@@ -91,6 +91,16 @@ def main():
             group = [v for v in results.values() if v["status"]==status]
             lines.append(f"|{status}|{len(group)}|{sum(v['return_pct'] for v in group)/len(group):.2f}|{sum(v['excess_pp'] for v in group)/len(group):.2f}|")
     extend_report(lines,evaluate(reports,series,today))
+    import copy
+    for model in ("price_only","price_flow"):
+        trials = copy.deepcopy(reports)
+        for _,report in trials:
+            for asset in report["assets"]:
+                for h in asset.get("horizons",{}).values():
+                    h["action"] = h.get("models",{}).get(model,"BEKLE")
+                    h["confirmation"] = "YÖN UYUMLU"
+        lines += ["", "### Araştırma modeli " + model]
+        extend_report(lines,evaluate(trials,series,today))
     if errors:
         lines.append("Fiyat kaynağı erişim sorunu: "+", ".join(errors))
     (ROOT/"FORWARD.md").write_text("\n".join(lines)+"\n")

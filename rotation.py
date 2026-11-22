@@ -29,11 +29,14 @@ ASSETS = [
 
 class FlowChart(HTMLParser):
     points = None
+    aum = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if attrs.get("id") == "fund-flow-chart-container":
             self.points = json.loads(attrs["data-series"])
+        if attrs.get("id") == "aumcontainer":
+            self.aum = json.loads(attrs["data-series"])[2]
 
 
 def flows(html, today, *, detailed=False):
@@ -77,7 +80,17 @@ def flows(html, today, *, detailed=False):
     if len(reference) == 52 and "1H" in result:
         percentile = round(100*sum(v <= result["1H"] for v in reference)/len(reference))
     if detailed:
-        return end, result, percentile, analyze(dates, days, unit)
+        horizons = analyze(dates, days, unit)
+        if chart.aum:
+            assets = {datetime.fromtimestamp(ts/1000,timezone.utc).date():v*unit for ts,v in chart.aum if v is not None and math.isfinite(v) and v>0}
+            from horizons import boundary
+            for key,h in horizons.items():
+                target = boundary(end,key,1)
+                prior = sorted(d for d in assets if d<=target)
+                if prior and (target-prior[-1]).days<=4 and h["net_usd_m"] is not None:
+                    h["flow_aum_pct"]=100*h["net_usd_m"]/assets[prior[-1]]
+                    h["aum_asof"]=str(prior[-1])
+        return end, result, percentile, horizons
     return end, result, percentile
 
 
@@ -192,7 +205,9 @@ def main():
                 h.update(net_usd_m=row["net_usd_m"].get(key), confirmation="TEYİTSİZ · kaynak okunamadı",action="BEKLE · önceki gözlem")
                 h.setdefault("strength","Güç ölçülemedi")
                 row["horizons"][key]=h
-    payload = dict(schema_version=2, seen_at=now.isoformat(), cot_error=error, assets=rows)
+    from price_context import enrich
+    price_errors = enrich(rows,today)
+    payload = dict(price_errors=price_errors, schema_version=3, seen_at=now.isoformat(), cot_error=error, assets=rows)
     folder = ROOT/"history"/"rotation"
     folder.mkdir(exist_ok=True,parents=True)
     # Her çalıştırmanın bilgi kümesi korunur. Tüketiciler latest.json okur.
