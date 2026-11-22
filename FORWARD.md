@@ -52,3 +52,7 @@ Alım için fonun SGOV’u geçmesi, azaltma için SGOV’un fonu geçmesi başa
 |3A|AZALTMA ADAYI|0 / 0|—|
 |1Y|ALIM ADAYI|0 / 0|—|
 |1Y|AZALTMA ADAYI|0 / 0|—|
+
+## Öncü yöntem seçimi
+
+{}

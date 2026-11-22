@@ -24,7 +24,18 @@ jobs:
       - id: evaluation
         continue-on-error: true
         run: python3 evaluate_rotation.py
+      - id: validation
+        continue-on-error: true
+        run: python3 validation.py
+      - name: Telegram değişim bildirimi
+        continue-on-error: true
+        id: telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 telegram_report.py
       - name: Gözlem ve tahminleri kaydet
+        if: always()
         run: |
           git config user.name github-actions[bot]
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -36,10 +47,5 @@ jobs:
             git commit -m "Günlük sermaye gözlemi"
             git push
           fi
-      - name: Telegram vade özeti
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python3 telegram_report.py
-      - if: steps.collect.outcome == 'failure' || steps.rotation.outcome == 'failure' || steps.evaluation.outcome == 'failure'
+      - if: steps.collect.outcome == 'failure' || steps.rotation.outcome == 'failure' || steps.evaluation.outcome == 'failure' || steps.telegram.outcome == 'failure' || steps.validation.outcome == 'failure'
         run: exit 1

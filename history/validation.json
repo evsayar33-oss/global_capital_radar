@@ -1,0 +1,126 @@
+{
+  "checked_at": "2026-11-22T12:03:20.648024+00:00",
+  "assets": [
+    {
+      "asset": "SPY",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "QQQ",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "DIA",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "IWM",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "SGOV",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": null
+    },
+    {
+      "asset": "SHY",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "GLD",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "SLV",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "CPER",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "USO",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "IBIT",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [
+        "1Y"
+      ],
+      "cot_date": "2026-11-17"
+    },
+    {
+      "asset": "ETHA",
+      "flow_date": "2026-11-19",
+      "source_error": null,
+      "cached": false,
+      "stale": false,
+      "missing_horizons": [
+        "1Y"
+      ],
+      "cot_date": "2026-11-17"
+    }
+  ],
+  "open_integrations": [
+    "SGOV TBF3 doğrulanmış fiyat ve pozisyon serisi",
+    "Bakır depo stokları",
+    "Petrol vade farkı",
+    "Kripto vadeli primi",
+    "Gerçek komisyon ve kayma kalibrasyonu"
+  ],
+  "telegram": "Teslimat yalnız API yanıtı başarılıysa kaydedilir",
+  "selection": "30 bağımsız örnek öncesi yöntem seçilmez"
+}

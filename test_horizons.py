@@ -25,4 +25,4 @@ class HorizonTests(unittest.TestCase):
         for i in range(7):data[end-timedelta(days=i)] = 100
         h=analyze(data,sorted(data),1)["1H"]
         self.assertEqual((h["net_usd_m"],h["reference_count"],h["strength"]),(700,52,"Olağanüstü giriş"))
-        self.assertIn("TEYİTSİZ",message({"seen_at":"2026-11-22","assets":[{"symbol":"GLD"}]}))
+        self.assertEqual(message({"seen_at":"2026-11-22","assets":[{"symbol":"GLD"}]}),"")

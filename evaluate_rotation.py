@@ -55,7 +55,7 @@ def main():
     for path in sorted(folder.glob("2*.json")):
         report = json.loads(path.read_text())
         day = datetime.fromisoformat(report["seen_at"]).astimezone(NY).date()
-        if (today-day).days >= 8 and any(h.get("action") in ("ALIM ADAYI","AZALTMA ADAYI") for a in report["assets"] for h in a.get("horizons",{}).values()):
+        if (today-day).days >= 8 and (any(a.get("horizons",{}).get("1H",{}).get("early_methods") for a in report["assets"]) or any(h.get("action") in ("ALIM ADAYI","AZALTMA ADAYI") for a in report["assets"] for h in a.get("horizons",{}).values())):
             reports.append((day,report))
         if (today-day).days < 8:
             continue
@@ -101,6 +101,9 @@ def main():
                     h["confirmation"] = "YÖN UYUMLU"
         lines += ["", "### Araştırma modeli " + model]
         extend_report(lines,evaluate(trials,series,today))
+    from experiments import compare
+    selection = compare(reports,series,today)
+    lines += ["", "## Öncü yöntem seçimi", "", json.dumps(selection,ensure_ascii=False)]
     if errors:
         lines.append("Fiyat kaynağı erişim sorunu: "+", ".join(errors))
     (ROOT/"FORWARD.md").write_text("\n".join(lines)+"\n")

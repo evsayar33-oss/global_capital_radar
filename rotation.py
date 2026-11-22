@@ -207,6 +207,8 @@ def main():
                 row["horizons"][key]=h
     from price_context import enrich
     price_errors = enrich(rows,today)
+    from experiments import record
+    record(rows)
     payload = dict(price_errors=price_errors, schema_version=3, seen_at=now.isoformat(), cot_error=error, assets=rows)
     folder = ROOT/"history"/"rotation"
     folder.mkdir(exist_ok=True,parents=True)
