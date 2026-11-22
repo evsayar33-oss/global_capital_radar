@@ -49,10 +49,14 @@ def main():
     results = json.loads(ledger.read_text()) if ledger.exists() else {}
     now = datetime.now(timezone.utc)
     today = now.astimezone(NY).date()
+    from horizon_evaluation import evaluate, extend_report
+    reports = []
     pending = []
     for path in sorted(folder.glob("2*.json")):
         report = json.loads(path.read_text())
         day = datetime.fromisoformat(report["seen_at"]).astimezone(NY).date()
+        if (today-day).days >= 8 and any(h.get("action") in ("ALIM ADAYI","AZALTMA ADAYI") for a in report["assets"] for h in a.get("horizons",{}).values()):
+            reports.append((day,report))
         if (today-day).days < 8:
             continue
         for r in report["assets"]:
@@ -60,10 +64,10 @@ def main():
             if key not in results and r["status"] in ("ALIM ADAYI","AZALTMA ADAYI","BEKLE","GİRİŞ İZLE","ÇIKIŞ İZLE"):
                 pending.append((day,key,r))
     errors = {}
-    if pending:
-        start = min(d for d,_,_ in pending)
-        series = {}
-        for sym in sorted({"SGOV"} | {r["symbol"] for _,_,r in pending}):
+    series = {}
+    if pending or reports:
+        start = min([d for d,_,_ in pending]+[d for d,_ in reports])
+        for sym in sorted({"SGOV"} | {r["symbol"] for _,_,r in pending} | {a["symbol"] for _,report in reports for a in report["assets"]}):
             try:
                 series[sym] = prices(sym,start,today)
             except Exception as exc:
@@ -86,6 +90,7 @@ def main():
         for status in sorted({v["status"] for v in results.values()}):
             group = [v for v in results.values() if v["status"]==status]
             lines.append(f"|{status}|{len(group)}|{sum(v['return_pct'] for v in group)/len(group):.2f}|{sum(v['excess_pp'] for v in group)/len(group):.2f}|")
+    extend_report(lines,evaluate(reports,series,today))
     if errors:
         lines.append("Fiyat kaynağı erişim sorunu: "+", ".join(errors))
     (ROOT/"FORWARD.md").write_text("\n".join(lines)+"\n")

@@ -45,3 +45,7 @@ ROTATION.md içinde 1 hafta, 1 ay, 3 ay ve 1 yıl için ayrı tablo bulunur. Mut
 Streamlit Community Cloud üzerinde repo ve main dalını seçin. Giriş dosyası streamlit_app.py. Sayfa kaydedilmiş raporu okur. Sonuçlar GitHub Actions çalıştıkça güncellenir.
 
 GitHub Settings → Secrets and variables → Actions → New repository secret altında TELEGRAM_BOT_TOKEN (BotFather tarafından verilen anahtar) ve TELEGRAM_CHAT_ID (hedef sohbetin sayısal kimliği) tanımlanır. Kişisel sohbet için önce bota /start gönderin. Ardından radar iş akışını elle çalıştırabilirsiniz. Telegram adımı bugünün varlık raporu kaydedildikten sonra vade özetini gönderir. İki secret da boşsa adımı atlar.
+
+SGOV için en yakın vadeli araç CME 13 haftalık bono kontratı TBF3’tür. Fiyatı 100 eksi iskonto faizidir. 22 Kasım 2026 incelemesinde CFTC Legacy ve TFF Futures Only veri kümelerinin 2025 başından itibaren yayımlanan piyasa listelerinde bono kontratına ait pozisyon serisi bulunamadı. SGOV fon akışı gösterilir, pozisyon teyidi eksik kalır. Kaynak: https://www.cmegroup.com/markets/interest-rates/stirs/us-t-bill/specs.html
+
+FORWARD.md her vadenin aday kararını ilgili hafta veya ay süresi sonunda SGOV ile karşılaştırır. Yönlü fark komisyon ve kayma öncesidir. Geçmiş akış yüzdeliği bir başarı olasılığı değildir. Dokuz geçmiş yıl içindeki en yüksek akış yüzde 100 sıralama alabilir. Bu değer dokuz karşılaştırma ve tek yeni gözleme dayanır.

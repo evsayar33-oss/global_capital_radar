@@ -153,6 +153,8 @@ def snapshot(asset, today, positions):
         stale = (today-end).days > 7
         for key, horizon in horizons.items():
             interpret(horizon, key, end, history, stale, today)
+            if symbol == "SGOV" and not history:
+                horizon["confirmation"] = "TEYİTSİZ · CME TBF3 pozisyon serisi yok"
             if cached:
                 horizon.update(confirmation="TEYİTSİZ · kaynak yeniden okunamadı",action="BEKLE · önbellek")
         row["horizons"] = horizons
