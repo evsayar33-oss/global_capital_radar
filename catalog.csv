@@ -1,0 +1,28 @@
+id,label,freq,change,max_age
+FORTREASNET69995,ABD Hazine kâğıtları,M,flow,100
+FORLTEQTYNET69995,ABD hisseleri,M,flow,100
+FORLTCORPNET69995,ABD uzun vadeli şirket ve belediye borcu,M,flow,100
+DTWEXBGS,Geniş dolar endeksi,D,pct,10
+DEXJPUS,JPY/USD (bir yenin dolar değeri),D,inverse,10
+DEXUSEU,EUR/USD,D,pct,10
+M2SL,ABD M2,M,pct,90
+TOTLL,Banka kredileri ABD,W,pct,30
+DRTSCILM,Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi,Q,pp,175
+BAMLH0A0HYM2,Yüksek getirili ABD tahvili risk primi,D,bp,10
+VIXCLS,VIX,D,points,10
+NFCI,Chicago Fed finansal koşullar,W,points,30
+DCOILBRENTEU,Brent petrol,D,pct,15
+DHHNGSP,Henry Hub doğal gaz,D,pct,15
+IR,ABD ithalat fiyat endeksi,M,pct,90
+CPIAUCSL,ABD TÜFE,M,pct,75
+CPILFESL,ABD çekirdek TÜFE,M,pct,75
+PCEPILFE,ABD çekirdek PCE,M,pct,90
+PCEPI,ABD PCE,M,pct,90
+PPIACO,ABD emtia üretici fiyat endeksi,M,pct,90
+CES0500000003,Özel sektör saatlik ücret,M,pct,75
+T5YIE,ABD 5 yıllık başabaş enflasyon,D,bp,10
+DGS2,ABD 2 yıllık tahvil faizi,D,bp,10
+DFII10,ABD 10 yıllık reel faiz,D,bp,10
+DFF,Gerçekleşen efektif Fed faizi,D,bp,10
+BOPGIMP,ABD mal ithalatı nominal değer,M,pct,100
+BOPGEXP,ABD mal ihracatı nominal değer,M,pct,100

@@ -1,0 +1,540 @@
+{
+  "as_of": "2026-11-22T08:51:56.391540+00:00",
+  "indicators": [
+    {
+      "id": "FORTREASNET69995",
+      "label": "ABD Hazine kâğıtları",
+      "freq": "M",
+      "change": "flow",
+      "max_age": "100",
+      "period": "2026-09-01",
+      "value": 82634.0,
+      "changes": {
+        "1A": 18821.0,
+        "3A": 107844.0,
+        "1Y": 79533.0
+      },
+      "stale": false
+    },
+    {
+      "id": "FORLTEQTYNET69995",
+      "label": "ABD hisseleri",
+      "freq": "M",
+      "change": "flow",
+      "max_age": "100",
+      "period": "2026-09-01",
+      "value": 67116.0,
+      "changes": {
+        "1A": -82814.0,
+        "3A": -115537.0,
+        "1Y": -61574.0
+      },
+      "stale": false
+    },
+    {
+      "id": "FORLTCORPNET69995",
+      "label": "ABD uzun vadeli şirket ve belediye borcu",
+      "freq": "M",
+      "change": "flow",
+      "max_age": "100",
+      "period": "2026-09-01",
+      "value": 27747.0,
+      "changes": {
+        "1A": -22066.0,
+        "3A": -11774.0,
+        "1Y": -10733.0
+      },
+      "stale": false
+    },
+    {
+      "id": "DTWEXBGS",
+      "label": "Geniş dolar endeksi",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "10",
+      "period": "2026-11-13",
+      "value": 122.6503,
+      "changes": {
+        "1G": 0.0873,
+        "1H": 0.6318,
+        "1A": 0.9939,
+        "3A": 2.9077,
+        "1Y": 1.5548
+      },
+      "stale": false
+    },
+    {
+      "id": "DEXJPUS",
+      "label": "JPY/USD (bir yenin dolar değeri)",
+      "freq": "D",
+      "change": "inverse",
+      "max_age": "10",
+      "period": "2026-11-13",
+      "value": 0.006252735571812668,
+      "changes": {
+        "1G": -0.2063,
+        "1H": -1.063,
+        "1A": -0.9817,
+        "3A": -0.3627,
+        "1Y": -3.4578
+      },
+      "stale": false
+    },
+    {
+      "id": "DEXUSEU",
+      "label": "EUR/USD",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "10",
+      "period": "2026-11-13",
+      "value": 1.1034,
+      "changes": {
+        "1G": -0.199,
+        "1H": -1.0758,
+        "1A": -1.4469,
+        "3A": -4.3101,
+        "1Y": -5.2794
+      },
+      "stale": false
+    },
+    {
+      "id": "M2SL",
+      "label": "ABD M2",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "period": "2026-09-01",
+      "value": 23413.9,
+      "changes": {
+        "1A": 0.485,
+        "3A": 1.4568,
+        "1Y": 5.7099
+      },
+      "stale": false
+    },
+    {
+      "id": "TOTLL",
+      "label": "Banka kredileri ABD",
+      "freq": "W",
+      "change": "pct",
+      "max_age": "30",
+      "period": "2026-11-11",
+      "value": 14264.2085,
+      "changes": {
+        "1H": 0.2687,
+        "1A": 0.6031,
+        "3A": 2.1627,
+        "1Y": 8.0501
+      },
+      "stale": false
+    },
+    {
+      "id": "DRTSCILM",
+      "label": "Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi",
+      "freq": "Q",
+      "change": "pp",
+      "max_age": "175",
+      "period": "2026-10-01",
+      "value": 1.7,
+      "changes": {
+        "3A": 1.7,
+        "1Y": -4.8
+      },
+      "stale": false
+    },
+    {
+      "id": "BAMLH0A0HYM2",
+      "label": "Yüksek getirili ABD tahvili risk primi",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "period": "2026-11-19",
+      "value": 3.52,
+      "changes": {
+        "1G": 5.0,
+        "1H": 32.0,
+        "1A": 23.0,
+        "3A": 79.0,
+        "1Y": 35.0
+      },
+      "stale": false
+    },
+    {
+      "id": "VIXCLS",
+      "label": "VIX",
+      "freq": "D",
+      "change": "points",
+      "max_age": "10",
+      "period": "2026-11-19",
+      "value": 28.44,
+      "changes": {
+        "1G": 3.88,
+        "1H": 9.74,
+        "1A": 10.0,
+        "3A": 13.55,
+        "1Y": 4.78
+      },
+      "stale": false
+    },
+    {
+      "id": "NFCI",
+      "label": "Chicago Fed finansal koşullar",
+      "freq": "W",
+      "change": "points",
+      "max_age": "30",
+      "period": "2026-11-13",
+      "value": -0.478,
+      "changes": {
+        "1H": -0.005,
+        "1A": 0.006,
+        "3A": 0.066,
+        "1Y": 0.033
+      },
+      "stale": false
+    },
+    {
+      "id": "DCOILBRENTEU",
+      "label": "Brent petrol",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "15",
+      "period": "2026-11-17",
+      "value": 92.94,
+      "changes": {
+        "1G": 0.0431,
+        "1H": 3.0834,
+        "1A": -22.1151,
+        "3A": 0.5518,
+        "1Y": 47.1501
+      },
+      "stale": false
+    },
+    {
+      "id": "DHHNGSP",
+      "label": "Henry Hub doğal gaz",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "15",
+      "period": "2026-11-17",
+      "value": 3.1,
+      "changes": {
+        "1G": -3.125,
+        "1H": 3.3333,
+        "1A": -3.7267,
+        "3A": 11.9134,
+        "1Y": -16.442
+      },
+      "stale": false
+    },
+    {
+      "id": "IR",
+      "label": "ABD ithalat fiyat endeksi",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "period": "2026-10-01",
+      "value": 153.8,
+      "changes": {
+        "1A": 1.0512,
+        "3A": 2.6702
+      },
+      "stale": false
+    },
+    {
+      "id": "CPIAUCSL",
+      "label": "ABD TÜFE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "75",
+      "period": "2026-10-01",
+      "value": 337.476,
+      "changes": {
+        "1A": 0.3503,
+        "3A": 1.4011
+      },
+      "stale": false
+    },
+    {
+      "id": "CPILFESL",
+      "label": "ABD çekirdek TÜFE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "75",
+      "period": "2026-10-01",
+      "value": 339.9,
+      "changes": {
+        "1A": 0.2963,
+        "3A": 0.9237
+      },
+      "stale": false
+    },
+    {
+      "id": "PCEPILFE",
+      "label": "ABD çekirdek PCE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "period": "2026-09-01",
+      "value": 130.902,
+      "changes": {
+        "1A": 0.3165,
+        "3A": 0.7179,
+        "1Y": 3.1212
+      },
+      "stale": false
+    },
+    {
+      "id": "PCEPI",
+      "label": "ABD PCE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "period": "2026-09-01",
+      "value": 132.257,
+      "changes": {
+        "1A": 0.4908,
+        "3A": 0.8779,
+        "1Y": 3.6489
+      },
+      "stale": false
+    },
+    {
+      "id": "PPIACO",
+      "label": "ABD emtia üretici fiyat endeksi",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "period": "2026-10-01",
+      "value": 293.921,
+      "changes": {
+        "1A": -0.1875,
+        "3A": 3.1892,
+        "1Y": 12.7902
+      },
+      "stale": false
+    },
+    {
+      "id": "CES0500000003",
+      "label": "Özel sektör saatlik ücret",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "75",
+      "period": "2026-10-01",
+      "value": 38.0,
+      "changes": {
+        "1A": 0.3698,
+        "3A": 0.9564,
+        "1Y": 3.1208
+      },
+      "stale": false
+    },
+    {
+      "id": "T5YIE",
+      "label": "ABD 5 yıllık başabaş enflasyon",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "period": "2026-11-20",
+      "value": 2.18,
+      "changes": {
+        "1G": -4.0,
+        "1H": -12.0,
+        "1A": -21.0,
+        "3A": -16.0,
+        "1Y": -16.0
+      },
+      "stale": false
+    },
+    {
+      "id": "DGS2",
+      "label": "ABD 2 yıllık tahvil faizi",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "period": "2026-11-19",
+      "value": 4.76,
+      "changes": {
+        "1G": -4.0,
+        "1H": -10.0,
+        "1A": -1.0,
+        "3A": 57.0,
+        "1Y": 118.0
+      },
+      "stale": false
+    },
+    {
+      "id": "DFII10",
+      "label": "ABD 10 yıllık reel faiz",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "period": "2026-11-19",
+      "value": 2.88,
+      "changes": {
+        "1G": 0.0,
+        "1H": 2.0,
+        "1A": 8.0,
+        "3A": 53.0,
+        "1Y": 102.0
+      },
+      "stale": false
+    },
+    {
+      "id": "DFF",
+      "label": "Gerçekleşen efektif Fed faizi",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "period": "2026-11-19",
+      "value": 3.88,
+      "changes": {
+        "1G": 0.0,
+        "1H": 0.0,
+        "1A": 0.0,
+        "3A": 25.0,
+        "1Y": 0.0
+      },
+      "stale": false
+    },
+    {
+      "id": "BOPGIMP",
+      "label": "ABD mal ithalatı nominal değer",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "100",
+      "period": "2026-09-01",
+      "value": 346879.0,
+      "changes": {
+        "1A": 1.2853,
+        "3A": 12.1787,
+        "1Y": 26.4311
+      },
+      "stale": false
+    },
+    {
+      "id": "BOPGEXP",
+      "label": "ABD mal ihracatı nominal değer",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "100",
+      "period": "2026-09-01",
+      "value": 210968.0,
+      "changes": {
+        "1A": 2.4863,
+        "3A": 1.795,
+        "1Y": 13.1408
+      },
+      "stale": false
+    },
+    {
+      "id": "ICI_Domestic",
+      "label": "ICI fon akışı · Domestic",
+      "freq": "W",
+      "change": "flow",
+      "max_age": 17,
+      "period": "2026-11-11",
+      "value": 31505,
+      "changes": {
+        "1H": 19592
+      },
+      "stale": false
+    },
+    {
+      "id": "ICI_World",
+      "label": "ICI fon akışı · World",
+      "freq": "W",
+      "change": "flow",
+      "max_age": 17,
+      "period": "2026-11-11",
+      "value": 5515,
+      "changes": {
+        "1H": -6
+      },
+      "stale": false
+    },
+    {
+      "id": "ICI_Hybrid",
+      "label": "ICI fon akışı · Hybrid",
+      "freq": "W",
+      "change": "flow",
+      "max_age": 17,
+      "period": "2026-11-11",
+      "value": -4147,
+      "changes": {
+        "1H": -1386
+      },
+      "stale": false
+    },
+    {
+      "id": "ICI_Bond",
+      "label": "ICI fon akışı · Bond",
+      "freq": "W",
+      "change": "flow",
+      "max_age": 17,
+      "period": "2026-11-11",
+      "value": 1671,
+      "changes": {
+        "1H": -682
+      },
+      "stale": false
+    },
+    {
+      "id": "ICI_Commodity",
+      "label": "ICI fon akışı · Commodity",
+      "freq": "W",
+      "change": "flow",
+      "max_age": 17,
+      "period": "2026-11-11",
+      "value": -228,
+      "changes": {
+        "1H": -358
+      },
+      "stale": false
+    }
+  ],
+  "expectations": {
+    "IMF": {
+      "error": "HTTP Error 429: Too Many Requests",
+      "archive": "WEO 2026-10-13",
+      "archived_forecast": {
+        "2026": 4.7,
+        "2027": 4.1
+      },
+      "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"
+    },
+    "Fed SEP": {
+      "2026": 4.1,
+      "2027": 4.1,
+      "2028": 3.9,
+      "2029": 3.6
+    },
+    "Vadeli Fed fonları (%)": {
+      "freq": "D",
+      "change": "bp",
+      "max_age": 7,
+      "contract": "ZQZ26.CBT",
+      "target": "2026-12-01",
+      "period": "2026-11-20",
+      "value": 4.040000915527344,
+      "changes": {
+        "1G": -3.4996,
+        "1H": -3.4996,
+        "1A": -3.4996,
+        "3A": 20.5002,
+        "1Y": 102.9999
+      },
+      "stale": false
+    },
+    "Dünya geniş para / GSYH (%)": {
+      "freq": "Y",
+      "change": "pp",
+      "max_age": 1100,
+      "period": "2024-01-01",
+      "value": 135.663792466297,
+      "changes": {
+        "1Y": 0.2012
+      },
+      "stale": false
+    }
+  }
+}

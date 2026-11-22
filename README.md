@@ -1,0 +1,47 @@
+# Global Capital Radar
+Yabancı yatırımcıların ABD hisseleri, Hazine kâğıtları ve uzun vadeli şirket borcundaki aylık net alımlarını izler. TIC kapsamı tüzel ikametgâha dayanır. İşlemler nihai yatırımcıyı ve satılan paranın sonraki adresini açıklamaz. Şirket borcu kategorisi belediye borcunu da kapsar.
+
+## Kullanım
+Python 3.10+ ile proje kökünde `python3 -m unittest -v`, ardından `python3 radar.py` çalıştırın. Standart kütüphane yeterlidir. Veriler internetten alınır. Actions iş akışı günlük ve elle çalışır. Varsayılan dala yazma izni gerekir. LATEST.md son raporu, history/ tarihli gözlemleri ve dondurulmuş tahminleri içerir. Kısmi veri kaydedilir, gecikme veya kaynak hatası çalışmayı başarısız işaretler.
+
+## Ölçüm
+catalog.csv kaynak kimliklerini içerir. FRED üzerinden piyasa, enerji, dış ticaret fiyatları, ücret, kredi, enflasyon ve TIC serileri okunur. IMF DataMapper PCPIPCH/WEOWORLD aynı hedef yıla ait dünya ortalama tüketici fiyat enflasyonu tahminini, FEDTARMD katılımcıların yıl sonu medyanını verir. Tahmin eğrilerindeki yıllar yayın tarihi değildir. Dünya Bankası FM.LBL.BMNY.GD.ZS dünya geniş para stokunun GSYH’ye oranını verir. ABD M2 seviyesi, dolar endeksi ve kredi anketi ayrı okunur. SLOOS artışı sıkılaşmadır. VIX, kredi risk primi ve NFCI son ayda birlikte düşerse risk iştahı güçleniyor etiketi verilir. Bu etiket bir model olasılığı değildir.
+
+1G son gözlemden önceki işlem gününe, 1H yedi takvim günü öncesine, diğer sütunlar takvim aylarına göre hesaplanır. Tatil ve hafta sonunda önceki uygun gözlem kullanılır. Aylık seride günlük ve haftalık değişim boş kalır. Akış sütunları iki ayın net alım tutarları arasındaki farktır. TÜFE ve PCE endekslerinde 1Y sütunu yıllık fiyat artışını gösterir. Birikimli akım ve değişim farklı büyüklüklerdir. Eski tarihli satırların yanına gecikme işareti konur.
+
+## İleri test
+Her ay ilk kullanılabilir çalışmada bir sonraki tam takvim ayı için üç varlık sınıfının net alım tutarı dondurulur. Tahmin son üç ardışık yayımlanmış ayın medyanıdır. Karşılaştırma modeli son açıklanan tutarı tekrarlar. İşlem ayı tamamlandıktan sonra ilk görülen gerçekleşme saklanır. Model ve karşılaştırmanın ortalama mutlak hatası her sınıf için ayrı raporlanır. Eski veriler sonradan revize edilebilir. İlk kurulumda indirilen tarihsel değerler geçmişte biliniyormuş gibi test edilmez. Aynı gün tekrar çalıştırma günlük özeti günceller, mevcut aylık tahmini değiştirmez.
+
+## Kapsamın genişletilmesi
+Makro seriler ilk sürümde koşulları açıklar. İleri testte örnekler biriktikten sonra alternatif modelin dolar, reel faiz ve kredi koşullarından katkı sağlayıp sağlamadığı karşılaştırılabilir. IMF ve Fed aynı hedef yıl için farklı tarihlerde kaydedilen eğriler üzerinden değerlendirilmeli. Sonraki takvim ayının CME Fed fonları kontratı Yahoo Finance üzerinden okunur. Fiyattan ima edilen ortalama efektif faiz 100 eksi kontrat fiyatıdır. Farklar aynı kontrat içinde baz puanla hesaplanır. Bu ölçü tek bir toplantının faiz indirim olasılığını vermez. ICI haftalık birleşik tablosu ABD hissesi, dünya hissesi, karma, tahvil ve emtia fonlarının tahmini net akışını ayrı verir. Buradaki fon evreni ve TIC kapsamı farklıdır. Tutarlar toplanmaz. Offshore dolar kredisi için BIS GLI, arz şoku için navlun ve ticaret hacmi sonraki kapsamdadır. Tarihli gözlem ve tahmin kayıtlarını saklayın.
+
+## Kaynaklar
+- https://fred.stlouisfed.org/series/FORTREASNET69995
+- https://fred.stlouisfed.org/series/FORLTEQTYNET69995
+- https://fred.stlouisfed.org/series/FORLTCORPNET69995
+- https://fred.stlouisfed.org/series/FEDTARMD
+- https://www.imf.org/external/datamapper/PCPIPCH@WEO/WEOWORLD
+- https://data.worldbank.org/indicator/FM.LBL.BMNY.GD.ZS
+
+## Yatırım evreni ve ortak rapor
+`python3 rotation.py` ile ROTATION.md, history/rotation/latest.json ve zaman damgalı gözlem üretilir. Günlük Actions her iki raporu da çalıştırır. Streamlit ve Telegram için ortak girdi latest.json dosyasıdır.
+
+SPY, QQQ, IWM ve DIA kendi endeks fonlarının talebini gösterir. SGOV kısa vadeli dolar faizini elde etmek isteyenlerin kullanabildiği bono fonudur. SHY daha uzun vade taşır. Fed faizi ve vadeli faiz beklentisi makro rapordadır. GLD ve SLV kıymetli metal, CPER ve USO vadeli emtia fonlarıdır. IBIT ile ETHA ABD borsasında işlem gören iki kripto fonudur. Tek fonla izlenen bir piyasada yatırımcı diğer fonlara veya spot varlığa geçmiş olabilir. İki satırdaki eşzamanlı hareket aynı yatırımcının parayı birinden diğerine aktardığını kanıtlamaz.
+
+ETF Database verisinden günlük net akımlar alınır. Rapor dönem içindeki akımları toplar. Son gözlem tarihi her satırda görünür. Haftalık yüzdelik, fonun son haftaki akışını önceki 52 haftalık dağılımda konumlandırır. Büyük ve küçük fonların kendi geçmişine göre olağandışı hareketi böyle incelenebilir. Açık pozisyonun yüzdesi olarak CFTC ticari olmayan net uzun pozisyonu (uzun eksi kısa) hesaplanır. Haftalık değişim yüzde puandır. Türev pozisyonu nakit akışına eklenmez. CFTC tarihi pozisyon tarihidir. Arşivdeki seen_at sistemin ilk kullanabileceği zamanı gösterir.
+
+Haftalık ve aylık nakit akışı pozitifse GİRİŞ İZLE, negatifse ÇIKIŞ İZLE. Vadeli pozisyon değişimi de aynı yöndeyse ALIM ADAYI veya AZALTMA ADAYI etiketi verilir. SGOV için vadeli teyit kullanılmaz. Çelişkili akışlar BEKLE, yetersiz veya gecikmiş veri ayrı durum üretir. Aday etiketleri ileriye dönük araştırma içindir. İşlem getirisi ve maliyet sonrası başarı henüz doğrulanmadı. Telegram ve Streamlit yayını sonraki aşamadır.
+
+Kaynaklar
+- https://etfdb.com/etf/GLD/ (diğer fonlar için her kayıtta kaynak URL bulunur)
+- https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalCompressed/index.htm
+
+Beş seanslık ileri testi çalıştırmak için `python3 evaluate_rotation.py` kullanılır. FORWARD.md ve history/rotation/outcomes.json sonuçları tutar. Ölçüm gözlem tarihinden sonraki ilk seansın açılışında başlar. Getiri, SGOV ile aynı tarihlerde karşılaştırılır. Komisyon ve kayma dahil değildir. Hangi sinyalin maliyet sonrası kullanılabilir olduğu ayrıca sınanmalıdır.
+
+## Vadeye göre yorum
+ROTATION.md içinde 1 hafta, 1 ay, 3 ay ve 1 yıl için ayrı tablo bulunur. Mutlak net dolar akışı fonun aynı uzunluktaki son 52 ayrı dönemine kadar karşılaştırılır. En az beş geçerli geçmiş dönem gerekir. Yeni fonların yıllık gücü yeterli tarih oluşana kadar boş kalır. Yüzdelik 15 ve altı yatay, 40 ve altı zayıf, 75 ve üzeri güçlü, 90 ve üzeri olağanüstüdür. Bunlar araştırma için seçilmiş eşiklerdir. Tarihsel dolar tutarları fonun büyümesine göre düzeltilmemiştir. Her vade için CFTC net pozisyon payının o vadedeki değişimiyle yön kontrol edilir. Uyuşmazlık, eski veya eksik veri TEYİTSİZ ve BEKLE sonucu üretir. Yön uyumu, ETF dolar tutarının ikinci bir kaynaktan doğrulandığı anlamına gelmez. Eski haftalık/aylık birleşik etiketin ileri testi ayrı sürer. Vade bazlı yeni eşiklerin işlem başarısı doğrulanmamıştır.
+
+## Streamlit ve Telegram kurulumu
+Streamlit Community Cloud üzerinde repo ve main dalını seçin. Giriş dosyası streamlit_app.py. Sayfa kaydedilmiş raporu okur. Sonuçlar GitHub Actions çalıştıkça güncellenir.
+
+GitHub Settings → Secrets and variables → Actions → New repository secret altında TELEGRAM_BOT_TOKEN (BotFather tarafından verilen anahtar) ve TELEGRAM_CHAT_ID (hedef sohbetin sayısal kimliği) tanımlanır. Kişisel sohbet için önce bota /start gönderin. Ardından radar iş akışını elle çalıştırabilirsiniz. Telegram adımı bugünün varlık raporu kaydedildikten sonra vade özetini gönderir. İki secret da boşsa adımı atlar.

@@ -1,0 +1,385 @@
+{
+  "schema_version": 2,
+  "seen_at": "2026-11-22T09:13:39.179044+00:00",
+  "cot_error": null,
+  "assets": [
+    {
+      "symbol": "SPY",
+      "asset": "S&P 500",
+      "cash_source": "https://etfdb.com/etf/SPY/",
+      "cot_code": "13874A",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": 2.39,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    },
+    {
+      "symbol": "QQQ",
+      "asset": "Nasdaq-100",
+      "cash_source": "https://etfdb.com/etf/QQQ/",
+      "cot_code": "209742",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -8.637,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 1309.247,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 32.7,
+          "reference_count": 52,
+          "cot_change_pp": -8.637,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "1A": {
+          "net_usd_m": 9808.897,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -15.907,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "3A": {
+          "net_usd_m": 6520.256,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 71.4,
+          "reference_count": 42,
+          "cot_change_pp": 15.357,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "Girişi izle"
+        },
+        "1Y": {
+          "net_usd_m": 27438.693,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -1286.458,
+        "1H": 1309.247,
+        "1A": 9808.897,
+        "3A": 6520.256,
+        "1Y": 27438.693
+      },
+      "weekly_percentile": 56,
+      "stale": false,
+      "status": "GİRİŞ İZLE"
+    },
+    {
+      "symbol": "DIA",
+      "asset": "Dow Jones",
+      "cash_source": "https://etfdb.com/etf/DIA/",
+      "cot_code": "124603",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -4.82,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    },
+    {
+      "symbol": "IWM",
+      "asset": "Russell 2000",
+      "cash_source": "https://etfdb.com/etf/IWM/",
+      "cot_code": "239742",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -2.11,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    },
+    {
+      "symbol": "SGOV",
+      "asset": "ABD Hazine bonosu · 0–3 ay",
+      "cash_source": "https://etfdb.com/etf/SGOV/",
+      "cot_code": null,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    },
+    {
+      "symbol": "SHY",
+      "asset": "ABD Hazine tahvili · 1–3 yıl",
+      "cash_source": "https://etfdb.com/etf/SHY/",
+      "cot_code": "042601",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": 2.771,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    },
+    {
+      "symbol": "GLD",
+      "asset": "Altın",
+      "cash_source": "https://etfdb.com/etf/GLD/",
+      "cot_code": "088691",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -6.237,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    },
+    {
+      "symbol": "SLV",
+      "asset": "Gümüş",
+      "cash_source": "https://etfdb.com/etf/SLV/",
+      "cot_code": "084691",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -1.866,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -147.2,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 48.1,
+          "reference_count": 52,
+          "cot_change_pp": -1.866,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "Çıkışı izle"
+        },
+        "1A": {
+          "net_usd_m": 207.847,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 44.2,
+          "reference_count": 52,
+          "cot_change_pp": -5.994,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "3A": {
+          "net_usd_m": 661.892,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 76.2,
+          "reference_count": 42,
+          "cot_change_pp": -5.662,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1Y": {
+          "net_usd_m": 11.618,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": 51.575,
+        "1H": -147.201,
+        "1A": 207.846,
+        "3A": 661.891,
+        "1Y": 11.618
+      },
+      "weekly_percentile": 25,
+      "stale": false,
+      "status": "BEKLE"
+    },
+    {
+      "symbol": "CPER",
+      "asset": "Bakır vadeli",
+      "cash_source": "https://etfdb.com/etf/CPER/",
+      "cot_code": "085692",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -3.558,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -35.527,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 84.6,
+          "reference_count": 52,
+          "cot_change_pp": -3.558,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "1A": {
+          "net_usd_m": -80.267,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 94.2,
+          "reference_count": 52,
+          "cot_change_pp": -16.19,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "3A": {
+          "net_usd_m": -135.962,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 95.2,
+          "reference_count": 42,
+          "cot_change_pp": -21.419,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "1Y": {
+          "net_usd_m": 171.099,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 88.9,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -11.938,
+        "1H": -35.527,
+        "1A": -80.268,
+        "3A": -135.962,
+        "1Y": 171.099
+      },
+      "weekly_percentile": 4,
+      "stale": false,
+      "status": "AZALTMA ADAYI"
+    },
+    {
+      "symbol": "USO",
+      "asset": "WTI petrol vadeli",
+      "cash_source": "https://etfdb.com/etf/USO/",
+      "cot_code": "067651",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -0.482,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 269.404,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 82.7,
+          "reference_count": 52,
+          "cot_change_pp": -0.482,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1A": {
+          "net_usd_m": 670.564,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -1.904,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "3A": {
+          "net_usd_m": 214.858,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 40.5,
+          "reference_count": 42,
+          "cot_change_pp": -1.865,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1Y": {
+          "net_usd_m": 238.796,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -54.725,
+        "1H": 269.404,
+        "1A": 670.564,
+        "3A": 214.858,
+        "1Y": 238.796
+      },
+      "weekly_percentile": 92,
+      "stale": false,
+      "status": "GİRİŞ İZLE"
+    },
+    {
+      "symbol": "IBIT",
+      "asset": "Bitcoin",
+      "cash_source": "https://etfdb.com/etf/IBIT/",
+      "cot_code": "133741",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -4.393,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -629.028,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 67.3,
+          "reference_count": 52,
+          "cot_change_pp": -4.393,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "Çıkışı izle"
+        },
+        "1A": {
+          "net_usd_m": -1657.197,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 39.4,
+          "reference_count": 33,
+          "cot_change_pp": -4.276,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "3A": {
+          "net_usd_m": 2511.122,
+          "strength": "Yatay",
+          "magnitude_percentile": 10.0,
+          "reference_count": 10,
+          "cot_change_pp": -10.309,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "1Y": {
+          "net_usd_m": 790.471,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 1,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -148.663,
+        "1H": -629.028,
+        "1A": -1657.197,
+        "3A": 2511.122,
+        "1Y": 790.471
+      },
+      "weekly_percentile": 17,
+      "stale": false,
+      "status": "AZALTMA ADAYI"
+    },
+    {
+      "symbol": "ETHA",
+      "asset": "Ether",
+      "cash_source": "https://etfdb.com/etf/ETHA/",
+      "cot_code": "146021",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -1.326,
+      "error": "ETF akış grafiği eksik",
+      "status": "VERİ EKSİK"
+    }
+  ]
+}

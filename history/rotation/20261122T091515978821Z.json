@@ -1,0 +1,434 @@
+{
+  "schema_version": 2,
+  "seen_at": "2026-11-22T09:15:15.978821+00:00",
+  "cot_error": null,
+  "assets": [
+    {
+      "symbol": "SPY",
+      "asset": "S&P 500",
+      "cash_source": "https://etfdb.com/etf/SPY/",
+      "cot_code": "13874A",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": 2.39,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -7096.55,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 63.5,
+          "reference_count": 52,
+          "cot_change_pp": 2.39,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1A": {
+          "net_usd_m": -6484.783,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 40.4,
+          "reference_count": 52,
+          "cot_change_pp": 2.89,
+          "cot_start": "2026-10-20",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "3A": {
+          "net_usd_m": -7287.221,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 47.6,
+          "reference_count": 42,
+          "cot_change_pp": -3.971,
+          "cot_start": "2026-08-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "Çıkışı izle"
+        },
+        "1Y": {
+          "net_usd_m": 20120.424,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 88.9,
+          "reference_count": 9,
+          "cot_change_pp": 2.754,
+          "cot_start": "2025-11-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "ALIM ADAYI"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -11652.04,
+        "1H": -7096.55,
+        "1A": -6484.783,
+        "3A": -7287.221,
+        "1Y": 20120.424
+      },
+      "weekly_percentile": 17,
+      "stale": false,
+      "status": "ÇIKIŞ İZLE"
+    },
+    {
+      "symbol": "QQQ",
+      "asset": "Nasdaq-100",
+      "cash_source": "https://etfdb.com/etf/QQQ/",
+      "cot_code": "209742",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -8.637,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 1309.247,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 32.7,
+          "reference_count": 52,
+          "cot_change_pp": -8.637,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "1A": {
+          "net_usd_m": 9808.897,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -17.165,
+          "cot_start": "2026-10-20",
+          "cot_end": "2…10137 tokens truncated…tile": 37,
+      "stale": false,
+      "status": "AZALTMA ADAYI"
+    },
+    {
+      "symbol": "SLV",
+      "asset": "Gümüş",
+      "cash_source": "https://etfdb.com/etf/SLV/",
+      "cot_code": "084691",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -1.866,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -147.2,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 48.1,
+          "reference_count": 52,
+          "cot_change_pp": -1.866,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "Çıkışı izle"
+        },
+        "1A": {
+          "net_usd_m": 207.847,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 44.2,
+          "reference_count": 52,
+          "cot_change_pp": -2.488,
+          "cot_start": "2026-10-20",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "3A": {
+          "net_usd_m": 661.892,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 76.2,
+          "reference_count": 42,
+          "cot_change_pp": -4.791,
+          "cot_start": "2026-08-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1Y": {
+          "net_usd_m": 11.618,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "cot_change_pp": -7.313,
+          "cot_start": "2025-11-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · akış zayıf veya yatay"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": 51.575,
+        "1H": -147.201,
+        "1A": 207.846,
+        "3A": 661.891,
+        "1Y": 11.618
+      },
+      "weekly_percentile": 25,
+      "stale": false,
+      "status": "BEKLE"
+    },
+    {
+      "symbol": "CPER",
+      "asset": "Bakır vadeli",
+      "cash_source": "https://etfdb.com/etf/CPER/",
+      "cot_code": "085692",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -3.558,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -35.527,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 84.6,
+          "reference_count": 52,
+          "cot_change_pp": -3.558,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "1A": {
+          "net_usd_m": -80.267,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 94.2,
+          "reference_count": 52,
+          "cot_change_pp": -11.903,
+          "cot_start": "2026-10-20",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "3A": {
+          "net_usd_m": -135.962,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 95.2,
+          "reference_count": 42,
+          "cot_change_pp": -22.68,
+          "cot_start": "2026-08-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "1Y": {
+          "net_usd_m": 171.099,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 88.9,
+          "reference_count": 9,
+          "cot_change_pp": -15.013,
+          "cot_start": "2025-11-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -11.938,
+        "1H": -35.527,
+        "1A": -80.268,
+        "3A": -135.962,
+        "1Y": 171.099
+      },
+      "weekly_percentile": 4,
+      "stale": false,
+      "status": "AZALTMA ADAYI"
+    },
+    {
+      "symbol": "USO",
+      "asset": "WTI petrol vadeli",
+      "cash_source": "https://etfdb.com/etf/USO/",
+      "cot_code": "067651",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -0.482,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 269.404,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 82.7,
+          "reference_count": 52,
+          "cot_change_pp": -0.482,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1A": {
+          "net_usd_m": 670.564,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -1.491,
+          "cot_start": "2026-10-20",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "3A": {
+          "net_usd_m": 214.858,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 40.5,
+          "reference_count": 42,
+          "cot_change_pp": -3.087,
+          "cot_start": "2026-08-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · yön teyitsiz"
+        },
+        "1Y": {
+          "net_usd_m": 238.796,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "cot_change_pp": -0.327,
+          "cot_start": "2025-11-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · akış zayıf veya yatay"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -54.725,
+        "1H": 269.404,
+        "1A": 670.564,
+        "3A": 214.858,
+        "1Y": 238.796
+      },
+      "weekly_percentile": 92,
+      "stale": false,
+      "status": "GİRİŞ İZLE"
+    },
+    {
+      "symbol": "IBIT",
+      "asset": "Bitcoin",
+      "cash_source": "https://etfdb.com/etf/IBIT/",
+      "cot_code": "133741",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -4.393,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -629.028,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 67.3,
+          "reference_count": 52,
+          "cot_change_pp": -4.393,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "Çıkışı izle"
+        },
+        "1A": {
+          "net_usd_m": -1657.197,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 39.4,
+          "reference_count": 33,
+          "cot_change_pp": -3.558,
+          "cot_start": "2026-10-20",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "3A": {
+          "net_usd_m": 2511.122,
+          "strength": "Yatay",
+          "magnitude_percentile": 10.0,
+          "reference_count": 10,
+          "cot_change_pp": -4.639,
+          "cot_start": "2026-08-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · yönler çelişiyor",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "1Y": {
+          "net_usd_m": 790.471,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 1,
+          "cot_change_pp": 9.085,
+          "cot_start": "2025-11-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "BEKLE · veri yetersiz"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -148.663,
+        "1H": -629.028,
+        "1A": -1657.197,
+        "3A": 2511.122,
+        "1Y": 790.471
+      },
+      "weekly_percentile": 17,
+      "stale": false,
+      "status": "AZALTMA ADAYI"
+    },
+    {
+      "symbol": "ETHA",
+      "asset": "Ether",
+      "cash_source": "https://etfdb.com/etf/ETHA/",
+      "cot_code": "146021",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -1.326,
+      "cached_source": false,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -107.037,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 32.7,
+          "reference_count": 52,
+          "cot_change_pp": -1.326,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "BEKLE · akış zayıf veya yatay"
+        },
+        "1A": {
+          "net_usd_m": -1326.381,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 85.2,
+          "reference_count": 27,
+          "cot_change_pp": -2.941,
+          "cot_start": "2026-10-20",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "3A": {
+          "net_usd_m": -7159.366,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 87.5,
+          "reference_count": 8,
+          "cot_change_pp": -15.173,
+          "cot_start": "2026-08-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "AZALTMA ADAYI"
+        },
+        "1Y": {
+          "net_usd_m": -8526.556,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 1,
+          "cot_change_pp": -3.612,
+          "cot_start": "2025-11-18",
+          "cot_end": "2026-11-17",
+          "confirmation": "YÖN UYUMLU",
+          "action": "BEKLE · veri yetersiz"
+        }
+      },
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -17.423,
+        "1H": -107.037,
+        "1A": -1326.381,
+        "3A": -7159.366,
+        "1Y": -8526.556
+      },
+      "weekly_percentile": 42,
+      "stale": false,
+      "status": "AZALTMA ADAYI"
+    }
+  ]
+}

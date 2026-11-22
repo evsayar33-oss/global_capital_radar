@@ -1,0 +1,26 @@
+{
+  "2026-12-01/FORTREASNET69995": {
+    "id": "FORTREASNET69995",
+    "target": "2026-12-01",
+    "observed": "2026-09-01",
+    "estimate": 63813.0,
+    "baseline": 82634.0,
+    "issued": "2026-11-22T08:49:23.572451+00:00"
+  },
+  "2026-12-01/FORLTEQTYNET69995": {
+    "id": "FORLTEQTYNET69995",
+    "target": "2026-12-01",
+    "observed": "2026-09-01",
+    "estimate": 67116.0,
+    "baseline": 67116.0,
+    "issued": "2026-11-22T08:49:23.572451+00:00"
+  },
+  "2026-12-01/FORLTCORPNET69995": {
+    "id": "FORLTCORPNET69995",
+    "target": "2026-12-01",
+    "observed": "2026-09-01",
+    "estimate": 27747.0,
+    "baseline": 27747.0,
+    "issued": "2026-11-22T08:49:23.572451+00:00"
+  }
+}
