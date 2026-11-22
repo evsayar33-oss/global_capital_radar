@@ -1,7 +1,7 @@
 """Fiyattan bağımsız üç öncü yöntemin ileri zamanlı karşılaştırması."""
 import json
 import statistics
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from horizon_evaluation import evaluate
 
@@ -31,9 +31,11 @@ def record(rows):
             h["early_methods"] = methods
             h["experiment_version"]=VERSION
             chosen = selection.get(row["symbol"]+"/"+key,{})
-            if chosen.get("version")==VERSION and chosen.get("status")=="validated":
+            if chosen.get("version")==VERSION and chosen.get("status")=="validated" and chosen.get("method") in METHODS:
                 h["action"]=methods[chosen["method"]]
                 h["selected_method"]=chosen["method"]
+                h["method_selected_at"]=chosen.get("selected_at")
+                h["method_samples"]=chosen.get("samples")
             else:
                 h["selected_method"]="flow_position · doğrulama sürüyor"
 
@@ -84,8 +86,33 @@ def compare(reports, series, today):
             if lower>0 and sum(v>0 for v in values)>=7:
                 choice.update(status="validated",method=winner,holdout_mean_pp=statistics.mean(values),lower_bound_pp=lower)
         selection[identity]=choice
-    path=ROOT/"history"/"method_selection.json"
-    temp=path.with_suffix(".tmp")
-    temp.write_text(json.dumps(selection,ensure_ascii=False,indent=2))
-    temp.replace(path)
-    return selection
+    return persist_selection(selection, today)
+
+
+def persist_selection(selection, today):
+    """Eksik veri seçimi silmez. Yeni doğrulanmış seçim bir sonraki taramada kullanılır."""
+    path = ROOT/"history"/"method_selection.json"
+    previous = json.loads(path.read_text()) if path.exists() else {}
+    audit_path = ROOT/"history"/"method_changes.json"
+    audit = json.loads(audit_path.read_text()) if audit_path.exists() else []
+    now = datetime.now(timezone.utc).isoformat()
+    merged = dict(previous)
+    for identity, choice in selection.items():
+        old = previous.get(identity,{})
+        if old.get("version")==VERSION and choice["samples"] < old.get("samples",0):
+            continue
+        old_method = old.get("method") if old.get("status")=="validated" else None
+        new_method = choice.get("method") if choice.get("status")=="validated" else None
+        if old_method != new_method:
+            audit.append({"identity":identity,"previous_method":old_method,
+                          "method":new_method,"changed_at":now,"evaluation_date":str(today),
+                          "evidence":dict(choice),"effective":"next_scan"})
+        choice["selected_at"] = now if old_method != new_method else old.get("selected_at")
+        choice["evaluated_at"] = now
+        merged[identity] = choice
+    # Denetim günlüğü önce yazılır. Yarım kalan yazmada tekrar kayıt güvenlidir.
+    for target, content in ((audit_path,audit),(path,merged)):
+        temp = target.with_suffix(".tmp")
+        temp.write_text(json.dumps(content,ensure_ascii=False,indent=2))
+        temp.replace(target)
+    return merged

@@ -19,6 +19,7 @@ for asset in data["assets"]:
                  "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),"Toplam getiri %":h.get("total_return_pct"),"SGOV farkı (puan)":h.get("excess_sgov_pp"),"Göreli sıra":h.get("relative_rank"),"Fiyat gözlemi · kararı etkilemez":h.get("price_confirmation","TEYİTSİZ"),
                  "Akış":h.get("strength","Veri eksik"),"Geçmiş dönem":h.get("reference_count"),
                  "Yüzdelik":h.get("magnitude_percentile"),"Vadeli teyit":h.get("confirmation","TEYİTSİZ"),
+                 "Etkin yöntem":h.get("selected_method","flow_position"),"Yöntem örnek sayısı":h.get("method_samples"),
                  "Karar":"BEKLE · rapor eski" if expired else h.get("action","BEKLE"),"Akış tarihi":asset.get("flow_asof"),"Vadeli tarih":h.get("cot_end")})
 st.dataframe(rows,hide_index=True,width="stretch")
 st.caption("Yatay, ölçülen para hareketinin küçük olduğunu gösterir. Fiyat oynaklığı veya gelecek getiri tahmini vermez.")
