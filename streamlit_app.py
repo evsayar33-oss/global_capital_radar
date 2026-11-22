@@ -16,7 +16,7 @@ rows = []
 for asset in data["assets"]:
     h = asset.get("horizons",{}).get(key,{})
     rows.append({"Varlık":asset["asset"],"Fon":asset["symbol"],"Net milyon USD":h.get("net_usd_m"),
-                 "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),"Toplam getiri %":h.get("total_return_pct"),"SGOV farkı (puan)":h.get("excess_sgov_pp"),"Göreli sıra":h.get("relative_rank"),"Fiyat teyidi":h.get("price_confirmation","TEYİTSİZ"),
+                 "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),"Toplam getiri %":h.get("total_return_pct"),"SGOV farkı (puan)":h.get("excess_sgov_pp"),"Göreli sıra":h.get("relative_rank"),"Fiyat gözlemi · kararı etkilemez":h.get("price_confirmation","TEYİTSİZ"),
                  "Akış":h.get("strength","Veri eksik"),"Geçmiş dönem":h.get("reference_count"),
                  "Yüzdelik":h.get("magnitude_percentile"),"Vadeli teyit":h.get("confirmation","TEYİTSİZ"),
                  "Karar":"BEKLE · rapor eski" if expired else h.get("action","BEKLE"),"Akış tarihi":asset.get("flow_asof"),"Vadeli tarih":h.get("cot_end")})

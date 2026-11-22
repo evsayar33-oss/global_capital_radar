@@ -38,7 +38,7 @@ def enrich(rows, today):
     if not common:
         for row in rows:
             for h in row.get("horizons",{}).values():
-                h.update(price_confirmation="TEYİTSİZ · SGOV fiyatı eksik",action="BEKLE · fiyat verisi yetersiz")
+                h.update(price_confirmation="Fiyat gözlemi eksik")
         return errors
     end = common[-1]
     for row in rows:
@@ -53,14 +53,10 @@ def enrich(rows, today):
             h["excess_sgov_pp"]=None if value is None or cash is None else value-cash
             if value is None or cash is None or (today-end).days>5:
                 h["price_confirmation"]="TEYİTSİZ · fiyat verisi eksik/eski"
-                h["action"]="BEKLE · fiyat verisi yetersiz"
                 continue
             excess=value-cash
             flow=h.get("net_usd_m")
             h["price_confirmation"]="YÖN UYUMLU" if flow is not None and flow*excess>0 else "TEYİTSİZ · fiyat yönü desteklemiyor"
-            h["original_action"]=h.get("action","BEKLE")
-            if h.get("action") in ("ALIM ADAYI","AZALTMA ADAYI") and h["price_confirmation"] != "YÖN UYUMLU":
-                h["action"]="BEKLE · fiyat teyidi bekleniyor"
             h["models"]={"price_only":"ALIM ADAYI" if excess>0 else "AZALTMA ADAYI",
                          "price_flow":"BEKLE"}
             if h.get("flow_aum_pct") is not None and flow*excess>0:

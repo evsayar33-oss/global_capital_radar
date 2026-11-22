@@ -15,7 +15,7 @@ def message(data):
             h = asset.get("horizons",{}).get(key,{})
             value = h.get("net_usd_m")
             net = "—" if value is None else f"{value:+,.0f}"
-            lines.append(f"{asset['symbol']} {net} · {h.get('strength','Veri eksik')} · {h.get('confirmation','TEYİTSİZ')} · {h.get('action','BEKLE')} · Fiyat: {h.get('price_confirmation','TEYİTSİZ')}")
+            lines.append(f"{asset['symbol']} {net} · {h.get('strength','Veri eksik')} · {h.get('confirmation','TEYİTSİZ')} · {h.get('action','BEKLE')}")
     return "\n".join(lines)
 
 
