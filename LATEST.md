@@ -1,68 +1,58 @@
-# Sermaye radarı · 2026-11-22
+# Sermaye radarı · 2026-11-23
 
 ## Gözlenen yabancı net alımları
 
 Milyon USD. Her satırın tarihi işlem ayını gösterir.
 
-- ABD Hazine kâğıtları · 2026-09-01 · +82,634
-- ABD hisseleri · 2026-09-01 · +67,116
-- ABD uzun vadeli şirket ve belediye borcu · 2026-09-01 · +27,747
 
 ## Gelecek ay için araştırma tahmini
 
 Üç aylık medyan, milyon USD. İlk tahmin sabittir.
 
-- 2026-12-01 · FORTREASNET69995 · +63,813
-- 2026-12-01 · FORLTEQTYNET69995 · +67,116
-- 2026-12-01 · FORLTCORPNET69995 · +27,747
 Henüz sonuçlanmış ileri test yok.
 
 ## Makro koşullar
 
-- Risk iştahı (1A) · zayıflıyor · {'BAMLH0A0HYM2': 23.0, 'VIXCLS': 10.0, 'NFCI': 0.006}
-- ABD kredi erişimi (3A) · karışık veya yatay · {'TOTLL': 2.1627, 'DRTSCILM': 1.7}
-- Dolar gücü (1A) · artıyor · {'DTWEXBGS': 0.9939, 'DEXJPUS': -0.9817, 'DEXUSEU': -1.4469}
+- Risk iştahı (1A) · veri eksik · {}
+- ABD kredi erişimi (3A) · veri eksik · {}
+- Dolar gücü (1A) · veri eksik · {}
 
 ## Gösterge değişimleri
 
 |Gösterge|Dönem|Son değer|Fark birimi|1G|1H|1A|3A|1Y|
 |---|---|---:|---|---:|---:|---:|---:|---:|
-|ABD Hazine kâğıtları|2026-09-01|82634|milyon USD|—|—|18821.0|107844.0|79533.0|
-|ABD hisseleri|2026-09-01|67116|milyon USD|—|—|-82814.0|-115537.0|-61574.0|
-|ABD uzun vadeli şirket ve belediye borcu|2026-09-01|27747|milyon USD|—|—|-22066.0|-11774.0|-10733.0|
-|Geniş dolar endeksi|2026-11-13|122.65|%|0.0873|0.6318|0.9939|2.9077|1.5548|
-|JPY/USD (bir yenin dolar değeri)|2026-11-13|0.00625274|%|-0.2063|-1.063|-0.9817|-0.3627|-3.4578|
-|EUR/USD|2026-11-13|1.1034|%|-0.199|-1.0758|-1.4469|-4.3101|-5.2794|
-|ABD M2|2026-09-01|23413.9|%|—|—|0.485|1.4568|5.7099|
-|Banka kredileri ABD|2026-11-11|14264.2|%|—|0.2687|0.6031|2.1627|8.0501|
-|Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi|2026-10-01|1.7|yüzde puan|—|—|—|1.7|-4.8|
-|Yüksek getirili ABD tahvili risk primi|2026-11-19|3.52|baz puan|5.0|32.0|23.0|79.0|35.0|
-|VIX|2026-11-19|28.44|puan|3.88|9.74|10.0|13.55|4.78|
-|Chicago Fed finansal koşullar|2026-11-13|-0.478|puan|—|-0.005|0.006|0.066|0.033|
-|Brent petrol|2026-11-17|92.94|%|0.0431|3.0834|-22.1151|0.5518|47.1501|
-|Henry Hub doğal gaz|2026-11-17|3.1|%|-3.125|3.3333|-3.7267|11.9134|-16.442|
-|ABD ithalat fiyat endeksi|2026-10-01|153.8|%|—|—|1.0512|2.6702|—|
-|ABD TÜFE|2026-10-01|337.476|%|—|—|0.3503|1.4011|—|
-|ABD çekirdek TÜFE|2026-10-01|339.9|%|—|—|0.2963|0.9237|—|
-|ABD çekirdek PCE|2026-09-01|130.902|%|—|—|0.3165|0.7179|3.1212|
-|ABD PCE|2026-09-01|132.257|%|—|—|0.4908|0.8779|3.6489|
-|ABD emtia üretici fiyat endeksi|2026-10-01|293.921|%|—|—|-0.1875|3.1892|12.7902|
-|Özel sektör saatlik ücret|2026-10-01|38|%|—|—|0.3698|0.9564|3.1208|
-|ABD 5 yıllık başabaş enflasyon|2026-11-20|2.18|baz puan|-4.0|-12.0|-21.0|-16.0|-16.0|
-|ABD 2 yıllık tahvil faizi|2026-11-19|4.76|baz puan|-4.0|-10.0|-1.0|57.0|118.0|
-|ABD 10 yıllık reel faiz|2026-11-19|2.88|baz puan|0.0|2.0|8.0|53.0|102.0|
-|Gerçekleşen efektif Fed faizi|2026-11-19|3.88|baz puan|0.0|0.0|0.0|25.0|0.0|
-|ABD mal ithalatı nominal değer|2026-09-01|346879|%|—|—|1.2853|12.1787|26.4311|
-|ABD mal ihracatı nominal değer|2026-09-01|210968|%|—|—|2.4863|1.795|13.1408|
-|ICI fon akışı · Domestic|2026-11-11|31505|milyon USD|—|19592|—|—|—|
-|ICI fon akışı · World|2026-11-11|5515|milyon USD|—|-6|—|—|—|
-|ICI fon akışı · Hybrid|2026-11-11|-4147|milyon USD|—|-1386|—|—|—|
-|ICI fon akışı · Bond|2026-11-11|1671|milyon USD|—|-682|—|—|—|
-|ICI fon akışı · Commodity|2026-11-11|-228|milyon USD|—|-358|—|—|—|
+|ABD Hazine kâğıtları|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD hisseleri|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD uzun vadeli şirket ve belediye borcu|Kaynak hatası|—|—|—|—|—|—|—|
+|Geniş dolar endeksi|Kaynak hatası|—|—|—|—|—|—|—|
+|JPY/USD (bir yenin dolar değeri)|Kaynak hatası|—|—|—|—|—|—|—|
+|EUR/USD|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD M2|Kaynak hatası|—|—|—|—|—|—|—|
+|Banka kredileri ABD|Kaynak hatası|—|—|—|—|—|—|—|
+|Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi|Kaynak hatası|—|—|—|—|—|—|—|
+|Yüksek getirili ABD tahvili risk primi|Kaynak hatası|—|—|—|—|—|—|—|
+|VIX|Kaynak hatası|—|—|—|—|—|—|—|
+|Chicago Fed finansal koşullar|Kaynak hatası|—|—|—|—|—|—|—|
+|Brent petrol|Kaynak hatası|—|—|—|—|—|—|—|
+|Henry Hub doğal gaz|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD ithalat fiyat endeksi|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD TÜFE|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD çekirdek TÜFE|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD çekirdek PCE|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD PCE|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD emtia üretici fiyat endeksi|Kaynak hatası|—|—|—|—|—|—|—|
+|Özel sektör saatlik ücret|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD 5 yıllık başabaş enflasyon|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD 2 yıllık tahvil faizi|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD 10 yıllık reel faiz|Kaynak hatası|—|—|—|—|—|—|—|
+|Gerçekleşen efektif Fed faizi|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD mal ithalatı nominal değer|Kaynak hatası|—|—|—|—|—|—|—|
+|ABD mal ihracatı nominal değer|Kaynak hatası|—|—|—|—|—|—|—|
+|ICI haftalık fon akışı|Kaynak hatası|—|—|—|—|—|—|—|
 
 ## Projeksiyonlar ve küresel para
 
-- IMF · {"error": "HTTP Error 429: Too Many Requests", "archive": "WEO 2026-10-13", "archived_forecast": {"2026": 4.7, "2027": 4.1}, "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"}
-- Fed SEP · {"2026": 4.1, "2027": 4.1, "2028": 3.9, "2029": 3.6}
-- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-20", "value": 4.040000915527344, "changes": {"1G": -3.4996, "1H": -3.4996, "1A": -3.4996, "3A": 20.5002, "1Y": 102.9999}, "stale": false}
+- IMF · {"error": "HTTP Error 403: Forbidden", "archive": "WEO 2026-10-13", "archived_forecast": {"2026": 4.7, "2027": 4.1}, "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"}
+- Fed SEP · {"error": "The read operation timed out"}
+- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-23", "value": 4.0449981689453125, "changes": {"1G": 0.4997, "1H": -2.0004, "1A": 0.4997, "3A": 18.4998, "1Y": 107.0}, "stale": false}
 - Dünya geniş para / GSYH (%) · {"freq": "Y", "change": "pp", "max_age": 1100, "period": "2024-01-01", "value": 135.663792466297, "changes": {"1Y": 0.2012}, "stale": false}
