@@ -47,6 +47,31 @@
         "estimated_creation_usd": 79986000.0,
         "creation_basis": "issuer net created shares times same-date rounded NAV",
         "first_seen_at": "2026-11-24T15:13:06.339045+00:00"
+      },
+      {
+        "status": "OBSERVED",
+        "symbol": "USO",
+        "source": "USCF",
+        "upstream_id": "USCF",
+        "source_date": "2026-11-23",
+        "nav_usd": 133.31,
+        "shares": 13123603.0,
+        "shares_unit": "shares",
+        "shares_precision": "exact_integer",
+        "reported_aum_usd": 1749570356.46,
+        "calculated_aum_usd": 1749507515.93,
+        "source_url": "https://www.uscfinvestments.com/uso",
+        "publication_intraday_verified": false,
+        "source_sha256": "405b2fddc3a28630517472809837c18b18abf070e1a7d18f91665c5e55bd083c",
+        "transport": "RENDERED_HTTP_200",
+        "net_created_shares": 600000,
+        "creation_source_sha256": "bd830ff00f8cd7fb0503a693adac7155ec432abca19b34f3731e4afd521c1dcf",
+        "creation_status": "OBSERVED",
+        "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
+        "creation_transport": "RENDERED_HTTP_200",
+        "estimated_creation_usd": 79986000.0,
+        "creation_basis": "issuer net created shares times same-date rounded NAV",
+        "first_seen_at": "2026-11-24T16:20:25.593849+00:00"
       }
     ]
   }

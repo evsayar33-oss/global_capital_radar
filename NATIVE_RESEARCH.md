@@ -1,6 +1,6 @@
 # ETFIQ independent research / native evidence
 
-2026-11-24T15:11:18.525046+00:00
+2026-11-24T16:19:09.289042+00:00
 
 Separate ETFIQ source history; no production override, no mixing with ETFdb. Current vintage replay is exploratory.
 
@@ -29,7 +29,7 @@ Separate ETFIQ source history; no production override, no mixing with ETFdb. Cur
 |issuer_CPER|OBSERVED|
 |issuer_QQQ|OBSERVED|
 |COMEX_copper|UNAVAILABLE|
-|ALFRED|UNAVAILABLE|
+|ALFRED|OBSERVED_DATE_VINTAGE|
 |WTI_CLOSE_PAIR|OBSERVED_DELAYED_CLOSE_PAIR|
 |TBILL_AUCTION|OBSERVED_AUCTION_CONTEXT|
 |TREASURY_REAL_YIELD|OBSERVED_CURRENT_PUBLICATION|

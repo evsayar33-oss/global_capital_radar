@@ -1,0 +1,11 @@
+{
+  "status": "NO_CURRENT_COT_SERIES",
+  "code": "041741",
+  "contract_name": "13-week U.S. Treasury bills",
+  "source": "CFTC Legacy futures only",
+  "latest_report_date": null,
+  "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
+  "production_proxy_allowed": false,
+  "first_seen_at": "2026-11-24T16:19:09.289042+00:00",
+  "source_digest": "c0e061ee75cd5ada54ba4dc8689b357d1b596a596b42a0fe02c3ddcfd169ddf8"
+}

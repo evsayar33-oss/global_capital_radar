@@ -1,0 +1,7 @@
+{
+  "status": "UNAVAILABLE",
+  "source": "SHFE",
+  "error": "HTTPError: HTTP Error 404: Not Found; ValueError: SHFE report title/date mismatch; URLError: <urlopen error [Errno 101] Network is unreachable>; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>",
+  "first_seen_at": "2026-11-24T16:19:09.289042+00:00",
+  "source_digest": "2147244e08307e237c71a95ec8708986276c19bb0b3c73f7e7ff89b1c5a1e814"
+}
