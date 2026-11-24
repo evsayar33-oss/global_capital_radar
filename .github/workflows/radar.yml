@@ -1,6 +1,17 @@
 name: Küresel sermaye radarı
 on:
   workflow_dispatch:
+  push:
+    branches: ['main']
+    paths:
+      - 'adaptive_flow.py'
+      - 'adaptive_evaluation.py'
+      - 'secondary_sources.py'
+      - 'rotation.py'
+      - 'radar.py'
+      - 'price_context.py'
+      - 'evaluate_rotation.py'
+      - '.github/workflows/radar.yml'
   pull_request:
     paths:
       - '**.py'

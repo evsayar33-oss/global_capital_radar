@@ -139,6 +139,13 @@ def evaluate_tracks(tracks, *, exploratory=False):
                     entry["status"]=("CONFIRMATION_PENDING" if name=="holdout" else "RESEARCH_ACCEPT") if passed else "REJECTED"
                     if not passed:
                         break
+        if entry["status"]=="RESEARCH_ACCEPT" and len(rows)>=80:
+            recent=rows[-10:]
+            pairs=paired(recent,entry["candidate"],.30)
+            entry["drift_check"]=dict(paired=len(pairs),advantage=summary([a-b for a,b in pairs]),
+                                       absolute=summary([a for a,b in pairs]))
+            if len(pairs)!=10 or mean(a-b for a,b in pairs)<=0 or mean(a for a,b in pairs)<=0:
+                entry["status"]="RESEARCH_REVOKED"
         output[identity]=entry
     return output
 

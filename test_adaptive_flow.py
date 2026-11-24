@@ -57,3 +57,15 @@ class AdaptiveFlowTests(unittest.TestCase):
         first=collect([(start,report)],{"GLD":bars,"SGOV":bars},start+timedelta(days=40))
         self.assertEqual(len(first["GLD/1H"]),1)
         self.assertEqual(collect([(start,report)],{},start+timedelta(days=41),existing=first),first)
+
+    def test_shadow_selection_does_not_change_production(self):
+        from adaptive_flow import record
+        method="M01_raw_percentile"
+        h=dict(action=WAIT,cot_change_pp=1,early_methods={"flow_position":WAIT},
+               adaptive_features=dict(raw=10,raw_rank=95,source_end="2026-11-20"))
+        r=dict(symbol="GLD",horizons={"1H":h})
+        record([r],{"GLD/1H":{"status":"RESEARCH_ACCEPT","candidate":method}})
+        self.assertEqual(h["adaptive_shadow_action"],BUY)
+        self.assertEqual(h["action"],WAIT)
+        record([r],{"GLD/1H":{"status":"RESEARCH_REVOKED","candidate":method}})
+        self.assertEqual(h["adaptive_shadow_method"],BASE)

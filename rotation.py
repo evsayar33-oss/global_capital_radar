@@ -251,7 +251,9 @@ def main():
     record(rows)
     from adaptive_flow import record as record_adaptive
     from adaptive_evaluation import atomic
-    replay = record_adaptive(rows)
+    previous_path=ROOT/"history/adaptive_results.json"
+    previous=json.loads(previous_path.read_text()) if previous_path.exists() else {}
+    replay = record_adaptive(rows,previous.get("prospective",{}))
     # Keep last valid replay if source is temporarily unavailable. Merge by
     # symbol only when a newly observed source is usable; never pretend stale
     # replay is a fresh forward observation.

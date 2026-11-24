@@ -1,7 +1,7 @@
 """Public secondary source capture; never fabricates primary ETF history."""
 import hashlib
 import json
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from math import isfinite
@@ -99,7 +99,9 @@ def capture_etfiq(root,today,rows,read):
         path=folder/(observed["source_date"]+"-"+digest[:16]+".json")
         if not path.exists():
             temp=path.with_suffix(".tmp")
-            temp.write_text(data)
+            captured=dict(observed,captured_at_utc=datetime.now(timezone.utc).isoformat(),
+                          content_sha256=digest)
+            temp.write_text(json.dumps(captured,ensure_ascii=False,sort_keys=True,allow_nan=False))
             temp.replace(path)
         matches=0
         for r in rows:

@@ -202,9 +202,10 @@ def usable(row):
     return not any(row.get(k) for k in ("error","stale","cached_source"))
 
 
-def record(rows):
+def record(rows, previous=None):
     """Freeze all prospective features and actions. No production promotion."""
     cross = cross_scores(rows)
+    previous = previous or {}
     replay = []
     for r in rows:
         for key,h in r.get("horizons",{}).items():
@@ -224,6 +225,12 @@ def record(rows):
             f["cross_rank"] = cross.get((r["symbol"],key))
             h["adaptive_version"] = VERSION
             h["adaptive_methods"] = methods
+            selected = previous.get(r["symbol"]+"/"+key,{})
+            candidate = selected.get("candidate")
+            shadow = candidate if (selected.get("status")=="RESEARCH_ACCEPT" and candidate in ELIGIBLE
+                                   and methods.get(candidate) in (BUY,REDUCE,WAIT)) else BASE
+            h["adaptive_shadow_method"]=shadow
+            h["adaptive_shadow_action"]=methods.get(shadow)
             for x in history:
                 replay.append(dict(symbol=r["symbol"],horizon=key,
                                    assumed_signal_day=str(date.fromisoformat(x["source_end"])+timedelta(days=7)),
