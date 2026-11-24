@@ -4,6 +4,8 @@ import hashlib
 import io
 import json
 import math
+import os
+from keyed_sources import EIA, BEA, eia_series, bea_series, bls_authenticated
 import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
@@ -18,7 +20,7 @@ TREASURY = {"DGS2": ("daily_treasury_yield_curve", "2 YR"),
 NYFED = "https://markets.newyorkfed.org/api/rates/unsecured/effr/search.json"
 BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 TREASURY_URL = "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/"
-SUPPORTED = tuple(BLS) + tuple(TREASURY) + ("DFF",)
+SUPPORTED = tuple(BLS) + tuple(TREASURY) + ("DFF",) + tuple(EIA) + tuple(BEA)
 
 
 def finite(value):
@@ -44,8 +46,21 @@ def meta(source, identity, urls, bodies, basis):
 def bls_series(key, today, reader):
     identity = BLS[key]
     url = BLS_URL + identity
-    raw = reader(url)
-    data = json.loads(raw)
+    authenticated = False
+    if os.getenv("BLS_API_KEY"):
+        try:
+            data, body_hash = bls_authenticated(identity,today)
+            if data.get("status") != "REQUEST_SUCCEEDED":
+                raise ValueError("BLS registered request rejected")
+            authenticated = True
+        except Exception:
+            raw = reader(url)
+            data = json.loads(raw)
+            body_hash = hashlib.sha256(raw.encode()).hexdigest()
+    else:
+        raw = reader(url)
+        data = json.loads(raw)
+        body_hash = hashlib.sha256(raw.encode()).hexdigest()
     series = data.get("Results", {}).get("series", [])
     if data.get("status") != "REQUEST_SUCCEEDED" or len(series) != 1 or series[0].get("seriesID") != identity:
         raise ValueError("BLS status or series identity mismatch")
@@ -60,8 +75,11 @@ def bls_series(key, today, reader):
         if row["value"] in ("", ".", "-"):
             continue
         add(rows, d, row["value"], today)
-    return rows, meta("US Bureau of Labor Statistics", identity, [url], [raw],
-                      "SOURCE_NATIVE_CURRENT_MONTHLY")
+    return rows, dict(source="US Bureau of Labor Statistics",source_series=identity,
+                      source_urls=[BLS_URL if authenticated else url],source_sha256=[body_hash],
+                      observation_basis="SOURCE_NATIVE_CURRENT_MONTHLY",
+                      historical_vintage_verified=False,publication_intraday_verified=False,
+                      authenticated_request=authenticated)
 
 
 def treasury_series(key, today, reader):
@@ -107,6 +125,10 @@ def direct_series(key, today, reader):
         return treasury_series(key, today, reader)
     if key == "DFF":
         return effr_series(today, reader)
+    if key in EIA:
+        return eia_series(key,today)
+    if key in BEA:
+        return bea_series(key,today)
     raise ValueError("no verified source mapping")
 
 
@@ -124,7 +146,7 @@ def main():
     from radar import read
     from datetime import timezone
     today = datetime.now(timezone.utc).date()
-    ages = {**{k: 75 for k in BLS}, **{k: 10 for k in TREASURY}, "DFF": 10}
+    ages = {**{k: 75 for k in BLS}, **{k: 10 for k in TREASURY}, "DFF": 10, **{k:15 for k in EIA}, **{k:90 for k in BEA}}
     def probe(key):
         try:
             rows, evidence = fresh_series(key, today, read, ages[key])
