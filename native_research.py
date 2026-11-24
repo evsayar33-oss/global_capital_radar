@@ -15,6 +15,7 @@ from radar import read
 from rotation import ASSETS, CODES, cot_with_source
 from secondary_sources import cot_api, parse_etfiq, ETFIQ_URL, number
 from native_adapters import okx_crypto, shfe_copper, tbf3
+from source_recovery import shfe_cn, capture_issuer, estimate_adjacent, tff_tbf3
 
 ROOT=Path(__file__).resolve().parent
 NY=ZoneInfo("America/New_York")
@@ -316,10 +317,31 @@ def main():
         futures={name:pool.submit(safe,fn) for name,fn in (
             ("BTC",lambda:okx_crypto("BTC-USDT-SWAP",datetime.now(timezone.utc),read)),
             ("ETH",lambda:okx_crypto("ETH-USDT-SWAP",datetime.now(timezone.utc),read)),
-            ("SHFE_copper_warrant",lambda:shfe_copper(datetime.now(timezone.utc),read)),
+            ("SHFE_copper_warrant",lambda:shfe_cn(datetime.now(timezone.utc),read)),
+            ("TBF3_TFF",lambda:tff_tbf3(today,read)),
+            ("issuer_USO",lambda:capture_issuer("USO",today,read)),
+            ("issuer_CPER",lambda:capture_issuer("CPER",today,read)),
+            ("issuer_QQQ",lambda:capture_issuer("QQQ",today,read)),
             ("COMEX_copper",lambda:copper(datetime.now(timezone.utc))),
             ("ALFRED",lambda:alfred_vintage("DFII10",today-timedelta(days=1),os.getenv("FRED_API_KEY"))))}
         native={k:f.result() for k,f in futures.items()}
+    for symbol in ("USO","CPER","QQQ"):
+        key="issuer_"+symbol
+        r=native[key]
+        if r.get("status")!="OBSERVED":continue
+        path=folder/"issuer_snapshots"/(symbol+".json")
+        path.parent.mkdir(parents=True,exist_ok=True)
+        hist=json.loads(path.read_text()) if path.exists() else {}
+        d=r["source_date"]
+        before=sorted(k for k in hist if k<d)
+        if before:
+            r["adjacent_creation_estimate_usd"]=estimate_adjacent(hist[before[-1]],r,calendar)
+        first=hist.setdefault(d,dict(r,first_seen_at=now.isoformat()))
+        if first.get("source_sha256")!=r.get("source_sha256") and any(first.get(k)!=r.get(k) for k in ("shares","nav_usd","reported_aum_usd","net_created_shares")):
+            revisions=first.setdefault("revisions",[])
+            if not revisions or revisions[-1].get("source_sha256")!=r.get("source_sha256"):
+                revisions.append(dict(r,first_seen_at=now.isoformat()))
+        atomic(path,hist)
     native["TBF3"]=tbf_data
     native["WTI"]=dict(status="UNAVAILABLE_CURRENT_OFFICIAL",source_url="https://www.eia.gov/opendata/browser/petroleum/pri/fut",
                        historical_end="2024-04-05",reason="no verified current licensed settlement curve")
@@ -328,7 +350,7 @@ def main():
     # Retain current detailed input, and bounded immutable daily summaries.
     atomic(folder/"native_latest.json",native)
     for key,value in native.items():
-        provider={"BTC":"okx","ETH":"okx","SHFE_copper_warrant":"shfe","COMEX_copper":"comex","TBF3":"cftc","ALFRED":"alfred","WTI":"wti"}[key]
+        provider={"BTC":"okx","ETH":"okx","SHFE_copper_warrant":"shfe","COMEX_copper":"comex","TBF3":"cftc","ALFRED":"alfred","WTI":"wti","TBF3_TFF":"cftc","issuer_USO":"uscf","issuer_CPER":"uscf","issuer_QQQ":"invesco"}[key]
         data={k:v for k,v in value.items() if k not in ("history","observations")}
         archive(folder,"native/"+provider+"/"+key,now,dict(data,first_seen_at=now.isoformat(),source_digest=digest(data)))
     compact={k:{a:b for a,b in v.items() if a not in ("history","observations")} for k,v in native.items()}
