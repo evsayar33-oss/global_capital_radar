@@ -1,0 +1,26 @@
+name: Alternative capital-flow continuity smoke
+on:
+  pull_request:
+    paths:
+      - 'flow_continuity.py'
+      - 'test_flow_continuity.py'
+      - 'rotation.py'
+      - 'native_research.py'
+      - 'secondary_sources.py'
+      - '.github/workflows/flow_continuity_smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_continuity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest -v test_flow_continuity test_notifications_experiments
+      - run: python flow_continuity.py

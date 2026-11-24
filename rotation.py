@@ -245,6 +245,9 @@ def main():
                 row["horizons"][key]=h
     from secondary_sources import capture_etfiq
     secondary_flow = capture_etfiq(ROOT,today,rows,read)
+    from flow_continuity import live as continuity_live
+    from zoneinfo import ZoneInfo
+    continuity = continuity_live(ROOT,rows,now.astimezone(ZoneInfo("America/New_York")).date(),read,now)
     from price_context import enrich
     price_errors = enrich(rows,today)
     from experiments import record
@@ -262,7 +265,7 @@ def main():
         old_replay = json.loads(replay_path.read_text()) if replay_path.exists() else []
         updated = {r["symbol"] for r in replay}
         atomic(replay_path,[r for r in old_replay if r["symbol"] not in updated]+replay)
-    payload = dict(price_errors=price_errors, schema_version=4, seen_at=now.isoformat(), cot_error=error, cot_source=cot_source, secondary_flow=secondary_flow, assets=rows)
+    payload = dict(price_errors=price_errors, schema_version=5, seen_at=now.isoformat(), cot_error=error, cot_source=cot_source, secondary_flow=secondary_flow, continuity=continuity, assets=rows)
     folder = ROOT/"history"/"rotation"
     folder.mkdir(exist_ok=True,parents=True)
     # Her çalıştırmanın bilgi kümesi korunur. Tüketiciler latest.json okur.
@@ -292,6 +295,13 @@ def main():
                       h.get("strength","Veri eksik"),h.get("confirmation","TEYİTSİZ"),h.get("action","BEKLE")]
             lines.append("|"+"|".join(str(v) if v is not None else "—" for v in fields)+"|")
         lines.append("")
+    lines += ["", "## Alternatif kaynak sürekliliği", "", "Birincil kaynak veya strateji kararı yerine geçmez. ETFIQ ve USCF geçmişleri birleştirilmez.", "",
+              "Durum: "+continuity["status"], "",
+              "|Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|", "|---|---|---|---:|---:|---|"]
+    for row in rows:
+        c=continuity.get("assets",{}).get(row["symbol"],{}).get("selected") or {}
+        lines.append("|"+"|".join(str(x) for x in (row["symbol"],c.get("provider","—"),c.get("flow_asof","—"),
+                     c.get("daily_flow_usd","—"),c.get("daily_count","—"),c.get("action","—")))+"|")
     (ROOT/"ROTATION.md").write_text("\n".join(lines)+"\n")
     return int(any(r.get("error") or r.get("stale") or r.get("cached_source") or (r["cot_code"] and r.get("cot_change_pp") is None) for r in rows))
 

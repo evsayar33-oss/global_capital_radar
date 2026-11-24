@@ -23,3 +23,20 @@ for asset in data["assets"]:
                  "Karar":"BEKLE · rapor eski" if expired else h.get("action","BEKLE"),"Akış tarihi":asset.get("flow_asof"),"Vadeli tarih":h.get("cot_end")})
 st.dataframe(rows,hide_index=True,width="stretch")
 st.caption("Yatay, ölçülen para hareketinin küçük olduğunu gösterir. Fiyat oynaklığı veya gelecek getiri tahmini vermez.")
+
+continuity = data.get("continuity",{})
+if continuity:
+    st.subheader("Alternatif veri kaynakları · araştırma")
+    st.caption("Birincil kaynak ayrı kalır. Alternatif veri üretim kararı veya onaylanmış strateji değildir.")
+    st.write("Durum: "+continuity.get("status","UNAVAILABLE"))
+    alternative=[]
+    for asset in data["assets"]:
+        r=continuity.get("assets",{}).get(asset["symbol"],{})
+        c=r.get("selected") or {};h=c.get("horizons",{}).get(key,{})
+        alternative.append({"Fon":asset["symbol"],"Kaynak":c.get("provider"),
+                            "Durum":r.get("status","UNAVAILABLE"),"Akış tarihi":c.get("flow_asof"),
+                            "Günlük net USD":c.get("daily_flow_usd"),"Ardışık gün":c.get("daily_count"),
+                            "Vade net milyon USD":h.get("net_usd_m"),"Geçmiş dönem":h.get("reference_count"),
+                            "Akış gücü":h.get("strength"),"Yüzdelik":h.get("magnitude_percentile"),
+                            "Karar":"BEKLE · rapor eski" if expired else c.get("action","BEKLE · veri yok")})
+    st.dataframe(alternative,hide_index=True,width="stretch")
