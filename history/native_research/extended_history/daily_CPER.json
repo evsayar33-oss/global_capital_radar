@@ -1,0 +1,222 @@
+{
+  "2026-10-12": {
+    "symbol": "CPER",
+    "source_date": "2026-10-12",
+    "prior_nav_date": "2026-10-09",
+    "flow_usd": -2010000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-13": {
+    "symbol": "CPER",
+    "source_date": "2026-10-13",
+    "prior_nav_date": "2026-10-12",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-14": {
+    "symbol": "CPER",
+    "source_date": "2026-10-14",
+    "prior_nav_date": "2026-10-13",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-15": {
+    "symbol": "CPER",
+    "source_date": "2026-10-15",
+    "prior_nav_date": "2026-10-14",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-16": {
+    "symbol": "CPER",
+    "source_date": "2026-10-16",
+    "prior_nav_date": "2026-10-15",
+    "flow_usd": -15768000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-19": {
+    "symbol": "CPER",
+    "source_date": "2026-10-19",
+    "prior_nav_date": "2026-10-16",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-20": {
+    "symbol": "CPER",
+    "source_date": "2026-10-20",
+    "prior_nav_date": "2026-10-19",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-21": {
+    "symbol": "CPER",
+    "source_date": "2026-10-21",
+    "prior_nav_date": "2026-10-20",
+    "flow_usd": -5956500,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-22": {
+    "symbol": "CPER",
+    "source_date": "2026-10-22",
+    "prior_nav_date": "2026-10-21",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-23": {
+    "symbol": "CPER",
+    "source_date": "2026-10-23",
+    "prior_nav_date": "2026-10-22",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-26": {
+    "symbol": "CPER",
+    "source_date": "2026-10-26",
+    "prior_nav_date": "2026-10-23",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-27": {
+    "symbol": "CPER",
+    "source_date": "2026-10-27",
+    "prior_nav_date": "2026-10-26",
+    "flow_usd": -3936000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-28": {
+    "symbol": "CPER",
+    "source_date": "2026-10-28",
+    "prior_nav_date": "2026-10-27",
+    "flow_usd": -6003000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-29": {
+    "symbol": "CPER",
+    "source_date": "2026-10-29",
+    "prior_nav_date": "2026-10-28",
+    "flow_usd": -4014000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-30": {
+    "symbol": "CPER",
+    "source_date": "2026-10-30",
+    "prior_nav_date": "2026-10-29",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-02": {
+    "symbol": "CPER",
+    "source_date": "2026-11-02",
+    "prior_nav_date": "2026-10-30",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-03": {
+    "symbol": "CPER",
+    "source_date": "2026-11-03",
+    "prior_nav_date": "2026-11-02",
+    "flow_usd": -3953000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-04": {
+    "symbol": "CPER",
+    "source_date": "2026-11-04",
+    "prior_nav_date": "2026-11-03",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-05": {
+    "symbol": "CPER",
+    "source_date": "2026-11-05",
+    "prior_nav_date": "2026-11-04",
+    "flow_usd": -1935000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-06": {
+    "symbol": "CPER",
+    "source_date": "2026-11-06",
+    "prior_nav_date": "2026-11-05",
+    "flow_usd": 0,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-09": {
+    "symbol": "CPER",
+    "source_date": "2026-11-09",
+    "prior_nav_date": "2026-11-06",
+    "flow_usd": -9387500,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-10": {
+    "symbol": "CPER",
+    "source_date": "2026-11-10",
+    "prior_nav_date": "2026-11-09",
+    "flow_usd": -9555000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/cper.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  }
+}

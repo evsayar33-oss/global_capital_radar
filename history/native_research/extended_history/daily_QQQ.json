@@ -1,0 +1,302 @@
+{
+  "2026-10-06": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-06",
+    "prior_nav_date": "2026-10-02",
+    "flow_usd": -3484604319,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-07": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-07",
+    "prior_nav_date": "2026-10-06",
+    "flow_usd": -531649200,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-08": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-08",
+    "prior_nav_date": "2026-10-07",
+    "flow_usd": 833755938,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-09": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-09",
+    "prior_nav_date": "2026-10-08",
+    "flow_usd": 2802776618,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-12": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-12",
+    "prior_nav_date": "2026-10-09",
+    "flow_usd": -1164408532,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-13": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-13",
+    "prior_nav_date": "2026-10-12",
+    "flow_usd": 6377509211,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-14": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-14",
+    "prior_nav_date": "2026-10-13",
+    "flow_usd": -4275630120,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-19": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-19",
+    "prior_nav_date": "2026-10-14",
+    "flow_usd": 2732032909,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-20": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-20",
+    "prior_nav_date": "2026-10-19",
+    "flow_usd": -2118901769,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-21": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-21",
+    "prior_nav_date": "2026-10-20",
+    "flow_usd": -573854191,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-22": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-22",
+    "prior_nav_date": "2026-10-21",
+    "flow_usd": -181348830,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-23": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-23",
+    "prior_nav_date": "2026-10-22",
+    "flow_usd": 669161543,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-26": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-26",
+    "prior_nav_date": "2026-10-23",
+    "flow_usd": -4331746596,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-27": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-27",
+    "prior_nav_date": "2026-10-26",
+    "flow_usd": 142407057,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-29": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-29",
+    "prior_nav_date": "2026-10-27",
+    "flow_usd": 1983386122,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-10-30": {
+    "symbol": "QQQ",
+    "source_date": "2026-10-30",
+    "prior_nav_date": "2026-10-29",
+    "flow_usd": -464866316,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-03": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-03",
+    "prior_nav_date": "2026-10-30",
+    "flow_usd": 4177436991,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-04": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-04",
+    "prior_nav_date": "2026-11-03",
+    "flow_usd": 411297221,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-05": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-05",
+    "prior_nav_date": "2026-11-04",
+    "flow_usd": -2248156297,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-06": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-06",
+    "prior_nav_date": "2026-11-05",
+    "flow_usd": 2785439956,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-09": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-09",
+    "prior_nav_date": "2026-11-06",
+    "flow_usd": 2363585530,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-10": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-10",
+    "prior_nav_date": "2026-11-09",
+    "flow_usd": 3054877880,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-11": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-11",
+    "prior_nav_date": "2026-11-10",
+    "flow_usd": -742312013,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-12": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-12",
+    "prior_nav_date": "2026-11-11",
+    "flow_usd": 3589217247,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-13": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-13",
+    "prior_nav_date": "2026-11-12",
+    "flow_usd": 5161619355,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-16": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-16",
+    "prior_nav_date": "2026-11-13",
+    "flow_usd": 237947132,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-17": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-17",
+    "prior_nav_date": "2026-11-16",
+    "flow_usd": -1654227198,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-18": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-18",
+    "prior_nav_date": "2026-11-17",
+    "flow_usd": -1149635240,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-19": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-19",
+    "prior_nav_date": "2026-11-18",
+    "flow_usd": -1286458664,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-20": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-20",
+    "prior_nav_date": "2026-11-19",
+    "flow_usd": 612981544,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  }
+}
