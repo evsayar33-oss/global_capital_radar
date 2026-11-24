@@ -1,0 +1,102 @@
+{
+  "BTC": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "BTC-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 2.21870316848e-05,
+    "interval_hours": 8.0,
+    "annualized_pct": 2.4294799694856,
+    "basis_pct": -0.054043537473791314,
+    "quoted_spread_bps": 0.016639890309600936,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T13:29:42.481000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T13:29:42.871000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "ETH": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "ETH-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 8.892955017e-07,
+    "interval_hours": 8.0,
+    "annualized_pct": 0.09737785743615,
+    "basis_pct": -0.052548917728478806,
+    "quoted_spread_bps": 0.05907843548481776,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T13:29:42.945000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T13:29:43.366000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "SHFE_copper_warrant": {
+    "status": "UNAVAILABLE",
+    "source": "SHFE",
+    "upstream_id": "SHFE",
+    "source_url": "https://www.shfe.com.cn/data/tradedata/future/stockdata/",
+    "error": "2026-11-24: ValueError: SHFE Chinese report date/title missing; 2026-11-23: ValueError: SHFE Chinese report date/title missing; 2026-11-20: ValueError: SHFE Chinese report date/title missing"
+  },
+  "TBF3_TFF": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "source": "CFTC TFF",
+    "upstream_id": "CFTC",
+    "reports": {
+      "futures_only": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      },
+      "combined": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/yw9f-hn96.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      }
+    },
+    "proxy_used": false,
+    "caveat": "report availability only; TFF categories are not Legacy net noncommercial positions"
+  },
+  "issuer_USO": {
+    "status": "UNAVAILABLE",
+    "error": "ValueError: issuer dated Key Facts absent"
+  },
+  "issuer_CPER": {
+    "status": "UNAVAILABLE",
+    "error": "ValueError: issuer dated Key Facts absent"
+  },
+  "issuer_QQQ": {
+    "status": "UNAVAILABLE",
+    "error": "ValueError: QQQ dated NAV/shares not unambiguous"
+  },
+  "COMEX_copper": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "ALFRED": {
+    "status": "API_KEY_REQUIRED",
+    "series": "DFII10",
+    "vintage": "2026-11-23"
+  },
+  "TBF3": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "code": "041741",
+    "contract_name": "13-week U.S. Treasury bills",
+    "source": "CFTC Legacy futures only",
+    "latest_report_date": null,
+    "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
+    "production_proxy_allowed": false
+  },
+  "WTI": {
+    "status": "UNAVAILABLE_CURRENT_OFFICIAL",
+    "source_url": "https://www.eia.gov/opendata/browser/petroleum/pri/fut",
+    "historical_end": "2024-04-05",
+    "reason": "no verified current licensed settlement curve"
+  }
+}

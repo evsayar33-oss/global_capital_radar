@@ -1,0 +1,6 @@
+{
+  "status": "UNAVAILABLE",
+  "error": "ValueError: QQQ dated NAV/shares not unambiguous",
+  "first_seen_at": "2026-11-24T13:29:33.570084+00:00",
+  "source_digest": "f78fc8a77024ca4c84f8e426912fb9bbb1b04e8b5d942dc14dd7dfa4cc828073"
+}

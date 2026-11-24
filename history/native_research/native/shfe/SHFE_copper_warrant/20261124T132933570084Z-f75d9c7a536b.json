@@ -1,0 +1,9 @@
+{
+  "status": "UNAVAILABLE",
+  "source": "SHFE",
+  "upstream_id": "SHFE",
+  "source_url": "https://www.shfe.com.cn/data/tradedata/future/stockdata/",
+  "error": "2026-11-24: ValueError: SHFE Chinese report date/title missing; 2026-11-23: ValueError: SHFE Chinese report date/title missing; 2026-11-20: ValueError: SHFE Chinese report date/title missing",
+  "first_seen_at": "2026-11-24T13:29:33.570084+00:00",
+  "source_digest": "7c9fac878598ddcbc0ae4611a45c089456c8228c4b8f9047360bc89f119d9c13"
+}

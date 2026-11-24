@@ -1,0 +1,6 @@
+{
+  "status": "UNAVAILABLE",
+  "error": "ValueError: issuer dated Key Facts absent",
+  "first_seen_at": "2026-11-24T13:29:33.570084+00:00",
+  "source_digest": "60614faadf1f90f36cbcdcf828233e32c0a7d43a94b3e743407e1acb2d1fb517"
+}

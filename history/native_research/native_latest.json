@@ -510,12 +510,12 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.05622326475317463,
-    "quoted_spread_bps": 0.016691328103697348,
+    "basis_pct": -0.054043537473791314,
+    "quoted_spread_bps": 0.016639890309600936,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T13:11:56.638000+00:00",
+    "basis_asof": "2026-11-24T13:29:42.481000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T13:11:56.832000+00:00",
+    "quote_asof": "2026-11-24T13:29:42.871000+00:00",
     "spread_status": "OBSERVED"
   },
   "ETH": {
@@ -1029,19 +1029,55 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.06818774755117385,
-    "quoted_spread_bps": 0.059338553148004625,
+    "basis_pct": -0.052548917728478806,
+    "quoted_spread_bps": 0.05907843548481776,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T13:11:56.264000+00:00",
+    "basis_asof": "2026-11-24T13:29:42.945000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T13:11:56.569000+00:00",
+    "quote_asof": "2026-11-24T13:29:43.366000+00:00",
     "spread_status": "OBSERVED"
   },
   "SHFE_copper_warrant": {
     "status": "UNAVAILABLE",
     "source": "SHFE",
-    "error": "2026-11-24: ValueError: SHFE report title/date mismatch; 2026-11-23: ValueError: SHFE report title/date mismatch; 2026-11-20: ValueError: SHFE report title/date mismatch; 2026-11-19: URLError: <urlopen error [Errno 104] Connection reset by peer>; 2026-11-18: URLError: <urlopen error [Errno 104] Connection reset by peer>",
-    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/"
+    "upstream_id": "SHFE",
+    "source_url": "https://www.shfe.com.cn/data/tradedata/future/stockdata/",
+    "error": "2026-11-24: ValueError: SHFE Chinese report date/title missing; 2026-11-23: ValueError: SHFE Chinese report date/title missing; 2026-11-20: ValueError: SHFE Chinese report date/title missing"
+  },
+  "TBF3_TFF": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "source": "CFTC TFF",
+    "upstream_id": "CFTC",
+    "reports": {
+      "futures_only": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      },
+      "combined": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/yw9f-hn96.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      }
+    },
+    "proxy_used": false,
+    "caveat": "report availability only; TFF categories are not Legacy net noncommercial positions"
+  },
+  "issuer_USO": {
+    "status": "UNAVAILABLE",
+    "error": "ValueError: issuer dated Key Facts absent"
+  },
+  "issuer_CPER": {
+    "status": "UNAVAILABLE",
+    "error": "ValueError: issuer dated Key Facts absent"
+  },
+  "issuer_QQQ": {
+    "status": "UNAVAILABLE",
+    "error": "ValueError: QQQ dated NAV/shares not unambiguous"
   },
   "COMEX_copper": {
     "status": "UNAVAILABLE",
