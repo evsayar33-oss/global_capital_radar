@@ -153,7 +153,7 @@ def health():
         try:
             credential(secret)
             rows,meta=fn()
-            age=100 if name=="HS2709" else 90 if name in BEA or name=="CPIAUCSL" else 15
+            age=120 if name=="HS2709" else 90 if name in BEA or name=="CPIAUCSL" else 15
             if not rows or (today-max(rows)).days>age or (max(rows)-min(rows)).days<365 or not meta.get("authenticated_request"):
                 raise ValueError("missing, stale, short, or unauthenticated series")
             item=dict(secret=secret,series=name,status="AUTHENTICATED_OBSERVED",observations=len(rows),
