@@ -1,0 +1,48 @@
+name: FRED authenticated source health
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fred_health.yml'
+      - 'radar.py'
+      - 'native_research.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify authenticated current and historical vintage
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime, timezone, timedelta
+          from radar import fred_with_source
+          from native_research import alfred_vintage
+          key = os.getenv("FRED_API_KEY")
+          if not key:
+              print("FRED_HEALTH secret=ABSENT")
+              raise SystemExit(1)
+          today = datetime.now(timezone.utc).date()
+          try:
+              rows, source = fred_with_source("DFII10")
+              current = source.get("source") == "FRED API" and bool(rows) and 0 <= (today-max(rows)).days <= 10
+              print("FRED_HEALTH authenticated_current=" + str(current) + " count=" + str(len(rows)))
+          except Exception as exc:
+              current = False
+              print("FRED_HEALTH current_error=" + type(exc).__name__)
+          vintage = alfred_vintage("DFII10", today-timedelta(days=1), key)
+          historical = vintage.get("source") == "FRED API / ALFRED" and vintage.get("status") == "OBSERVED_DATE_VINTAGE"
+          print("FRED_HEALTH authenticated_vintage=" + str(historical) + " count=" + str(len(vintage.get("observations",[]))))
+          raise SystemExit(0 if current and historical else 1)
+          PY
