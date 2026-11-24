@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-24T16:18:30.534214+00:00",
+  "as_of": "2026-11-24T16:21:10.674571+00:00",
   "indicators": [
     {
       "id": "FORTREASNET69995",
@@ -581,6 +581,30 @@
       "value": 135.663792466297,
       "changes": {
         "1Y": 0.2012
+      },
+      "stale": false
+    },
+    "Census · ABD ham petrol ithalatı (USD)": {
+      "freq": "M",
+      "change": "pct",
+      "max_age": 120,
+      "source": "US Census API",
+      "source_series": "HS 2709 / GEN_VAL_MO / all countries",
+      "source_urls": [
+        "https://api.census.gov/data/timeseries/intltrade/imports/hs"
+      ],
+      "source_sha256": [
+        "703efa0862bab688f9f4a5be259129d42b99bd57d7d68e6af21e3d29918f9bc8",
+        "91adade6545ccfcf193dc9cb5bdee35e516acfb66fe595e8890d62c47a6e5434"
+      ],
+      "observation_basis": "CUSTOMS_BASIS_CURRENT_MONTHLY_USD_NOT_BOP",
+      "authenticated_request": true,
+      "historical_vintage_verified": false,
+      "publication_intraday_verified": false,
+      "period": "2026-08-01",
+      "value": 15620795604.0,
+      "changes": {
+        "1Y": 28.1267
       },
       "stale": false
     }
