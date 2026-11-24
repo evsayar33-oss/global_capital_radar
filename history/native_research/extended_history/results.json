@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-11-24T14:04:38.553930+00:00",
+  "evaluated_at": "2026-11-24T14:10:36.961622+00:00",
   "policy": "MONTHLY_RESEARCH_ONLY_NO_DAILY_INTERPOLATION",
   "symbols": {
     "QQQ": {
@@ -20,12 +20,13 @@
       "live_daily_count": 22,
       "daily_start": "2026-10-12",
       "daily_end": "2026-11-10",
-      "monthly_count": 0,
-      "live_monthly_count": 0,
-      "monthly_start": null,
-      "monthly_end": null,
+      "monthly_count": 23,
+      "live_monthly_count": 23,
+      "monthly_start": "2024-11",
+      "monthly_end": "2026-09",
       "errors": [
-        "SEC discovery: HTTP Error 403: Forbidden"
+        "SEC discovery: HTTP Error 403: Forbidden",
+        "issuer PDF 2026-10: invalid issuer PDF"
       ],
       "daily_history_contiguous": false,
       "production_eligible": false
@@ -35,12 +36,13 @@
       "live_daily_count": 33,
       "daily_start": "2026-10-06",
       "daily_end": "2026-11-20",
-      "monthly_count": 0,
-      "live_monthly_count": 0,
-      "monthly_start": null,
-      "monthly_end": null,
+      "monthly_count": 23,
+      "live_monthly_count": 23,
+      "monthly_start": "2024-11",
+      "monthly_end": "2026-09",
       "errors": [
-        "SEC discovery: HTTP Error 403: Forbidden"
+        "SEC discovery: HTTP Error 403: Forbidden",
+        "issuer PDF 2026-10: invalid issuer PDF"
       ],
       "daily_history_contiguous": false,
       "production_eligible": false
