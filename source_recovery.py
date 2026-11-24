@@ -89,10 +89,56 @@ def amount(value):
     if not number(v) or v<=0:raise ValueError("nonpositive issuer figure")
     return v
 
+class USCFFields(HTMLParser):
+    """Exact source field identities; do not extract values from JavaScript."""
+    def __init__(self,html,symbol):
+        super().__init__(convert_charrefs=True)
+        self.symbol=symbol;self.stack=[];self.values={};self.feed(html)
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        if tag in ("br","img","input","meta","link","hr","source","wbr","area","base","embed","param","track","col"):return
+        inherited=self.stack[-1][1] if self.stack else None
+        location=a.get("data-location",inherited)
+        field=a.get("data-key")
+        active=field if field in ("asofdate","nav","navps","so","navtotal") and location==self.symbol else None
+        self.stack.append((tag,location,active,[]))
+    def handle_data(self,data):
+        for item in self.stack:
+            if item[2]:item[3].append(data)
+    def handle_endtag(self,tag):
+        i=next((i for i in range(len(self.stack)-1,-1,-1) if self.stack[i][0]==tag),None)
+        if i is None:return
+        for _,_,key,parts in self.stack[i:]:
+            v=" ".join("".join(parts).split())
+            if key and v:self.values.setdefault(key,set()).add(v)
+        del self.stack[i:]
+
+def issuer_fields(html,symbol,today):
+    p=Page(html);name={"USO":"United States Oil Fund","CPER":"United States Copper Index Fund"}[symbol]
+    if name.lower() not in p.text.lower():raise ValueError("issuer identity mismatch")
+    v=USCFFields(html,symbol).values
+    def exact(keys,pattern):
+        matches={x for key in keys for x in v.get(key,set()) if re.fullmatch(pattern,x)}
+        if len(matches)!=1:raise ValueError("USCF missing or conflicting "+"/".join(keys))
+        return matches.pop()
+    ds=exact(("asofdate",),r"(?:As of\s+)?\d{1,2}/\d{1,2}/\d{4}")
+    d=datetime.strptime(ds.removeprefix("As of "),"%m/%d/%Y").date()
+    if not 0<=(today-d).days<=7:raise ValueError("issuer stale/future date")
+    nav=amount(exact(("nav","navps"),r"\$[\d,.]+"))
+    shares=amount(exact(("so",),r"[\d,]+"))
+    aum=amount(exact(("navtotal",),r"\$[\d,.]+"))
+    if not shares.is_integer() or abs(shares*nav/aum-1)>.005:raise ValueError("issuer shares NAV AUM reconcile")
+    return dict(status="OBSERVED",symbol=symbol,source="USCF",upstream_id="USCF",source_date=str(d),
+                nav_usd=nav,shares=shares,shares_unit="shares",shares_precision="exact_integer",
+                reported_aum_usd=aum,calculated_aum_usd=nav*shares,source_url=ISSUERS[symbol],
+                publication_intraday_verified=False,parser="USCF_DATA_KEY")
+
 def parse_issuer(html,symbol,today):
     p=Page(html)
     t=p.text
     if symbol in ("USO","CPER"):
+        try:return issuer_fields(html,symbol,today)
+        except ValueError:pass
         name={"USO":"United States Oil Fund","CPER":"United States Copper Index Fund"}[symbol]
         if name.lower() not in t.lower():raise ValueError("issuer identity mismatch")
         # Bind all fields to the same Key Facts section and its date.
