@@ -11,7 +11,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: capital-radar
+  group: capital-radar-${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
   cancel-in-progress: false
 jobs:
   smoke:
@@ -25,7 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m unittest -v test_filing_history
+      - run: python -m unittest -v test_filing_history test_observation_persistence
+      - run: command -v pdftotext || (sudo apt-get update && sudo apt-get install -y poppler-utils)
       - run: python filing_history.py --smoke
   research:
     if: github.event_name != 'pull_request'
@@ -38,20 +39,30 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m unittest -v test_filing_history
+      - run: python -m unittest -v test_filing_history test_observation_persistence
+      - run: command -v pdftotext || (sudo apt-get update && sudo apt-get install -y poppler-utils)
       - id: collect
         continue-on-error: true
         env:
           SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
         run: python filing_history.py
-      - if: always()
+      - id: persist
+        if: always()
         run: |
           git config user.name github-actions[bot]
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           if test -d history/native_research/extended_history; then git add history/native_research/extended_history; fi
           if ! git diff --cached --quiet; then
             git commit -m "Archive sparse daily and filing-month capital flows"
-            git push
+            bash scripts/persist_observations.sh "$RUNNER_TEMP/observation-recovery.patch"
           fi
+      - name: Preserve unpushed observation patch
+        if: always() && steps.persist.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: observation-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/observation-recovery.patch
+          if-no-files-found: warn
+          retention-days: 30
       - if: steps.collect.outcome == 'failure'
         run: exit 1

@@ -25,7 +25,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: capital-radar
+  group: capital-radar-${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
   cancel-in-progress: false
 jobs:
   unit-tests:
@@ -72,6 +72,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python3 telegram_report.py
       - name: Gözlem ve tahminleri kaydet
+        id: persist
         if: always()
         run: |
           git config user.name github-actions[bot]
@@ -82,8 +83,16 @@ jobs:
           done
           if ! git diff --cached --quiet; then
             git commit -m "Günlük sermaye gözlemi"
-            git push
+            bash scripts/persist_observations.sh "$RUNNER_TEMP/observation-recovery.patch"
           fi
+      - name: Preserve unpushed observation patch
+        if: always() && steps.persist.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: observation-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/observation-recovery.patch
+          if-no-files-found: warn
+          retention-days: 30
       - if: steps.collect.outcome == 'failure' || steps.rotation.outcome == 'failure' || steps.evaluation.outcome == 'failure' || steps.telegram.outcome == 'failure' || steps.validation.outcome == 'failure'
         run: exit 1
       - name: Report runner capacity

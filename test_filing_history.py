@@ -1,6 +1,7 @@
 import unittest
 from datetime import date
-from filing_history import parse_uscf,parse_nport,exhibit,sparse
+from filing_history import parse_uscf,parse_nport,exhibit,sparse,parse_issuer_pdf_text
+from datetime import datetime,timezone
 class FilingTests(unittest.TestCase):
     def test_cper_exact_fund(self):
         # Reduced numerical fields from SEC filing 0001104659-26-120528.
@@ -41,3 +42,28 @@ class FilingTests(unittest.TestCase):
         r=sparse(p,"CPER",date(2026,11,24))
         self.assertEqual(len(r),2);self.assertNotIn("2026-11-03",r)
         self.assertEqual(r["2026-11-02"]["flow_usd"],0)
+
+    def test_real_issuer_pdf_layout(self):
+        # Reduced numeric fields from public USO September 2025 issuer PDF.
+        # The cover explicitly states 28 October 2025; this is not a SEC filed date.
+        t="""On October 28, 2025, Year, United States Oil Fund, LP (the Registrant)
+        issued its monthly account statement for the month ended September 30, 2025.
+        Exhibit 99.1 United States Oil Fund, LP Monthly Account Statement
+        For the Month Ended September 30, 2025
+        Statement of Changes in Net Asset Value
+        Net Asset Value Beginning of Month 9/1/25 $ 982,775,138
+        Additions (3,100,000 Shares) 227,510,959
+        Withdrawals ((4,200,000) Shares) (310,980,558)
+        Net Income (Loss) (14,636,152)
+        Net Asset Value End of Month $ 884,669,387
+        To the Limited Partners of United States Oil Fund, LP"""
+        now=datetime(2026,11,24,tzinfo=timezone.utc)
+        r=parse_issuer_pdf_text(t,"USO",date(2025,9,30),"https://secure.alpsinc.com/example.pdf",now.date(),now,"abc")
+        self.assertEqual(r["net_flow_usd"],-83469599)
+        self.assertEqual(r["issued_date"],"2025-10-28")
+        self.assertEqual(r["available_from_date"],"2025-10-29")
+        self.assertIsNone(r["filed_date"]);self.assertIsNone(r["accession"])
+        with self.assertRaises(ValueError):
+            parse_issuer_pdf_text(t,"USO",date(2025,8,31),"",now.date(),now,"abc")
+        r=parse_issuer_pdf_text(t.replace("On October 28, 2025","Unknown date"),"USO",date(2025,9,30),"",now.date(),now,"abc")
+        self.assertIsNone(r["issued_date"]);self.assertEqual(r["available_from_date"],"2026-11-25")
