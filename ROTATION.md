@@ -27,67 +27,88 @@ Yüzdelik, bu fonun mutlak net akışını aynı uzunluktaki geçmiş dönemlerl
 
 |Varlık|Net milyon USD|Geçmiş dönem|Yüzdelik|Akış gücü|Vadeli teyit|Araştırma kararı|
 |---|---:|---:|---:|---|---|---|
-|S&P 500|-7096.55|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Nasdaq-100|1309.247|52|32.7|Zayıf giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Dow Jones|363.998|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Russell 2000|480.385|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine bonosu · 0–3 ay|1830.514|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine tahvili · 1–3 yıl|-1217.053|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Altın|-294.202|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Gümüş|-147.201|52|48.1|Olağan çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bakır vadeli|-35.527|52|84.6|Güçlü çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|WTI petrol vadeli|269.404|52|82.7|Güçlü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bitcoin|-629.028|52|67.3|Olağan çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Ether|-107.037|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
+|S&P 500|-7096.55|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Nasdaq-100|1309.247|52|32.7|Zayıf giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Dow Jones|363.998|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Russell 2000|480.385|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine bonosu · 0–3 ay|1830.514|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine tahvili · 1–3 yıl|-1217.053|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Altın|-294.202|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Gümüş|-147.201|52|48.1|Olağan çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bakır vadeli|-35.527|52|84.6|Güçlü çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|WTI petrol vadeli|269.404|52|82.7|Güçlü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bitcoin|-629.028|52|67.3|Olağan çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Ether|-107.037|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
 
 ### 1 ay
 
 |Varlık|Net milyon USD|Geçmiş dönem|Yüzdelik|Akış gücü|Vadeli teyit|Araştırma kararı|
 |---|---:|---:|---:|---|---|---|
-|S&P 500|-6484.783|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Nasdaq-100|9808.897|52|100.0|Olağanüstü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Dow Jones|1297.357|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Russell 2000|312.143|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine bonosu · 0–3 ay|2736.323|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine tahvili · 1–3 yıl|-483.942|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Altın|-2583.698|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Gümüş|207.846|52|44.2|Olağan giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bakır vadeli|-80.268|52|94.2|Olağanüstü çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|WTI petrol vadeli|670.564|52|100.0|Olağanüstü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bitcoin|-1657.197|33|39.4|Zayıf çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Ether|-1326.381|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
+|S&P 500|-6484.783|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Nasdaq-100|9808.897|52|100.0|Olağanüstü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Dow Jones|1297.357|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Russell 2000|312.143|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine bonosu · 0–3 ay|2736.323|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine tahvili · 1–3 yıl|-483.942|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Altın|-2583.698|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Gümüş|207.846|52|44.2|Olağan giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bakır vadeli|-80.268|52|94.2|Olağanüstü çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|WTI petrol vadeli|670.564|52|100.0|Olağanüstü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bitcoin|-1657.197|33|39.4|Zayıf çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Ether|-1326.381|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
 
 ### 3 ay
 
 |Varlık|Net milyon USD|Geçmiş dönem|Yüzdelik|Akış gücü|Vadeli teyit|Araştırma kararı|
 |---|---:|---:|---:|---|---|---|
-|S&P 500|-7287.221|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Nasdaq-100|6520.256|42|71.4|Olağan giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Dow Jones|1781.384|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Russell 2000|1148.206|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine bonosu · 0–3 ay|14979.54|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine tahvili · 1–3 yıl|1634.341|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Altın|873.532|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Gümüş|661.891|42|76.2|Güçlü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bakır vadeli|-135.962|42|95.2|Olağanüstü çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|WTI petrol vadeli|214.858|42|40.5|Olağan giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bitcoin|2511.122|10|10.0|Yatay|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Ether|-7159.366|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
+|S&P 500|-7287.221|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Nasdaq-100|6520.256|42|71.4|Olağan giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Dow Jones|1781.384|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Russell 2000|1148.206|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine bonosu · 0–3 ay|14979.54|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine tahvili · 1–3 yıl|1634.341|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Altın|873.532|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Gümüş|661.891|42|76.2|Güçlü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bakır vadeli|-135.962|42|95.2|Olağanüstü çıkış|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|WTI petrol vadeli|214.858|42|40.5|Olağan giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bitcoin|2511.122|10|10.0|Yatay|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Ether|-7159.366|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
 
 ### 1 yıl
 
 |Varlık|Net milyon USD|Geçmiş dönem|Yüzdelik|Akış gücü|Vadeli teyit|Araştırma kararı|
 |---|---:|---:|---:|---|---|---|
-|S&P 500|20120.424|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Nasdaq-100|27438.693|9|100.0|Olağanüstü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Dow Jones|440.903|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Russell 2000|-2585.529|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine bonosu · 0–3 ay|56704.596|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|ABD Hazine tahvili · 1–3 yıl|3360.793|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Altın|-427.148|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Gümüş|11.618|9|0.0|Yatay|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bakır vadeli|171.099|9|88.9|Güçlü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|WTI petrol vadeli|238.796|9|0.0|Yatay|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Bitcoin|790.471|1|—|Geçmiş yetersiz|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
-|Ether|-8526.556|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · önceki gözlem|
+|S&P 500|20120.424|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Nasdaq-100|27438.693|9|100.0|Olağanüstü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Dow Jones|440.903|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Russell 2000|-2585.529|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine bonosu · 0–3 ay|56704.596|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|ABD Hazine tahvili · 1–3 yıl|3360.793|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Altın|-427.148|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Gümüş|11.618|9|0.0|Yatay|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bakır vadeli|171.099|9|88.9|Güçlü giriş|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|WTI petrol vadeli|238.796|9|0.0|Yatay|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Bitcoin|790.471|1|—|Geçmiş yetersiz|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
+|Ether|-8526.556|—|—|Güç ölçülemedi|TEYİTSİZ · kaynak okunamadı|BEKLE · kaynak kullanılamıyor|
 
+
+## Alternatif kaynak sürekliliği
+
+Birincil kaynak veya strateji kararı yerine geçmez. ETFIQ ve USCF geçmişleri birleştirilmez.
+
+Durum: DEGRADED_RESEARCH_AVAILABLE
+
+|Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
+|---|---|---|---:|---:|---|
+|SPY|ETFIQ_HISTORY|2026-11-20|-1539201250|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|QQQ|ETFIQ_HISTORY|2026-11-20|612981544|13|BEKLE · alternatif kaynak araştırma aşamasında|
+|DIA|ETFIQ_HISTORY|2026-11-20|-24539606|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|IWM|ETFIQ_HISTORY|2026-11-20|435781797|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SGOV|ETFIQ_HISTORY|2026-11-20|422519105|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SHY|ETFIQ_HISTORY|2026-11-20|-65106431|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|GLD|ETFIQ_HISTORY|2026-11-20|-441847067|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SLV|ETFIQ_HISTORY|2026-11-20|60938561|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|CPER|USCF_CREATION|2026-11-23|-10179000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
+|USO|USCF_CREATION|2026-11-23|79986000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
+|IBIT|ETFIQ_HISTORY|2026-11-20|-541071824|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|ETHA|ETFIQ_HISTORY|2026-11-20|-124223168|400|BEKLE · alternatif kaynak araştırma aşamasında|
