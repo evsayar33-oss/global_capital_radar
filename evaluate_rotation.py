@@ -51,10 +51,19 @@ def main():
     today = now.astimezone(NY).date()
     from horizon_evaluation import evaluate, extend_report
     reports = []
+    adaptive_reports = []
+    invalid = []
     pending = []
     for path in sorted(folder.glob("2*.json")):
-        report = json.loads(path.read_text())
+        try:
+            report = json.loads(path.read_text())
+        except (ValueError,OSError) as exc:
+            invalid.append(path.name)
+            print(f"Invalid historical observation excluded: {path.name}: {exc}")
+            continue
         day = datetime.fromisoformat(report["seen_at"]).astimezone(NY).date()
+        if any(h.get("adaptive_version") for a in report["assets"] for h in a.get("horizons",{}).values()):
+            adaptive_reports.append((day,report))
         if (today-day).days >= 8 and (any(a.get("horizons",{}).get("1H",{}).get("early_methods") for a in report["assets"]) or any(h.get("action") in ("ALIM ADAYI","AZALTMA ADAYI") for a in report["assets"] for h in a.get("horizons",{}).values())):
             reports.append((day,report))
         if (today-day).days < 8:
@@ -65,9 +74,12 @@ def main():
                 pending.append((day,key,r))
     errors = {}
     series = {}
-    if pending or reports:
-        start = min([d for d,_,_ in pending]+[d for d,_ in reports])
-        for sym in sorted({"SGOV"} | {r["symbol"] for _,_,r in pending} | {a["symbol"] for _,report in reports for a in report["assets"]}):
+    replay_path=ROOT/"history/adaptive_replay.json"
+    replay=json.loads(replay_path.read_text()) if replay_path.exists() else []
+    starts=[d for d,_,_ in pending]+[d for d,_ in reports]+[d for d,_ in adaptive_reports]+[date.fromisoformat(x["assumed_signal_day"]) for x in replay]
+    if starts:
+        start=min(starts)
+        for sym in sorted({"SGOV"} | {r["symbol"] for _,_,r in pending} | {a["symbol"] for _,report in reports+adaptive_reports for a in report["assets"]} | {x["symbol"] for x in replay}):
             try:
                 series[sym] = prices(sym,start,today)
             except Exception as exc:
@@ -107,7 +119,9 @@ def main():
     if errors:
         lines.append("Fiyat kaynağı erişim sorunu: "+", ".join(errors))
     (ROOT/"FORWARD.md").write_text("\n".join(lines)+"\n")
-    return int(bool(errors))
+    from adaptive_evaluation import run as run_adaptive
+    run_adaptive(adaptive_reports,series,today,replay,errors,root=ROOT)
+    return int(bool(errors or invalid))
 
 
 if __name__ == "__main__":

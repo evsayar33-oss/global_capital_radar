@@ -49,6 +49,14 @@ def enrich(rows, today):
                                   if code in macro and (today-date.fromisoformat(macro[code]["period"])).days<=10}
             value = returns(series.get(row["symbol"],{}),end,key)
             cash = returns(series["SGOV"],end,key)
+            f=h.get("adaptive_features",{})
+            weights=f.get("positive_weights",[])
+            bars=series.get(row["symbol"],{})
+            matched=[(bars[date.fromisoformat(d)][1],w) for d,w in weights if bars.get(date.fromisoformat(d))]
+            if weights and len(matched)==len(weights) and bars.get(end) and f.get("source_end")==str(end):
+                basis=sum(p*w for p,w in matched)/sum(w for p,w in matched)
+                if basis>0:
+                    f["cost_proxy_gap_pct"]=100*(bars[end][1]/basis-1)
             h["total_return_pct"]=value
             h["excess_sgov_pp"]=None if value is None or cash is None else value-cash
             if value is None or cash is None or (today-end).days>5:

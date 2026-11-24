@@ -81,6 +81,7 @@ def flows(html, today, *, detailed=False):
         percentile = round(100*sum(v <= result["1H"] for v in reference)/len(reference))
     if detailed:
         horizons = analyze(dates, days, unit)
+        assets = {}
         if chart.aum:
             assets = {datetime.fromtimestamp(ts/1000,timezone.utc).date():v*unit for ts,v in chart.aum if v is not None and math.isfinite(v) and v>0}
             from horizons import boundary
@@ -90,6 +91,10 @@ def flows(html, today, *, detailed=False):
                 if prior and (target-prior[-1]).days<=4 and h["net_usd_m"] is not None:
                     h["flow_aum_pct"]=100*h["net_usd_m"]/assets[prior[-1]]
                     h["aum_asof"]=str(prior[-1])
+        from adaptive_flow import build_features
+        research = build_features(dates, days, unit, assets)
+        for key,h in horizons.items():
+            h['adaptive_features'],h['adaptive_replay'] = research[key]
         return end, result, percentile, horizons
     return end, result, percentile
 
@@ -166,6 +171,9 @@ def snapshot(asset, today, positions):
         stale = (today-end).days > 7
         for key, horizon in horizons.items():
             interpret(horizon, key, end, history, stale, today)
+            from adaptive_flow import cot_feature
+            if horizon.get('adaptive_features'):
+                horizon['adaptive_features']['cot_z'] = cot_feature(horizon,history,key)
             if symbol == "SGOV" and not history:
                 horizon["confirmation"] = "TEYİTSİZ · CME TBF3 pozisyon serisi yok"
             if cached:
@@ -192,7 +200,12 @@ def main():
     for path in sorted(archive_folder.glob("2*.json"), reverse=True):
         if not missing:
             break
-        for old in json.loads(path.read_text())["assets"]:
+        try:
+            prior_report = json.loads(path.read_text())
+        except (ValueError, OSError) as exc:
+            print(f"Invalid historical observation excluded: {path.name}: {exc}")
+            continue
+        for old in prior_report["assets"]:
             symbol = old["symbol"]
             if symbol not in missing or not old.get("net_usd_m") or old.get("error"):
                 continue
@@ -209,12 +222,26 @@ def main():
     price_errors = enrich(rows,today)
     from experiments import record
     record(rows)
+    from adaptive_flow import record as record_adaptive
+    from adaptive_evaluation import atomic
+    replay = record_adaptive(rows)
+    # Keep last valid replay if source is temporarily unavailable. Merge by
+    # symbol only when a newly observed source is usable; never pretend stale
+    # replay is a fresh forward observation.
+    replay_path = ROOT/"history/adaptive_replay.json"
+    if replay:
+        old_replay = json.loads(replay_path.read_text()) if replay_path.exists() else []
+        updated = {r["symbol"] for r in replay}
+        atomic(replay_path,[r for r in old_replay if r["symbol"] not in updated]+replay)
     payload = dict(price_errors=price_errors, schema_version=3, seen_at=now.isoformat(), cot_error=error, assets=rows)
     folder = ROOT/"history"/"rotation"
     folder.mkdir(exist_ok=True,parents=True)
     # Her çalıştırmanın bilgi kümesi korunur. Tüketiciler latest.json okur.
     data = json.dumps(payload,ensure_ascii=False,indent=2,allow_nan=False)
-    (folder/(now.strftime("%Y%m%dT%H%M%S%fZ")+".json")).write_text(data)
+    archive = folder/(now.strftime("%Y%m%dT%H%M%S%fZ")+".json")
+    temp_archive = archive.with_suffix(".tmp")
+    temp_archive.write_text(data)
+    temp_archive.replace(archive)
     temp = folder/"latest.tmp"
     temp.write_text(data)
     temp.replace(folder/"latest.json")
