@@ -253,6 +253,14 @@ def main():
     except Exception as exc:
         rows.append(dict(id="ICI", label="ICI haftalık fon akışı", error=str(exc)))
     extra = extras(today)
+    # Customs-basis commodity imports are separately named, never substitute BOP.
+    if os.getenv("CENSUS_API_KEY"):
+        try:
+            from keyed_sources import census_crude_imports
+            trade, evidence = census_crude_imports(today)
+            extra["Census · ABD ham petrol ithalatı (USD)"] = summarize(dict(freq="M",change="pct",max_age=120,**evidence),trade,today)
+        except Exception as exc:
+            extra["Census · ABD ham petrol ithalatı (USD)"] = {"error":type(exc).__name__,"scope":"CUSTOMS_BASIS_NOT_BOP"}
     flows = [(r, data) for r, data in pairs if r["change"] == "flow"]
     history = ROOT / "history"
     history.mkdir(exist_ok=True)
