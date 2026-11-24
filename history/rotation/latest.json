@@ -1,8 +1,19 @@
 {
   "price_errors": {},
-  "schema_version": 3,
-  "seen_at": "2026-11-22T11:53:41.458447+00:00",
+  "schema_version": 4,
+  "seen_at": "2026-11-24T12:32:24.042592+00:00",
   "cot_error": null,
+  "cot_source": {
+    "transport": "CFTC archive + matched API",
+    "api_overlap_verified": true
+  },
+  "secondary_flow": {
+    "source": "ETFIQ (etfiq.com)",
+    "date": "2026-11-20",
+    "observed": 11,
+    "same_date_comparisons": 0,
+    "role": "SHADOW_CORROBORATION_ONLY"
+  },
   "assets": [
     {
       "symbol": "SPY",
@@ -11,145 +22,8 @@
       "cot_code": "13874A",
       "cot_asof": "2026-11-17",
       "cot_change_pp": 2.39,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -7096.55,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 63.5,
-          "reference_count": 52,
-          "flow_aum_pct": -0.8761825630797375,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": 2.39,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -8.558134334142586,
-          "excess_sgov_pp": -8.637690651760899,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "breadth_rsp_spy_pp": 2.354480421356131,
-          "relative_rank": 6,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": -6484.783,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 40.4,
-          "reference_count": 52,
-          "flow_aum_pct": -0.7973937325011339,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": 2.89,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -10.303620244735857,
-          "excess_sgov_pp": -10.662226268145414,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "breadth_rsp_spy_pp": 6.402944739715256,
-          "relative_rank": 5,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": -7287.221,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 47.6,
-          "reference_count": 42,
-          "flow_aum_pct": -0.8905115770134384,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -3.971,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "Çıkışı izle",
-          "total_return_pct": -9.32035965210063,
-          "excess_sgov_pp": -10.307819328387069,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "Çıkışı izle",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "breadth_rsp_spy_pp": 3.8454005915725116,
-          "relative_rank": 5,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 20120.424,
-          "strength": "Güçlü giriş",
-          "magnitude_percentile": 88.9,
-          "reference_count": 9,
-          "flow_aum_pct": 2.9566546255072352,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": 2.754,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "ALIM ADAYI",
-          "total_return_pct": 6.853645113459561,
-          "excess_sgov_pp": 3.0958535959635824,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "ALIM ADAYI",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "ALIM ADAYI"
-          },
-          "breadth_rsp_spy_pp": 8.831860700476614,
-          "relative_rank": 4,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -11652.04,
@@ -159,9 +33,112 @@
         "1Y": 20120.424
       },
       "weekly_percentile": 17,
-      "stale": false,
-      "status": "ÇIKIŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -7096.55,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -2.386652326285299,
+          "excess_sgov_pp": -2.4463039046323853,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": -0.40418746541511785,
+          "relative_rank": 4,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": -6484.783,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -4.958089678322375,
+          "excess_sgov_pp": -5.266838770751215,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 3.240168704251534,
+          "relative_rank": 5,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": -7287.221,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -5.437549143072662,
+          "excess_sgov_pp": -6.384875965699166,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.8060255039223816,
+          "relative_rank": 4,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 20120.424,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 10.781376669818288,
+          "excess_sgov_pp": 7.044221048427257,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 5.617121030940806,
+          "relative_rank": 4,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -1539201250,
+        "start_aum_usd": 756379330000,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "QQQ",
@@ -170,145 +147,8 @@
       "cot_code": "209742",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -8.637,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": 1309.247,
-          "strength": "Zayıf giriş",
-          "magnitude_percentile": 32.7,
-          "reference_count": 52,
-          "flow_aum_pct": 0.27424508815202137,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -8.637,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -10.507582241569901,
-          "excess_sgov_pp": -10.587138559188213,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 2.354480421356131,
-          "relative_rank": 9,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": 9808.897,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 100,
-          "reference_count": 52,
-          "flow_aum_pct": 2.0357991776309614,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -17.165,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -15.213967076754287,
-          "excess_sgov_pp": -15.572573100163844,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 6.402944739715256,
-          "relative_rank": 8,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 6520.256,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 71.4,
-          "reference_count": 42,
-          "flow_aum_pct": 1.3302112501743066,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": 4.948,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "Girişi izle",
-          "total_return_pct": -14.325735027697394,
-          "excess_sgov_pp": -15.313194703983834,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "Girişi izle",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 3.8454005915725116,
-          "relative_rank": 7,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 27438.693,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 100,
-          "reference_count": 9,
-          "flow_aum_pct": 7.025378524340642,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": -14.039,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 4.377701753434438,
-          "excess_sgov_pp": 0.619910235938459,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "ALIM ADAYI"
-          },
-          "breadth_rsp_spy_pp": 8.831860700476614,
-          "relative_rank": 6,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -1286.458,
@@ -318,9 +158,129 @@
         "1Y": 27438.693
       },
       "weekly_percentile": 56,
-      "stale": false,
-      "status": "GİRİŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": 1309.247,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 32.7,
+          "reference_count": 52,
+          "cot_change_pp": -8.637,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -1.6199426827540608,
+          "excess_sgov_pp": -1.6795942611011472,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": -0.40418746541511785,
+          "relative_rank": 3,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": 9808.897,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -15.907,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -7.57666003228521,
+          "excess_sgov_pp": -7.885409124714049,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 3.240168704251534,
+          "relative_rank": 6,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 6520.256,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 71.4,
+          "reference_count": 42,
+          "cot_change_pp": 15.357,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -8.652670749622715,
+          "excess_sgov_pp": -9.599997572249219,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.8060255039223816,
+          "relative_rank": 6,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 27438.693,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": 10.849379500846723,
+          "excess_sgov_pp": 7.1122238794556925,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 5.617121030940806,
+          "relative_rank": 3,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 612981544,
+        "start_aum_usd": 447347478852,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "DIA",
@@ -329,145 +289,8 @@
       "cot_code": "124603",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -4.82,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": 363.998,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 44.2,
-          "reference_count": 52,
-          "flow_aum_pct": 0.7889469720591672,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -4.82,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -7.9392552040154385,
-          "excess_sgov_pp": -8.01881152163375,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 2.354480421356131,
-          "relative_rank": 5,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": 1297.357,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 92.3,
-          "reference_count": 52,
-          "flow_aum_pct": 2.895449696254168,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -2.163,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -8.151686011254833,
-          "excess_sgov_pp": -8.510292034664392,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 6.402944739715256,
-          "relative_rank": 4,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 1781.384,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 92.9,
-          "reference_count": 42,
-          "flow_aum_pct": 3.9145098930553925,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -14.322,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -8.393811282300657,
-          "excess_sgov_pp": -9.381270958587097,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 3.8454005915725116,
-          "relative_rank": 4,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 440.903,
-          "strength": "Zayıf giriş",
-          "magnitude_percentile": 22.2,
-          "reference_count": 9,
-          "flow_aum_pct": 1.0868316293172977,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": 27.1,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": 6.67190822389232,
-          "excess_sgov_pp": 2.9141167063963413,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "ALIM ADAYI"
-          },
-          "breadth_rsp_spy_pp": 8.831860700476614,
-          "relative_rank": 5,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": 551.9,
@@ -477,9 +300,112 @@
         "1Y": 440.903
       },
       "weekly_percentile": 73,
-      "stale": false,
-      "status": "GİRİŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": 363.998,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -3.7480178034222655,
+          "excess_sgov_pp": -3.807669381769352,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": -0.40418746541511785,
+          "relative_rank": 6,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": 1297.357,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -4.798477560768832,
+          "excess_sgov_pp": -5.107226653197672,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 3.240168704251534,
+          "relative_rank": 4,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 1781.384,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -6.503868438559623,
+          "excess_sgov_pp": -7.451195261186127,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.8060255039223816,
+          "relative_rank": 5,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 440.903,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 8.736603588707204,
+          "excess_sgov_pp": 4.999447967316174,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 5.617121030940806,
+          "relative_rank": 6,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -24539606,
+        "start_aum_usd": 43554300000,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "IWM",
@@ -488,145 +414,8 @@
       "cot_code": "239742",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -2.11,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": 480.385,
-          "strength": "Zayıf giriş",
-          "magnitude_percentile": 32.7,
-          "reference_count": 52,
-          "flow_aum_pct": 0.6169709980481235,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -2.11,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -7.541263439131041,
-          "excess_sgov_pp": -7.620819756749353,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 2.354480421356131,
-          "relative_rank": 4,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": 312.143,
-          "strength": "Yatay",
-          "magnitude_percentile": 11.5,
-          "reference_count": 52,
-          "flow_aum_pct": 0.4182068033242933,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": 5.562,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -6.951197879682303,
-          "excess_sgov_pp": -7.3098039030918605,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 6.402944739715256,
-          "relative_rank": 3,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 1148.206,
-          "strength": "Zayıf giriş",
-          "magnitude_percentile": 33.3,
-          "reference_count": 42,
-          "flow_aum_pct": 1.4012195800914402,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": 6.518,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -13.568656344842378,
-          "excess_sgov_pp": -14.556116021128817,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 3.8454005915725116,
-          "relative_rank": 6,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": -2585.529,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 55.6,
-          "reference_count": 9,
-          "flow_aum_pct": -3.8511670762578283,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": 13.236,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 13.140906957618759,
-          "excess_sgov_pp": 9.38311544012278,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "breadth_rsp_spy_pp": 8.831860700476614,
-          "relative_rank": 2,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -202.49,
@@ -636,138 +425,120 @@
         "1Y": -2585.529
       },
       "weekly_percentile": 67,
-      "stale": false,
-      "status": "GİRİŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": 480.385,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -2.637946853751094,
+          "excess_sgov_pp": -2.6975984320981805,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": -0.40418746541511785,
+          "relative_rank": 5,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": 312.143,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -3.630103269492291,
+          "excess_sgov_pp": -3.93885236192113,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 3.240168704251534,
+          "relative_rank": 3,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 1148.206,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -11.176811103398432,
+          "excess_sgov_pp": -12.124137926024936,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.8060255039223816,
+          "relative_rank": 7,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": -2585.529,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 13.938834229953878,
+          "excess_sgov_pp": 10.201678608562847,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 5.617121030940806,
+          "relative_rank": 2,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 435781797,
+        "start_aum_usd": 73132108772,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "SGOV",
       "asset": "ABD Hazine bonosu · 0–3 ay",
       "cash_source": "https://etfdb.com/etf/SGOV/",
       "cot_code": null,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": 1830.514,
-          "strength": "Güçlü giriş",
-          "magnitude_percentile": 84.6,
-          "reference_count": 52,
-          "flow_aum_pct": 1.5632624872097938,
-          "aum_asof": "2026-11-12",
-          "confirmation": "TEYİTSİZ · CME TBF3 pozisyon serisi yok",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 0.07955631761831228,
-          "excess_sgov_pp": 0,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 2,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": 2736.323,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 65.4,
-          "reference_count": 52,
-          "flow_aum_pct": 2.3536386084190934,
-          "aum_asof": "2026-10-19",
-          "confirmation": "TEYİTSİZ · CME TBF3 pozisyon serisi yok",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 0.35860602340955783,
-          "excess_sgov_pp": 0,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 2,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 14979.54,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 95.8,
-          "reference_count": 24,
-          "flow_aum_pct": 14.404168395943204,
-          "aum_asof": "2026-08-19",
-          "confirmation": "TEYİTSİZ · CME TBF3 pozisyon serisi yok",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 0.9874596762864396,
-          "excess_sgov_pp": 0,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 2,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 56704.596,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 100,
-          "reference_count": 5,
-          "flow_aum_pct": 91.16783242881216,
-          "aum_asof": "2025-11-19",
-          "confirmation": "TEYİTSİZ · CME TBF3 pozisyon serisi yok",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 3.7577915174959786,
-          "excess_sgov_pp": 0,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 7,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": 829.863,
@@ -777,9 +548,108 @@
         "1Y": 56704.596
       },
       "weekly_percentile": 85,
-      "stale": false,
-      "status": "GİRİŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": 1830.514,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 0.05965157834708634,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 2,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": 2736.323,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 0.3087490924288394,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 2,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 14979.54,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 0.9473268226265041,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 56704.596,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 3.7371556213910306,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 7,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 422519105,
+        "start_aum_usd": 119024637460,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "SHY",
@@ -788,153 +658,119 @@
       "cot_code": "042601",
       "cot_asof": "2026-11-17",
       "cot_change_pp": 2.771,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -1217.053,
-          "strength": "Olağanüstü çıkış",
-          "magnitude_percentile": 100,
-          "reference_count": 52,
-          "flow_aum_pct": -4.3649824032939355,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": 2.771,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 0.5420752141578777,
-          "excess_sgov_pp": 0.46251889653956546,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 1,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": -483.942,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 63.5,
-          "reference_count": 52,
-          "flow_aum_pct": -1.7807321180596933,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -3.117,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "Çıkışı izle",
-          "total_return_pct": 0.6943502439276994,
-          "excess_sgov_pp": 0.33574422051814157,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "Çıkışı izle",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 1,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 1634.341,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 66.7,
-          "reference_count": 42,
-          "flow_aum_pct": 6.467924911161351,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -1.094,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 0.40672247578625864,
-          "excess_sgov_pp": -0.580737200500181,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 3,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 3360.793,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 66.7,
-          "reference_count": 9,
-          "flow_aum_pct": 14.120758117783367,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": 7.165,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "Girişi izle",
-          "total_return_pct": 1.9870860809393376,
-          "excess_sgov_pp": -1.770705436556641,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "Girişi izle",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 8,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
-        "1G": 0,
+        "1G": 0.0,
         "1H": -1217.053,
         "1A": -483.942,
         "3A": 1634.341,
         "1Y": 3360.793
       },
       "weekly_percentile": 0,
-      "stale": false,
-      "status": "ÇIKIŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -1217.053,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 0.418560044121441,
+          "excess_sgov_pp": 0.35890846577435465,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": -483.942,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 0.3980221157411812,
+          "excess_sgov_pp": 0.08927302331234177,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 1634.341,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 0.38197858031920884,
+          "excess_sgov_pp": -0.5653482423072953,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 2,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 3360.793,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": 1.814328512849217,
+          "excess_sgov_pp": -1.9228271085418136,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -65106431,
+        "start_aum_usd": 26701774982,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "GLD",
@@ -943,141 +779,8 @@
       "cot_code": "088691",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -6.237,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -294.202,
-          "strength": "Zayıf çıkış",
-          "magnitude_percentile": 26.9,
-          "reference_count": 52,
-          "flow_aum_pct": -0.2190754562704593,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -6.237,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -9.165850603732029,
-          "excess_sgov_pp": -9.245406921350341,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 7,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": -2583.698,
-          "strength": "Güçlü çıkış",
-          "magnitude_percentile": 75,
-          "reference_count": 52,
-          "flow_aum_pct": -1.812640190151232,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -8.948,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "AZALTMA ADAYI",
-          "total_return_pct": -14.505494416693232,
-          "excess_sgov_pp": -14.864100440102789,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "AZALTMA ADAYI",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 7,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 873.532,
-          "strength": "Zayıf giriş",
-          "magnitude_percentile": 19,
-          "reference_count": 42,
-          "flow_aum_pct": 0.5964483824852341,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -13.956,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -22.248714654845514,
-          "excess_sgov_pp": -23.236174331131956,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 10,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": -427.148,
-          "strength": "Yatay",
-          "magnitude_percentile": 11.1,
-          "reference_count": 9,
-          "flow_aum_pct": -0.3135230381612862,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": -3.833,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -13.86688279043905,
-          "excess_sgov_pp": -17.624674307935027,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 9,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -723.356,
@@ -1087,9 +790,108 @@
         "1Y": -427.148
       },
       "weekly_percentile": 37,
-      "stale": false,
-      "status": "AZALTMA ADAYI",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -294.202,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -5.641346463971308,
+          "excess_sgov_pp": -5.700998042318394,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": -2583.698,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -9.162324453786852,
+          "excess_sgov_pp": -9.471073546215692,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 7,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 873.532,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -21.33881317642038,
+          "excess_sgov_pp": -22.286139999046885,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 10,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": -427.148,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -11.021455422783887,
+          "excess_sgov_pp": -14.758611044174918,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -441847067,
+        "start_aum_usd": 123785155148,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "SLV",
@@ -1098,145 +900,8 @@
       "cot_code": "084691",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -1.866,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -147.2,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 48.1,
-          "reference_count": 52,
-          "flow_aum_pct": -0.5536716697283794,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -1.866,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "Çıkışı izle",
-          "total_return_pct": -16.224789653552364,
-          "excess_sgov_pp": -16.304345971170676,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "Çıkışı izle",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "silver_gold_pp": -7.058939049820335,
-          "relative_rank": 11,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": 207.847,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 44.2,
-          "reference_count": 52,
-          "flow_aum_pct": 0.7239607651837594,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -2.488,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -29.06753265858861,
-          "excess_sgov_pp": -29.426138681998168,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "silver_gold_pp": -14.56203824189538,
-          "relative_rank": 10,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 661.892,
-          "strength": "Güçlü giriş",
-          "magnitude_percentile": 76.2,
-          "reference_count": 42,
-          "flow_aum_pct": 2.071011165979612,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -4.791,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -40.042164592618356,
-          "excess_sgov_pp": -41.0296242689048,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "silver_gold_pp": -17.79344993777284,
-          "relative_rank": 12,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 11.618,
-          "strength": "Yatay",
-          "magnitude_percentile": 0,
-          "reference_count": 9,
-          "flow_aum_pct": 0.047195886735071586,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": -7.313,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -19.24420662627432,
-          "excess_sgov_pp": -23.001998143770297,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "silver_gold_pp": -5.37732383583527,
-          "relative_rank": 10,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": 51.575,
@@ -1246,9 +911,129 @@
         "1Y": 11.618
       },
       "weekly_percentile": 25,
-      "stale": false,
-      "status": "BEKLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -147.201,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 48.1,
+          "reference_count": 52,
+          "cot_change_pp": -1.866,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -8.209482407037116,
+          "excess_sgov_pp": -8.269133985384203,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -2.5681359430658084,
+          "relative_rank": 12,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": 207.846,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 44.2,
+          "reference_count": 52,
+          "cot_change_pp": -5.994,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -20.13547029453345,
+          "excess_sgov_pp": -20.444219386962292,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -10.9731458407466,
+          "relative_rank": 9,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 661.891,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 76.2,
+          "reference_count": 42,
+          "cot_change_pp": -5.662,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -37.96237389968612,
+          "excess_sgov_pp": -38.90970072231262,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -16.62356072326574,
+          "relative_rank": 12,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 11.618,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -14.105959155117809,
+          "excess_sgov_pp": -17.84311477650884,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -3.0845037323339213,
+          "relative_rank": 10,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 60938561,
+        "start_aum_usd": 22557423835,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "CPER",
@@ -1257,141 +1042,8 @@
       "cot_code": "085692",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -3.558,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -35.527,
-          "strength": "Güçlü çıkış",
-          "magnitude_percentile": 84.6,
-          "reference_count": 52,
-          "flow_aum_pct": -5.734923589370948,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -3.558,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "AZALTMA ADAYI",
-          "total_return_pct": -9.88229053102927,
-          "excess_sgov_pp": -9.961846848647582,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "AZALTMA ADAYI",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 8,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": -80.267,
-          "strength": "Olağanüstü çıkış",
-          "magnitude_percentile": 94.2,
-          "reference_count": 52,
-          "flow_aum_pct": -11.604224344192971,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -11.903,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "AZALTMA ADAYI",
-          "total_return_pct": -17.182394543533807,
-          "excess_sgov_pp": -17.541000566943364,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "AZALTMA ADAYI",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 9,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": -135.962,
-          "strength": "Olağanüstü çıkış",
-          "magnitude_percentile": 95.2,
-          "reference_count": 42,
-          "flow_aum_pct": -18.265219280834362,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -22.68,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "AZALTMA ADAYI",
-          "total_return_pct": -16.34053508135339,
-          "excess_sgov_pp": -17.32799475763983,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "AZALTMA ADAYI",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 8,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 171.099,
-          "strength": "Güçlü giriş",
-          "magnitude_percentile": 88.9,
-          "reference_count": 9,
-          "flow_aum_pct": 52.079985097305816,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": -15.013,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 6.987317774443413,
-          "excess_sgov_pp": 3.229526256947435,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "ALIM ADAYI"
-          },
-          "relative_rank": 3,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -11.938,
@@ -1401,9 +1053,125 @@
         "1Y": 171.099
       },
       "weekly_percentile": 4,
-      "stale": false,
-      "status": "AZALTMA ADAYI",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -35.527,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 84.6,
+          "reference_count": 52,
+          "cot_change_pp": -3.558,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -6.161525065833439,
+          "excess_sgov_pp": -6.221176644180526,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": -80.268,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 94.2,
+          "reference_count": 52,
+          "cot_change_pp": -16.19,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -13.440859742493295,
+          "excess_sgov_pp": -13.749608834922135,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": -135.962,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 95.2,
+          "reference_count": 42,
+          "cot_change_pp": -21.419,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -15.453863580364624,
+          "excess_sgov_pp": -16.401190402991126,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 171.099,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 88.9,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": 8.818801755325545,
+          "excess_sgov_pp": 5.081646133934514,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 5,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "UNAVAILABLE",
+        "flow_usd": null,
+        "start_aum_usd": null,
+        "start_aum_date": null,
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "USO",
@@ -1412,141 +1180,8 @@
       "cot_code": "067651",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -0.482,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": 269.404,
-          "strength": "Güçlü giriş",
-          "magnitude_percentile": 82.7,
-          "reference_count": 52,
-          "flow_aum_pct": 12.805617976191238,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -0.482,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -4.087097728675094,
-          "excess_sgov_pp": -4.166654046293406,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 3,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": 670.564,
-          "strength": "Olağanüstü giriş",
-          "magnitude_percentile": 100,
-          "reference_count": 52,
-          "flow_aum_pct": 33.61918243102986,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -1.491,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": -13.062695752325936,
-          "excess_sgov_pp": -13.421301775735493,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 6,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 214.858,
-          "strength": "Olağan giriş",
-          "magnitude_percentile": 40.5,
-          "reference_count": 42,
-          "flow_aum_pct": 10.59739684154068,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -3.087,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · yön teyitsiz",
-          "total_return_pct": 3.7832702918711325,
-          "excess_sgov_pp": 2.795810615584693,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · yön teyitsiz",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "ALIM ADAYI"
-          },
-          "relative_rank": 1,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 238.796,
-          "strength": "Yatay",
-          "magnitude_percentile": 0,
-          "reference_count": 9,
-          "flow_aum_pct": 24.360180389972143,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": -0.327,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": 99.04490640859338,
-          "excess_sgov_pp": 95.2871148910974,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "ALIM ADAYI",
-            "price_flow": "ALIM ADAYI"
-          },
-          "relative_rank": 1,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -54.725,
@@ -1556,9 +1191,125 @@
         "1Y": 238.796
       },
       "weekly_percentile": 92,
-      "stale": false,
-      "status": "GİRİŞ İZLE",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": 269.404,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 82.7,
+          "reference_count": 52,
+          "cot_change_pp": -0.482,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -4.763263748547186,
+          "excess_sgov_pp": -4.822915326894273,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 7,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": 670.564,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -1.904,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -21.335455924843917,
+          "excess_sgov_pp": -21.644205017272757,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 10,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 214.858,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 40.5,
+          "reference_count": 42,
+          "cot_change_pp": -1.865,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -0.9506824012918691,
+          "excess_sgov_pp": -1.8980092239183732,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 3,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 238.796,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": 92.4386648450066,
+          "excess_sgov_pp": 88.70150922361557,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 27408000,
+        "start_aum_usd": 2278088484,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "IBIT",
@@ -1567,141 +1318,8 @@
       "cot_code": "133741",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -4.393,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -629.028,
-          "strength": "Olağan çıkış",
-          "magnitude_percentile": 67.3,
-          "reference_count": 52,
-          "flow_aum_pct": -1.071420020804314,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -4.393,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "Çıkışı izle",
-          "total_return_pct": -15.202872053736494,
-          "excess_sgov_pp": -15.282428371354806,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "Çıkışı izle",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 10,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": -1657.197,
-          "strength": "Zayıf çıkış",
-          "magnitude_percentile": 39.4,
-          "reference_count": 33,
-          "flow_aum_pct": -2.5390325970738643,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -3.558,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -29.308496885113012,
-          "excess_sgov_pp": -29.66710290852257,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 11,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": 2511.122,
-          "strength": "Yatay",
-          "magnitude_percentile": 10,
-          "reference_count": 10,
-          "flow_aum_pct": 5.168895617999896,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -4.639,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "TEYİTSİZ · yönler çelişiyor",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -19.854369305094576,
-          "excess_sgov_pp": -20.841828981381013,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 9,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": 790.471,
-          "strength": "Geçmiş yetersiz",
-          "magnitude_percentile": null,
-          "reference_count": 1,
-          "flow_aum_pct": 1.0864346054132084,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": 9.085,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · veri yetersiz",
-          "total_return_pct": -32.557187346362205,
-          "excess_sgov_pp": -36.31497886385819,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
-          "original_action": "BEKLE · veri yetersiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "BEKLE"
-          },
-          "relative_rank": 11,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -148.663,
@@ -1711,9 +1329,125 @@
         "1Y": 790.471
       },
       "weekly_percentile": 17,
-      "stale": false,
-      "status": "AZALTMA ADAYI",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -629.028,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 67.3,
+          "reference_count": 52,
+          "cot_change_pp": -4.393,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -5.898347185761343,
+          "excess_sgov_pp": -5.95799876410843,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 10,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": -1657.197,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 39.4,
+          "reference_count": 33,
+          "cot_change_pp": -4.276,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -24.673630066322282,
+          "excess_sgov_pp": -24.982379158751122,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": 2511.122,
+          "strength": "Yatay",
+          "magnitude_percentile": 10.0,
+          "reference_count": 10,
+          "cot_change_pp": -10.309,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -20.741761240824598,
+          "excess_sgov_pp": -21.689088063451102,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": 790.471,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 1,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "macro_context": {},
+          "total_return_pct": -27.829897746712373,
+          "excess_sgov_pp": -31.5670533681034,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -541071824,
+        "start_aum_usd": 48357767665,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     },
     {
       "symbol": "ETHA",
@@ -1722,141 +1456,8 @@
       "cot_code": "146021",
       "cot_asof": "2026-11-17",
       "cot_change_pp": -1.326,
-      "cached_source": false,
-      "horizons": {
-        "1H": {
-          "net_usd_m": -107.037,
-          "strength": "Zayıf çıkış",
-          "magnitude_percentile": 32.7,
-          "reference_count": 52,
-          "flow_aum_pct": -1.8249884362791924,
-          "aum_asof": "2026-11-12",
-          "cot_change_pp": -1.326,
-          "cot_start": "2026-11-10",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · akış zayıf veya yatay",
-          "total_return_pct": -17.99182621827018,
-          "excess_sgov_pp": -18.071382535888493,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · akış zayıf veya yatay",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 12,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.6318
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 2
-            }
-          }
-        },
-        "1A": {
-          "net_usd_m": -1326.381,
-          "strength": "Güçlü çıkış",
-          "magnitude_percentile": 85.2,
-          "reference_count": 27,
-          "flow_aum_pct": -16.398809038694836,
-          "aum_asof": "2026-10-19",
-          "cot_change_pp": -2.941,
-          "cot_start": "2026-10-20",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "AZALTMA ADAYI",
-          "total_return_pct": -34.447069776334196,
-          "excess_sgov_pp": -34.80567579974375,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "AZALTMA ADAYI",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 12,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 0.9939
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 8
-            }
-          }
-        },
-        "3A": {
-          "net_usd_m": -7159.366,
-          "strength": "Güçlü çıkış",
-          "magnitude_percentile": 87.5,
-          "reference_count": 8,
-          "flow_aum_pct": -122.66864452628373,
-          "aum_asof": "2026-08-19",
-          "cot_change_pp": -15.173,
-          "cot_start": "2026-08-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "AZALTMA ADAYI",
-          "total_return_pct": -31.434002985969588,
-          "excess_sgov_pp": -32.421462662256026,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "AZALTMA ADAYI",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 11,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 2.9077
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 53
-            }
-          }
-        },
-        "1Y": {
-          "net_usd_m": -8526.556,
-          "strength": "Geçmiş yetersiz",
-          "magnitude_percentile": null,
-          "reference_count": 1,
-          "flow_aum_pct": -74.33008791783202,
-          "aum_asof": "2025-11-19",
-          "cot_change_pp": -3.612,
-          "cot_start": "2025-11-18",
-          "cot_end": "2026-11-17",
-          "confirmation": "YÖN UYUMLU",
-          "action": "BEKLE · veri yetersiz",
-          "total_return_pct": -43.79573939377022,
-          "excess_sgov_pp": -47.5535309112662,
-          "price_confirmation": "YÖN UYUMLU",
-          "original_action": "BEKLE · veri yetersiz",
-          "models": {
-            "price_only": "AZALTMA ADAYI",
-            "price_flow": "AZALTMA ADAYI"
-          },
-          "relative_rank": 12,
-          "rank_count": 12,
-          "macro_context": {
-            "dollar": {
-              "asof": "2026-11-13",
-              "change": 1.5548
-            },
-            "real_yield": {
-              "asof": "2026-11-19",
-              "change": 102
-            }
-          }
-        }
-      },
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
       "flow_asof": "2026-11-19",
       "net_usd_m": {
         "1G": -17.423,
@@ -1866,10 +1467,108 @@
         "1Y": -8526.556
       },
       "weekly_percentile": 42,
-      "stale": false,
-      "status": "AZALTMA ADAYI",
-      "price_asof": "2026-11-20"
+      "horizons": {
+        "1H": {
+          "net_usd_m": -107.037,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -5.203013211948115,
+          "excess_sgov_pp": -5.262664790295202,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1A": {
+          "net_usd_m": -1326.381,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -27.9031058462773,
+          "excess_sgov_pp": -28.21185493870614,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 12,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "3A": {
+          "net_usd_m": -7159.366,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -28.746343551404998,
+          "excess_sgov_pp": -29.693670374031502,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        },
+        "1Y": {
+          "net_usd_m": -8526.556,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · önceki gözlem",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {},
+          "total_return_pct": -37.214166446855735,
+          "excess_sgov_pp": -40.95132206824677,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 12,
+          "rank_count": 12,
+          "early_methods": {
+            "flow": "BEKLE",
+            "flow_position": "BEKLE",
+            "flow_persistence": "BEKLE"
+          },
+          "experiment_version": "early-v1",
+          "selected_method": "flow_position · doğrulama sürüyor"
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -124223168,
+        "start_aum_usd": 4867528971,
+        "start_aum_date": "2026-11-19",
+        "source_date": "2026-11-20"
+      },
+      "price_asof": "2026-11-23"
     }
-  ],
-  "decision_policy": "flow_position_without_price_gate_v1"
+  ]
 }

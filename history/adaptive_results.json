@@ -1,0 +1,14 @@
+{
+  "version": "adaptive-flow-v2.0",
+  "evaluated_at": "2026-11-24T12:32:28.307245+00:00",
+  "cost_assumptions_pp": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "price_errors": {},
+  "prospective": {},
+  "exploratory_current_vintage": {},
+  "promotion": "SHADOW_ONLY_NO_PRODUCTION_CHANGE",
+  "note": "Directional relative SGOV score, not executable portfolio PnL. Replay uses current vintage and assumed seven-day lag; never qualifies a method."
+}

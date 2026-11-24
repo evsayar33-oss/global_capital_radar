@@ -1,19 +1,24 @@
 {
-  "checked_at": "2026-11-24T07:05:42.109001+00:00",
+  "checked_at": "2026-11-24T12:32:28.348930+00:00",
   "assets": [
     {
       "asset": "SPY",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
-      "missing_horizons": [],
+      "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
+        "1Y"
+      ],
       "cot_date": "2026-11-17"
     },
     {
       "asset": "QQQ",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
       "missing_horizons": [],
@@ -22,52 +27,77 @@
     {
       "asset": "DIA",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
-      "missing_horizons": [],
+      "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
+        "1Y"
+      ],
       "cot_date": "2026-11-17"
     },
     {
       "asset": "IWM",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
-      "missing_horizons": [],
+      "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
+        "1Y"
+      ],
       "cot_date": "2026-11-17"
     },
     {
       "asset": "SGOV",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
-      "missing_horizons": [],
+      "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
+        "1Y"
+      ],
       "cot_date": null
     },
     {
       "asset": "SHY",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
-      "missing_horizons": [],
+      "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
+        "1Y"
+      ],
       "cot_date": "2026-11-17"
     },
     {
       "asset": "GLD",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
-      "missing_horizons": [],
+      "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
+        "1Y"
+      ],
       "cot_date": "2026-11-17"
     },
     {
       "asset": "SLV",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
       "missing_horizons": [],
@@ -76,7 +106,7 @@
     {
       "asset": "CPER",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
       "missing_horizons": [],
@@ -85,7 +115,7 @@
     {
       "asset": "USO",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
       "missing_horizons": [],
@@ -94,7 +124,7 @@
     {
       "asset": "IBIT",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
       "missing_horizons": [
@@ -105,10 +135,13 @@
     {
       "asset": "ETHA",
       "flow_date": "2026-11-19",
-      "source_error": null,
+      "source_error": "HTTP Error 403: Forbidden",
       "cached": false,
       "stale": false,
       "missing_horizons": [
+        "1H",
+        "1A",
+        "3A",
         "1Y"
       ],
       "cot_date": "2026-11-17"
