@@ -48,3 +48,12 @@ class AdaptiveFlowTests(unittest.TestCase):
                  (start+timedelta(days=13),report("2026-01-14"))]
         result=collect(records,{"GLD":bars,"SGOV":bars},start+timedelta(days=40))
         self.assertEqual(len(result["GLD/1H"]),2)
+
+    def test_frozen_outcomes_survive_source_outage(self):
+        from adaptive_flow import VERSION
+        start=date(2026,1,1)
+        bars={start+timedelta(days=i):(100.,101.) for i in range(40)}
+        report={"assets":[{"symbol":"GLD","flow_asof":str(start),"horizons":{"1H":{"adaptive_version":VERSION,"adaptive_methods":{BASE:BUY}}}}]}
+        first=collect([(start,report)],{"GLD":bars,"SGOV":bars},start+timedelta(days=40))
+        self.assertEqual(len(first["GLD/1H"]),1)
+        self.assertEqual(collect([(start,report)],{},start+timedelta(days=41),existing=first),first)

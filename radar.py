@@ -10,14 +10,25 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
+from time import sleep
 
 ROOT = Path(__file__).resolve().parent
 HORIZONS = {"1G": 1, "1H": 7, "1A": -1, "3A": -3, "1Y": -12}
 
 
 def read(url):
-    with urlopen(Request(url, headers={"User-Agent": "global-capital-radar/1.0"}), timeout=35) as response:
-        return response.read().decode("utf-8-sig")
+    for attempt in range(2):
+        try:
+            with urlopen(Request(url, headers={"User-Agent": "global-capital-radar/1.0"}), timeout=20) as response:
+                return response.read().decode("utf-8-sig")
+        except HTTPError as exc:
+            if attempt or exc.code not in (408,429,500,502,503,504):
+                raise
+        except (URLError,TimeoutError):
+            if attempt:
+                raise
+        sleep(1)
 
 
 def month(d, offset):

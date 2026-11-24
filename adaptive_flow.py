@@ -215,8 +215,12 @@ def record(rows):
                 h.pop("adaptive_features",None)
                 continue
             base = h.get("early_methods",{}).get("flow_position")
+            if h.get("cot_change_pp") is None:
+                base = None
             methods = candidates(f,base=base,cot=f.get("cot_z"),
                                  cross=cross.get((r["symbol"],key)),proxy=f.get("cost_proxy_gap_pct"))
+            if methods["M08_cot_anomaly"] in (BUY,REDUCE) and h.get("confirmation")!="YÖN UYUMLU":
+                methods["M08_cot_anomaly"]=WAIT
             f["cross_rank"] = cross.get((r["symbol"],key))
             h["adaptive_version"] = VERSION
             h["adaptive_methods"] = methods

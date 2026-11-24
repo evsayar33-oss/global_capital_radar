@@ -99,7 +99,7 @@ def flows(html, today, *, detailed=False):
     return end, result, percentile
 
 
-def cot(today):
+def cot_archive(today):
     histories = {}
     years = [today.year-1, today.year]
     for year in years:
@@ -126,6 +126,30 @@ def cot(today):
 
 
 CODES = {code for _,_,code in ASSETS if code}
+
+
+def cot_with_source(today):
+    from secondary_sources import cot_api, combine_cot
+    primary,primary_error={},None
+    try:
+        primary=cot_archive(today)
+    except Exception as exc:
+        primary_error=str(exc)
+    try:
+        secondary=cot_api(today,CODES,read)
+        if primary:
+            joined,ok=combine_cot(primary,secondary)
+            return joined, {"transport":"CFTC archive + matched API" if ok else "CFTC archive",
+                            "api_overlap_verified":ok}
+        return secondary,{"transport":"CFTC API fallback","archive_error":primary_error}
+    except Exception as exc:
+        if primary:
+            return primary,{"transport":"CFTC archive","api_error":str(exc)}
+        raise ValueError("Both CFTC transports unavailable: "+str(primary_error)+" / "+str(exc)) from exc
+
+
+def cot(today):
+    return cot_with_source(today)[0]
 
 
 def classify(values, position):
@@ -190,9 +214,10 @@ def main():
     now = datetime.now(timezone.utc)
     today = now.date()
     try:
-        positions, error = cot(today), None
+        positions, cot_source = cot_with_source(today)
+        error = None
     except Exception as exc:
-        positions, error = {}, str(exc)
+        positions, error, cot_source = {}, str(exc), {"transport":"unavailable"}
     with ThreadPoolExecutor(max_workers=4) as pool:
         rows = list(pool.map(lambda a: snapshot(a, today, positions), ASSETS))
     archive_folder = ROOT/"history"/"rotation"
@@ -218,6 +243,8 @@ def main():
                 h.update(net_usd_m=row["net_usd_m"].get(key), confirmation="TEYİTSİZ · kaynak okunamadı",action="BEKLE · önceki gözlem")
                 h.setdefault("strength","Güç ölçülemedi")
                 row["horizons"][key]=h
+    from secondary_sources import capture_etfiq
+    secondary_flow = capture_etfiq(ROOT,today,rows,read)
     from price_context import enrich
     price_errors = enrich(rows,today)
     from experiments import record
@@ -233,7 +260,7 @@ def main():
         old_replay = json.loads(replay_path.read_text()) if replay_path.exists() else []
         updated = {r["symbol"] for r in replay}
         atomic(replay_path,[r for r in old_replay if r["symbol"] not in updated]+replay)
-    payload = dict(price_errors=price_errors, schema_version=3, seen_at=now.isoformat(), cot_error=error, assets=rows)
+    payload = dict(price_errors=price_errors, schema_version=4, seen_at=now.isoformat(), cot_error=error, cot_source=cot_source, secondary_flow=secondary_flow, assets=rows)
     folder = ROOT/"history"/"rotation"
     folder.mkdir(exist_ok=True,parents=True)
     # Her çalıştırmanın bilgi kümesi korunur. Tüketiciler latest.json okur.

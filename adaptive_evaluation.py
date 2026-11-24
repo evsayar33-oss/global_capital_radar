@@ -52,7 +52,7 @@ def summary(values):
                 lower95_pp=mean(values)-1.96*stdev(values)/sqrt(len(values)) if len(values)>1 else None)
 
 
-def collect(reports,series,today,*,replay=False):
+def collect(reports,series,today,*,replay=False,existing=None):
     """First eligible signal per symbol/horizon/date; do not resample unchanged source."""
     observations=[]
     if replay:
@@ -67,19 +67,25 @@ def collect(reports,series,today,*,replay=False):
                     if h.get("adaptive_version")==VERSION and h.get("adaptive_methods"):
                         # same flow release is not another independent forecast
                         observations.append((day,r["symbol"],key,r.get("flow_asof"),h["adaptive_methods"]))
-    tracks,occupied,seen={}, {},set()
+    tracks={k:list(v) for k,v in (existing or {}).items()}
+    occupied={k:date.fromisoformat(v[-1]["end"]) for k,v in tracks.items() if v}
+    seen={(k,r["source"]) for k,v in tracks.items() for r in v}
+    blocked=set()
     cash=series.get("SGOV",{})
     for day,sym,key,source,methods in sorted(observations,key=lambda x:x[0]):
         identity=sym+"/"+key
         if sym=="SGOV" or not source or (identity,source) in seen:
             continue
         seen.add((identity,source))
-        if day<=occupied.get(identity,date.min):
+        if identity in blocked or day<=occupied.get(identity,date.min):
             continue
         if not any(m in (BUY,REDUCE,WAIT) for m in methods.values()):
             continue
         result=outcome(series.get(sym,{}),cash,day,key,today)
         if not result:
+            # Do not let a missing earlier observation change a locked cohort.
+            if not replay:
+                blocked.add(identity)
             continue
         end,excess=result
         occupied[identity]=end
@@ -138,7 +144,10 @@ def evaluate_tracks(tracks, *, exploratory=False):
 
 
 def run(reports,series,today,replay_data,errors,*,root=ROOT):
-    prospective=collect(reports,series,today)
+    ledger=root/"history/adaptive_forward_ledger.json"
+    frozen=json.loads(ledger.read_text()) if ledger.exists() else {}
+    prospective=collect(reports,series,today,existing=frozen)
+    atomic(ledger,prospective)
     historical=collect(replay_data,series,today,replay=True)
     report=dict(version=VERSION,evaluated_at=datetime.now(timezone.utc).isoformat(),
                 cost_assumptions_pp=list(COSTS),price_errors=errors,

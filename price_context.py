@@ -53,10 +53,11 @@ def enrich(rows, today):
             weights=f.get("positive_weights",[])
             bars=series.get(row["symbol"],{})
             matched=[(bars[date.fromisoformat(d)][1],w) for d,w in weights if bars.get(date.fromisoformat(d))]
-            if weights and len(matched)==len(weights) and bars.get(end) and f.get("source_end")==str(end):
+            flow_end=date.fromisoformat(f["source_end"]) if f.get("source_end") else None
+            if weights and len(matched)==len(weights) and flow_end and bars.get(flow_end):
                 basis=sum(p*w for p,w in matched)/sum(w for p,w in matched)
                 if basis>0:
-                    f["cost_proxy_gap_pct"]=100*(bars[end][1]/basis-1)
+                    f["cost_proxy_gap_pct"]=100*(bars[flow_end][1]/basis-1)
             h["total_return_pct"]=value
             h["excess_sgov_pp"]=None if value is None or cash is None else value-cash
             if value is None or cash is None or (today-end).days>5:
