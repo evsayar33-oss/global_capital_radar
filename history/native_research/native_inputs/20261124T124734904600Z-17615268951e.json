@@ -1,0 +1,31 @@
+{
+  "BTC": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 451: "
+  },
+  "ETH": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 451: "
+  },
+  "COMEX_copper": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "ALFRED": {
+    "status": "API_KEY_REQUIRED",
+    "series": "DFII10",
+    "vintage": "2026-11-23"
+  },
+  "TBF3": {
+    "status": "UNAVAILABLE",
+    "code": "041741",
+    "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
+    "error": "ValueError: CFTC API empty or truncated"
+  },
+  "WTI": {
+    "status": "UNAVAILABLE_CURRENT_OFFICIAL",
+    "source_url": "https://www.eia.gov/opendata/browser/petroleum/pri/fut",
+    "historical_end": "2024-04-05",
+    "reason": "no verified current licensed settlement curve"
+  }
+}

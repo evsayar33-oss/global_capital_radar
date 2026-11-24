@@ -1,0 +1,3880 @@
+{
+  "version": "adaptive-flow-v2.0",
+  "evaluated_at": "2026-11-24T12:47:34.904600+00:00",
+  "source": "ETFIQ (etfiq.com)",
+  "price_errors": {},
+  "coverage": [
+    {
+      "symbol": "SPY",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/spy.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "41128555df1aaa0171677ff1f39630dea58c0bf93f4668dffa53b847e9a38851",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2026-11-04",
+        "coverage_end": "2026-11-20",
+        "daily_count": 13,
+        "skipped_count": 4,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "fc3272e689024d67157215aeb5a1bbd8b192dfb02de99504a0c396fc1476e5be",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 2,
+        "1A": 0,
+        "3A": 0,
+        "1Y": 0
+      }
+    },
+    {
+      "symbol": "DIA",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/dia.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "f619d1579156e76aa08b29f3ab50482a7ddb7cef077bd37d2373f1ed13e434dc",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "IWM",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/iwm.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "0a228323b28f914bb84ee9cb5eee114630c556d1ec1623d6dadcda8fe037acc5",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "SGOV",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/sgov.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "64b8a1dd114706d1b6f552e6578833605a0aecb4b915a98b2f55fa19c3629505",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
+      }
+    },
+    {
+      "symbol": "SHY",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/shy.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "85b848b13ee7327f598dc2e1d990b76a2c1a23674c3d474682f7d9f3607a8793",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "GLD",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/gld.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "e5245157757ee3800d2f981a391c4ac45e7bc5088448e7f9ee2b3af4d108cb6f",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "SLV",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/slv.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "67f8b1f41847e8c68c573907634f1dc836fea0ca25d166b581dd3916d3fdb658",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "CPER",
+      "status": "UNAVAILABLE",
+      "provenance": null,
+      "error": "ValueError: ETFIQ fund history stale/future",
+      "model_coverage": {}
+    },
+    {
+      "symbol": "USO",
+      "status": "UNAVAILABLE",
+      "provenance": null,
+      "error": "ValueError: insufficient contiguous daily observations",
+      "model_coverage": {}
+    },
+    {
+      "symbol": "IBIT",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/ibit.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "8178ae9020155f92678e33899b1ee0a5d1e5102114b504e344baa4fb0fb7879f",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    },
+    {
+      "symbol": "ETHA",
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/etha.json",
+        "source_date": "2026-11-20",
+        "coverage_start": "2025-04-22",
+        "coverage_end": "2026-11-20",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "bb772cface0436a46353af55f68e8cacab4b36d51ad6432616cf355e7aa09f9d",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 3,
+        "1A": 3,
+        "3A": 3,
+        "1Y": 2
+      }
+    }
+  ],
+  "prospective": {},
+  "exploratory": {
+    "SPY/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 11,
+          "hit_rate": 0.36363636363636365,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": -0.22084445106116984,
+              "positive": 4,
+              "lower95_pp": -0.5303945683105961
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": -0.27873918790327507,
+              "positive": 3,
+              "lower95_pp": -0.5999747952772083
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": -0.33663392474538034,
+              "positive": 3,
+              "lower95_pp": -0.6717037028364148
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "DIA/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 12,
+          "hit_rate": 0.25,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": -0.05664785932180815,
+              "positive": 3,
+              "lower95_pp": -0.22264366115879453
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": -0.11980575405865027,
+              "positive": 3,
+              "lower95_pp": -0.2931886918073162
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": -0.18296364879549235,
+              "positive": 3,
+              "lower95_pp": -0.36833722623970455
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "IWM/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 10,
+          "hit_rate": 0.2,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": -0.2839497711731157,
+              "positive": 2,
+              "lower95_pp": -0.6333524842860274
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": -0.3365813501204841,
+              "positive": 2,
+              "lower95_pp": -0.6993166448557746
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": -0.38921292906785254,
+              "positive": 2,
+              "lower95_pp": -0.7669458311618726
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "SHY/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 8,
+          "hit_rate": 0.125,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": -0.042000046012103394,
+              "positive": 1,
+              "lower95_pp": -0.08048362509077622
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": -0.08410530916999813,
+              "positive": 0,
+              "lower95_pp": -0.1436731226608863
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": -0.12621057232789287,
+              "positive": 0,
+              "lower95_pp": -0.20985379390970652
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "GLD/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 7,
+          "hit_rate": 0.42857142857142855,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": -0.3189346809568373,
+              "positive": 3,
+              "lower95_pp": -0.9266951108692564
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": -0.3557767862199952,
+              "positive": 3,
+              "lower95_pp": -0.9728687459697082
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": -0.3926188914831531,
+              "positive": 3,
+              "lower95_pp": -1.0198990988932257
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "SLV/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 10,
+          "hit_rate": 0.4,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": 0.6920675462966811,
+              "positive": 4,
+              "lower95_pp": -1.0309871663153873
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": 0.6394359673493126,
+              "positive": 4,
+              "lower95_pp": -1.0776966543075368
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": 0.5868043884019443,
+              "positive": 4,
+              "lower95_pp": -1.1248561945476163
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "IBIT/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 11,
+          "hit_rate": 0.45454545454545453,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": 0.25764610686679845,
+              "positive": 5,
+              "lower95_pp": -0.5927433954186037
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": 0.1997513700246932,
+              "positive": 5,
+              "lower95_pp": -0.6466608790353814
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": 0.14185663318258793,
+              "positive": 5,
+              "lower95_pp": -0.7015729640630637
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "ETHA/1H": {
+      "independent_periods": 38,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 38,
+          "active": 12,
+          "hit_rate": 0.5,
+          "cost_stress": {
+            "0.1": {
+              "n": 38,
+              "mean_pp": -0.4829592515466723,
+              "positive": 6,
+              "lower95_pp": -1.7089523350480533
+            },
+            "0.3": {
+              "n": 38,
+              "mean_pp": -0.5461171462835145,
+              "positive": 6,
+              "lower95_pp": -1.7780587295447177
+            },
+            "0.5": {
+              "n": 38,
+              "mean_pp": -0.6092750410203566,
+              "positive": 6,
+              "lower95_pp": -1.8478612397083083
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "SPY/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 3,
+          "hit_rate": 0.3333333333333333,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": -1.450939717101124,
+              "positive": 1,
+              "lower95_pp": -5.776104325777433
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": -1.550939717101124,
+              "positive": 1,
+              "lower95_pp": -5.902685262607514
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": -1.650939717101124,
+              "positive": 1,
+              "lower95_pp": -6.030859361743403
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "DIA/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 1,
+          "hit_rate": 0.0,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": -0.5508835850096002,
+              "positive": 0,
+              "lower95_pp": -1.6306154116284164
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": -0.5842169183429334,
+              "positive": 0,
+              "lower95_pp": -1.7292820782950833
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": -0.6175502516762669,
+              "positive": 0,
+              "lower95_pp": -1.8279487449617497
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "IWM/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "SHY/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 3,
+          "hit_rate": 0.3333333333333333,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": 0.03342653038372339,
+              "positive": 1,
+              "lower95_pp": -0.06618684791140217
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": -0.06657346961627661,
+              "positive": 1,
+              "lower95_pp": -0.17824070192049069
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": -0.16657346961627661,
+              "positive": 0,
+              "lower95_pp": -0.34087985620494654
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "GLD/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 2,
+          "hit_rate": 0.5,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": -0.19048985862807158,
+              "positive": 1,
+              "lower95_pp": -0.9898404368170782
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": -0.2571565252947382,
+              "positive": 1,
+              "lower95_pp": -1.0846947033529122
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": -0.3238231919614049,
+              "positive": 1,
+              "lower95_pp": -1.186572603817946
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "SLV/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "IBIT/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": 0.0,
+              "positive": 0,
+              "lower95_pp": 0.0
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    },
+    "ETHA/1A": {
+      "independent_periods": 6,
+      "models": {
+        "M00_flow_position": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M01_raw_percentile": {
+          "available": 6,
+          "active": 1,
+          "hit_rate": 0.0,
+          "cost_stress": {
+            "0.1": {
+              "n": 6,
+              "mean_pp": -2.0630358074379482,
+              "positive": 0,
+              "lower95_pp": -6.1065859900163275
+            },
+            "0.3": {
+              "n": 6,
+              "mean_pp": -2.0963691407712814,
+              "positive": 0,
+              "lower95_pp": -6.205252656682994
+            },
+            "0.5": {
+              "n": 6,
+              "mean_pp": -2.1297024741046147,
+              "positive": 0,
+              "lower95_pp": -6.30391932334966
+            }
+          }
+        },
+        "M02_aum_percentile": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M03_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M04_robust_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M05_ewma_zscore": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M06_acceleration": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M07_persistence": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M08_cot_anomaly": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M09_cross_asset": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M10_regime": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M12_ensemble": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        },
+        "M11_cost_proxy": {
+          "available": 0,
+          "active": 0,
+          "hit_rate": null,
+          "cost_stress": {
+            "0.1": {
+              "n": 0
+            },
+            "0.3": {
+              "n": 0
+            },
+            "0.5": {
+              "n": 0
+            }
+          }
+        }
+      },
+      "status": "EXPLORATORY_ONLY"
+    }
+  },
+  "native_status": {
+    "BTC": "UNAVAILABLE",
+    "ETH": "UNAVAILABLE",
+    "COMEX_copper": "UNAVAILABLE",
+    "ALFRED": "API_KEY_REQUIRED",
+    "TBF3": "UNAVAILABLE",
+    "WTI": "UNAVAILABLE_CURRENT_OFFICIAL"
+  },
+  "native_errors": {
+    "BTC": "HTTPError: HTTP Error 451: ",
+    "ETH": "HTTPError: HTTP Error 451: ",
+    "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden",
+    "TBF3": "ValueError: CFTC API empty or truncated"
+  },
+  "decision_policy": "SHADOW_ONLY_NO_PRODUCTION_PROMOTION",
+  "costs": {
+    "observed_median_spread_bps": null,
+    "commission_bps": null,
+    "slippage_bps": null,
+    "scenario_roundtrip_bps": [
+      10,
+      30,
+      50
+    ],
+    "realized_cost_verified": false
+  },
+  "historical_publication_time_verified": false
+}

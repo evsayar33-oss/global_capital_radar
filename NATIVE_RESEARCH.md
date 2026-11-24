@@ -1,0 +1,48 @@
+# ETFIQ independent research / native evidence
+
+2026-11-24T12:47:34.904600+00:00
+
+Separate ETFIQ source history; no production override, no mixing with ETFdb. Current vintage replay is exploratory.
+
+|Fund|Status|Daily samples|From|To|
+|---|---|---:|---|---|
+|SPY|OBSERVED|400|2025-04-22|2026-11-20|
+|QQQ|OBSERVED|13|2026-11-04|2026-11-20|
+|DIA|OBSERVED|400|2025-04-22|2026-11-20|
+|IWM|OBSERVED|400|2025-04-22|2026-11-20|
+|SGOV|OBSERVED|400|2025-04-22|2026-11-20|
+|SHY|OBSERVED|400|2025-04-22|2026-11-20|
+|GLD|OBSERVED|400|2025-04-22|2026-11-20|
+|SLV|OBSERVED|400|2025-04-22|2026-11-20|
+|CPER|UNAVAILABLE|—|—|—|
+|USO|UNAVAILABLE|—|—|—|
+|IBIT|OBSERVED|400|2025-04-22|2026-11-20|
+|ETHA|OBSERVED|400|2025-04-22|2026-11-20|
+
+|Native input|Status|
+|---|---|
+|BTC|UNAVAILABLE|
+|ETH|UNAVAILABLE|
+|COMEX_copper|UNAVAILABLE|
+|ALFRED|API_KEY_REQUIRED|
+|TBF3|UNAVAILABLE|
+|WTI|UNAVAILABLE_CURRENT_OFFICIAL|
+
+|Research cohort|Independent replay periods|Forward periods|
+|---|---:|---:|
+|DIA/1A|6|0|
+|DIA/1H|38|0|
+|ETHA/1A|6|0|
+|ETHA/1H|38|0|
+|GLD/1A|6|0|
+|GLD/1H|38|0|
+|IBIT/1A|6|0|
+|IBIT/1H|38|0|
+|IWM/1A|6|0|
+|IWM/1H|38|0|
+|SHY/1A|6|0|
+|SHY/1H|38|0|
+|SLV/1A|6|0|
+|SLV/1H|38|0|
+|SPY/1A|6|0|
+|SPY/1H|38|0|
