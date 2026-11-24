@@ -6,6 +6,8 @@ from source_recovery import ISSUERS,parse_issuer,parse_creation,parse_shfe_cn,SH
 from native_adapters import SHFE as SHFE_EN,parse_shfe
 from runner_sources import verified_page
 from urllib.parse import urlencode
+from urllib.error import HTTPError, URLError
+from time import sleep
 
 def issuer_verified(symbol,today):
     r,mode=verified_page(ISSUERS[symbol],lambda html:parse_issuer(html,symbol,today),
@@ -23,6 +25,19 @@ def issuer_verified(symbol,today):
         except Exception as e:r.update(creation_status="UNAVAILABLE",creation_error=str(e))
     return r
 
+def shfe_read_once_retry(url,parser,reader=verified_page,pause=sleep):
+    # Same public endpoint, one bounded transient retry, never retry 403/429.
+    try:return reader(url,parser)
+    except HTTPError as exc:
+        if exc.code not in (408,500,502,503,504):raise
+    except URLError as exc:
+        if not isinstance(exc.reason,(TimeoutError,ConnectionResetError,ConnectionAbortedError)):
+            raise
+    except (TimeoutError,ConnectionResetError,ConnectionAbortedError):
+        pass
+    pause(2)
+    return reader(url,parser)
+
 def shfe_verified(now):
     day=now.astimezone(ZoneInfo("Asia/Shanghai")).date()
     errors=[]
@@ -33,7 +48,7 @@ def shfe_verified(now):
                     (SHFE_EN+"?"+urlencode(dict(query_date=d.strftime("%Y%m%d"),query_params="dailystock")),parse_shfe)]
         for url,parse in candidates:
             try:
-                r,mode=verified_page(url,lambda h:parse(h,d))
+                r,mode=shfe_read_once_retry(url,lambda h:parse(h,d))
                 return dict(r,source_url=url,transport=mode)
             except Exception as e:errors.append(type(e).__name__+": "+str(e)[:200])
     return dict(status="UNAVAILABLE",source="SHFE",error="; ".join(errors))

@@ -18,6 +18,7 @@ from native_adapters import okx_crypto, shfe_copper, tbf3
 from source_recovery import shfe_cn, capture_issuer, estimate_adjacent, tff_tbf3
 from runner_recovery import issuer_verified, shfe_verified
 from macro_recovery import alfred_csv, wti_pair, treasury_auction, issuer_revision, treasury_real_yield, usl_pair
+from daily_evidence import capture as capture_daily_evidence, preserve_vintage
 
 ROOT=Path(__file__).resolve().parent
 NY=ZoneInfo("America/New_York")
@@ -244,6 +245,7 @@ def main():
     aum_history=json.loads(prior.read_text()) if prior.exists() else {}
     syms={s for s,_,_ in ASSETS}
     daily=safe(lambda:parse_etfiq(json.loads(read(ETFIQ_URL)),today,syms))
+    daily_seen=datetime.now(timezone.utc)
     for sym,r in daily.get("funds",{}).items():
         if r["status"]=="OBSERVED":
             day=r["start_aum_date"]
@@ -272,6 +274,7 @@ def main():
     errors={s:b.get("error") for s,b in series.items() if b.get("status")=="UNAVAILABLE"}
     series={s:b for s,b in series.items() if s not in errors}
     calendar=sorted(d for d,v in series.get("SGOV",{}).items() if v)
+    daily_evidence=safe(lambda:capture_daily_evidence(ROOT,folder,daily,daily_seen,calendar,syms))
     previous_path=folder/"results.json"
     previous=json.loads(previous_path.read_text()) if previous_path.exists() else {}
     rows=[]
@@ -354,6 +357,7 @@ def main():
     # Store bounded summaries; funding history and vintage observations are
     # captured once per unique source content, not duplicated every scan.
     # Retain current detailed input, and bounded immutable daily summaries.
+    vintage_archive=safe(lambda:dict(status="ARCHIVED" if preserve_vintage(folder,native["ALFRED"],datetime.now(timezone.utc)) else "UNAVAILABLE"))
     atomic(folder/"native_latest.json",native)
     for key,value in native.items():
         provider={"BTC":"okx","ETH":"okx","SHFE_copper_warrant":"shfe","COMEX_copper":"comex","TBF3":"cftc","ALFRED":"alfred","WTI":"wti","TBF3_TFF":"cftc","issuer_USO":"uscf","issuer_CPER":"uscf","issuer_QQQ":"invesco","WTI_CLOSE_PAIR":"yahoo","TBILL_AUCTION":"treasurydirect","TREASURY_REAL_YIELD":"treasury","WTI_USL_PAIR":"uscf"}[key]
@@ -362,6 +366,7 @@ def main():
     compact={k:{a:b for a,b in v.items() if a not in ("history","observations")} for k,v in native.items()}
     archive(folder,"native_inputs",now,compact)
     result=dict(version=VERSION,evaluated_at=now.isoformat(),source="ETFIQ (etfiq.com)",
+                daily_snapshot_evidence=daily_evidence,alfred_vintage_archive=vintage_archive,
                 price_errors=errors,coverage=[dict(symbol=r["symbol"],status=r["source_status"],
                 provenance=r.get("provenance"),error=r.get("error"),
                 model_coverage={k:sum(v is not None for v in h.get("adaptive_methods",{}).values())

@@ -1,0 +1,88 @@
+name: Full isolated source acceptance
+on:
+  push:
+    branches: ['research/full-source-validation']
+permissions:
+  contents: read
+concurrency:
+  group: isolated-full-source-validation
+  cancel-in-progress: true
+jobs:
+  unit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install xlrd==2.0.2
+      - run: python -m unittest -v
+  live_acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    needs: unit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m pip install xlrd==2.0.2 playwright==1.56.0
+          python -m playwright install --with-deps chromium
+          command -v pdftotext || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+          date -u +'%Y-%m-%dT%H:%M:%S+00:00' > "$RUNNER_TEMP/started"
+      - name: Actual native sources and research
+        id: native
+        continue-on-error: true
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python native_research.py
+      - name: Actual monthly filing sources
+        id: filing
+        continue-on-error: true
+        run: python filing_history.py
+      - name: Actual primary macro data
+        id: macro
+        continue-on-error: true
+        run: python radar.py
+      - name: Actual primary rotation and alternative flows
+        id: rotation
+        continue-on-error: true
+        run: python rotation.py
+      - name: Actual evaluation
+        id: evaluation
+        continue-on-error: true
+        run: python evaluate_rotation.py
+      - name: Actual validation
+        id: validation
+        continue-on-error: true
+        run: python validation.py
+      - name: Strict source acceptance
+        if: always()
+        run: python full_source_gate.py --started "$(cat "$RUNNER_TEMP/started")" --out "$RUNNER_TEMP/full-source-gate.json"
+      - name: Export test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-source-validation-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/full-source-gate.json
+            history/native_research/results.json
+            history/native_research/native_latest.json
+            history/native_research/extended_history/results.json
+            history/rotation/latest.json
+          retention-days: 30
+      - name: Require all pipeline stages
+        if: always()
+        run: |
+          test '${{ steps.native.outcome }}' = success
+          test '${{ steps.filing.outcome }}' = success
+          test '${{ steps.macro.outcome }}' = success
+          test '${{ steps.rotation.outcome }}' = success
+          test '${{ steps.evaluation.outcome }}' = success
+          test '${{ steps.validation.outcome }}' = success
