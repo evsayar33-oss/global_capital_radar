@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-24T16:03:59.080254+00:00",
+  "seen_at": "2026-11-24T16:18:33.608659+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -1628,7 +1628,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -2.386652326285299,
           "excess_sgov_pp": -2.4463039046323853,
           "price_confirmation": "YÖN UYUMLU",
@@ -1645,7 +1654,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -4.958089678322375,
           "excess_sgov_pp": -5.266838770751215,
           "price_confirmation": "YÖN UYUMLU",
@@ -1662,7 +1680,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -5.437549143072662,
           "excess_sgov_pp": -6.384868240511099,
           "price_confirmation": "YÖN UYUMLU",
@@ -1679,9 +1706,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": 10.781376669818288,
-          "excess_sgov_pp": 7.044212890343604,
+          "excess_sgov_pp": 7.044221048427257,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -1730,7 +1766,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -1.6199426827540608,
           "excess_sgov_pp": -1.6795942611011472,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1752,7 +1797,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -7.57666003228521,
           "excess_sgov_pp": -7.885409124714049,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1774,7 +1828,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -8.652670749622715,
           "excess_sgov_pp": -9.599989847061153,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1793,9 +1856,18 @@
           "reference_count": 9,
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": 10.849379500846723,
-          "excess_sgov_pp": 7.112215721372039,
+          "excess_sgov_pp": 7.1122238794556925,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -1839,7 +1911,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -3.7480178034222655,
           "excess_sgov_pp": -3.807669381769352,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1856,7 +1937,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -4.798477560768832,
           "excess_sgov_pp": -5.107226653197672,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1873,7 +1963,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -6.503868438559623,
           "excess_sgov_pp": -7.45118753599806,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1890,9 +1989,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
-          "total_return_pct": 8.736596310992084,
-          "excess_sgov_pp": 4.9994325315174,
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
+          "total_return_pct": 8.7366108664233,
+          "excess_sgov_pp": 4.999455245032269,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -1936,7 +2044,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -2.637946853751094,
           "excess_sgov_pp": -2.6975984320981805,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1953,7 +2070,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -3.630103269492291,
           "excess_sgov_pp": -3.93885236192113,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1970,7 +2096,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -11.176811103398432,
           "excess_sgov_pp": -12.12413020083687,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -1987,9 +2122,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": 13.938834229953878,
-          "excess_sgov_pp": 10.201670450479195,
+          "excess_sgov_pp": 10.201678608562847,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2031,7 +2175,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": 0.05965157834708634,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2047,7 +2200,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": 0.3087490924288394,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2063,7 +2225,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": 0.9473190974384371,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2079,8 +2250,17 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
-          "total_return_pct": 3.7371637794746837,
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
+          "total_return_pct": 3.7371556213910306,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -2124,7 +2304,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": 0.418560044121441,
           "excess_sgov_pp": 0.35890846577435465,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2140,7 +2329,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": 0.3980221157411812,
           "excess_sgov_pp": 0.08927302331234177,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2156,9 +2354,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
-          "total_return_pct": 0.381969155542361,
-          "excess_sgov_pp": -0.5653499418960761,
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
+          "total_return_pct": 0.38197858031920884,
+          "excess_sgov_pp": -0.5653405171192283,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2172,9 +2379,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
-          "total_return_pct": 1.814328512849217,
-          "excess_sgov_pp": -1.9228352666254667,
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
+          "total_return_pct": 1.8143382085110016,
+          "excess_sgov_pp": -1.922817412880029,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2217,7 +2433,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -5.641346463971308,
           "excess_sgov_pp": -5.700998042318394,
           "price_confirmation": "YÖN UYUMLU",
@@ -2233,7 +2458,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -9.162324453786852,
           "excess_sgov_pp": -9.471073546215692,
           "price_confirmation": "YÖN UYUMLU",
@@ -2249,7 +2483,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -21.33881317642038,
           "excess_sgov_pp": -22.28613227385882,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2265,9 +2508,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": -11.021455422783887,
-          "excess_sgov_pp": -14.758619202258572,
+          "excess_sgov_pp": -14.758611044174918,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2315,7 +2567,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -8.209482407037116,
           "excess_sgov_pp": -8.269133985384203,
           "price_confirmation": "YÖN UYUMLU",
@@ -2337,7 +2598,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -20.13547029453345,
           "excess_sgov_pp": -20.444219386962292,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2359,7 +2629,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -37.96237389968612,
           "excess_sgov_pp": -38.90969299712456,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2378,9 +2657,18 @@
           "reference_count": 9,
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": -14.105959155117809,
-          "excess_sgov_pp": -17.843122934592493,
+          "excess_sgov_pp": -17.84311477650884,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2429,7 +2717,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -6.161525065833439,
           "excess_sgov_pp": -6.221176644180526,
           "price_confirmation": "YÖN UYUMLU",
@@ -2450,7 +2747,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -13.440859742493295,
           "excess_sgov_pp": -13.749608834922135,
           "price_confirmation": "YÖN UYUMLU",
@@ -2471,7 +2777,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -15.453863580364624,
           "excess_sgov_pp": -16.40118267780306,
           "price_confirmation": "YÖN UYUMLU",
@@ -2489,9 +2804,18 @@
           "reference_count": 9,
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": 8.818801755325545,
-          "excess_sgov_pp": 5.081637975850861,
+          "excess_sgov_pp": 5.081646133934514,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2539,7 +2863,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -4.763263748547186,
           "excess_sgov_pp": -4.822915326894273,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2560,7 +2893,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -21.335455924843917,
           "excess_sgov_pp": -21.644205017272757,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2581,7 +2923,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -0.9506824012918691,
           "excess_sgov_pp": -1.8980014987303062,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2599,9 +2950,18 @@
           "reference_count": 9,
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": 92.4386648450066,
-          "excess_sgov_pp": 88.70150106553191,
+          "excess_sgov_pp": 88.70150922361557,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2649,7 +3009,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -5.898347185761343,
           "excess_sgov_pp": -5.95799876410843,
           "price_confirmation": "YÖN UYUMLU",
@@ -2670,7 +3039,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -24.673630066322282,
           "excess_sgov_pp": -24.982379158751122,
           "price_confirmation": "YÖN UYUMLU",
@@ -2691,7 +3069,16 @@
           "cot_end": "2026-11-17",
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -20.741761240824598,
           "excess_sgov_pp": -21.689080338263036,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
@@ -2709,9 +3096,18 @@
           "reference_count": 1,
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": -27.829897746712373,
-          "excess_sgov_pp": -31.567061526187057,
+          "excess_sgov_pp": -31.5670533681034,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2754,7 +3150,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": -14.0
+            }
+          },
           "total_return_pct": -5.203013211948115,
           "excess_sgov_pp": -5.262664790295202,
           "price_confirmation": "YÖN UYUMLU",
@@ -2770,7 +3175,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 0.0
+            }
+          },
           "total_return_pct": -27.9031058462773,
           "excess_sgov_pp": -28.21185493870614,
           "price_confirmation": "YÖN UYUMLU",
@@ -2786,7 +3200,16 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 42.0
+            }
+          },
           "total_return_pct": -28.746343551404998,
           "excess_sgov_pp": -29.693662648843436,
           "price_confirmation": "YÖN UYUMLU",
@@ -2802,9 +3225,18 @@
           "confirmation": "TEYİTSİZ · kaynak okunamadı",
           "action": "BEKLE · kaynak kullanılamıyor",
           "strength": "Güç ölçülemedi",
-          "macro_context": {},
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-20",
+              "change": 91.0
+            }
+          },
           "total_return_pct": -37.214166446855735,
-          "excess_sgov_pp": -40.95133022633042,
+          "excess_sgov_pp": -40.95132206824677,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
