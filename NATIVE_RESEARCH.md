@@ -1,6 +1,6 @@
 # ETFIQ independent research / native evidence
 
-2026-11-24T13:39:22.607597+00:00
+2026-11-24T13:53:39.261758+00:00
 
 Separate ETFIQ source history; no production override, no mixing with ETFdb. Current vintage replay is exploratory.
 
@@ -23,11 +23,11 @@ Separate ETFIQ source history; no production override, no mixing with ETFdb. Cur
 |---|---|
 |BTC|OBSERVED|
 |ETH|OBSERVED|
-|SHFE_copper_warrant|UNAVAILABLE|
+|SHFE_copper_warrant|OBSERVED|
 |TBF3_TFF|NO_CURRENT_COT_SERIES|
 |issuer_USO|OBSERVED|
 |issuer_CPER|OBSERVED|
-|issuer_QQQ|UNAVAILABLE|
+|issuer_QQQ|OBSERVED|
 |COMEX_copper|UNAVAILABLE|
 |ALFRED|API_KEY_REQUIRED|
 |TBF3|NO_CURRENT_COT_SERIES|

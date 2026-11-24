@@ -1,0 +1,162 @@
+{
+  "BTC": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "BTC-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 2.21870316848e-05,
+    "interval_hours": 8.0,
+    "annualized_pct": 2.4294799694856,
+    "basis_pct": -0.04759654109611766,
+    "quoted_spread_bps": 0.016650335462391436,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T13:53:46.227000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T13:53:46.665000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "ETH": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "ETH-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 8.892955017e-07,
+    "interval_hours": 8.0,
+    "annualized_pct": 0.09737785743615,
+    "basis_pct": -0.059657765255549666,
+    "quoted_spread_bps": 0.05910672013849239,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T13:53:46.089000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T13:53:46.371000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "SHFE_copper_warrant": {
+    "status": "OBSERVED",
+    "source": "SHFE",
+    "source_date": "2026-11-24",
+    "units": "metric tonnes",
+    "on_warrant_tonnes": 3952,
+    "change_tonnes": -422,
+    "regions": 4,
+    "scope": "SHFE copper warrants only; not COMEX inventories",
+    "source_sha256": "a938e1cf56faa4a6c4aafb84c7285c90fba28c3875fcb06575b60594720cf36c",
+    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261124&query_params=dailystock",
+    "transport": "RENDERED_HTTP_200"
+  },
+  "TBF3_TFF": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "source": "CFTC TFF",
+    "upstream_id": "CFTC",
+    "reports": {
+      "futures_only": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      },
+      "combined": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/yw9f-hn96.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      }
+    },
+    "proxy_used": false,
+    "caveat": "report availability only; TFF categories are not Legacy net noncommercial positions"
+  },
+  "issuer_USO": {
+    "status": "OBSERVED",
+    "symbol": "USO",
+    "source": "USCF",
+    "upstream_id": "USCF",
+    "source_date": "2026-11-23",
+    "nav_usd": 133.31,
+    "shares": 13123603.0,
+    "shares_unit": "shares",
+    "shares_precision": "exact_integer",
+    "reported_aum_usd": 1749570356.46,
+    "calculated_aum_usd": 1749507515.93,
+    "source_url": "https://www.uscfinvestments.com/uso",
+    "publication_intraday_verified": false,
+    "source_sha256": "16d5b3fdb992d290acaaf864317e74691741ecfebbfa1e66a4ddefbc4e17dc19",
+    "transport": "RENDERED_HTTP_200",
+    "net_created_shares": 600000,
+    "creation_status": "OBSERVED",
+    "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
+    "creation_transport": "RENDERED_HTTP_200",
+    "estimated_creation_usd": 79986000.0,
+    "creation_basis": "issuer net created shares times same-date rounded NAV"
+  },
+  "issuer_CPER": {
+    "status": "OBSERVED",
+    "symbol": "CPER",
+    "source": "USCF",
+    "upstream_id": "USCF",
+    "source_date": "2026-11-23",
+    "nav_usd": 33.93,
+    "shares": 14900000.0,
+    "shares_unit": "shares",
+    "shares_precision": "exact_integer",
+    "reported_aum_usd": 505514719.7,
+    "calculated_aum_usd": 505557000.0,
+    "source_url": "https://www.uscfinvestments.com/cper",
+    "publication_intraday_verified": false,
+    "source_sha256": "35db79493c4c9d9ea044c45cb80f2ecd62920166dcb20dbdff7b66f9bc254427",
+    "transport": "RENDERED_HTTP_200",
+    "net_created_shares": -300000,
+    "creation_status": "OBSERVED",
+    "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
+    "creation_transport": "RENDERED_HTTP_200",
+    "estimated_creation_usd": -10179000.0,
+    "creation_basis": "issuer net created shares times same-date rounded NAV"
+  },
+  "issuer_QQQ": {
+    "status": "OBSERVED",
+    "symbol": "QQQ",
+    "source": "Invesco",
+    "upstream_id": "Invesco",
+    "source_date": "2026-11-23",
+    "nav_usd": null,
+    "shares": 692250000.0,
+    "shares_unit": "shares",
+    "shares_precision": "rounded",
+    "reported_aum_usd": 450580000000.0,
+    "calculated_aum_usd": null,
+    "aum_precision": "rounded",
+    "snapshot_only": true,
+    "flow_eligible": false,
+    "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
+    "publication_intraday_verified": false,
+    "source_sha256": "d61621dbeff7c43a1da8323c17bfa35c2b88b92d622969e62536aaf09aa849ea",
+    "transport": "RENDERED_HTTP_200"
+  },
+  "COMEX_copper": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "ALFRED": {
+    "status": "API_KEY_REQUIRED",
+    "series": "DFII10",
+    "vintage": "2026-11-23"
+  },
+  "TBF3": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "code": "041741",
+    "contract_name": "13-week U.S. Treasury bills",
+    "source": "CFTC Legacy futures only",
+    "latest_report_date": null,
+    "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
+    "production_proxy_allowed": false
+  },
+  "WTI": {
+    "status": "UNAVAILABLE_CURRENT_OFFICIAL",
+    "source_url": "https://www.eia.gov/opendata/browser/petroleum/pri/fut",
+    "historical_end": "2024-04-05",
+    "reason": "no verified current licensed settlement curve"
+  }
+}
