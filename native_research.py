@@ -14,6 +14,7 @@ from horizons import analyze, interpret, PERIODS
 from radar import read
 from rotation import ASSETS, CODES, cot_with_source
 from secondary_sources import cot_api, parse_etfiq, ETFIQ_URL, number
+from native_adapters import okx_crypto, shfe_copper, tbf3
 
 ROOT=Path(__file__).resolve().parent
 NY=ZoneInfo("America/New_York")
@@ -228,25 +229,34 @@ def main():
     folder=ROOT/"history/native_research"
     folder.mkdir(parents=True,exist_ok=True)
     # Retain immutable first-observed daily AUM evidence; no backdated AUM.
-    aum_ledger=folder/"aum_observations.json"
-    aum_history=json.loads(aum_ledger.read_text()) if aum_ledger.exists() else {}
+    aum_root=folder/"aum"
+    aum_root.mkdir(parents=True,exist_ok=True)
+    aum_ledger=aum_root/"etfiq.json"
+    legacy=folder/"aum_observations.json"
+    prior=aum_ledger if aum_ledger.exists() else legacy
+    aum_history=json.loads(prior.read_text()) if prior.exists() else {}
     syms={s for s,_,_ in ASSETS}
     daily=safe(lambda:parse_etfiq(json.loads(read(ETFIQ_URL)),today,syms))
     for sym,r in daily.get("funds",{}).items():
         if r["status"]=="OBSERVED":
-            aum_history.setdefault(sym,{}).setdefault(r["start_aum_date"],
-                dict(value=r["start_aum_usd"],first_seen=now.isoformat(),source_date=daily["source_date"]))
+            day=r["start_aum_date"]
+            entry=dict(value=r["start_aum_usd"],source_date=daily["source_date"],source="ETFIQ",source_url=ETFIQ_URL)
+            history=aum_history.setdefault(sym,{})
+            first=history.setdefault(day,dict(entry,first_seen=now.isoformat()))
+            if first["value"]!=entry["value"]:
+                revisions=first.setdefault("revisions",[])
+                if not revisions or revisions[-1]["value"]!=entry["value"]:
+                    revisions.append(dict(entry,first_seen=now.isoformat(),revision_of=digest({k:v for k,v in first.items() if k!="revisions"})))
     atomic(aum_ledger,aum_history)
     try:
         positions,cot_source=cot_with_source(today)
     except Exception as exc:
         positions,cot_source={},dict(status="UNAVAILABLE",error=str(exc))
-    tbf=safe(lambda:cot_api(today,{CFTC_TBF3},read))
-    tbfseries=tbf.get(CFTC_TBF3,{})
-    tbf_data=dict(status="OBSERVED" if tbfseries else "UNAVAILABLE",code=CFTC_TBF3,
-                  observations=[dict(date=str(d),noncommercial_net_oi_pct=v) for d,v in sorted(tbfseries.items())],
-                  price_status="UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
-                  error=tbf.get("error"))
+    try:
+        tbfseries,tbf_data=tbf3(today,read)
+    except Exception as exc:
+        tbfseries={}
+        tbf_data=dict(status="UNAVAILABLE",code=CFTC_TBF3,error=type(exc).__name__+": "+str(exc))
     start=today-timedelta(days=850)
     with ThreadPoolExecutor(max_workers=4) as pool:
         def get_price(sym):
@@ -304,8 +314,9 @@ def main():
     # production, and never represented by zero on failure.
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures={name:pool.submit(safe,fn) for name,fn in (
-            ("BTC",lambda:crypto("BTCUSDT",datetime.now(timezone.utc))),
-            ("ETH",lambda:crypto("ETHUSDT",datetime.now(timezone.utc))),
+            ("BTC",lambda:okx_crypto("BTC-USDT-SWAP",datetime.now(timezone.utc),read)),
+            ("ETH",lambda:okx_crypto("ETH-USDT-SWAP",datetime.now(timezone.utc),read)),
+            ("SHFE_copper_warrant",lambda:shfe_copper(datetime.now(timezone.utc),read)),
             ("COMEX_copper",lambda:copper(datetime.now(timezone.utc))),
             ("ALFRED",lambda:alfred_vintage("DFII10",today-timedelta(days=1),os.getenv("FRED_API_KEY"))))}
         native={k:f.result() for k,f in futures.items()}
@@ -316,6 +327,10 @@ def main():
     # captured once per unique source content, not duplicated every scan.
     # Retain current detailed input, and bounded immutable daily summaries.
     atomic(folder/"native_latest.json",native)
+    for key,value in native.items():
+        provider={"BTC":"okx","ETH":"okx","SHFE_copper_warrant":"shfe","COMEX_copper":"comex","TBF3":"cftc","ALFRED":"alfred","WTI":"wti"}[key]
+        data={k:v for k,v in value.items() if k not in ("history","observations")}
+        archive(folder,"native/"+provider+"/"+key,now,dict(data,first_seen_at=now.isoformat(),source_digest=digest(data)))
     compact={k:{a:b for a,b in v.items() if a not in ("history","observations")} for k,v in native.items()}
     archive(folder,"native_inputs",now,compact)
     result=dict(version=VERSION,evaluated_at=now.isoformat(),source="ETFIQ (etfiq.com)",
@@ -326,6 +341,7 @@ def main():
                 prospective=evaluate_tracks(prospective),exploratory=evaluate_tracks(historical,exploratory=True),
                 native_status={k:v.get("status") for k,v in native.items()},
                 native_errors={k:v.get("error") for k,v in native.items() if v.get("error")},
+                native_substatus={k:{a:b for a,b in v.items() if a.endswith("_status") or a.endswith("_error")} for k,v in native.items()},
                 decision_policy="SHADOW_ONLY_NO_PRODUCTION_PROMOTION",
                 costs=cost_context(),historical_publication_time_verified=False)
     atomic(folder/"results.json",result)

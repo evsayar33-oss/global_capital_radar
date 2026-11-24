@@ -14,7 +14,7 @@ def number(v):
     return isinstance(v,(int,float)) and not isinstance(v,bool) and isfinite(v)
 
 
-def cot_api(today,codes,read):
+def cot_api(today,codes,read,*,allow_empty=False):
     fields=("cftc_contract_market_code","report_date_as_yyyy_mm_dd","open_interest_all",
             "noncomm_positions_long_all","noncomm_positions_short_all")
     codes_sql=",".join("'"+code+"'" for code in sorted(codes))
@@ -22,8 +22,11 @@ def cot_api(today,codes,read):
                      "cftc_contract_market_code in ("+codes_sql+") AND report_date_as_yyyy_mm_dd >= '"+str(today-timedelta(days=15*366))+"T00:00:00'",
                      "$limit":50000,"$order":"report_date_as_yyyy_mm_dd ASC,cftc_contract_market_code ASC"})
     data=json.loads(read(CFTC_URL+"?"+query))
-    if not isinstance(data,list) or not data or len(data)>=50000:
-        raise ValueError("CFTC API empty or truncated")
+    if not isinstance(data,list) or len(data)>=50000:
+        raise ValueError("CFTC API invalid or truncated")
+    if not data:
+        if allow_empty:return {}
+        raise ValueError("CFTC API empty")
     result={}
     for row in data:
         code=row[fields[0]]

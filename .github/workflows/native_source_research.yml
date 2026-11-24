@@ -5,11 +5,17 @@ on:
     branches: [main]
     paths:
       - 'native_research.py'
+      - 'native_adapters.py'
+      - 'test_native_adapters.py'
+      - 'secondary_sources.py'
       - 'test_native_research.py'
       - '.github/workflows/native_source_research.yml'
   pull_request:
     paths:
       - 'native_research.py'
+      - 'native_adapters.py'
+      - 'test_native_adapters.py'
+      - 'secondary_sources.py'
       - 'test_native_research.py'
       - '.github/workflows/native_source_research.yml'
   schedule:
