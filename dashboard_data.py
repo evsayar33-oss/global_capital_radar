@@ -85,5 +85,11 @@ def macro_rows(report):
         "Değer": row.get("value"), "Frekans": row.get("freq"), "Fark birimi": row.get("change"),
         **{h: (row.get("changes") or {}).get(h) for h in ("1G", "1H", "1A", "3A", "1Y")},
         "Durum": "Kaynak hatası" if row.get("error") else ("Eski" if row.get("stale") else "Gözlem"),
-        "Hata": row.get("error"),
+        "Hata": row.get("error"), "FRED hatası": row.get("primary_error"),
+        "Alternatif hata": row.get("alternative_error"),
+        "Kaynak": row.get("source"), "Kaynak serisi": row.get("source_series"),
+        "Gözlem türü": row.get("observation_basis"),
+        "Son doğrulanmış dönem (eski)": (row.get("last_verified") or {}).get("period"),
+        "Son doğrulanmış değer (eski)": (row.get("last_verified") or {}).get("value"),
+        "Önceki kayıt UTC": (row.get("last_verified") or {}).get("observed_at"),
     } for row in report.get("indicators", [])]
