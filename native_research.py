@@ -35,12 +35,14 @@ def parse_history(p,symbol,today,calendar):
     if end>today or (today-end).days>7:
         raise ValueError("ETFIQ fund history stale/future")
     raw={}
+    seen=set()
     skipped=[]
     for r in p["daily"]:
         d=date.fromisoformat(r["d"])
         prior=date.fromisoformat(r["navDate"])
-        if d in raw:
+        if d in seen:
             raise ValueError("duplicate flow date")
+        seen.add(d)
         if d>end or not number(r.get("flow")):
             raise ValueError("invalid flow value/date")
         # If cash calendar is missing a session, do not infer a zero.
@@ -133,9 +135,10 @@ def crypto(symbol,now,reader=read):
     if not rows or (now-rows[-1][0]).total_seconds()>86400:
         raise ValueError("stale funding")
     mark=json.loads(reader(root+"premiumIndex?"+urlencode(dict(symbol=symbol))))
+    checked_at=max(now,datetime.now(timezone.utc)) if reader is read else now
     t=datetime.fromtimestamp(mark["time"]/1000,timezone.utc)
     mp,ip=float(mark["markPrice"]),float(mark["indexPrice"])
-    if mark["symbol"]!=symbol or not 0<mp or not 0<ip or not number(mp) or not number(ip) or not 0<=(now-t).total_seconds()<=900:
+    if mark["symbol"]!=symbol or not 0<mp or not 0<ip or not number(mp) or not number(ip) or not 0<=(checked_at-t).total_seconds()<=900:
         raise ValueError("invalid/stale premium")
     last=rows[-1]
     annual=last[1]*365*24/last[2]*100 if last[2] in (1,2,4,8) else None
@@ -311,7 +314,10 @@ def main():
                        historical_end="2024-04-05",reason="no verified current licensed settlement curve")
     # Store bounded summaries; funding history and vintage observations are
     # captured once per unique source content, not duplicated every scan.
-    archive(folder,"native_inputs",now,native)
+    # Retain current detailed input, and bounded immutable daily summaries.
+    atomic(folder/"native_latest.json",native)
+    compact={k:{a:b for a,b in v.items() if a not in ("history","observations")} for k,v in native.items()}
+    archive(folder,"native_inputs",now,compact)
     result=dict(version=VERSION,evaluated_at=now.isoformat(),source="ETFIQ (etfiq.com)",
                 price_errors=errors,coverage=[dict(symbol=r["symbol"],status=r["source_status"],
                 provenance=r.get("provenance"),error=r.get("error"),
