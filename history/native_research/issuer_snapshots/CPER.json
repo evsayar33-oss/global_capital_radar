@@ -21,6 +21,33 @@
     "creation_transport": "RENDERED_HTTP_200",
     "estimated_creation_usd": -10179000.0,
     "creation_basis": "issuer net created shares times same-date rounded NAV",
-    "first_seen_at": "2026-11-24T13:39:22.607597+00:00"
+    "first_seen_at": "2026-11-24T13:39:22.607597+00:00",
+    "revisions": [
+      {
+        "status": "OBSERVED",
+        "symbol": "CPER",
+        "source": "USCF",
+        "upstream_id": "USCF",
+        "source_date": "2026-11-23",
+        "nav_usd": 33.93,
+        "shares": 14900000.0,
+        "shares_unit": "shares",
+        "shares_precision": "exact_integer",
+        "reported_aum_usd": 505514719.7,
+        "calculated_aum_usd": 505557000.0,
+        "source_url": "https://www.uscfinvestments.com/cper",
+        "publication_intraday_verified": false,
+        "source_sha256": "82de5b528717d28d812524a9dd77d57ecbaf157ea6c0c8d61be69eb4064ce448",
+        "transport": "RENDERED_HTTP_200",
+        "net_created_shares": -300000,
+        "creation_source_sha256": "10dbf4e3461958c65459bedf5f1d6b569c62628f6301ecfa5c19d7638be71fc9",
+        "creation_status": "OBSERVED",
+        "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
+        "creation_transport": "RENDERED_HTTP_200",
+        "estimated_creation_usd": -10179000.0,
+        "creation_basis": "issuer net created shares times same-date rounded NAV",
+        "first_seen_at": "2026-11-24T15:13:06.339660+00:00"
+      }
+    ]
   }
 }

@@ -1,0 +1,241 @@
+{
+  "BTC": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "BTC-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 2.21870316848e-05,
+    "interval_hours": 8.0,
+    "annualized_pct": 2.4294799694856,
+    "basis_pct": -0.056643725957650215,
+    "quoted_spread_bps": 0.016671181779368705,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T15:11:30.097000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T15:11:30.422000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "ETH": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "ETH-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 8.892955017e-07,
+    "interval_hours": 8.0,
+    "annualized_pct": 0.09737785743615,
+    "basis_pct": -0.05470134256120307,
+    "quoted_spread_bps": 0.0594953013585211,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T15:11:29.959000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T15:11:30.367000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "SHFE_copper_warrant": {
+    "status": "UNAVAILABLE",
+    "source": "SHFE",
+    "error": "ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "TBF3_TFF": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "source": "CFTC TFF",
+    "upstream_id": "CFTC",
+    "reports": {
+      "futures_only": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      },
+      "combined": {
+        "status": "NO_CURRENT_COT_SERIES",
+        "latest_report_date": null,
+        "count": 0,
+        "source_url": "https://publicreporting.cftc.gov/resource/yw9f-hn96.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+        "upstream_id": "CFTC"
+      }
+    },
+    "proxy_used": false,
+    "caveat": "report availability only; TFF categories are not Legacy net noncommercial positions"
+  },
+  "issuer_USO": {
+    "status": "OBSERVED",
+    "symbol": "USO",
+    "source": "USCF",
+    "upstream_id": "USCF",
+    "source_date": "2026-11-23",
+    "nav_usd": 133.31,
+    "shares": 13123603.0,
+    "shares_unit": "shares",
+    "shares_precision": "exact_integer",
+    "reported_aum_usd": 1749570356.46,
+    "calculated_aum_usd": 1749507515.93,
+    "source_url": "https://www.uscfinvestments.com/uso",
+    "publication_intraday_verified": false,
+    "source_sha256": "8a95ba3fae92c9361b40c3491e8191e05f9f801933499eee000c32de729c9f6a",
+    "transport": "RENDERED_HTTP_200",
+    "net_created_shares": 600000,
+    "creation_source_sha256": "b79d64ded695714c844106867dc3305de37a970a4419d15732cb58ec67b0a6f3",
+    "creation_status": "OBSERVED",
+    "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
+    "creation_transport": "RENDERED_HTTP_200",
+    "estimated_creation_usd": 79986000.0,
+    "creation_basis": "issuer net created shares times same-date rounded NAV"
+  },
+  "issuer_CPER": {
+    "status": "OBSERVED",
+    "symbol": "CPER",
+    "source": "USCF",
+    "upstream_id": "USCF",
+    "source_date": "2026-11-23",
+    "nav_usd": 33.93,
+    "shares": 14900000.0,
+    "shares_unit": "shares",
+    "shares_precision": "exact_integer",
+    "reported_aum_usd": 505514719.7,
+    "calculated_aum_usd": 505557000.0,
+    "source_url": "https://www.uscfinvestments.com/cper",
+    "publication_intraday_verified": false,
+    "source_sha256": "82de5b528717d28d812524a9dd77d57ecbaf157ea6c0c8d61be69eb4064ce448",
+    "transport": "RENDERED_HTTP_200",
+    "net_created_shares": -300000,
+    "creation_source_sha256": "10dbf4e3461958c65459bedf5f1d6b569c62628f6301ecfa5c19d7638be71fc9",
+    "creation_status": "OBSERVED",
+    "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
+    "creation_transport": "RENDERED_HTTP_200",
+    "estimated_creation_usd": -10179000.0,
+    "creation_basis": "issuer net created shares times same-date rounded NAV"
+  },
+  "issuer_QQQ": {
+    "status": "OBSERVED",
+    "symbol": "QQQ",
+    "source": "Invesco",
+    "upstream_id": "Invesco",
+    "source_date": "2026-11-23",
+    "nav_usd": null,
+    "shares": 692250000.0,
+    "shares_unit": "shares",
+    "shares_precision": "rounded",
+    "reported_aum_usd": 450580000000.0,
+    "calculated_aum_usd": null,
+    "aum_precision": "rounded",
+    "snapshot_only": true,
+    "flow_eligible": false,
+    "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
+    "publication_intraday_verified": false,
+    "source_sha256": "a84b30b24e96fff4a520b83d59cdb422533590526f4dd77fc8ccafc68ecf211d",
+    "transport": "RENDERED_HTTP_200"
+  },
+  "COMEX_copper": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "ALFRED": {
+    "status": "UNAVAILABLE",
+    "series": "DFII10",
+    "vintage": "2026-11-23",
+    "source": "ALFRED graph CSV",
+    "error": "TimeoutError"
+  },
+  "WTI_CLOSE_PAIR": {
+    "status": "OBSERVED_DELAYED_CLOSE_PAIR",
+    "source": "Yahoo Finance NYMEX contract charts",
+    "source_date": "2026-11-23",
+    "front_contract": {
+      "contract": "CLF27.NYM",
+      "delivery_month": "2027-01",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLF27.NYM?range=10d&interval=1d",
+      "source_sha256": "cadc56408631213e9a6f860ba1ddd150b6597763f1cc33526abb7edd9c443114"
+    },
+    "next_contract": {
+      "contract": "CLG27.NYM",
+      "delivery_month": "2027-02",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLG27.NYM?range=10d&interval=1d",
+      "source_sha256": "95edb3bf7d072edc211b937e004cbb43a6c175cb868ce32b57d071666aee243a"
+    },
+    "front_close_usd_per_barrel": 80.16999816894531,
+    "next_close_usd_per_barrel": 79.06999969482422,
+    "front_minus_next_usd_per_barrel": 1.0999984741210938,
+    "official_settlement_verified": false,
+    "roll_calendar_verified": false,
+    "role": "PRICE_DERIVED_CONTEXT_ONLY",
+    "production_proxy_allowed": false
+  },
+  "TBILL_AUCTION": {
+    "status": "OBSERVED_AUCTION_CONTEXT",
+    "source": "US TreasuryDirect",
+    "source_url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?type=Bill&term=13-Week&format=json",
+    "source_sha256": "6f1aaeddfe3f763eab936e1b48d85bb32db6f6c0b4328b50c817f1431689f39d",
+    "source_date": "2026-11-23",
+    "auction_date": "2026-11-23",
+    "cusip": "912797WC7",
+    "issue_date": "2026-11-27",
+    "maturity_date": "2027-02-25",
+    "high_discount_rate_pct": 4.18,
+    "bid_to_cover_ratio": 2.74,
+    "implied_final_settlement_index": 95.82,
+    "actual_tbf3_settlement_verified": false,
+    "cot_verified": false,
+    "role": "CASH_AUCTION_CONTEXT_NOT_FUTURES_POSITION_OR_QUOTE",
+    "production_proxy_allowed": false
+  },
+  "TREASURY_REAL_YIELD": {
+    "status": "OBSERVED_CURRENT_PUBLICATION",
+    "source": "US Treasury daily par real yield curve",
+    "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202611?_format=csv&field_tdr_date_value_month=202611&page=&type=daily_treasury_real_yield_curve",
+    "source_sha256": "2a81f81507c1737beff2f08e1b3db2a8c36958a88e9bc1f4554c701e424bf731",
+    "source_date": "2026-11-23",
+    "real_yield_10y_pct": 2.79,
+    "historical_vintage_verified": false,
+    "publication_intraday_verified": false,
+    "role": "CURRENT_MACRO_CONTEXT_ONLY",
+    "production_proxy_allowed": false
+  },
+  "WTI_USL_PAIR": {
+    "status": "OBSERVED_ISSUER_VALUATION_PAIR",
+    "source": "USCF USL published holdings",
+    "source_url": "https://www.uscfinvestments.com/holdings/usl",
+    "source_date": "2026-11-23",
+    "front_contract": {
+      "contract": "CLF27.NYM",
+      "delivery_month": "2027-01",
+      "contracts": 48,
+      "valuation_usd_per_barrel": 80.17,
+      "market_value_usd": 3848160.0
+    },
+    "next_contract": {
+      "contract": "CLG27.NYM",
+      "delivery_month": "2027-02",
+      "contracts": 47,
+      "valuation_usd_per_barrel": 79.07,
+      "market_value_usd": 3716290.0
+    },
+    "front_valuation_usd_per_barrel": 80.17,
+    "next_valuation_usd_per_barrel": 79.07,
+    "front_minus_next_usd_per_barrel": 1.1000000000000085,
+    "official_settlement_verified": false,
+    "roll_calendar_verified": false,
+    "role": "ISSUER_VALUATION_CONTEXT_ONLY",
+    "production_proxy_allowed": false,
+    "source_sha256": "2689b1a7b97b5216cd6907d7e7ecb02e6d3ac1caec0c0299fa3c32be565bdbab",
+    "transport": "RENDERED_HTTP_200"
+  },
+  "TBF3": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "code": "041741",
+    "contract_name": "13-week U.S. Treasury bills",
+    "source": "CFTC Legacy futures only",
+    "latest_report_date": null,
+    "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
+    "production_proxy_allowed": false
+  },
+  "WTI": {
+    "status": "UNAVAILABLE_CURRENT_OFFICIAL",
+    "source_url": "https://www.eia.gov/opendata/browser/petroleum/pri/fut",
+    "historical_end": "2024-04-05",
+    "reason": "no verified current licensed settlement curve"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "version": "adaptive-flow-v2.0",
-  "evaluated_at": "2026-11-24T14:10:53.463460+00:00",
+  "evaluated_at": "2026-11-24T15:11:18.525046+00:00",
   "source": "ETFIQ (etfiq.com)",
   "price_errors": {},
   "coverage": [
@@ -307,21 +307,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.22084251495537105,
+              "mean_pp": -0.22084403914048895,
               "positive": 4,
-              "lower95_pp": -0.5303918327244904
+              "lower95_pp": -0.5303927216959834
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.2787372517974763,
+              "mean_pp": -0.27873877598259417,
               "positive": 3,
-              "lower95_pp": -0.5999719998479675
+              "lower95_pp": -0.5999729819326312
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.3366319886395816,
+              "mean_pp": -0.33663351282469944,
               "positive": 3,
-              "lower95_pp": -0.6717008576323705
+              "lower95_pp": -0.6717019292147977
             }
           }
         },
@@ -530,21 +530,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.056650147684757575,
+              "mean_pp": -0.05665141320999715,
               "positive": 3,
-              "lower95_pp": -0.2226462924917417
+              "lower95_pp": -0.22264987651415166
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.11980804242159969,
+              "mean_pp": -0.11980930794683926,
               "positive": 3,
-              "lower95_pp": -0.2931914960477744
+              "lower95_pp": -0.2931950849899236
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.18296593715844178,
+              "mean_pp": -0.18296720268368136,
               "positive": 3,
-              "lower95_pp": -0.3683401725018475
+              "lower95_pp": -0.368343708151827
             }
           }
         },
@@ -753,21 +753,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.2839501984763448,
+              "mean_pp": -0.2839504846693416,
               "positive": 2,
-              "lower95_pp": -0.6333517355572361
+              "lower95_pp": -0.6333527166904057
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.33658177742371315,
+              "mean_pp": -0.33658206361670995,
               "positive": 2,
-              "lower95_pp": -0.699315957377447
+              "lower95_pp": -0.6993169250396201
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.38921335637108156,
+              "mean_pp": -0.38921364256407837,
               "positive": 2,
-              "lower95_pp": -0.7669452052540744
+              "lower95_pp": -0.7669461574517064
             }
           }
         },
@@ -976,21 +976,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.042000660594879585,
+              "mean_pp": -0.04200168233183282,
               "positive": 1,
-              "lower95_pp": -0.08048390081296897
+              "lower95_pp": -0.08048538069189129
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.08410592375277433,
+              "mean_pp": -0.08410694548972755,
               "positive": 0,
-              "lower95_pp": -0.14367368746508596
+              "lower95_pp": -0.1436752863735626
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.12621118691066907,
+              "mean_pp": -0.12621220864762228,
               "positive": 0,
-              "lower95_pp": -0.2098544934976685
+              "lower95_pp": -0.2098561265314466
             }
           }
         },
@@ -1199,21 +1199,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.31893427178760786,
+              "mean_pp": -0.318932815781765,
               "positive": 3,
-              "lower95_pp": -0.9266940733201838
+              "lower95_pp": -0.9266923055577068
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.35577637705076576,
+              "mean_pp": -0.3557749210449229,
               "positive": 3,
-              "lower95_pp": -0.9728677066904816
+              "lower95_pp": -0.9728659036724862
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.39261848231392366,
+              "mean_pp": -0.3926170263080808,
               "positive": 3,
-              "lower95_pp": -1.019898058798268
+              "lower95_pp": -1.0198962220957775
             }
           }
         },
@@ -1422,21 +1422,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": 0.6920652869393149,
+              "mean_pp": 0.6920661158916528,
               "positive": 4,
-              "lower95_pp": -1.0309887721386706
+              "lower95_pp": -1.0309875450404544
             },
             "0.3": {
               "n": 38,
-              "mean_pp": 0.6394337079919464,
+              "mean_pp": 0.6394345369442843,
               "positive": 4,
-              "lower95_pp": -1.0776982780093198
+              "lower95_pp": -1.077697042151435
             },
             "0.5": {
               "n": 38,
-              "mean_pp": 0.5868021290445781,
+              "mean_pp": 0.586802957996916,
               "positive": 4,
-              "lower95_pp": -1.124857836414047
+              "lower95_pp": -1.1248565918451714
             }
           }
         },
@@ -1645,21 +1645,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": 0.25764591359597694,
+              "mean_pp": 0.25764569659203346,
               "positive": 5,
-              "lower95_pp": -0.5927426143924137
+              "lower95_pp": -0.592743359708253
             },
             "0.3": {
               "n": 38,
-              "mean_pp": 0.19975117675387166,
+              "mean_pp": 0.19975095974992818,
               "positive": 5,
-              "lower95_pp": -0.6466600968000424
+              "lower95_pp": -0.6466608483811378
             },
             "0.5": {
               "n": 38,
-              "mean_pp": 0.14185643991176639,
+              "mean_pp": 0.1418562229078229,
               "positive": 5,
-              "lower95_pp": -0.7015721817589502
+              "lower95_pp": -0.701572939026609
             }
           }
         },
@@ -1868,21 +1868,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.48295882634252846,
+              "mean_pp": -0.48295965921064216,
               "positive": 6,
-              "lower95_pp": -1.708951326862868
+              "lower95_pp": -1.7089522048255366
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.5461167210793706,
+              "mean_pp": -0.5461175539474844,
               "positive": 6,
-              "lower95_pp": -1.7780577192706342
+              "lower95_pp": -1.7780586066209838
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.6092746158162128,
+              "mean_pp": -0.6092754486843265,
               "positive": 6,
-              "lower95_pp": -1.8478602276953886
+              "lower95_pp": -1.847861124307351
             }
           }
         },
@@ -2091,21 +2091,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -1.4509384337133204,
+              "mean_pp": -1.4509384228257407,
               "positive": 1,
-              "lower95_pp": -5.77610420177088
+              "lower95_pp": -5.7761005924470545
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -1.5509384337133205,
+              "mean_pp": -1.5509384228257408,
               "positive": 1,
-              "lower95_pp": -5.902685108860562
+              "lower95_pp": -5.902681521324141
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -1.6509384337133206,
+              "mean_pp": -1.6509384228257409,
               "positive": 1,
-              "lower95_pp": -6.030859178216946
+              "lower95_pp": -6.030855613496535
             }
           }
         },
@@ -2314,21 +2314,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.5508856172022772,
+              "mean_pp": -0.5508853726848747,
               "positive": 0,
-              "lower95_pp": -1.630621426918741
+              "lower95_pp": -1.6306207031472288
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.5842189505356106,
+              "mean_pp": -0.5842187060182079,
               "positive": 0,
-              "lower95_pp": -1.7292880935854074
+              "lower95_pp": -1.7292873698138957
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.6175522838689439,
+              "mean_pp": -0.6175520393515413,
               "positive": 0,
-              "lower95_pp": -1.8279547602520738
+              "lower95_pp": -1.8279540364805626
             }
           }
         },
@@ -2760,21 +2760,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.033419147697890346,
+              "mean_pp": 0.03342518194981441,
               "positive": 1,
-              "lower95_pp": -0.06619901433250636
+              "lower95_pp": -0.06618985225677376
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.06658085230210965,
+              "mean_pp": -0.06657481805018559,
               "positive": 1,
-              "lower95_pp": -0.17825743129012192
+              "lower95_pp": -0.1782444552880823
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.16658085230210964,
+              "mean_pp": -0.1665748180501856,
               "positive": 0,
-              "lower95_pp": -0.3408964809262153
+              "lower95_pp": -0.34088333970563184
             }
           }
         },
@@ -2983,21 +2983,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.19048855242554025,
+              "mean_pp": -0.19049116066566044,
               "positive": 1,
-              "lower95_pp": -0.9898405468856739
+              "lower95_pp": -0.9898403271051093
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.2571552190922069,
+              "mean_pp": -0.25715782733232706,
               "positive": 1,
-              "lower95_pp": -1.0846946034833036
+              "lower95_pp": -1.0846948029102101
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.32382188575887355,
+              "mean_pp": -0.32382449399899377,
               "positive": 1,
-              "lower95_pp": -1.186572299616566
+              "lower95_pp": -1.1865729070557556
             }
           }
         },
@@ -3859,13 +3859,18 @@
     "issuer_CPER": "OBSERVED",
     "issuer_QQQ": "OBSERVED",
     "COMEX_copper": "UNAVAILABLE",
-    "ALFRED": "API_KEY_REQUIRED",
+    "ALFRED": "UNAVAILABLE",
+    "WTI_CLOSE_PAIR": "OBSERVED_DELAYED_CLOSE_PAIR",
+    "TBILL_AUCTION": "OBSERVED_AUCTION_CONTEXT",
+    "TREASURY_REAL_YIELD": "OBSERVED_CURRENT_PUBLICATION",
+    "WTI_USL_PAIR": "OBSERVED_ISSUER_VALUATION_PAIR",
     "TBF3": "NO_CURRENT_COT_SERIES",
     "WTI": "UNAVAILABLE_CURRENT_OFFICIAL"
   },
   "native_errors": {
     "SHFE_copper_warrant": "ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>",
-    "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden"
+    "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden",
+    "ALFRED": "TimeoutError"
   },
   "native_substatus": {
     "BTC": {
@@ -3887,6 +3892,10 @@
     "issuer_QQQ": {},
     "COMEX_copper": {},
     "ALFRED": {},
+    "WTI_CLOSE_PAIR": {},
+    "TBILL_AUCTION": {},
+    "TREASURY_REAL_YIELD": {},
+    "WTI_USL_PAIR": {},
     "TBF3": {
       "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY"
     },

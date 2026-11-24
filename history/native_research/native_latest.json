@@ -510,12 +510,12 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.045551219447559355,
-    "quoted_spread_bps": 0.01657139495492909,
+    "basis_pct": -0.056643725957650215,
+    "quoted_spread_bps": 0.016671181779368705,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T14:11:07.108000+00:00",
+    "basis_asof": "2026-11-24T15:11:30.097000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T14:11:07.662000+00:00",
+    "quote_asof": "2026-11-24T15:11:30.422000+00:00",
     "spread_status": "OBSERVED"
   },
   "ETH": {
@@ -1029,12 +1029,12 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.04825999187820784,
-    "quoted_spread_bps": 0.05887565167981599,
+    "basis_pct": -0.05470134256120307,
+    "quoted_spread_bps": 0.0594953013585211,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T14:11:07.114000+00:00",
+    "basis_asof": "2026-11-24T15:11:29.959000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T14:11:07.523000+00:00",
+    "quote_asof": "2026-11-24T15:11:30.367000+00:00",
     "spread_status": "OBSERVED"
   },
   "SHFE_copper_warrant": {
@@ -1079,9 +1079,10 @@
     "calculated_aum_usd": 1749507515.93,
     "source_url": "https://www.uscfinvestments.com/uso",
     "publication_intraday_verified": false,
-    "source_sha256": "c69ba4d15af12f97539bd0f0b5c554a7df824c00e89bf61933ede200edd3f92a",
+    "source_sha256": "8a95ba3fae92c9361b40c3491e8191e05f9f801933499eee000c32de729c9f6a",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": 600000,
+    "creation_source_sha256": "b79d64ded695714c844106867dc3305de37a970a4419d15732cb58ec67b0a6f3",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1102,9 +1103,10 @@
     "calculated_aum_usd": 505557000.0,
     "source_url": "https://www.uscfinvestments.com/cper",
     "publication_intraday_verified": false,
-    "source_sha256": "a305ba2da96a31c04e8e4b81e76da488e57aa27b3884af316b09e672cd7641d5",
+    "source_sha256": "82de5b528717d28d812524a9dd77d57ecbaf157ea6c0c8d61be69eb4064ce448",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": -300000,
+    "creation_source_sha256": "10dbf4e3461958c65459bedf5f1d6b569c62628f6301ecfa5c19d7638be71fc9",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1128,7 +1130,7 @@
     "flow_eligible": false,
     "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
     "publication_intraday_verified": false,
-    "source_sha256": "8bf516a45b308d52fc66e7151ebc99ac096b8278773351412e2d6a9de4384d95",
+    "source_sha256": "a84b30b24e96fff4a520b83d59cdb422533590526f4dd77fc8ccafc68ecf211d",
     "transport": "RENDERED_HTTP_200"
   },
   "COMEX_copper": {
@@ -1136,10 +1138,95 @@
     "error": "HTTPError: HTTP Error 403: Forbidden"
   },
   "ALFRED": {
-    "status": "API_KEY_REQUIRED",
+    "status": "UNAVAILABLE",
     "series": "DFII10",
     "vintage": "2026-11-23",
+    "source": "ALFRED graph CSV",
+    "error": "TimeoutError",
     "observations": []
+  },
+  "WTI_CLOSE_PAIR": {
+    "status": "OBSERVED_DELAYED_CLOSE_PAIR",
+    "source": "Yahoo Finance NYMEX contract charts",
+    "source_date": "2026-11-23",
+    "front_contract": {
+      "contract": "CLF27.NYM",
+      "delivery_month": "2027-01",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLF27.NYM?range=10d&interval=1d",
+      "source_sha256": "cadc56408631213e9a6f860ba1ddd150b6597763f1cc33526abb7edd9c443114"
+    },
+    "next_contract": {
+      "contract": "CLG27.NYM",
+      "delivery_month": "2027-02",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLG27.NYM?range=10d&interval=1d",
+      "source_sha256": "95edb3bf7d072edc211b937e004cbb43a6c175cb868ce32b57d071666aee243a"
+    },
+    "front_close_usd_per_barrel": 80.16999816894531,
+    "next_close_usd_per_barrel": 79.06999969482422,
+    "front_minus_next_usd_per_barrel": 1.0999984741210938,
+    "official_settlement_verified": false,
+    "roll_calendar_verified": false,
+    "role": "PRICE_DERIVED_CONTEXT_ONLY",
+    "production_proxy_allowed": false
+  },
+  "TBILL_AUCTION": {
+    "status": "OBSERVED_AUCTION_CONTEXT",
+    "source": "US TreasuryDirect",
+    "source_url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?type=Bill&term=13-Week&format=json",
+    "source_sha256": "6f1aaeddfe3f763eab936e1b48d85bb32db6f6c0b4328b50c817f1431689f39d",
+    "source_date": "2026-11-23",
+    "auction_date": "2026-11-23",
+    "cusip": "912797WC7",
+    "issue_date": "2026-11-27",
+    "maturity_date": "2027-02-25",
+    "high_discount_rate_pct": 4.18,
+    "bid_to_cover_ratio": 2.74,
+    "implied_final_settlement_index": 95.82,
+    "actual_tbf3_settlement_verified": false,
+    "cot_verified": false,
+    "role": "CASH_AUCTION_CONTEXT_NOT_FUTURES_POSITION_OR_QUOTE",
+    "production_proxy_allowed": false
+  },
+  "TREASURY_REAL_YIELD": {
+    "status": "OBSERVED_CURRENT_PUBLICATION",
+    "source": "US Treasury daily par real yield curve",
+    "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202611?_format=csv&field_tdr_date_value_month=202611&page=&type=daily_treasury_real_yield_curve",
+    "source_sha256": "2a81f81507c1737beff2f08e1b3db2a8c36958a88e9bc1f4554c701e424bf731",
+    "source_date": "2026-11-23",
+    "real_yield_10y_pct": 2.79,
+    "historical_vintage_verified": false,
+    "publication_intraday_verified": false,
+    "role": "CURRENT_MACRO_CONTEXT_ONLY",
+    "production_proxy_allowed": false
+  },
+  "WTI_USL_PAIR": {
+    "status": "OBSERVED_ISSUER_VALUATION_PAIR",
+    "source": "USCF USL published holdings",
+    "source_url": "https://www.uscfinvestments.com/holdings/usl",
+    "source_date": "2026-11-23",
+    "front_contract": {
+      "contract": "CLF27.NYM",
+      "delivery_month": "2027-01",
+      "contracts": 48,
+      "valuation_usd_per_barrel": 80.17,
+      "market_value_usd": 3848160.0
+    },
+    "next_contract": {
+      "contract": "CLG27.NYM",
+      "delivery_month": "2027-02",
+      "contracts": 47,
+      "valuation_usd_per_barrel": 79.07,
+      "market_value_usd": 3716290.0
+    },
+    "front_valuation_usd_per_barrel": 80.17,
+    "next_valuation_usd_per_barrel": 79.07,
+    "front_minus_next_usd_per_barrel": 1.1000000000000085,
+    "official_settlement_verified": false,
+    "roll_calendar_verified": false,
+    "role": "ISSUER_VALUATION_CONTEXT_ONLY",
+    "production_proxy_allowed": false,
+    "source_sha256": "2689b1a7b97b5216cd6907d7e7ecb02e6d3ac1caec0c0299fa3c32be565bdbab",
+    "transport": "RENDERED_HTTP_200"
   },
   "TBF3": {
     "status": "NO_CURRENT_COT_SERIES",

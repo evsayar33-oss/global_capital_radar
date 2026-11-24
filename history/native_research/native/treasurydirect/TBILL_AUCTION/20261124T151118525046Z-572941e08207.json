@@ -1,0 +1,20 @@
+{
+  "status": "OBSERVED_AUCTION_CONTEXT",
+  "source": "US TreasuryDirect",
+  "source_url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?type=Bill&term=13-Week&format=json",
+  "source_sha256": "6f1aaeddfe3f763eab936e1b48d85bb32db6f6c0b4328b50c817f1431689f39d",
+  "source_date": "2026-11-23",
+  "auction_date": "2026-11-23",
+  "cusip": "912797WC7",
+  "issue_date": "2026-11-27",
+  "maturity_date": "2027-02-25",
+  "high_discount_rate_pct": 4.18,
+  "bid_to_cover_ratio": 2.74,
+  "implied_final_settlement_index": 95.82,
+  "actual_tbf3_settlement_verified": false,
+  "cot_verified": false,
+  "role": "CASH_AUCTION_CONTEXT_NOT_FUTURES_POSITION_OR_QUOTE",
+  "production_proxy_allowed": false,
+  "first_seen_at": "2026-11-24T15:11:18.525046+00:00",
+  "source_digest": "1a4933f750a8c030c36abe4d53efc61690f61e1d6600a1d2a88014cffc4bf2dc"
+}
