@@ -11,7 +11,7 @@ from secondary_sources import number
 SHFE="https://www.shfe.com.cn/data/tradedata/future/stockdata/"
 ISSUERS={"USO":"https://www.uscfinvestments.com/uso",
          "CPER":"https://www.uscfinvestments.com/cper",
-         "QQQ":"https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-trust-series-1.html"}
+         "QQQ":"https://www.invesco.com/qqq-etf/en/about.html"}
 
 class Page(HTMLParser):
     def __init__(self,html):
@@ -154,19 +154,27 @@ def parse_issuer(html,symbol,today):
         if not shares.is_integer() or abs(shares*nav/aum-1)>.005:raise ValueError("issuer shares NAV AUM reconcile")
         unit="shares";precision="exact_integer"
     elif symbol=="QQQ":
-        if not re.search(r"Invesco QQQ Trust",t,re.I):raise ValueError("QQQ issuer identity")
-        # Require one as-of date in the bounded NAV/shares block; millions are rounded.
+        # Invesco's dated overview pairs AUM and rounded share count, not NAV.
+        # Require ticker and both figures inside one explicitly dated block.
+        if not re.search(r"\bInvesco QQQ\b",t,re.I):raise ValueError("QQQ issuer identity")
         matches=[]
-        for m in re.finditer(r"Shares outstanding\s+([\d,.]+)\s*(million|M|shares)?",t,re.I):
-            block=t[max(0,m.start()-1200):m.end()+150]
-            ds=re.findall(r"(?i)\bas of\s+(\d{1,2}/\d{1,2}/\d{4})",block)
-            ns=re.findall(r"(?i)\bFund NAV\s+\$([\d,.]+)",block)
-            if len(set(ds))==1 and len(set(ns))==1 and m.group(2):
-                matches.append((ds[0],ns[0],m.group(1),m.group(2)))
-        if len(set(matches))!=1:raise ValueError("QQQ dated NAV/shares not unambiguous")
-        ds,n,s,u=matches[0];d=datetime.strptime(ds,"%m/%d/%Y").date()
-        nav=amount(n);shares=amount(s)*(1e6 if u.lower() in ("m","million") else 1)
-        aum=None;unit="shares";precision="rounded" if u.lower() in ("m","million") else "exact_integer"
+        for m in re.finditer(r"\bas of\s+(\d{1,2}/\d{1,2}/\d{4})\s+Fund ticker\s+QQQ\b",t,re.I):
+            block=re.split(r"\bas of\s+\d{1,2}/\d{1,2}/\d{4}",t[m.end():m.end()+1000],maxsplit=1,flags=re.I)[0]
+            a=re.findall(r"\bAssets Under Management\s+\$\s*([\d,.]+)\s*(B|M|billion|million)\b",block,re.I)
+            sh=re.findall(r"\bShares Outstanding\s+([\d,.]+)\s*(M|million|B|billion)\b",block,re.I)
+            if len(a)==len(sh)==1:
+                matches.append((m.group(1),*a[0],*sh[0]))
+        if len(set(matches))!=1:raise ValueError("QQQ dated AUM/shares snapshot missing or ambiguous")
+        ds,av,au,sv,su=matches[0]
+        d=datetime.strptime(ds,"%m/%d/%Y").date()
+        if not 0<=(today-d).days<=7:raise ValueError("issuer stale/future date")
+        def scaled(v,u):return amount(v)*(1e9 if u.lower() in ("b","billion") else 1e6)
+        aum=scaled(av,au);shares=scaled(sv,su)
+        return dict(status="OBSERVED",symbol="QQQ",source="Invesco",upstream_id="Invesco",
+                    source_date=str(d),nav_usd=None,shares=shares,shares_unit="shares",
+                    shares_precision="rounded",reported_aum_usd=aum,calculated_aum_usd=None,
+                    aum_precision="rounded",snapshot_only=True,flow_eligible=False,
+                    source_url=ISSUERS["QQQ"],publication_intraday_verified=False)
     else:raise ValueError("unsupported fund")
     if not 0<=(today-d).days<=7:raise ValueError("issuer stale/future date")
     return dict(status="OBSERVED",symbol=symbol,source="Invesco" if symbol=="QQQ" else "USCF",

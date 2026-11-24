@@ -24,6 +24,26 @@ class RecoveryTests(unittest.TestCase):
         prior=dict(r,source_date="2026-11-20",shares=15200000)
         self.assertAlmostEqual(estimate_adjacent(prior,r,[date(2026,11,20),date(2026,11,23)]),-300000*33.93)
         self.assertIsNone(estimate_adjacent(prior,r,[date(2026,11,20),date(2026,11,21),date(2026,11,23)]))
+    def test_qqq_dated_snapshot(self):
+        # Reduced visible field sequence and published figures from Invesco
+        # overview observed 2026-11-24 (issuer as-of 2026-11-22).
+        html="""<h1>Invesco QQQ</h1> as of 11/22/2026 Fund ticker QQQ Exchange
+        Nasdaq/NMS (Global Market) Inception date 03/09/1999 Total Expense Ratio 0.18%
+        Number Of Holdings 102 Assets Under Management $450.58B
+        30 Day Average Trading Volume 57.13M Shares Outstanding 692.25M
+        Cumulative Performance as of 10/30/2026"""
+        d=date(2026,11,24);r=parse_issuer(html,"QQQ",d)
+        self.assertEqual(r["reported_aum_usd"],450580000000)
+        self.assertEqual(r["shares"],692250000)
+        self.assertIsNone(r["nav_usd"])
+        self.assertFalse(r["flow_eligible"])
+        self.assertTrue(r["snapshot_only"])
+        self.assertIsNone(estimate_adjacent(r,r,[]))
+        for bad in (html.replace("Fund ticker QQQ","Fund ticker QQQM"),
+                    html.replace("11/22/2026","11/01/2026"),
+                    html.replace("Assets Under Management","Other"),
+                    html.replace("Shares Outstanding","as of 11/23/2026 Shares Outstanding")):
+            with self.assertRaises(ValueError):parse_issuer(bad,"QQQ",d)
     def test_tff(self):
         self.assertEqual(tff_tbf3(date(2026,11,24),lambda _:"[]")["status"],"NO_CURRENT_COT_SERIES")
         self.assertEqual(tff_tbf3(date(2026,11,24),lambda _:"{}")["status"],"UNAVAILABLE")
