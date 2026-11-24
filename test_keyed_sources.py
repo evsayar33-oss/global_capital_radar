@@ -53,3 +53,8 @@ class KeyedSourcesTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"authenticated response failed") as c:
                 k.request_json(k.BEA_URL,{"UserID":"test-secret"})
         self.assertNotIn("test-secret",str(c.exception))
+
+    def test_safe_diagnostics_allowlist(self):
+        self.assertEqual(k.safe_failure(ValueError("authenticated HTTP status 403")),"authenticated HTTP status 403")
+        self.assertEqual(k.safe_failure(ValueError("BEA line identity mismatch")),"BEA line identity mismatch")
+        self.assertEqual(k.safe_failure(ValueError("https://api.example?key=test-secret")),"ValueError")
