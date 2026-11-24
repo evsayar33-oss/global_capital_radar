@@ -6,6 +6,9 @@ on:
     paths:
       - 'native_research.py'
       - 'source_recovery.py'
+      - 'runner_sources.py'
+      - 'runner_recovery.py'
+      - 'test_runner_sources.py'
       - 'test_source_recovery.py'
       - 'native_adapters.py'
       - 'test_native_adapters.py'
@@ -16,6 +19,9 @@ on:
     paths:
       - 'native_research.py'
       - 'source_recovery.py'
+      - 'runner_sources.py'
+      - 'runner_recovery.py'
+      - 'test_runner_sources.py'
       - 'test_source_recovery.py'
       - 'native_adapters.py'
       - 'test_native_adapters.py'
@@ -31,7 +37,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   independent:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +46,10 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install xlrd==2.0.2
       - run: python -m unittest -v
+      - if: github.event_name != 'pull_request'
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
       - id: collect
         if: github.event_name != 'pull_request'
         continue-on-error: true

@@ -16,6 +16,7 @@ from rotation import ASSETS, CODES, cot_with_source
 from secondary_sources import cot_api, parse_etfiq, ETFIQ_URL, number
 from native_adapters import okx_crypto, shfe_copper, tbf3
 from source_recovery import shfe_cn, capture_issuer, estimate_adjacent, tff_tbf3
+from runner_recovery import issuer_verified, shfe_verified
 
 ROOT=Path(__file__).resolve().parent
 NY=ZoneInfo("America/New_York")
@@ -317,11 +318,11 @@ def main():
         futures={name:pool.submit(safe,fn) for name,fn in (
             ("BTC",lambda:okx_crypto("BTC-USDT-SWAP",datetime.now(timezone.utc),read)),
             ("ETH",lambda:okx_crypto("ETH-USDT-SWAP",datetime.now(timezone.utc),read)),
-            ("SHFE_copper_warrant",lambda:shfe_cn(datetime.now(timezone.utc),read)),
+            ("SHFE_copper_warrant",lambda:shfe_verified(datetime.now(timezone.utc))),
             ("TBF3_TFF",lambda:tff_tbf3(today,read)),
-            ("issuer_USO",lambda:capture_issuer("USO",today,read)),
-            ("issuer_CPER",lambda:capture_issuer("CPER",today,read)),
-            ("issuer_QQQ",lambda:capture_issuer("QQQ",today,read)),
+            ("issuer_USO",lambda:issuer_verified("USO",today)),
+            ("issuer_CPER",lambda:issuer_verified("CPER",today)),
+            ("issuer_QQQ",lambda:issuer_verified("QQQ",today)),
             ("COMEX_copper",lambda:copper(datetime.now(timezone.utc))),
             ("ALFRED",lambda:alfred_vintage("DFII10",today-timedelta(days=1),os.getenv("FRED_API_KEY"))))}
         native={k:f.result() for k,f in futures.items()}
