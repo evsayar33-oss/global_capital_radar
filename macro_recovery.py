@@ -110,6 +110,82 @@ def wti_pair(now,reader):
                 official_settlement_verified=False,roll_calendar_verified=False,
                 role="PRICE_DERIVED_CONTEXT_ONLY",production_proxy_allowed=False)
 
+USL_HOLDINGS="https://www.uscfinvestments.com/holdings/usl"
+TREASURY_REAL="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/"
+
+def treasury_real_yield(today,reader):
+    """Treasury's current publication, never an ALFRED historical vintage."""
+    cutoff=today-timedelta(days=1)
+    ym=cutoff.strftime("%Y%m")
+    url=TREASURY_REAL+ym+"?"+urlencode({"_format":"csv","field_tdr_date_value_month":ym,"page":"","type":"daily_treasury_real_yield_curve"})
+    raw=reader(url);rows=csv.DictReader(io.StringIO(raw.lstrip("\ufeff")))
+    if not rows.fieldnames or not {"Date","10 YR"}<=set(rows.fieldnames):
+        raise ValueError("Treasury real yield CSV identity")
+    values={}
+    for r in rows:
+        d=datetime.strptime(r["Date"],"%m/%d/%Y").date()
+        if d>today or d.strftime("%Y%m")!=ym or d in values:
+            raise ValueError("Treasury curve date mismatch")
+        if d>cutoff or r["10 YR"].strip() in ("","N/A","."):continue
+        v=float(r["10 YR"])
+        if not number(v):raise ValueError("invalid Treasury real yield")
+        values[d]=v
+    if not values or (today-max(values)).days>7:raise ValueError("Treasury real yield stale")
+    d=max(values)
+    return dict(status="OBSERVED_CURRENT_PUBLICATION",source="US Treasury daily par real yield curve",
+                source_url=url,source_sha256=sha(raw),source_date=str(d),real_yield_10y_pct=values[d],
+                historical_vintage_verified=False,publication_intraday_verified=False,
+                role="CURRENT_MACRO_CONTEXT_ONLY",production_proxy_allowed=False)
+
+def parse_usl_pair(html,today):
+    from source_recovery import Page
+    p=Page(html);t=p.text
+    if not re.search(r"\bUnited States 12 Month Oil Fund\b",t,re.I):raise ValueError("USL identity")
+    matches=set(re.findall(r"\bHoldings\s+As of\s+(\d{1,2}/\d{1,2}/\d{4})",t,re.I))
+    if len(matches)!=1:raise ValueError("USL holdings date ambiguous")
+    day=datetime.strptime(next(iter(matches)),"%m/%d/%Y").date()
+    if not 0<(today-day).days<=4:raise ValueError("USL stale or unfinished session")
+    pair=contract_pair(day)
+    found={}
+    for table in p.tables:
+        if not any([x.strip().lower() for x in row]==["security","quantity","price","market value","ticker"] for row in table):
+            continue
+        for row in table:
+            if len(row)!=5:continue
+            a=re.fullmatch(r"WTI CRUDE FUTURE\s+([A-Za-z]{3})(\d{2})",row[0],re.I)
+            if not a:continue
+            mon=next((i+1 for i,v in enumerate(MONTH_NAMES) if v.lower()==a[1].lower()),None)
+            if mon is None:raise ValueError("USL contract month")
+            ym=(2000+int(a[2]),mon)
+            if ym not in pair:continue
+            sym=contract_symbol(ym)
+            # USCF publishes a one-digit expiry code; the full year comes
+            # from the security label. Both must agree.
+            if row[4].strip()!=sym[:3]+str(ym[0]%10):raise ValueError("USL ticker mismatch")
+            qty=int(row[1].replace(",",""))
+            px=float(row[2].replace(",",""))
+            mv=float(row[3].replace(",","").replace("$",""))
+            if qty<=0 or not all(number(x) for x in (px,mv)) or abs(qty*1000*px-mv)>.05:
+                raise ValueError("USL contract notional reconciliation")
+            if ym in found:raise ValueError("duplicate USL contract")
+            found[ym]=dict(contract=sym,delivery_month=f"{ym[0]:04d}-{ym[1]:02d}",
+                           contracts=qty,valuation_usd_per_barrel=px,market_value_usd=mv)
+    if any(ym not in found for ym in pair):raise ValueError("USL dated pair unavailable")
+    a,b=[found[ym] for ym in pair]
+    return dict(status="OBSERVED_ISSUER_VALUATION_PAIR",source="USCF USL published holdings",
+                source_url=USL_HOLDINGS,source_date=str(day),front_contract=a,next_contract=b,
+                front_valuation_usd_per_barrel=a["valuation_usd_per_barrel"],
+                next_valuation_usd_per_barrel=b["valuation_usd_per_barrel"],
+                front_minus_next_usd_per_barrel=a["valuation_usd_per_barrel"]-b["valuation_usd_per_barrel"],
+                official_settlement_verified=False,roll_calendar_verified=False,
+                role="ISSUER_VALUATION_CONTEXT_ONLY",production_proxy_allowed=False)
+
+def usl_pair(now):
+    from runner_sources import verified_page
+    r,mode=verified_page(USL_HOLDINGS,lambda html:parse_usl_pair(html,now.astimezone(NY).date()),
+                         'table')
+    return dict(r,transport=mode)
+
 def treasury_auction(today,reader):
     url=TREASURY+"?"+urlencode(dict(type="Bill",term="13-Week",format="json"))
     raw=reader(url);p=json.loads(raw)
@@ -166,7 +242,9 @@ def main():
     now=datetime.now(timezone.utc);today=now.astimezone(NY).date()
     jobs={"ALFRED":lambda:alfred_csv("DFII10",today-timedelta(days=1),read),
           "WTI_CLOSE_PAIR":lambda:wti_pair(now,read),
-          "TBILL_AUCTION":lambda:treasury_auction(today,read)}
+          "TBILL_AUCTION":lambda:treasury_auction(today,read),
+          "TREASURY_REAL_YIELD":lambda:treasury_real_yield(today,read),
+          "WTI_USL_PAIR":lambda:usl_pair(now)}
     results={}
     for k,fn in jobs.items():
         try:results[k]=fn()
@@ -176,8 +254,18 @@ def main():
     # auction always; require contract close pair when outside that window.
     try:contract_pair(today-timedelta(days=1));need_wti=True
     except ValueError:need_wti=False
-    ok=results["ALFRED"]["status"]=="OBSERVED_DATE_VINTAGE" and results["TBILL_AUCTION"]["status"]=="OBSERVED_AUCTION_CONTEXT"
-    ok=ok and (not need_wti or results["WTI_CLOSE_PAIR"]["status"]=="OBSERVED_DELAYED_CLOSE_PAIR")
-    return 0 if ok else 1
+    vintage=results["ALFRED"]["status"]=="OBSERVED_DATE_VINTAGE"
+    current=results["TREASURY_REAL_YIELD"]["status"]=="OBSERVED_CURRENT_PUBLICATION"
+    close=results["WTI_CLOSE_PAIR"]["status"]=="OBSERVED_DELAYED_CLOSE_PAIR"
+    valuation=results["WTI_USL_PAIR"]["status"]=="OBSERVED_ISSUER_VALUATION_PAIR"
+    auction=results["TBILL_AUCTION"]["status"]=="OBSERVED_AUCTION_CONTEXT"
+    # Two capabilities are intentionally different: contextual continuity
+    # versus true point-in-time history and official settlement.
+    # Require real alternative observations; never label fallback as vintage.
+    context=(vintage or current) and auction and (not need_wti or close or valuation)
+    print("MACRO_CAPABILITIES "+json.dumps(dict(context_continuity=context,
+          true_alfred_vintage=vintage,dated_wti_close=close,issuer_wti_valuation=valuation,
+          treasury_current=current,official_wti_settlement=False)),flush=True)
+    return 0 if context else 1
 
 if __name__=="__main__":raise SystemExit(main())

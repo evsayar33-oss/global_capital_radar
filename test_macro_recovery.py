@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import date,datetime,timezone
-from macro_recovery import alfred_csv,contract_pair,contract_closes,wti_pair,treasury_auction,issuer_revision,first_creation
+from macro_recovery import alfred_csv,contract_pair,contract_closes,wti_pair,treasury_auction,issuer_revision,first_creation,treasury_real_yield,parse_usl_pair
 class MacroRecoveryTests(unittest.TestCase):
     def test_actual_vintage_header(self):
         data="observation_date,DFII10_20261123\n2026-11-19,2.88\n2026-11-20,2.77\n2026-11-21,\n"
@@ -66,3 +66,26 @@ class MacroRecoveryTests(unittest.TestCase):
         self.assertEqual(first_creation(hist["2026-11-23"])["estimated_creation_usd"],50)
         self.assertEqual(first_creation(hist["2026-11-23"])["first_seen_at"],b.isoformat())
         self.assertEqual(len(hist["2026-11-23"]["revisions"]),2)
+
+    def test_real_treasury_current_not_vintage(self):
+        data="Date,5 YR,7 YR,10 YR,20 YR,30 YR\n11/23/2026,2.59,2.68,2.79,3.04,3.17\n11/20/2026,2.53,2.64,2.77,3.03,3.17\n"
+        r=treasury_real_yield(date(2026,11,24),lambda _:data)
+        self.assertEqual(r["real_yield_10y_pct"],2.79)
+        self.assertFalse(r["historical_vintage_verified"])
+        with self.assertRaises(ValueError):treasury_real_yield(date(2026,11,24),lambda _:data.replace("10 YR","10Y"))
+    def test_real_usl_pair(self):
+        # Reduced real USCF holdings rows observed on 2026-11-24.
+        html="""<h1>United States 12 Month Oil Fund, LP</h1><h2>Holdings</h2>
+        <p>As of 11/23/2026, subject to change</p><table>
+        <tr><th>Security</th><th>Quantity</th><th>Price</th><th>Market Value</th><th>Ticker</th></tr>
+        <tr><td>WTI CRUDE FUTURE Jan27</td><td>48</td><td>80.1700</td><td>$3,848,160.00</td><td>CLF7</td></tr>
+        <tr><td>WTI CRUDE FUTURE Feb27</td><td>47</td><td>79.0700</td><td>$3,716,290.00</td><td>CLG7</td></tr>
+        </table>"""
+        d=date(2026,11,24)
+        r=parse_usl_pair(html,d)
+        self.assertAlmostEqual(r["front_minus_next_usd_per_barrel"],1.10)
+        self.assertEqual(r["status"],"OBSERVED_ISSUER_VALUATION_PAIR")
+        self.assertFalse(r["official_settlement_verified"])
+        for bad in (html.replace("CLG7","CLH7"),html.replace("3,716,290","3,716,291"),
+                    html.replace("11/23/2026","11/24/2026"),html.replace("Feb27","Mar27")):
+            with self.assertRaises(ValueError):parse_usl_pair(bad,d)

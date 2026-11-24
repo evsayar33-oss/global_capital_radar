@@ -14,7 +14,7 @@ permissions:
 jobs:
   live_sources:
     runs-on: ubuntu-24.04
-    timeout-minutes: 6
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,4 +23,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m unittest -v test_macro_recovery test_flow_continuity test_runner_sources
+      - run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
       - run: python macro_recovery.py

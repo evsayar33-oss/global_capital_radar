@@ -17,7 +17,7 @@ from secondary_sources import cot_api, parse_etfiq, ETFIQ_URL, number
 from native_adapters import okx_crypto, shfe_copper, tbf3
 from source_recovery import shfe_cn, capture_issuer, estimate_adjacent, tff_tbf3
 from runner_recovery import issuer_verified, shfe_verified
-from macro_recovery import alfred_csv, wti_pair, treasury_auction, issuer_revision
+from macro_recovery import alfred_csv, wti_pair, treasury_auction, issuer_revision, treasury_real_yield, usl_pair
 
 ROOT=Path(__file__).resolve().parent
 NY=ZoneInfo("America/New_York")
@@ -331,7 +331,9 @@ def main():
             ("COMEX_copper",lambda:copper(datetime.now(timezone.utc))),
             ("ALFRED",lambda:alfred_vintage("DFII10",today-timedelta(days=1),os.getenv("FRED_API_KEY"))),
             ("WTI_CLOSE_PAIR",lambda:wti_pair(datetime.now(timezone.utc),read)),
-            ("TBILL_AUCTION",lambda:treasury_auction(today,read)))}
+            ("TBILL_AUCTION",lambda:treasury_auction(today,read)),
+            ("TREASURY_REAL_YIELD",lambda:treasury_real_yield(today,read)),
+            ("WTI_USL_PAIR",lambda:usl_pair(datetime.now(timezone.utc))))}
         native={k:f.result() for k,f in futures.items()}
     for symbol in ("USO","CPER","QQQ"):
         key="issuer_"+symbol
@@ -354,7 +356,7 @@ def main():
     # Retain current detailed input, and bounded immutable daily summaries.
     atomic(folder/"native_latest.json",native)
     for key,value in native.items():
-        provider={"BTC":"okx","ETH":"okx","SHFE_copper_warrant":"shfe","COMEX_copper":"comex","TBF3":"cftc","ALFRED":"alfred","WTI":"wti","TBF3_TFF":"cftc","issuer_USO":"uscf","issuer_CPER":"uscf","issuer_QQQ":"invesco","WTI_CLOSE_PAIR":"yahoo","TBILL_AUCTION":"treasurydirect"}[key]
+        provider={"BTC":"okx","ETH":"okx","SHFE_copper_warrant":"shfe","COMEX_copper":"comex","TBF3":"cftc","ALFRED":"alfred","WTI":"wti","TBF3_TFF":"cftc","issuer_USO":"uscf","issuer_CPER":"uscf","issuer_QQQ":"invesco","WTI_CLOSE_PAIR":"yahoo","TBILL_AUCTION":"treasurydirect","TREASURY_REAL_YIELD":"treasury","WTI_USL_PAIR":"uscf"}[key]
         data={k:v for k,v in value.items() if k not in ("history","observations")}
         archive(folder,"native/"+provider+"/"+key,now,dict(data,first_seen_at=now.isoformat(),source_digest=digest(data)))
     compact={k:{a:b for a,b in v.items() if a not in ("history","observations")} for k,v in native.items()}
