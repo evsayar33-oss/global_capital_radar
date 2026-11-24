@@ -14,6 +14,7 @@ on:
       - 'streamlit_app.py'
       - 'radar.py'
       - 'macro_sources.py'
+      - 'keyed_sources.py'
       - 'dashboard_data.py'
       - 'price_context.py'
       - 'evaluate_rotation.py'
@@ -47,7 +48,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # Queued runs must start from the latest persisted main snapshot, not a stale event SHA.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Start bounded resource telemetry
         continue-on-error: true
         run: python3 scripts/resource_probe.py start
@@ -59,6 +63,10 @@ jobs:
         continue-on-error: true
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
         run: python3 radar.py
       - id: rotation
         continue-on-error: true
