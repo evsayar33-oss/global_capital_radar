@@ -1,0 +1,8 @@
+{
+  "status": "UNAVAILABLE_CURRENT_OFFICIAL",
+  "source_url": "https://www.eia.gov/opendata/browser/petroleum/pri/fut",
+  "historical_end": "2024-04-05",
+  "reason": "no verified current licensed settlement curve",
+  "first_seen_at": "2026-11-24T14:10:53.463460+00:00",
+  "source_digest": "a002b57d8a261434e2d6523ad45f7fe2e5e1cd1b3e549be8da750d00e1054031"
+}

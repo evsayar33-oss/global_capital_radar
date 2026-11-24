@@ -1,0 +1,7 @@
+{
+  "status": "UNAVAILABLE",
+  "source": "SHFE",
+  "error": "ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>",
+  "first_seen_at": "2026-11-24T14:10:53.463460+00:00",
+  "source_digest": "42e7ce15d9d7a9d995fb1f062a0a36a1c86e8aee96f80f99a3f0337b9c8d3f58"
+}

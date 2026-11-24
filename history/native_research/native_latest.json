@@ -510,12 +510,12 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.04759654109611766,
-    "quoted_spread_bps": 0.016650335462391436,
+    "basis_pct": -0.045551219447559355,
+    "quoted_spread_bps": 0.01657139495492909,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T13:53:46.227000+00:00",
+    "basis_asof": "2026-11-24T14:11:07.108000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T13:53:46.665000+00:00",
+    "quote_asof": "2026-11-24T14:11:07.662000+00:00",
     "spread_status": "OBSERVED"
   },
   "ETH": {
@@ -1029,26 +1029,18 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.059657765255549666,
-    "quoted_spread_bps": 0.05910672013849239,
+    "basis_pct": -0.04825999187820784,
+    "quoted_spread_bps": 0.05887565167981599,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T13:53:46.089000+00:00",
+    "basis_asof": "2026-11-24T14:11:07.114000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T13:53:46.371000+00:00",
+    "quote_asof": "2026-11-24T14:11:07.523000+00:00",
     "spread_status": "OBSERVED"
   },
   "SHFE_copper_warrant": {
-    "status": "OBSERVED",
+    "status": "UNAVAILABLE",
     "source": "SHFE",
-    "source_date": "2026-11-24",
-    "units": "metric tonnes",
-    "on_warrant_tonnes": 3952,
-    "change_tonnes": -422,
-    "regions": 4,
-    "scope": "SHFE copper warrants only; not COMEX inventories",
-    "source_sha256": "a938e1cf56faa4a6c4aafb84c7285c90fba28c3875fcb06575b60594720cf36c",
-    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261124&query_params=dailystock",
-    "transport": "RENDERED_HTTP_200"
+    "error": "ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>"
   },
   "TBF3_TFF": {
     "status": "NO_CURRENT_COT_SERIES",
@@ -1087,7 +1079,7 @@
     "calculated_aum_usd": 1749507515.93,
     "source_url": "https://www.uscfinvestments.com/uso",
     "publication_intraday_verified": false,
-    "source_sha256": "16d5b3fdb992d290acaaf864317e74691741ecfebbfa1e66a4ddefbc4e17dc19",
+    "source_sha256": "c69ba4d15af12f97539bd0f0b5c554a7df824c00e89bf61933ede200edd3f92a",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": 600000,
     "creation_status": "OBSERVED",
@@ -1110,7 +1102,7 @@
     "calculated_aum_usd": 505557000.0,
     "source_url": "https://www.uscfinvestments.com/cper",
     "publication_intraday_verified": false,
-    "source_sha256": "35db79493c4c9d9ea044c45cb80f2ecd62920166dcb20dbdff7b66f9bc254427",
+    "source_sha256": "a305ba2da96a31c04e8e4b81e76da488e57aa27b3884af316b09e672cd7641d5",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": -300000,
     "creation_status": "OBSERVED",
@@ -1136,7 +1128,7 @@
     "flow_eligible": false,
     "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
     "publication_intraday_verified": false,
-    "source_sha256": "d61621dbeff7c43a1da8323c17bfa35c2b88b92d622969e62536aaf09aa849ea",
+    "source_sha256": "8bf516a45b308d52fc66e7151ebc99ac096b8278773351412e2d6a9de4384d95",
     "transport": "RENDERED_HTTP_200"
   },
   "COMEX_copper": {
