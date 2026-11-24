@@ -22,9 +22,20 @@ def sha(text):
 
 def alfred_csv(series,asof,reader):
     if not re.fullmatch(r"[A-Z0-9_]+",series):raise ValueError("invalid series")
-    url=ALFRED_CSV+"?"+urlencode(dict(id=series,vintage_date=str(asof),
-                       cosd=str(asof-timedelta(days=400)),coed=str(asof)))
-    raw=reader(url)
+    # Request only a recent date window; graph CSV is a context snapshot,
+    # not the full 400-day API backfill. Retry a shorter window on transient
+    # transport failures, never on access denial or invalid vintage content.
+    from urllib.error import HTTPError, URLError
+    for days in (31,14):
+        url=ALFRED_CSV+"?"+urlencode(dict(id=series,vintage_date=str(asof),
+                           cosd=str(asof-timedelta(days=days)),coed=str(asof)))
+        try:
+            raw=reader(url)
+            break
+        except HTTPError as exc:
+            if days==14 or exc.code not in (408,429,500,502,503,504):raise
+        except (TimeoutError,URLError):
+            if days==14:raise
     rows=csv.DictReader(io.StringIO(raw.lstrip("\ufeff")))
     field=series+"_"+asof.strftime("%Y%m%d")
     if rows.fieldnames!=["observation_date",field]:
@@ -43,7 +54,7 @@ def alfred_csv(series,asof,reader):
         raise ValueError("ALFRED no recent observation")
     return dict(status="OBSERVED_DATE_VINTAGE",series=series,vintage=str(asof),
                 observations=observations,source="ALFRED graph CSV",source_url=url,
-                source_sha256=sha(raw),publication_intraday_verified=False,
+                source_sha256=sha(raw),requested_window_days=days,publication_intraday_verified=False,
                 realtime_interval_verified=False,role="DATE_VINTAGE_RESEARCH_ONLY")
 
 def delivery_month(d,offset):

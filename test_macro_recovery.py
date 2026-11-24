@@ -9,6 +9,25 @@ class MacroRecoveryTests(unittest.TestCase):
         self.assertFalse(r["publication_intraday_verified"])
         for bad in (data.replace("20261123","20261124"),data+"2026-11-24,2.6\n"):
             with self.assertRaises(ValueError):alfred_csv("DFII10",date(2026,11,23),lambda _:bad)
+    def test_vintage_bounded_retry(self):
+        from urllib.parse import urlsplit,parse_qs
+        from urllib.error import HTTPError
+        calls=[]
+        def reader(url):
+            calls.append(parse_qs(urlsplit(url).query))
+            if len(calls)==1:raise TimeoutError("transient")
+            return "observation_date,DFII10_20261123\n2026-11-20,2.77\n"
+        r=alfred_csv("DFII10",date(2026,11,23),reader)
+        self.assertEqual(len(calls),2)
+        self.assertEqual(calls[0]["cosd"],["2026-10-23"])
+        self.assertEqual(calls[1]["cosd"],["2026-11-09"])
+        self.assertEqual(r["requested_window_days"],14)
+        denied=[]
+        def blocked(url):
+            denied.append(url)
+            raise HTTPError(url,403,"Forbidden",None,None)
+        with self.assertRaises(HTTPError):alfred_csv("DFII10",date(2026,11,23),blocked)
+        self.assertEqual(len(denied),1)
     def test_contract_pair(self):
         self.assertEqual(contract_pair(date(2026,11,23)),[(2027,1),(2027,2)])
         self.assertEqual(contract_pair(date(2026,12,2)),[(2027,1),(2027,2)])

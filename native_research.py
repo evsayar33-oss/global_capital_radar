@@ -95,7 +95,11 @@ def archive(root,kind,now,obj):
 
 def alfred_vintage(series,asof,key,reader=read):
     if not key:
-        return alfred_csv(series,asof,reader)
+        try:
+            return alfred_csv(series,asof,reader)
+        except Exception as exc:
+            return dict(status="UNAVAILABLE",series=series,vintage=str(asof),
+                        source="ALFRED graph CSV",error=type(exc).__name__,observations=[])
     query=urlencode(dict(series_id=series,api_key=key,file_type="json",
                          realtime_start=str(asof),realtime_end=str(asof),
                          observation_start=str(asof-timedelta(days=400)),observation_end=str(asof)))
