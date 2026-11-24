@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'native_research.py'
+      - 'source_recovery.py'
+      - 'test_source_recovery.py'
       - 'native_adapters.py'
       - 'test_native_adapters.py'
       - 'secondary_sources.py'
@@ -13,6 +15,8 @@ on:
   pull_request:
     paths:
       - 'native_research.py'
+      - 'source_recovery.py'
+      - 'test_source_recovery.py'
       - 'native_adapters.py'
       - 'test_native_adapters.py'
       - 'secondary_sources.py'
