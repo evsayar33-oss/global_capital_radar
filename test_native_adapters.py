@@ -39,6 +39,22 @@ class NativeAdaptersTests(unittest.TestCase):
         for bad in (html.replace("1500","1501"),html.replace("Tonne","Pound"),html.replace("2026-11-17","2026-11-16")):
             with self.assertRaises(ValueError):parse_shfe(bad,day)
 
+    def test_shfe_header_before_copper(self):
+        # Structure reproduced from real runner 45405127085, 2026-11-24:
+        # Region Warehouse On Warrant Change COPPER Unit:Tonne.
+        # Numeric totals are deliberately synthetic, not claimed as market data.
+        html="""<p>Shanghai Futures Exchange Warehouse Stocks Daily Vol.2026-215 DATE:2026-11-24</p>
+        <table><tr><th>Region</th><th>Warehouse</th><th>On Warrant</th><th>Change</th></tr>
+        <tr><td>COPPER</td><td>Unit：Tonne</td></tr>
+        <tr><td>Shanghai</td><td>Subtotal</td><td>1000</td><td>-10</td></tr>
+        <tr><td>Total</td><td>1000</td><td>-10</td></tr></table>"""
+        day=date(2026,11,24)
+        self.assertEqual(parse_shfe(html,day)["on_warrant_tonnes"],1000)
+        for bad in (html.replace("On Warrant","Other"),html.replace("COPPER","Copper(BC)"),
+                    html.replace("Total</td><td>1000","Total</td><td>999"),
+                    html.replace("<tr><td>Total",'<tr><td>Copper(BC)</td><td>Unit：Tonne</td></tr><tr><td>Total')):
+            with self.assertRaises(ValueError):parse_shfe(bad,day)
+
     def test_tbf_empty_distinct_from_network_error(self):
         d=date(2026,11,24)
         h,r=tbf3(d,lambda _: "[]")

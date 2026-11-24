@@ -98,13 +98,20 @@ def parse_shfe(html,day):
     if not re.search(r"Shanghai Futures Exchange Warehouse Stocks Daily",text,re.I) or not re.search(r"DATE\s*[:：]\s*"+str(day),text,re.I):
         raise ValueError("SHFE report title/date mismatch")
     # Read only copper (not Copper BC), require explicit unit and total.
-    active=False;unit=False;header=False;subs=[];total=None
+    active=False;unit=False;header=False;pre_header=False;subs=[];total=None
     for row in p.rows:
         upper=[s.upper().strip() for s in row]
         if "COPPER" in upper:
             if active:raise ValueError("duplicate copper section")
-            active=True;unit=any(re.search(r"UNIT\s*[:：]\s*TONNE\b",s) for s in upper);continue
-        if not active:continue
+            active=True;header=pre_header;unit=any(re.search(r"UNIT\s*[:：]\s*TONNE\b",s) for s in upper);continue
+        if not active:
+            if any(upper):pre_header="REGION" in upper and "WAREHOUSE" in upper and "ON WARRANT" in upper and "CHANGE" in upper
+            continue
+        # A new commodity/unit row before CU total is an incomplete CU section.
+        if any(re.search(r"UNIT\s*[:：]",s) for s in upper) and not any(re.search(r"UNIT\s*[:：]\s*TONNE\b",s) for s in upper):
+            raise ValueError("SHFE unexpected unit in copper section")
+        if any(re.search(r"UNIT\s*[:：]",s) for s in upper) and len(upper)>1 and upper[0] and not re.search(r"UNIT\s*[:：]",upper[0]):
+            raise ValueError("SHFE next product before copper total")
         if any(re.search(r"UNIT\s*[:：]\s*TONNE\b",s) for s in upper):unit=True
         if "ON WARRANT" in upper and "CHANGE" in upper:header=True
         label=next((s for s in upper if s in ("SUBTOTAL","TOTAL")),None)

@@ -22,7 +22,7 @@ def evidence(label,url,html,status,content_type,final_url):
     # response headers, cookies, keys, or full copyrighted pages.
     p=Page(html)
     t=p.text
-    markers=["Key Facts","Shares Outstanding","Total Net Assets","Fund NAV",
+    markers=["Key Facts","Shares Outstanding","Total Net Assets","Fund NAV","Assets Under Management",
              "Creation / Redemption","期货仓单日报","Shanghai Futures Exchange Warehouse Stocks Daily"]
     excerpts={}
     for term in markers:

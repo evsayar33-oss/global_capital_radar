@@ -50,6 +50,13 @@ def main():
         jobs.append(pool.submit(safe,"SHFE",lambda:shfe_verified(now)))
         result=[f.result() for f in jobs]
     print("RUNNER_OBSERVED "+str(sum(r.get("status")=="OBSERVED" for r in result))+"/4",flush=True)
-    return 0 if any(r.get("status")=="OBSERVED" for r in result) else 1
+    targets=dict(zip([*ISSUERS,"SHFE"],result))
+    states={k:v.get("status") for k,v in targets.items()}
+    print("RUNNER_TARGETS "+json.dumps(states),flush=True)
+    # Both existing issuer flows must survive and at least one NEW target
+    # must supply validated data. Rounded QQQ snapshot is not an ETF flow.
+    existing=all(targets[k].get("status")=="OBSERVED" and targets[k].get("creation_status")=="OBSERVED" for k in ("USO","CPER"))
+    improved=any(states.get(k)=="OBSERVED" for k in ("QQQ","SHFE"))
+    return 0 if existing and improved else 1
 
 if __name__=="__main__":raise SystemExit(main())
