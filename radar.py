@@ -5,6 +5,8 @@ import csv
 import io
 import json
 import math
+import os
+from urllib.parse import urlencode
 import statistics
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
@@ -36,8 +38,37 @@ def month(d, offset):
     return date(year, m + 1, min(d.day, calendar.monthrange(year, m + 1)[1]))
 
 
-def fred(key):
-    data = csv.DictReader(io.StringIO(read("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + key)))
+def fred_with_source(key):
+    today = datetime.now(timezone.utc).date()
+    start = str(today - timedelta(days=800))
+    secret = os.getenv("FRED_API_KEY")
+    api_error = None
+    if secret:
+        try:
+            query = urlencode(dict(series_id=key, api_key=secret, file_type="json", observation_start=start))
+            payload = json.loads(read("https://api.stlouisfed.org/fred/series/observations?" + query))
+            rows = {}
+            for row in payload["observations"]:
+                d = date.fromisoformat(row["date"])
+                if d in rows:
+                    raise ValueError("duplicate FRED API observation")
+                if row["value"] in ("", "."):
+                    continue
+                v = float(row["value"])
+                if not math.isfinite(v):
+                    raise ValueError("nonfinite FRED API observation")
+                rows[d] = v
+            if not rows:
+                raise ValueError("empty FRED API series")
+            return rows, dict(source="FRED API", source_series=key,
+                              observation_basis="CURRENT_VINTAGE", historical_vintage_verified=False)
+        except Exception as exc:
+            # Never include an authenticated URL in a persisted error.
+            api_error = type(exc).__name__
+    data = csv.DictReader(io.StringIO(read("https://fred.stlouisfed.org/graph/fredgraph.csv?" +
+                                           urlencode(dict(id=key, cosd=start)))))
+    if not data.fieldnames or key not in data.fieldnames:
+        raise ValueError("FRED CSV identity mismatch")
     rows = {}
     for row in data:
         if row[key] not in ("", "."):
@@ -47,7 +78,12 @@ def fred(key):
             rows[date.fromisoformat(row[data.fieldnames[0]])] = value
     if not rows:
         raise ValueError("Boş seri")
-    return rows
+    return rows, dict(source="FRED graph CSV", source_series=key, observation_basis="CURRENT_VINTAGE",
+                      historical_vintage_verified=False, api_error=api_error)
+
+
+def fred(key):
+    return fred_with_source(key)[0]
 
 
 def summarize(meta, data, today):
@@ -77,11 +113,51 @@ def summarize(meta, data, today):
 
 
 def retrieve(meta, today):
+    from macro_sources import SUPPORTED, fresh_series
     try:
-        data = fred(meta["id"])
-        return summarize(meta, data, today), data
+        data, source = fred_with_source(meta["id"])
+        row = summarize(dict(meta, **source), data, today)
+        if not row["stale"] or meta["id"] not in SUPPORTED:
+            return row, data
+        primary_error = "FRED series stale"
     except Exception as exc:
-        return dict(meta, error=str(exc)), {}
+        primary_error = type(exc).__name__ + ": " + str(exc)
+    if meta["id"] in SUPPORTED:
+        try:
+            data, source = fresh_series(meta["id"], today, read, meta["max_age"])
+            row = summarize(dict(meta, **source), data, today)
+            row.update(primary_error=primary_error, source_status="DIRECT_SOURCE_OBSERVED")
+            return row, data
+        except Exception as exc:
+            return dict(meta, error=primary_error, alternative_error=type(exc).__name__ + ": " + str(exc)), {}
+    return dict(meta, error=primary_error), {}
+
+
+def attach_last_verified(rows, history):
+    # Display evidence only. Never put old values in current row, forecast or conditions.
+    wanted = {r["id"]: r for r in rows if r.get("error")}
+    for path in sorted(history.glob("????-??-??.json"), reverse=True):
+        if not wanted:
+            break
+        try:
+            payload = json.loads(path.read_text())
+            seen = payload["as_of"]
+            if not isinstance(seen, str):
+                continue
+            for old in payload.get("indicators", []):
+                key = old.get("id")
+                if key not in wanted:
+                    continue
+                if not old.get("error") and not old.get("stale") and old.get("period") and old.get("value") is not None:
+                    previous = {k: old.get(k) for k in ("period", "value", "changes", "source", "source_series", "observation_basis")}
+                    previous["observed_at"] = seen
+                else:
+                    previous = old.get("last_verified")
+                    if not previous:
+                        continue
+                wanted.pop(key)["last_verified"] = previous
+        except (OSError, ValueError, KeyError, TypeError):
+            continue
 
 
 def market_rate(today):
@@ -181,6 +257,7 @@ def main():
     history = ROOT / "history"
     history.mkdir(exist_ok=True)
     path = history / (str(today) + ".json")
+    attach_last_verified(rows, history)
     signals = forecast(flows, today)
     # İlk başarılı aylık tahmini ve ilk açıklanan sonucu değiştirmeden sakla.
     ledger = history / "forecasts.json"
@@ -222,7 +299,9 @@ def main():
     units = dict(flow="milyon USD", pct="%", inverse="%", pp="yüzde puan", bp="baz puan", points="puan")
     for r in rows:
         if "error" in r:
-            lines.append(f"|{r['label']}|Kaynak hatası|—|—|—|—|—|—|—|")
+            previous = r.get("last_verified") or {}
+            last = f" · son kayıt {previous['period']}: {previous['value']}" if previous else ""
+            lines.append(f"|{r['label']}|Kaynak hatası{last}|—|—|—|—|—|—|—|")
         else:
             fields = [r["label"], r["period"] + (" (gecikmiş)" if r["stale"] else ""), f"{r['value']:.6g}", units[r["change"]]]
             fields.extend(str(r["changes"].get(h, "—")) for h in HORIZONS)
