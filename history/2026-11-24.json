@@ -1,0 +1,268 @@
+{
+  "as_of": "2026-11-24T07:00:44.084418+00:00",
+  "indicators": [
+    {
+      "id": "FORTREASNET69995",
+      "label": "ABD Hazine kâğıtları",
+      "freq": "M",
+      "change": "flow",
+      "max_age": "100",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "FORLTEQTYNET69995",
+      "label": "ABD hisseleri",
+      "freq": "M",
+      "change": "flow",
+      "max_age": "100",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "FORLTCORPNET69995",
+      "label": "ABD uzun vadeli şirket ve belediye borcu",
+      "freq": "M",
+      "change": "flow",
+      "max_age": "100",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DTWEXBGS",
+      "label": "Geniş dolar endeksi",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DEXJPUS",
+      "label": "JPY/USD (bir yenin dolar değeri)",
+      "freq": "D",
+      "change": "inverse",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DEXUSEU",
+      "label": "EUR/USD",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "M2SL",
+      "label": "ABD M2",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "TOTLL",
+      "label": "Banka kredileri ABD",
+      "freq": "W",
+      "change": "pct",
+      "max_age": "30",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DRTSCILM",
+      "label": "Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi",
+      "freq": "Q",
+      "change": "pp",
+      "max_age": "175",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "BAMLH0A0HYM2",
+      "label": "Yüksek getirili ABD tahvili risk primi",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "VIXCLS",
+      "label": "VIX",
+      "freq": "D",
+      "change": "points",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "NFCI",
+      "label": "Chicago Fed finansal koşullar",
+      "freq": "W",
+      "change": "points",
+      "max_age": "30",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DCOILBRENTEU",
+      "label": "Brent petrol",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "15",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DHHNGSP",
+      "label": "Henry Hub doğal gaz",
+      "freq": "D",
+      "change": "pct",
+      "max_age": "15",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "IR",
+      "label": "ABD ithalat fiyat endeksi",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "CPIAUCSL",
+      "label": "ABD TÜFE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "75",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "CPILFESL",
+      "label": "ABD çekirdek TÜFE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "75",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "PCEPILFE",
+      "label": "ABD çekirdek PCE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "PCEPI",
+      "label": "ABD PCE",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "PPIACO",
+      "label": "ABD emtia üretici fiyat endeksi",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "90",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "CES0500000003",
+      "label": "Özel sektör saatlik ücret",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "75",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "T5YIE",
+      "label": "ABD 5 yıllık başabaş enflasyon",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DGS2",
+      "label": "ABD 2 yıllık tahvil faizi",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DFII10",
+      "label": "ABD 10 yıllık reel faiz",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "DFF",
+      "label": "Gerçekleşen efektif Fed faizi",
+      "freq": "D",
+      "change": "bp",
+      "max_age": "10",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "BOPGIMP",
+      "label": "ABD mal ithalatı nominal değer",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "100",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "BOPGEXP",
+      "label": "ABD mal ihracatı nominal değer",
+      "freq": "M",
+      "change": "pct",
+      "max_age": "100",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "ICI",
+      "label": "ICI haftalık fon akışı",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "expectations": {
+    "IMF": {
+      "error": "HTTP Error 403: Forbidden",
+      "archive": "WEO 2026-10-13",
+      "archived_forecast": {
+        "2026": 4.7,
+        "2027": 4.1
+      },
+      "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"
+    },
+    "Fed SEP": {
+      "error": "The read operation timed out"
+    },
+    "Vadeli Fed fonları (%)": {
+      "freq": "D",
+      "change": "bp",
+      "max_age": 7,
+      "contract": "ZQZ26.CBT",
+      "target": "2026-12-01",
+      "period": "2026-11-24",
+      "value": 4.069999694824219,
+      "changes": {
+        "1G": 0.4997,
+        "1H": 0.4997,
+        "1A": 2.9999,
+        "3A": 19.0002,
+        "1Y": 109.5001
+      },
+      "stale": false
+    },
+    "Dünya geniş para / GSYH (%)": {
+      "freq": "Y",
+      "change": "pp",
+      "max_age": 1100,
+      "period": "2024-01-01",
+      "value": 135.663792466297,
+      "changes": {
+        "1Y": 0.2012
+      },
+      "stale": false
+    }
+  }
+}

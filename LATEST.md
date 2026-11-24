@@ -1,4 +1,4 @@
-# Sermaye radarı · 2026-11-23
+# Sermaye radarı · 2026-11-24
 
 ## Gözlenen yabancı net alımları
 
@@ -54,5 +54,5 @@ Henüz sonuçlanmış ileri test yok.
 
 - IMF · {"error": "HTTP Error 403: Forbidden", "archive": "WEO 2026-10-13", "archived_forecast": {"2026": 4.7, "2027": 4.1}, "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"}
 - Fed SEP · {"error": "The read operation timed out"}
-- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-23", "value": 4.0449981689453125, "changes": {"1G": 0.4997, "1H": -2.0004, "1A": 0.4997, "3A": 18.4998, "1Y": 107.0}, "stale": false}
+- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-24", "value": 4.069999694824219, "changes": {"1G": 0.4997, "1H": 0.4997, "1A": 2.9999, "3A": 19.0002, "1Y": 109.5001}, "stale": false}
 - Dünya geniş para / GSYH (%) · {"freq": "Y", "change": "pp", "max_age": 1100, "period": "2024-01-01", "value": 135.663792466297, "changes": {"1Y": 0.2012}, "stale": false}
