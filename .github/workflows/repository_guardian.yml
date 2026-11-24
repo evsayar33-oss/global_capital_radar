@@ -1,0 +1,60 @@
+name: Repository Guardian (capacity and schedules)
+on:
+  schedule:
+    - cron: '27 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/repo_guardian.py', 'scripts/resource_probe.py', 'scripts/test_repo_guardian.py', '.github/workflows/repository_guardian.yml']
+  pull_request:
+    paths: ['scripts/repo_guardian.py', 'scripts/resource_probe.py', 'scripts/test_repo_guardian.py', '.github/workflows/repository_guardian.yml']
+permissions:
+  contents: read
+concurrency:
+  group: repository-guardian-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Start bounded resource telemetry
+        continue-on-error: true
+        run: python3 scripts/resource_probe.py start
+      - run: python3 scripts/test_repo_guardian.py
+      - run: python3 -m unittest -q
+      - name: Report runner capacity
+        if: always()
+        continue-on-error: true
+        run: |
+          probe="$RUNNER_TEMP/repo-resource-$GITHUB_RUN_ID-$GITHUB_JOB/probe.py"
+          if test -f "$probe"; then python3 "$probe" finish; else echo "::warning::Resource telemetry unavailable"; fi
+  audit:
+    needs: tests
+    if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Start bounded resource telemetry
+        continue-on-error: true
+        run: python3 scripts/resource_probe.py start
+      - name: Measure capacity, preserve expiring evidence and recover inactivity
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/repo_guardian.py --apply
+      - name: Report runner capacity
+        if: always()
+        continue-on-error: true
+        run: |
+          probe="$RUNNER_TEMP/repo-resource-$GITHUB_RUN_ID-$GITHUB_JOB/probe.py"
+          if test -f "$probe"; then python3 "$probe" finish; else echo "::warning::Resource telemetry unavailable"; fi

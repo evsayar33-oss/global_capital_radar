@@ -1,0 +1,8 @@
+{
+  "source": "history/rotation/20261122T091515978821Z.json",
+  "preserved_as": "history/quarantine/20261122T091515978821Z.json.txt",
+  "sha256": "414996ec573dcaac5b0e6bd8cce5d7ee31e88769c1fcc587b4a3c82dd679e357",
+  "bytes": 13328,
+  "reason": "Invalid JSON containing a literal tool-output truncation marker at line 99. Missing bytes cannot be inferred. Excluded from scoring and fallback data; original bytes preserved.",
+  "quarantined_on": "2026-11-23"
+}
