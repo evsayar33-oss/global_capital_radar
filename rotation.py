@@ -81,6 +81,7 @@ def flows(html, today, *, detailed=False):
         percentile = round(100*sum(v <= result["1H"] for v in reference)/len(reference))
     if detailed:
         horizons = analyze(dates, days, unit)
+        assets = {}
         if chart.aum:
             assets = {datetime.fromtimestamp(ts/1000,timezone.utc).date():v*unit for ts,v in chart.aum if v is not None and math.isfinite(v) and v>0}
             from horizons import boundary
@@ -90,11 +91,15 @@ def flows(html, today, *, detailed=False):
                 if prior and (target-prior[-1]).days<=4 and h["net_usd_m"] is not None:
                     h["flow_aum_pct"]=100*h["net_usd_m"]/assets[prior[-1]]
                     h["aum_asof"]=str(prior[-1])
+        from adaptive_flow import build_features
+        research = build_features(dates, days, unit, assets)
+        for key,h in horizons.items():
+            h['adaptive_features'],h['adaptive_replay'] = research[key]
         return end, result, percentile, horizons
     return end, result, percentile
 
 
-def cot(today):
+def cot_archive(today):
     histories = {}
     years = [today.year-1, today.year]
     for year in years:
@@ -121,6 +126,30 @@ def cot(today):
 
 
 CODES = {code for _,_,code in ASSETS if code}
+
+
+def cot_with_source(today):
+    from secondary_sources import cot_api, combine_cot
+    primary,primary_error={},None
+    try:
+        primary=cot_archive(today)
+    except Exception as exc:
+        primary_error=str(exc)
+    try:
+        secondary=cot_api(today,CODES,read)
+        if primary:
+            joined,ok=combine_cot(primary,secondary)
+            return joined, {"transport":"CFTC archive + matched API" if ok else "CFTC archive",
+                            "api_overlap_verified":ok}
+        return secondary,{"transport":"CFTC API fallback","archive_error":primary_error}
+    except Exception as exc:
+        if primary:
+            return primary,{"transport":"CFTC archive","api_error":str(exc)}
+        raise ValueError("Both CFTC transports unavailable: "+str(primary_error)+" / "+str(exc)) from exc
+
+
+def cot(today):
+    return cot_with_source(today)[0]
 
 
 def classify(values, position):
@@ -166,6 +195,9 @@ def snapshot(asset, today, positions):
         stale = (today-end).days > 7
         for key, horizon in horizons.items():
             interpret(horizon, key, end, history, stale, today)
+            from adaptive_flow import cot_feature
+            if horizon.get('adaptive_features'):
+                horizon['adaptive_features']['cot_z'] = cot_feature(horizon,history,key)
             if symbol == "SGOV" and not history:
                 horizon["confirmation"] = "TEYİTSİZ · CME TBF3 pozisyon serisi yok"
             if cached:
@@ -182,9 +214,10 @@ def main():
     now = datetime.now(timezone.utc)
     today = now.date()
     try:
-        positions, error = cot(today), None
+        positions, cot_source = cot_with_source(today)
+        error = None
     except Exception as exc:
-        positions, error = {}, str(exc)
+        positions, error, cot_source = {}, str(exc), {"transport":"unavailable"}
     with ThreadPoolExecutor(max_workers=4) as pool:
         rows = list(pool.map(lambda a: snapshot(a, today, positions), ASSETS))
     archive_folder = ROOT/"history"/"rotation"
@@ -192,7 +225,12 @@ def main():
     for path in sorted(archive_folder.glob("2*.json"), reverse=True):
         if not missing:
             break
-        for old in json.loads(path.read_text())["assets"]:
+        try:
+            prior_report = json.loads(path.read_text())
+        except (ValueError, OSError) as exc:
+            print(f"Invalid historical observation excluded: {path.name}: {exc}")
+            continue
+        for old in prior_report["assets"]:
             symbol = old["symbol"]
             if symbol not in missing or not old.get("net_usd_m") or old.get("error"):
                 continue
@@ -205,16 +243,34 @@ def main():
                 h.update(net_usd_m=row["net_usd_m"].get(key), confirmation="TEYİTSİZ · kaynak okunamadı",action="BEKLE · önceki gözlem")
                 h.setdefault("strength","Güç ölçülemedi")
                 row["horizons"][key]=h
+    from secondary_sources import capture_etfiq
+    secondary_flow = capture_etfiq(ROOT,today,rows,read)
     from price_context import enrich
     price_errors = enrich(rows,today)
     from experiments import record
     record(rows)
-    payload = dict(price_errors=price_errors, schema_version=3, seen_at=now.isoformat(), cot_error=error, assets=rows)
+    from adaptive_flow import record as record_adaptive
+    from adaptive_evaluation import atomic
+    previous_path=ROOT/"history/adaptive_results.json"
+    previous=json.loads(previous_path.read_text()) if previous_path.exists() else {}
+    replay = record_adaptive(rows,previous.get("prospective",{}))
+    # Keep last valid replay if source is temporarily unavailable. Merge by
+    # symbol only when a newly observed source is usable; never pretend stale
+    # replay is a fresh forward observation.
+    replay_path = ROOT/"history/adaptive_replay.json"
+    if replay:
+        old_replay = json.loads(replay_path.read_text()) if replay_path.exists() else []
+        updated = {r["symbol"] for r in replay}
+        atomic(replay_path,[r for r in old_replay if r["symbol"] not in updated]+replay)
+    payload = dict(price_errors=price_errors, schema_version=4, seen_at=now.isoformat(), cot_error=error, cot_source=cot_source, secondary_flow=secondary_flow, assets=rows)
     folder = ROOT/"history"/"rotation"
     folder.mkdir(exist_ok=True,parents=True)
     # Her çalıştırmanın bilgi kümesi korunur. Tüketiciler latest.json okur.
     data = json.dumps(payload,ensure_ascii=False,indent=2,allow_nan=False)
-    (folder/(now.strftime("%Y%m%dT%H%M%S%fZ")+".json")).write_text(data)
+    archive = folder/(now.strftime("%Y%m%dT%H%M%S%fZ")+".json")
+    temp_archive = archive.with_suffix(".tmp")
+    temp_archive.write_text(data)
+    temp_archive.replace(archive)
     temp = folder/"latest.tmp"
     temp.write_text(data)
     temp.replace(folder/"latest.json")

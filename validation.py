@@ -20,7 +20,8 @@ def main():
              "telegram":"Teslimat yalnız API yanıtı başarılıysa kaydedilir",
              "selection":"30 bağımsız örnek öncesi yöntem seçilmez"}
     (ROOT/"history/validation.json").write_text(json.dumps(payload,ensure_ascii=False,indent=2))
-    return int(any(c["source_error"] or c["stale"] for c in checks))
+    report_old = report["seen_at"][:10] != datetime.now(timezone.utc).date().isoformat()
+    return int(report_old or any(c["source_error"] or c["stale"] or c["cached"] for c in checks))
 
 
 if __name__=="__main__":
