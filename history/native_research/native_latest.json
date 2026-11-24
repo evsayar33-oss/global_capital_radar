@@ -510,12 +510,12 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.04446390789091259,
-    "quoted_spread_bps": 0.016787325570172408,
+    "basis_pct": -0.05353185145162698,
+    "quoted_spread_bps": 0.016683948456366855,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T16:19:16.051000+00:00",
+    "basis_asof": "2026-11-24T23:01:08.211000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T16:19:17.063000+00:00",
+    "quote_asof": "2026-11-24T23:01:08.167000+00:00",
     "spread_status": "OBSERVED"
   },
   "ETH": {
@@ -1029,18 +1029,26 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.04425466767137287,
-    "quoted_spread_bps": 0.059834199433315714,
+    "basis_pct": -0.046303441889183894,
+    "quoted_spread_bps": 0.05939071069888557,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T16:19:16.558000+00:00",
+    "basis_asof": "2026-11-24T23:01:08.100000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T16:19:16.116000+00:00",
+    "quote_asof": "2026-11-24T23:01:07.766000+00:00",
     "spread_status": "OBSERVED"
   },
   "SHFE_copper_warrant": {
-    "status": "UNAVAILABLE",
+    "status": "OBSERVED",
     "source": "SHFE",
-    "error": "HTTPError: HTTP Error 404: Not Found; ValueError: SHFE report title/date mismatch; URLError: <urlopen error [Errno 101] Network is unreachable>; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>"
+    "source_date": "2026-11-24",
+    "units": "metric tonnes",
+    "on_warrant_tonnes": 3952,
+    "change_tonnes": -422,
+    "regions": 4,
+    "scope": "SHFE copper warrants only; not COMEX inventories",
+    "source_sha256": "9fb1d39e4a1aa2451cb12ecb0f2807e6b6b10bf54db8b0f2bb3dd6d09b6fe35f",
+    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261124&query_params=dailystock",
+    "transport": "RENDERED_HTTP_200"
   },
   "TBF3_TFF": {
     "status": "NO_CURRENT_COT_SERIES",
@@ -1079,10 +1087,10 @@
     "calculated_aum_usd": 1749507515.93,
     "source_url": "https://www.uscfinvestments.com/uso",
     "publication_intraday_verified": false,
-    "source_sha256": "405b2fddc3a28630517472809837c18b18abf070e1a7d18f91665c5e55bd083c",
+    "source_sha256": "4f00c18031a1f122f8a1ea51303bea6410bde964918aac537ffa1e5025272cbf",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": 600000,
-    "creation_source_sha256": "bd830ff00f8cd7fb0503a693adac7155ec432abca19b34f3731e4afd521c1dcf",
+    "creation_source_sha256": "8a6478b275268bed655fcb64d4ae49fc35b3d251a5698e515a68362eda180f2b",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1103,10 +1111,10 @@
     "calculated_aum_usd": 505557000.0,
     "source_url": "https://www.uscfinvestments.com/cper",
     "publication_intraday_verified": false,
-    "source_sha256": "3ab2a6a72b3ee6e9d33e48611ae6aa8375bcfca68821fefb26c5f355a9167e10",
+    "source_sha256": "3edd4617e88748e5d64d0768235ee7b0d36c5c1fa820effd70698bf297ad580e",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": -300000,
-    "creation_source_sha256": "d6e760b3da6b3fa42aae2356fef80b2e95a3e022df8454b6317c39f2800d764e",
+    "creation_source_sha256": "a19157e62e3249ad8ebcb57edf1083cd8ff0413f2ba88dad71158edd35ecd899",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1130,7 +1138,7 @@
     "flow_eligible": false,
     "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
     "publication_intraday_verified": false,
-    "source_sha256": "750c0a7c883a7add598d09877d0054946028f0b9f55d9dd913178caff59be7d7",
+    "source_sha256": "ec9204598c5e81c5ea50df8eb2c84ea5094ed56d2efcf1b8f418c45104ce5ff6",
     "transport": "RENDERED_HTTP_200"
   },
   "COMEX_copper": {
@@ -2796,13 +2804,13 @@
       "contract": "CLF27.NYM",
       "delivery_month": "2027-01",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLF27.NYM?range=10d&interval=1d",
-      "source_sha256": "77157fabd35d08f9c3589553c3b6f69b8b540eab740ae8ce4940ff95e7e89f6e"
+      "source_sha256": "863f961db564957d651ed29a5e1f94bf4217d90886d150bdbe00ff3a25ebd3b2"
     },
     "next_contract": {
       "contract": "CLG27.NYM",
       "delivery_month": "2027-02",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLG27.NYM?range=10d&interval=1d",
-      "source_sha256": "ef641c853dee27a04bb040c3bd3f0fb2fe39816e77caf6b435a7c8855ceee7e5"
+      "source_sha256": "299e48e14177cc0c48ac8d2218048979258b6c2a9970608f23bad4b63e03dd35"
     },
     "front_close_usd_per_barrel": 80.16999816894531,
     "next_close_usd_per_barrel": 79.06999969482422,
@@ -2816,7 +2824,7 @@
     "status": "OBSERVED_AUCTION_CONTEXT",
     "source": "US TreasuryDirect",
     "source_url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?type=Bill&term=13-Week&format=json",
-    "source_sha256": "6f1aaeddfe3f763eab936e1b48d85bb32db6f6c0b4328b50c817f1431689f39d",
+    "source_sha256": "0b3abd7915e275fc1652c94262321710b9469394241020c7100b1fbd52749600",
     "source_date": "2026-11-23",
     "auction_date": "2026-11-23",
     "cusip": "912797WC7",
@@ -2834,7 +2842,7 @@
     "status": "OBSERVED_CURRENT_PUBLICATION",
     "source": "US Treasury daily par real yield curve",
     "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202611?_format=csv&field_tdr_date_value_month=202611&page=&type=daily_treasury_real_yield_curve",
-    "source_sha256": "2a81f81507c1737beff2f08e1b3db2a8c36958a88e9bc1f4554c701e424bf731",
+    "source_sha256": "f2e4b66aeece3549aac136dd501a58affd0e0f29b3edaf7db5803cb39b5e2372",
     "source_date": "2026-11-23",
     "real_yield_10y_pct": 2.79,
     "historical_vintage_verified": false,
@@ -2868,7 +2876,7 @@
     "roll_calendar_verified": false,
     "role": "ISSUER_VALUATION_CONTEXT_ONLY",
     "production_proxy_allowed": false,
-    "source_sha256": "3883ca56dfca9402b1ee160c706b22de78e98608655b883f5c5ead30b009b08d",
+    "source_sha256": "b24b0d65d43f15daf2c51e791c2c020c2f7dbed2e2b477d4b252f0c96724dfa1",
     "transport": "RENDERED_HTTP_200"
   },
   "TBF3": {
