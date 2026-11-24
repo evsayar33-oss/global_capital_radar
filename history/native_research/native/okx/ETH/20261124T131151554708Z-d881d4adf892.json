@@ -1,0 +1,19 @@
+{
+  "status": "OBSERVED",
+  "source": "OKX",
+  "source_url": "https://www.okx.com/api/v5/",
+  "symbol": "ETH-USDT-SWAP",
+  "funding_asof": "2026-11-24T08:00:00+00:00",
+  "funding_rate": 8.892955017e-07,
+  "interval_hours": 8.0,
+  "annualized_pct": 0.09737785743615,
+  "basis_pct": -0.06818774755117385,
+  "quoted_spread_bps": 0.059338553148004625,
+  "caveat": "settled funding only; quoted spread is not execution cost",
+  "basis_asof": "2026-11-24T13:11:56.264000+00:00",
+  "basis_status": "OBSERVED",
+  "quote_asof": "2026-11-24T13:11:56.569000+00:00",
+  "spread_status": "OBSERVED",
+  "first_seen_at": "2026-11-24T13:11:51.554708+00:00",
+  "source_digest": "928a797bdf4731db2147ad248ee722d393ff7bfd0fb7364d77f7eef24d4fe340"
+}

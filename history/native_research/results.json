@@ -1,6 +1,6 @@
 {
   "version": "adaptive-flow-v2.0",
-  "evaluated_at": "2026-11-24T12:47:34.904600+00:00",
+  "evaluated_at": "2026-11-24T13:11:51.554708+00:00",
   "source": "ETFIQ (etfiq.com)",
   "price_errors": {},
   "coverage": [
@@ -307,21 +307,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.22084445106116984,
+              "mean_pp": -0.22084438611617047,
               "positive": 4,
-              "lower95_pp": -0.5303945683105961
+              "lower95_pp": -0.5303939274862361
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.27873918790327507,
+              "mean_pp": -0.2787391229582757,
               "positive": 3,
-              "lower95_pp": -0.5999747952772083
+              "lower95_pp": -0.5999741724185418
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.33663392474538034,
+              "mean_pp": -0.33663385980038096,
               "positive": 3,
-              "lower95_pp": -0.6717037028364148
+              "lower95_pp": -0.6717031001528343
             }
           }
         },
@@ -530,21 +530,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.05664785932180815,
+              "mean_pp": -0.05665165972782786,
               "positive": 3,
-              "lower95_pp": -0.22264366115879453
+              "lower95_pp": -0.22264926041793714
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.11980575405865027,
+              "mean_pp": -0.11980955446466997,
               "positive": 3,
-              "lower95_pp": -0.2931886918073162
+              "lower95_pp": -0.2931945258473483
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.18296364879549235,
+              "mean_pp": -0.18296744920151206,
               "positive": 3,
-              "lower95_pp": -0.36833722623970455
+              "lower95_pp": -0.368343220016161
             }
           }
         },
@@ -753,21 +753,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.2839497711731157,
+              "mean_pp": -0.2839503951619807,
               "positive": 2,
-              "lower95_pp": -0.6333524842860274
+              "lower95_pp": -0.6333526004863895
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.3365813501204841,
+              "mean_pp": -0.3365819741093491,
               "positive": 2,
-              "lower95_pp": -0.6993166448557746
+              "lower95_pp": -0.6993168060412764
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.38921292906785254,
+              "mean_pp": -0.3892135530567175,
               "positive": 2,
-              "lower95_pp": -0.7669458311618726
+              "lower95_pp": -0.7669460359986072
             }
           }
         },
@@ -976,21 +976,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.042000046012103394,
+              "mean_pp": -0.04200093661126244,
               "positive": 1,
-              "lower95_pp": -0.08048362509077622
+              "lower95_pp": -0.08048425651088362
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.08410530916999813,
+              "mean_pp": -0.08410619976915717,
               "positive": 0,
-              "lower95_pp": -0.1436731226608863
+              "lower95_pp": -0.14367409092187
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.12621057232789287,
+              "mean_pp": -0.1262114629270519,
               "positive": 0,
-              "lower95_pp": -0.20985379390970652
+              "lower95_pp": -0.20985491437057302
             }
           }
         },
@@ -1199,21 +1199,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.3189346809568373,
+              "mean_pp": -0.3189348717917887,
               "positive": 3,
-              "lower95_pp": -0.9266951108692564
+              "lower95_pp": -0.9266950358367465
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.3557767862199952,
+              "mean_pp": -0.3557769770549466,
               "positive": 3,
-              "lower95_pp": -0.9728687459697082
+              "lower95_pp": -0.9728686801963282
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.3926188914831531,
+              "mean_pp": -0.3926190823181045,
               "positive": 3,
-              "lower95_pp": -1.0198990988932257
+              "lower95_pp": -1.0198990424413157
             }
           }
         },
@@ -1422,21 +1422,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": 0.6920675462966811,
+              "mean_pp": 0.6920644605104971,
               "positive": 4,
-              "lower95_pp": -1.0309871663153873
+              "lower95_pp": -1.0309900790341955
             },
             "0.3": {
               "n": 38,
-              "mean_pp": 0.6394359673493126,
+              "mean_pp": 0.6394328815631286,
               "positive": 4,
-              "lower95_pp": -1.0776966543075368
+              "lower95_pp": -1.0776995939259315
             },
             "0.5": {
               "n": 38,
-              "mean_pp": 0.5868043884019443,
+              "mean_pp": 0.5868013026157602,
               "positive": 4,
-              "lower95_pp": -1.1248561945476163
+              "lower95_pp": -1.1248591612830943
             }
           }
         },
@@ -1645,21 +1645,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": 0.25764610686679845,
+              "mean_pp": 0.2576456996685146,
               "positive": 5,
-              "lower95_pp": -0.5927433954186037
+              "lower95_pp": -0.5927435400883322
             },
             "0.3": {
               "n": 38,
-              "mean_pp": 0.1997513700246932,
+              "mean_pp": 0.19975096282640933,
               "positive": 5,
-              "lower95_pp": -0.6466608790353814
+              "lower95_pp": -0.6466610295696418
             },
             "0.5": {
               "n": 38,
-              "mean_pp": 0.14185663318258793,
+              "mean_pp": 0.14185622598430406,
               "positive": 5,
-              "lower95_pp": -0.7015729640630637
+              "lower95_pp": -0.7015731208129172
             }
           }
         },
@@ -1868,21 +1868,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.4829592515466723,
+              "mean_pp": -0.4829600747218892,
               "positive": 6,
-              "lower95_pp": -1.7089523350480533
+              "lower95_pp": -1.7089526491646065
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.5461171462835145,
+              "mean_pp": -0.5461179694587314,
               "positive": 6,
-              "lower95_pp": -1.7780587295447177
+              "lower95_pp": -1.7780590556129252
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.6092750410203566,
+              "mean_pp": -0.6092758641955734,
               "positive": 6,
-              "lower95_pp": -1.8478612397083083
+              "lower95_pp": -1.8478615778860394
             }
           }
         },
@@ -2091,21 +2091,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -1.450939717101124,
+              "mean_pp": -1.4509384337133204,
               "positive": 1,
-              "lower95_pp": -5.776104325777433
+              "lower95_pp": -5.77610420177088
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -1.550939717101124,
+              "mean_pp": -1.5509384337133205,
               "positive": 1,
-              "lower95_pp": -5.902685262607514
+              "lower95_pp": -5.902685108860562
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -1.650939717101124,
+              "mean_pp": -1.6509384337133206,
               "positive": 1,
-              "lower95_pp": -6.030859361743403
+              "lower95_pp": -6.030859178216946
             }
           }
         },
@@ -2314,21 +2314,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.5508835850096002,
+              "mean_pp": -0.5508853726848747,
               "positive": 0,
-              "lower95_pp": -1.6306154116284164
+              "lower95_pp": -1.6306207031472288
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.5842169183429334,
+              "mean_pp": -0.5842187060182079,
               "positive": 0,
-              "lower95_pp": -1.7292820782950833
+              "lower95_pp": -1.7292873698138957
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.6175502516762669,
+              "mean_pp": -0.6175520393515413,
               "positive": 0,
-              "lower95_pp": -1.8279487449617497
+              "lower95_pp": -1.8279540364805626
             }
           }
         },
@@ -2760,21 +2760,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.03342653038372339,
+              "mean_pp": 0.033420451152016466,
               "positive": 1,
-              "lower95_pp": -0.06618684791140217
+              "lower95_pp": -0.06619711756253896
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.06657346961627661,
+              "mean_pp": -0.06657954884798353,
               "positive": 1,
-              "lower95_pp": -0.17824070192049069
+              "lower95_pp": -0.17825470181754838
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.16657346961627661,
+              "mean_pp": -0.16657954884798354,
               "positive": 0,
-              "lower95_pp": -0.34087985620494654
+              "lower95_pp": -0.34089368936719744
             }
           }
         },
@@ -2983,21 +2983,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.19048985862807158,
+              "mean_pp": -0.19048855659048272,
               "positive": 1,
-              "lower95_pp": -0.9898404368170782
+              "lower95_pp": -0.9898405465347012
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.2571565252947382,
+              "mean_pp": -0.25715522325714935,
               "positive": 1,
-              "lower95_pp": -1.0846947033529122
+              "lower95_pp": -1.0846946038017369
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.3238231919614049,
+              "mean_pp": -0.32382188992381605,
               "positive": 1,
-              "lower95_pp": -1.186572603817946
+              "lower95_pp": -1.186572300586529
             }
           }
         },
@@ -3851,18 +3851,34 @@
     }
   },
   "native_status": {
-    "BTC": "UNAVAILABLE",
-    "ETH": "UNAVAILABLE",
+    "BTC": "OBSERVED",
+    "ETH": "OBSERVED",
+    "SHFE_copper_warrant": "UNAVAILABLE",
     "COMEX_copper": "UNAVAILABLE",
     "ALFRED": "API_KEY_REQUIRED",
-    "TBF3": "UNAVAILABLE",
+    "TBF3": "NO_CURRENT_COT_SERIES",
     "WTI": "UNAVAILABLE_CURRENT_OFFICIAL"
   },
   "native_errors": {
-    "BTC": "HTTPError: HTTP Error 451: ",
-    "ETH": "HTTPError: HTTP Error 451: ",
-    "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden",
-    "TBF3": "ValueError: CFTC API empty or truncated"
+    "SHFE_copper_warrant": "2026-11-24: ValueError: SHFE report title/date mismatch; 2026-11-23: ValueError: SHFE report title/date mismatch; 2026-11-20: ValueError: SHFE report title/date mismatch; 2026-11-19: URLError: <urlopen error [Errno 104] Connection reset by peer>; 2026-11-18: URLError: <urlopen error [Errno 104] Connection reset by peer>",
+    "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "native_substatus": {
+    "BTC": {
+      "basis_status": "OBSERVED",
+      "spread_status": "OBSERVED"
+    },
+    "ETH": {
+      "basis_status": "OBSERVED",
+      "spread_status": "OBSERVED"
+    },
+    "SHFE_copper_warrant": {},
+    "COMEX_copper": {},
+    "ALFRED": {},
+    "TBF3": {
+      "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY"
+    },
+    "WTI": {}
   },
   "decision_policy": "SHADOW_ONLY_NO_PRODUCTION_PROMOTION",
   "costs": {

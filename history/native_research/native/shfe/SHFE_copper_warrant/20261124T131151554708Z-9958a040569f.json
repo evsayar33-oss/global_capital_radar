@@ -1,0 +1,8 @@
+{
+  "status": "UNAVAILABLE",
+  "source": "SHFE",
+  "error": "2026-11-24: ValueError: SHFE report title/date mismatch; 2026-11-23: ValueError: SHFE report title/date mismatch; 2026-11-20: ValueError: SHFE report title/date mismatch; 2026-11-19: URLError: <urlopen error [Errno 104] Connection reset by peer>; 2026-11-18: URLError: <urlopen error [Errno 104] Connection reset by peer>",
+  "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/",
+  "first_seen_at": "2026-11-24T13:11:51.554708+00:00",
+  "source_digest": "82b089271d04e3d9dc3f66728f2ac89dd097e16b801246a6d1ec80e296b4213e"
+}

@@ -1,0 +1,66 @@
+{
+  "BTC": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "BTC-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 2.21870316848e-05,
+    "interval_hours": 8.0,
+    "annualized_pct": 2.4294799694856,
+    "basis_pct": -0.05622326475317463,
+    "quoted_spread_bps": 0.016691328103697348,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T13:11:56.638000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T13:11:56.832000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "ETH": {
+    "status": "OBSERVED",
+    "source": "OKX",
+    "source_url": "https://www.okx.com/api/v5/",
+    "symbol": "ETH-USDT-SWAP",
+    "funding_asof": "2026-11-24T08:00:00+00:00",
+    "funding_rate": 8.892955017e-07,
+    "interval_hours": 8.0,
+    "annualized_pct": 0.09737785743615,
+    "basis_pct": -0.06818774755117385,
+    "quoted_spread_bps": 0.059338553148004625,
+    "caveat": "settled funding only; quoted spread is not execution cost",
+    "basis_asof": "2026-11-24T13:11:56.264000+00:00",
+    "basis_status": "OBSERVED",
+    "quote_asof": "2026-11-24T13:11:56.569000+00:00",
+    "spread_status": "OBSERVED"
+  },
+  "SHFE_copper_warrant": {
+    "status": "UNAVAILABLE",
+    "source": "SHFE",
+    "error": "2026-11-24: ValueError: SHFE report title/date mismatch; 2026-11-23: ValueError: SHFE report title/date mismatch; 2026-11-20: ValueError: SHFE report title/date mismatch; 2026-11-19: URLError: <urlopen error [Errno 104] Connection reset by peer>; 2026-11-18: URLError: <urlopen error [Errno 104] Connection reset by peer>",
+    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/"
+  },
+  "COMEX_copper": {
+    "status": "UNAVAILABLE",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "ALFRED": {
+    "status": "API_KEY_REQUIRED",
+    "series": "DFII10",
+    "vintage": "2026-11-23"
+  },
+  "TBF3": {
+    "status": "NO_CURRENT_COT_SERIES",
+    "code": "041741",
+    "contract_name": "13-week U.S. Treasury bills",
+    "source": "CFTC Legacy futures only",
+    "latest_report_date": null,
+    "price_status": "UNAVAILABLE_VERIFIED_TBF3_SETTLEMENT_HISTORY",
+    "production_proxy_allowed": false
+  },
+  "WTI": {
+    "status": "UNAVAILABLE_CURRENT_OFFICIAL",
+    "source_url": "https://www.eia.gov/opendata/browser/petroleum/pri/fut",
+    "historical_end": "2024-04-05",
+    "reason": "no verified current licensed settlement curve"
+  }
+}
