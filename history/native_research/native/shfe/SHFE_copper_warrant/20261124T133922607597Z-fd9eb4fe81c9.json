@@ -1,0 +1,7 @@
+{
+  "status": "UNAVAILABLE",
+  "source": "SHFE",
+  "error": "ValueError: SHFE Chinese report date/title missing; ValueError: SHFE copper unit/header/total reconciliation; ValueError: SHFE Chinese report date/title missing; ValueError: SHFE copper unit/header/total reconciliation",
+  "first_seen_at": "2026-11-24T13:39:22.607597+00:00",
+  "source_digest": "631d3e46cc1e93b615247c2a83bbcf1ec0d45fdb9e30d1d3c8896602ec787822"
+}
