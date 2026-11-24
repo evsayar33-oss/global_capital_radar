@@ -20,7 +20,11 @@ class NativeResearchTests(unittest.TestCase):
 
     def test_vintage_and_secret_absence(self):
         d=date(2026,11,20)
-        self.assertEqual(alfred_vintage("DFII10",d,None)["status"],"API_KEY_REQUIRED")
+        # Key-free fallback must be tested with injected data, not the network.
+        v=alfred_vintage("DFII10",d,None,lambda _:"observation_date,DFII10_20261120\n2026-11-19,2.88\n")
+        self.assertEqual(v["status"],"OBSERVED_DATE_VINTAGE")
+        self.assertEqual(v["observations"][0]["value"],2.88)
+        self.assertEqual(alfred_vintage("DFII10",d,None,lambda _:"invalid")["status"],"UNAVAILABLE")
         p={"observations":[dict(date="2026-11-21",value="3",realtime_start=str(d),realtime_end=str(d))]}
         self.assertEqual(alfred_vintage("DFII10",d,"secret",lambda _:json.dumps(p))["status"],"UNAVAILABLE")
 

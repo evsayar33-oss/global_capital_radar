@@ -64,7 +64,10 @@ def issuer_history(root,symbol,today,calendar,now):
     path=root/"history/native_research/issuer_snapshots"/(symbol+".json")
     hist=json.loads(path.read_text())
     raw={}; provenance={}
-    for ds,r in hist.items():
+    from macro_recovery import first_creation
+    for ds,entry in hist.items():
+        r=first_creation(entry)
+        if r is None:continue
         d=date.fromisoformat(ds)
         if d>today or d not in calendar:continue
         if (r.get("status")!="OBSERVED" or r.get("creation_status")!="OBSERVED"
@@ -82,7 +85,8 @@ def issuer_history(root,symbol,today,calendar,now):
             continue
         raw[d]=estimate
         provenance[d]=dict(first_seen_at=r["first_seen_at"],source_url=r.get("source_url"),
-                           creation_source_url=r.get("creation_source_url"),source_sha256=r.get("source_sha256"))
+                           creation_source_url=r.get("creation_source_url"),source_sha256=r.get("source_sha256"),
+                           creation_source_sha256=r.get("creation_source_sha256"))
     if not raw:raise ValueError("no verified issuer creation history")
     return observed(symbol,"USCF_CREATION",raw,today,calendar,
                     dict(provenance[max(raw)],source="USCF",units="USD",

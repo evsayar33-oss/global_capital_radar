@@ -16,7 +16,8 @@ def issuer_verified(symbol,today):
         try:
             c,transport=verified_page(url,lambda h:parse_creation(h,symbol,today))
             if c["source_date"]!=r["source_date"]:raise ValueError("creation/NAV date mismatch")
-            r.update(c,creation_status="OBSERVED",creation_source_url=url,creation_transport=transport,
+            creation_hash=c.pop("source_sha256")
+            r.update(c,creation_source_sha256=creation_hash,creation_status="OBSERVED",creation_source_url=url,creation_transport=transport,
                      estimated_creation_usd=c["net_created_shares"]*r["nav_usd"],
                      creation_basis="issuer net created shares times same-date rounded NAV")
         except Exception as e:r.update(creation_status="UNAVAILABLE",creation_error=str(e))

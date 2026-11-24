@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'native_research.py'
+      - 'macro_recovery.py'
+      - 'test_macro_recovery.py'
       - 'source_recovery.py'
       - 'runner_sources.py'
       - 'runner_recovery.py'
@@ -18,6 +20,8 @@ on:
   pull_request:
     paths:
       - 'native_research.py'
+      - 'macro_recovery.py'
+      - 'test_macro_recovery.py'
       - 'source_recovery.py'
       - 'runner_sources.py'
       - 'runner_recovery.py'
