@@ -111,7 +111,7 @@ def parse_issuer_pdf_text(text,symbol,expected_end,url,today,now,raw_sha256):
     # PDF cover contains the original issuer issue date, not necessarily the
     # SEC filed date. Do not invent accession or a filing timestamp.
     t=" ".join(text.split())
-    dates=set(re.findall(r"\bOn\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})\s+.{0,400}?\bissued\s+(?:its|their)\s+monthly account statements?\b",t,re.I))
+    dates=set(re.findall(r"\bOn\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})\s*,?\s+.{0,400}?\bissued\s+(?:its|their)\s+monthly account statements?\b",t,re.I))
     issued=None
     if len(dates)==1:
         issued=datetime.strptime(next(iter(dates)),"%B %d, %Y").date()

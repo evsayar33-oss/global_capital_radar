@@ -62,6 +62,8 @@ class FilingTests(unittest.TestCase):
         self.assertEqual(r["net_flow_usd"],-83469599)
         self.assertEqual(r["issued_date"],"2025-10-28")
         self.assertEqual(r["available_from_date"],"2025-10-29")
+        no_comma=parse_issuer_pdf_text(t.replace("2025, Year,","2025 Year,"),"USO",date(2025,9,30),"",now.date(),now,"abc")
+        self.assertEqual(no_comma["issued_date"],"2025-10-28")
         self.assertIsNone(r["filed_date"]);self.assertIsNone(r["accession"])
         with self.assertRaises(ValueError):
             parse_issuer_pdf_text(t,"USO",date(2025,8,31),"",now.date(),now,"abc")
