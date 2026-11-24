@@ -123,6 +123,20 @@ def census_crude_imports(today,request=request_json):
     return rows,evidence
 
 
+def safe_failure(exc):
+    # Never log upstream response bodies or credentials; only our own known messages.
+    message=str(exc)
+    allowed={"EIA frequency mismatch","EIA truncated history","EIA series or units mismatch",
+             "BEA line identity mismatch","BEA period mismatch","Census nonunique response",
+             "Census country, product or period mismatch","negative Census import value",
+             "missing, stale, short, or unauthenticated series",
+             "future or duplicate macro observation","nonfinite macro observation",
+             "EIA_API_KEY absent","BEA_API_KEY absent","BLS_API_KEY absent","CENSUS_API_KEY absent"}
+    if message in allowed or re.fullmatch(r"authenticated HTTP status [0-9]{3}|authenticated response failed: [A-Za-z]+",message):
+        return message
+    return type(exc).__name__
+
+
 def health():
     from datetime import datetime,timezone
     from macro_sources import fresh_series
@@ -139,13 +153,13 @@ def health():
         try:
             credential(secret)
             rows,meta=fn()
-            age=100 if name=="HS2709" else 90 if name in BEA or name=="CPIAUCSL" else 15
+            age=120 if name=="HS2709" else 90 if name in BEA or name=="CPIAUCSL" else 15
             if not rows or (today-max(rows)).days>age or (max(rows)-min(rows)).days<365 or not meta.get("authenticated_request"):
                 raise ValueError("missing, stale, short, or unauthenticated series")
             item=dict(secret=secret,series=name,status="AUTHENTICATED_OBSERVED",observations=len(rows),
                       last=str(max(rows)),source=meta["source"])
         except Exception as exc:
-            item=dict(secret=secret,series=name,status="UNAVAILABLE",error=type(exc).__name__)
+            item=dict(secret=secret,series=name,status="UNAVAILABLE",error=safe_failure(exc))
         result.append(item)
         print("KEYED_SOURCE_HEALTH "+json.dumps(item),flush=True)
     return 0 if all(x["status"]=="AUTHENTICATED_OBSERVED" for x in result) else 1
