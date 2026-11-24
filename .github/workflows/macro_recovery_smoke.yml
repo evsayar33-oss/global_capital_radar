@@ -1,0 +1,26 @@
+name: Macro and contract source recovery smoke
+on:
+  pull_request:
+    paths:
+      - 'macro_recovery.py'
+      - 'test_macro_recovery.py'
+      - 'native_research.py'
+      - 'runner_recovery.py'
+      - 'flow_continuity.py'
+      - '.github/workflows/macro_recovery_smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live_sources:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest -v test_macro_recovery test_flow_continuity test_runner_sources
+      - run: python macro_recovery.py
