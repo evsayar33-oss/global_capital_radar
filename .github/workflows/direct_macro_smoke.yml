@@ -1,0 +1,24 @@
+name: Direct official macro sources smoke
+on:
+  pull_request:
+    paths:
+      - 'macro_sources.py'
+      - 'test_macro_sources.py'
+      - 'radar.py'
+      - '.github/workflows/direct_macro_smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest -v test_macro_sources
+      - run: python macro_sources.py
