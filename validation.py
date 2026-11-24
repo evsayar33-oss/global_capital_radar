@@ -16,7 +16,8 @@ def main():
                        "missing_horizons":[k for k in ("1H","1A","3A","1Y") if row.get("horizons",{}).get(k,{}).get("reference_count",0)<5],
                        "cot_date":row.get("cot_asof")})
     gaps=["SGOV TBF3 doğrulanmış fiyat ve pozisyon serisi","Bakır depo stokları","Petrol vade farkı","Kripto vadeli primi","Gerçek komisyon ve kayma kalibrasyonu"]
-    payload={"checked_at":datetime.now(timezone.utc).isoformat(),"assets":checks,"open_integrations":gaps,
+    continuity=report.get("continuity",{})
+    payload={"continuity_status":continuity.get("status","UNAVAILABLE"),"alternative_count":continuity.get("alternative_count",0),"alternative_unavailable":continuity.get("unavailable_count"),"checked_at":datetime.now(timezone.utc).isoformat(),"assets":checks,"open_integrations":gaps,
              "telegram":"Teslimat yalnız API yanıtı başarılıysa kaydedilir",
              "selection":"30 bağımsız örnek öncesi yöntem seçilmez"}
     (ROOT/"history/validation.json").write_text(json.dumps(payload,ensure_ascii=False,indent=2))

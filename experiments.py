@@ -18,7 +18,13 @@ def record(rows):
         for key,h in horizons.items():
             base = "BEKLE"
             usable = not any(row.get(k) for k in ("error","stale","cached_source"))
-            if usable and h.get("strength","").startswith(("Güçlü","Olağanüstü")):
+            if not usable:
+                # Outages are missing observations, not legitimate abstentions.
+                for field in ("early_methods","experiment_version","selected_method","method_selected_at","method_samples"):
+                    h.pop(field,None)
+                h["action"]="BEKLE · kaynak kullanılamıyor"
+                continue
+            if h.get("strength","").startswith(("Güçlü","Olağanüstü")):
                 base = "ALIM ADAYI" if h.get("net_usd_m",0)>0 else "AZALTMA ADAYI"
             methods = {"flow":base,"flow_position":"BEKLE","flow_persistence":"BEKLE"}
             if h.get("confirmation")=="YÖN UYUMLU":
@@ -47,7 +53,7 @@ def compare(reports, series, today):
     for day,report in sorted(reports,key=lambda x:x[0]):
         for row in report["assets"]:
             symbol = row["symbol"]
-            if symbol=="SGOV":
+            if symbol=="SGOV" or any(row.get(k) for k in ("error","stale","cached_source")):
                 continue
             for key,h in row.get("horizons",{}).items():
                 if h.get("experiment_version") != VERSION:
