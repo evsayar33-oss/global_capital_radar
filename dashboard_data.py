@@ -23,11 +23,11 @@ def latest_macro(root):
 def coverage_rows(report):
     return [{
         "Fon": row.get("symbol"), "Durum": row.get("status"),
-        "Kaynak": row.get("provenance", {}).get("source"),
-        "Başlangıç": row.get("provenance", {}).get("coverage_start"),
-        "Bitiş": row.get("provenance", {}).get("coverage_end"),
-        "Günlük gözlem": row.get("provenance", {}).get("daily_count"),
-        **{f"{h} yöntem kapsamı": row.get("model_coverage", {}).get(h) for h in ("1H", "1A", "3A", "1Y")},
+        "Kaynak": (row.get("provenance") or {}).get("source"),
+        "Başlangıç": (row.get("provenance") or {}).get("coverage_start"),
+        "Bitiş": (row.get("provenance") or {}).get("coverage_end"),
+        "Günlük gözlem": (row.get("provenance") or {}).get("daily_count"),
+        **{f"{h} yöntem kapsamı": (row.get("model_coverage") or {}).get(h) for h in ("1H", "1A", "3A", "1Y")},
         "Hata": row.get("error"),
     } for row in report.get("coverage", [])]
 
@@ -38,7 +38,7 @@ def method_rows(cohorts, horizon=None):
         if horizon and not cohort.endswith("/" + horizon):
             continue
         for method, data in result.get("models", {}).items():
-            cost = data.get("cost_stress", {})
+            cost = data.get("cost_stress") or {}
             rows.append({
                 "Fon/vade": cohort, "Yöntem": method,
                 "Bağımsız dönem": result.get("independent_periods"),
@@ -83,7 +83,7 @@ def macro_rows(report):
     return [{
         "Gösterge": row.get("label"), "Seri": row.get("id"), "Dönem": row.get("period"),
         "Değer": row.get("value"), "Frekans": row.get("freq"), "Fark birimi": row.get("change"),
-        **{h: row.get("changes", {}).get(h) for h in ("1G", "1H", "1A", "3A", "1Y")},
+        **{h: (row.get("changes") or {}).get(h) for h in ("1G", "1H", "1A", "3A", "1Y")},
         "Durum": "Kaynak hatası" if row.get("error") else ("Eski" if row.get("stale") else "Gözlem"),
         "Hata": row.get("error"),
     } for row in report.get("indicators", [])]
