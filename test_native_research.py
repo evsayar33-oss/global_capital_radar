@@ -28,6 +28,24 @@ class NativeResearchTests(unittest.TestCase):
         p={"observations":[dict(date="2026-11-21",value="3",realtime_start=str(d),realtime_end=str(d))]}
         self.assertEqual(alfred_vintage("DFII10",d,"secret",lambda _:json.dumps(p))["status"],"UNAVAILABLE")
 
+    def test_authenticated_vintage_and_safe_fallback(self):
+        d=date(2026,11,24)
+        payload={"observations":[dict(date="2026-11-23",value="2.79",realtime_start=str(d),realtime_end=str(d))]}
+        result=alfred_vintage("DFII10",d,"private-key",lambda _:json.dumps(payload))
+        self.assertEqual(result["source"],"FRED API / ALFRED")
+        self.assertTrue(result["realtime_interval_verified"])
+        self.assertNotIn("private-key",str(result))
+        def fallback(url):
+            if "api.stlouisfed.org" in url:
+                raise ValueError("private-key")
+            return "observation_date,DFII10_20261124\n2026-11-23,2.79\n"
+        result=alfred_vintage("DFII10",d,"private-key",fallback)
+        self.assertEqual(result["source"],"ALFRED graph CSV")
+        self.assertEqual(result["api_error"],"ValueError")
+        self.assertNotIn("private-key",str(result))
+        payload["observations"].append(payload["observations"][0])
+        self.assertEqual(alfred_vintage("DFII10",d,"private-key",lambda _:json.dumps(payload))["status"],"UNAVAILABLE")
+
     def test_funding_interval_and_basis(self):
         now=datetime(2026,11,20,12,tzinfo=timezone.utc)
         ts=int(now.timestamp()*1000)
