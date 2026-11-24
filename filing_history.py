@@ -5,6 +5,8 @@ import json
 import os
 import re
 import time
+import subprocess
+import html as html_lib
 from datetime import date,datetime,timedelta,timezone
 from pathlib import Path
 from urllib.request import Request,urlopen
@@ -72,7 +74,7 @@ def parse_uscf(html,symbol,filed,accession,url,today):
     ending=field(r"Net Asset Value End of Month")
     income=field(r"Net Income\s*\(Loss\)")
     add=field(r"Additions(?:\s*\([\d,]+\s+Shares\))?",True)
-    withdraw=field(r"Withdrawals(?:\s*\([\d,]+\s+Shares\))?",True)
+    withdraw=field(r"Withdrawals(?:\s*\(\s*\(?[\d,]+\)?\s+Shares\))?",True)
     a=add if add is not None else 0;b=withdraw if withdraw is not None else 0
     if start<=0 or ending<=0 or a<0 or b>0 or abs(start+income+a+b-ending)>1:
         raise ValueError("NAV accounting reconciliation")
@@ -91,6 +93,57 @@ def sec_read(url):
         "Accept-Encoding":"identity"}),timeout=12) as r:data=r.read(3_000_001)
     if len(data)>3_000_000:raise ValueError("SEC body too large")
     return data.decode("utf-8",errors="replace")
+
+ISSUER_PDF_ROOT="https://secure.alpsinc.com/MarketingAPI/api/v1/Content/uscfinvestments/"
+ISSUER_PDF_STEM={"USO":"united-states-oil-fund","CPER":"united-states-commodity-index-fund"}
+
+def pdf_download(url):
+    # Public issuer document endpoint, not a proxy for EDGAR.
+    time.sleep(.25)
+    with urlopen(Request(url,headers={"User-Agent":"Global Capital Radar research",
+        "Accept":"application/pdf"}),timeout=12) as r:
+        if not r.geturl().startswith(ISSUER_PDF_ROOT):raise ValueError("unexpected issuer redirect")
+        raw=r.read(5_000_001)
+    if len(raw)>5_000_000 or not raw.startswith(b"%PDF-"):raise ValueError("invalid issuer PDF")
+    return raw
+
+def parse_issuer_pdf_text(text,symbol,expected_end,url,today,now,raw_sha256):
+    # PDF cover contains the original issuer issue date, not necessarily the
+    # SEC filed date. Do not invent accession or a filing timestamp.
+    t=" ".join(text.split())
+    dates=set(re.findall(r"\bOn\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})\s*,?\s+.{0,400}?\bissued\s+(?:its|their)\s+monthly account statements?\b",t,re.I))
+    issued=None
+    if len(dates)==1:
+        issued=datetime.strptime(next(iter(dates)),"%B %d, %Y").date()
+        if not expected_end<=issued<=today:raise ValueError("issuer issue date invalid")
+    elif len(dates)>1:raise ValueError("conflicting issuer issue dates")
+    # Use today's first-observed date solely to validate the statement when
+    # the cover has no unambiguous issue date; never backdate availability.
+    r=parse_uscf(html_lib.escape(t),symbol,issued or today,None,url,today)
+    if r["period_end"]!=str(expected_end):raise ValueError("issuer document month mismatch")
+    r.update(source="USCF / ALPS public issuer report",source_sha256=raw_sha256,
+        accession=None,filed_date=None,issued_date=str(issued) if issued else None,
+        available_from_date=str((issued or today)+timedelta(days=1)),
+        availability_basis="issuer cover issue date, not SEC timestamp" if issued else "first observed; historical issue date unknown",
+        first_observed_timestamp=now.isoformat(),form="issuer monthly account statement")
+    return r
+
+def issuer_pdf(symbol,end,today,now,reader=pdf_download):
+    url=ISSUER_PDF_ROOT+ISSUER_PDF_STEM[symbol]+"-8-kms-"+end.strftime("%Y%m%d")+".pdf"
+    raw=reader(url)
+    p=subprocess.run(["pdftotext","-layout","-","-"],input=raw,capture_output=True,timeout=20,check=True)
+    return parse_issuer_pdf_text(p.stdout.decode("utf-8"),symbol,end,url,today,now,hashlib.sha256(raw).hexdigest())
+
+def issuer_months(today,smoke):
+    end=today.replace(day=1)-timedelta(days=1)
+    ends=[]
+    for _ in range(4 if smoke else 24):
+        ends.append(end)
+        end=end.replace(day=1)-timedelta(days=1)
+    # An independently verified public document, not fixture data, is also
+    # checked in smoke if the most recent month is not yet posted.
+    if smoke and date(2025,9,30) not in ends:ends.append(date(2025,9,30))
+    return ends
 
 def discover(symbol,today,reader,limit):
     cik=CIKS[symbol]
@@ -156,7 +209,7 @@ def run(root,today,now,reader,sec_reader=sec_read,smoke=False):
         if sym in CIKS:
             try:
                 records=discover(sym,today,sec_reader,6 if smoke else 30)
-                existing={r["accession"] for r in monthly.values()}
+                existing={r.get("accession") for r in monthly.values() if r.get("accession")}
                 for acc,filed in records:
                     if not smoke and acc in existing:continue
                     url=SEC+CIKS[sym]+"/"+acc.replace("-","")+"/"+acc+".txt"
@@ -170,8 +223,21 @@ def run(root,today,now,reader,sec_reader=sec_read,smoke=False):
                         if exc.code in (403,429):break
                     except Exception as exc:errors.append(acc+": "+str(exc))
             except Exception as exc:errors.append("SEC discovery: "+str(exc))
+            # Issuer and SEC are two delivery channels for the same underlying
+            # filing, not independent corroboration. Prefer exact SEC dates.
+            for end in issuer_months(today,smoke):
+                m=end.strftime("%Y-%m")
+                if m in new_month or (m in monthly and not smoke):continue
+                try:
+                    r=issuer_pdf(sym,end,today,now)
+                    new_month[m]=r
+                    if smoke:break
+                except HTTPError as exc:
+                    errors.append("issuer PDF "+m+" HTTP "+str(exc.code))
+                    if exc.code in (403,429):break
+                except Exception as exc:errors.append("issuer PDF "+m+": "+str(exc))
         merge(daily,new_daily,now,("flow_usd","prior_nav_date"))
-        merge(monthly,new_month,now,("net_flow_usd","inflow_usd","outflow_usd","accession","filed_date"))
+        merge(monthly,new_month,now,("net_flow_usd","inflow_usd","outflow_usd","accession","filed_date","issued_date"))
         if not smoke:
             folder.mkdir(parents=True,exist_ok=True);atomic(dp,daily);atomic(mp,monthly)
         result["symbols"][sym]=dict(sparse_daily_count=len(daily),live_daily_count=len(new_daily),

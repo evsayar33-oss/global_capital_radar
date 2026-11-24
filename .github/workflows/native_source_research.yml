@@ -33,7 +33,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: capital-radar
+  group: capital-radar-${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
   cancel-in-progress: false
 jobs:
   independent:
@@ -56,7 +56,8 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python native_research.py
-      - if: github.event_name != 'pull_request' && always()
+      - id: persist
+        if: github.event_name != 'pull_request' && always()
         run: |
           git config user.name github-actions[bot]
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -64,7 +65,15 @@ jobs:
           if test -f NATIVE_RESEARCH.md; then git add NATIVE_RESEARCH.md; fi
           if ! git diff --cached --quiet; then
             git commit -m "Independent native source research evidence"
-            git push
+            bash scripts/persist_observations.sh "$RUNNER_TEMP/observation-recovery.patch"
           fi
+      - name: Preserve unpushed observation patch
+        if: always() && steps.persist.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: observation-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/observation-recovery.patch
+          if-no-files-found: warn
+          retention-days: 30
       - if: steps.collect.outcome == 'failure'
         run: exit 1
