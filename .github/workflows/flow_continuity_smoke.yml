@@ -4,6 +4,8 @@ on:
     paths:
       - 'flow_continuity.py'
       - 'issuer_flow_history.py'
+      - 'gold_flow_history.py'
+      - 'test_gold_flow_history.py'
       - 'test_issuer_flow_history.py'
       - 'public_flow_source.py'
       - 'test_public_flow_source.py'

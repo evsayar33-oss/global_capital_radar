@@ -117,7 +117,7 @@ def choose(candidates):
     # Prefer the most recent observed source; at the same date prefer a
     # complete source-native history, then exact published issuer creation.
     # The non-selected observations are retained for comparison, not merged.
-    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1,"FARSIDE_DAILY":0,"ISHARES_HISTORY":3}
+    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1,"FARSIDE_DAILY":0,"ISHARES_HISTORY":3,"SPDR_GOLD_HISTORY":3}
     candidates=[c for c in candidates if c.get("status")=="OBSERVED" and not c.get("stale")]
     return max(candidates,key=lambda x:(x["flow_asof"],x["daily_count"]>=5,
                                        order[x["provider"]])) if candidates else None
@@ -140,6 +140,9 @@ def collect(root,assets,today,calendar,reader,now):
         from issuer_flow_history import FUNDS, collect as issuer_collect
         if sym in FUNDS:
             attempt("ISHARES_HISTORY",lambda:issuer_collect(sym,today,calendar,reader))
+        if sym=="GLD":
+            from gold_flow_history import collect as gold_collect
+            attempt("SPDR_GOLD_HISTORY",lambda:gold_collect(today,calendar))
         if not choose(candidates):
             from public_flow_source import collect as public_collect
             attempt("PWD_DAILY_ROUNDED",lambda:public_collect(sym,today,calendar,reader))

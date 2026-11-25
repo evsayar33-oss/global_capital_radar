@@ -105,4 +105,10 @@ if __name__=='__main__':
             print('ISSUER_RESULT '+json.dumps(dict(symbol=symbol,date=r['flow_asof'],days=r['daily_count'],source_start=r['provenance']['source_history_start'],horizons={k:{f:v.get(f) for f in ('net_usd_m','reference_count','flow_aum_pct')} for k,v in r['horizons'].items()})),flush=True)
             if symbol=='SLV' and (r['daily_count']<400 or any(r['horizons'][k].get('net_usd_m') is None for k in ('1H','1A','3A','1Y'))):failed.append(symbol)
         except Exception as e:failed.append(symbol);print('ISSUER_ERROR',symbol,type(e).__name__,str(e),flush=True)
+    try:
+        from gold_flow_history import collect as gold_collect
+        r=gold_collect(today,calendar)
+        print('GOLD_RESULT '+json.dumps(dict(date=r['flow_asof'],days=r['daily_count'],horizons={k:{f:v.get(f) for f in ('net_usd_m','reference_count','flow_aum_pct')} for k,v in r['horizons'].items()})),flush=True)
+        if r['daily_count']<400 or r['horizons']['1Y'].get('net_usd_m') is None:failed.append('GLD')
+    except Exception as e:failed.append('GLD');print('GOLD_ERROR',type(e).__name__,str(e),flush=True)
     raise SystemExit(bool(failed))

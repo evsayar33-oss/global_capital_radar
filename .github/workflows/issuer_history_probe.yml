@@ -3,7 +3,7 @@ on:
   push:
     branches: ['fix/issuer-history-recovery']
   pull_request:
-    paths: ['issuer_flow_history.py', 'test_issuer_flow_history.py', 'flow_continuity.py', '.github/workflows/issuer_history_probe.yml']
+    paths: ['issuer_flow_history.py', 'gold_flow_history.py', 'test_gold_flow_history.py', 'test_issuer_flow_history.py', 'flow_continuity.py', '.github/workflows/issuer_history_probe.yml']
 permissions:
   contents: read
 jobs:
