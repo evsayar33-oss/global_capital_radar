@@ -45,6 +45,7 @@ def continuity_rows(assets, continuity, key, expired=False):
             errors = continuity.get("reason") or "Doğrulanmış alternatif gözlem yok"
         rows.append({
             "Fon": asset["symbol"], "Kaynak": c.get("provider"),
+            "Veri hassasiyeti": (c.get("provenance") or {}).get("precision", "Kaynak doğrulamasına tabi"),
             "Durum": "ESKİ · yalnız referans" if c.get("stale") else r.get("status", "UNAVAILABLE"),
             "Akış tarihi": c.get("flow_asof"), "Günlük net USD": c.get("daily_flow_usd"),
             "Ardışık gün": c.get("daily_count"), "Vade net milyon USD": h.get("net_usd_m"),

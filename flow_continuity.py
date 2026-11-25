@@ -114,7 +114,7 @@ def choose(candidates):
     # Prefer the most recent observed source; at the same date prefer a
     # complete source-native history, then exact published issuer creation.
     # The non-selected observations are retained for comparison, not merged.
-    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2}
+    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1}
     candidates=[c for c in candidates if c.get("status")=="OBSERVED" and not c.get("stale")]
     return max(candidates,key=lambda x:(x["flow_asof"],x["daily_count"]>=5,
                                        order[x["provider"]])) if candidates else None
@@ -134,6 +134,9 @@ def collect(root,assets,today,calendar,reader,now):
         if daily is None:errors["ETFIQ_DAILY"]=daily_error
         else:attempt("ETFIQ_DAILY",lambda:etfiq_daily(sym,today,calendar,daily))
         if sym in ("USO","CPER"):attempt("USCF_CREATION",lambda:issuer_history(root,sym,today,calendar,now))
+        if not choose(candidates):
+            from public_flow_source import collect as public_collect
+            attempt("PWD_DAILY_ROUNDED",lambda:public_collect(sym,today,calendar,reader))
         selected=choose(candidates)
         primary_ok=not any(row.get(k) for k in ("error","stale","cached_source")) and bool(row.get("flow_asof"))
         return sym,dict(status="PRIMARY_OBSERVED" if primary_ok else "ALTERNATIVE_OBSERVED" if selected else "UNAVAILABLE",
@@ -171,8 +174,8 @@ def main():
         s=r["selected"]
         print("CONTINUITY_RESULT "+json.dumps(dict(symbol=sym,status=r["status"],
                provider=s["provider"] if s else None,date=s["flow_asof"] if s else None,
-               daily_count=s["daily_count"] if s else 0,errors=r["errors"]),ensure_ascii=False),flush=True)
-    full=sum(any(c["provider"]=="ETFIQ_HISTORY" and c["daily_count"]>=5 for c in x["candidates"])
+               daily_count=s["daily_count"] if s else 0,precision=s["provenance"].get("precision") if s else None,errors=r["errors"]),ensure_ascii=False),flush=True)
+    full=sum(any(c["status"]=="OBSERVED" and c["daily_count"]>=5 for c in x["candidates"])
              for x in report.get("assets",{}).values())
     count=report.get("alternative_count",0)
     print("CONTINUITY_SUMMARY "+json.dumps(dict(alternatives=count,source_native_histories=full,
