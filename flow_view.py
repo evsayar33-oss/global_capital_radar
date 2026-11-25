@@ -50,7 +50,7 @@ def observation(asset, continuity, key, expired=False):
         source,item,h,stale,primary=entry
         valid=number(h.get("net_usd_m"))
         return (valid, not stale, primary, item["flow_asof"],
-                h.get("reference_count") or 0, item.get("daily_count") or 0)
+                number(h.get("flow_aum_pct")), h.get("reference_count") or 0, item.get("daily_count") or 0)
     if not candidates:
         return dict(source=None,asof=None,period_start=None,h={},stale=True,
                     primary=False,status="UNAVAILABLE",action="BEKLE · veri yok",
