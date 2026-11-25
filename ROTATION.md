@@ -100,15 +100,15 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 
 |Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
 |---|---|---|---:|---:|---|
-|SPY|—|—|—|—|—|
-|QQQ|—|—|—|—|—|
-|DIA|—|—|—|—|—|
-|IWM|—|—|—|—|—|
-|SGOV|—|—|—|—|—|
-|SHY|—|—|—|—|—|
-|GLD|—|—|—|—|—|
-|SLV|—|—|—|—|—|
+|SPY|ETFIQ_HISTORY|2026-11-23|9756524531|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|QQQ|ETFIQ_HISTORY|2026-11-23|-1218213914|14|BEKLE · alternatif kaynak araştırma aşamasında|
+|DIA|ETFIQ_HISTORY|2026-11-23|-168318015|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|IWM|ETFIQ_HISTORY|2026-11-23|1476708922|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SGOV|ETFIQ_HISTORY|2026-11-23|820151843|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SHY|ETFIQ_HISTORY|2026-11-23|-16317281|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|GLD|ETFIQ_HISTORY|2026-11-23|-359783532|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SLV|ETFIQ_HISTORY|2026-11-23|110862934|400|BEKLE · alternatif kaynak araştırma aşamasında|
 |CPER|USCF_CREATION|2026-11-23|-10179000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
 |USO|USCF_CREATION|2026-11-23|79986000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
-|IBIT|—|—|—|—|—|
-|ETHA|—|—|—|—|—|
+|IBIT|ETFIQ_HISTORY|2026-11-23|-544734320|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|ETHA|ETFIQ_HISTORY|2026-11-23|-60839323|400|BEKLE · alternatif kaynak araştırma aşamasında|

@@ -19,7 +19,7 @@ Henüz sonuçlanmış ileri test yok.
 
 ## Makro koşullar
 
-- Risk iştahı (1A) · zayıflıyor · {'BAMLH0A0HYM2': 25.0, 'VIXCLS': 7.17, 'NFCI': 0.006}
+- Risk iştahı (1A) · zayıflıyor · {'BAMLH0A0HYM2': 34.0, 'VIXCLS': 6.91, 'NFCI': 0.03}
 - ABD kredi erişimi (3A) · karışık veya yatay · {'TOTLL': 2.1627, 'DRTSCILM': 1.7}
 - Dolar gücü (1A) · artıyor · {'DTWEXBGS': 2.0491, 'DEXJPUS': -0.3527, 'DEXUSEU': -2.2347}
 
@@ -36,16 +36,16 @@ Henüz sonuçlanmış ileri test yok.
 |ABD M2|2026-10-01|23532.8|%|—|—|0.5061|1.5338|5.8934|
 |Banka kredileri ABD|2026-11-11|14264.2|%|—|0.2687|0.6031|2.1627|8.0501|
 |Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi|2026-10-01|1.7|yüzde puan|—|—|—|1.7|-4.8|
-|Yüksek getirili ABD tahvili risk primi|2026-11-23|3.63|baz puan|-13.0|29.0|25.0|93.0|44.0|
-|VIX|2026-11-23|26.62|puan|-9.27|3.71|7.17|11.49|3.19|
-|Chicago Fed finansal koşullar|2026-11-13|-0.478|puan|—|-0.005|0.006|0.066|0.033|
-|Brent petrol|2026-11-17|92.94|%|0.0431|3.0834|-22.1151|0.5518|47.1501|
+|Yüksek getirili ABD tahvili risk primi|2026-11-24|3.72|baz puan|9.0|29.0|34.0|103.0|57.0|
+|VIX|2026-11-24|26.36|puan|-0.26|0.9|6.91|10.51|5.84|
+|Chicago Fed finansal koşullar|2026-11-20|-0.444|puan|—|0.006|0.03|0.098|0.059|
+|Brent petrol|2026-11-24|91.8|%|0.6579|-1.2266|-28.4489|-0.9816|41.6011|
 |Henry Hub doğal gaz|2026-11-17|3.1|%|-3.125|3.3333|-3.7267|11.9134|-16.442|
 |ABD ithalat fiyat endeksi|2026-10-01|153.8|%|—|—|1.0512|2.6702|—|
 |ABD TÜFE|2026-10-01|337.476|%|—|—|0.3503|1.4011|—|
 |ABD çekirdek TÜFE|2026-10-01|339.9|%|—|—|0.2963|0.9237|—|
-|ABD çekirdek PCE|2026-09-01|130.902|%|—|—|0.3165|0.7179|3.1212|
-|ABD PCE|2026-09-01|132.257|%|—|—|0.4908|0.8779|3.6489|
+|ABD çekirdek PCE|2026-10-01|131.312|%|—|—|0.2925|0.8944|3.2611|
+|ABD PCE|2026-10-01|132.703|%|—|—|0.3175|1.1571|3.8446|
 |ABD emtia üretici fiyat endeksi|2026-10-01|293.921|%|—|—|-0.1875|3.1892|12.7902|
 |Özel sektör saatlik ücret|2026-10-01|38|%|—|—|0.3698|0.9564|3.1208|
 |ABD 5 yıllık başabaş enflasyon|2026-11-24|2.11|baz puan|-4.0|-15.0|-37.0|-21.0|-19.0|
@@ -60,6 +60,6 @@ Henüz sonuçlanmış ileri test yok.
 
 - IMF · {"error": "HTTP Error 403: Forbidden", "archive": "WEO 2026-10-13", "archived_forecast": {"2026": 4.7, "2027": 4.1}, "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"}
 - Fed SEP · {"2026": 4.1, "2027": 4.1, "2028": 3.9, "2029": 3.6}
-- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-25", "value": 4.055000305175781, "changes": {"1G": -0.4997, "1H": -1.4999, "1A": 1.4999, "3A": 19.0002, "1Y": 109.9998}, "stale": false}
+- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-25", "value": 4.0500030517578125, "changes": {"1G": -0.9995, "1H": -1.9997, "1A": 1.0002, "3A": 18.5005, "1Y": 109.5001}, "stale": false}
 - Dünya geniş para / GSYH (%) · {"freq": "Y", "change": "pp", "max_age": 1100, "period": "2024-01-01", "value": 135.663792466297, "changes": {"1Y": 0.2012}, "stale": false}
 - Census · ABD ham petrol ithalatı (USD) · {"freq": "M", "change": "pct", "max_age": 120, "source": "US Census API", "source_series": "HS 2709 / GEN_VAL_MO / all countries", "source_urls": ["https://api.census.gov/data/timeseries/intltrade/imports/hs"], "source_sha256": ["703efa0862bab688f9f4a5be259129d42b99bd57d7d68e6af21e3d29918f9bc8", "91adade6545ccfcf193dc9cb5bdee35e516acfb66fe595e8890d62c47a6e5434"], "observation_basis": "CUSTOMS_BASIS_CURRENT_MONTHLY_USD_NOT_BOP", "authenticated_request": true, "historical_vintage_verified": false, "publication_intraday_verified": false, "period": "2026-08-01", "value": 15620795604.0, "changes": {"1Y": 28.1267}, "stale": false}
