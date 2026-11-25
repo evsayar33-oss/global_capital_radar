@@ -43,6 +43,9 @@ def events(data, state):
                   f"{o['direction']} {abs(value):,.3f} milyon USD · {current['strength']} · "
                   f"yüzdelik {pct if pct is not None else 'ölçülemedi'} · n={current['references'] if current['references'] is not None else '—'}\\n"
                   f"{current['action']}")
+            pressure=h.get("directional_pressure_pct")
+            if number(pressure):
+                text+=f" · yönsel akış baskısı {pressure:+.2f}% (tarihsel yüzdelik değil)"
             if o.get("precision"):
                 text+=f" · {o['precision']}"
             if current["confirmation"]:

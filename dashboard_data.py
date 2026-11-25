@@ -196,7 +196,30 @@ def overview_rows(assets, continuity, key, expired=False):
                      "Akış yönü":o.get("direction","Veri eksik"),
                      "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),
                      "Akış gücü":h.get("strength","Veri eksik"),"Yüzdelik":h.get("magnitude_percentile"),
+                     "Yönsel akış baskısı %":h.get("directional_pressure_pct"),"Pozitif akış seansı %":h.get("positive_sessions_pct"),"Ölçülen seans":h.get("directional_sessions"),
                      "Geçmiş dönem":h.get("reference_count"),"Veri durumu":o["status"],
                      "Veri hassasiyeti":o.get("precision"),"Karar":o["action"],
                      "Eksik veri açıklaması":o["explanation"]})
+    return rows
+
+
+def monthly_reference_rows(root,key,asof):
+    from datetime import datetime
+    from flow_metrics import monthly_reference
+    try:
+        clock=datetime.fromisoformat(asof)
+    except (TypeError,ValueError):
+        return []
+    rows=[]
+    for symbol in ("QQQ","CPER","USO"):
+        records,error=read_report(root,"native_research/extended_history/monthly_"+symbol+".json")
+        if error:continue
+        for r in monthly_reference(records,symbol,key,clock):
+            rows.append({"Fon":symbol,"Kaynak":r["source"],"Belge":r["form"],
+                         "Dönem başlangıcı":r["start"],"Dönem sonu":r["end"],
+                         "Yayımlanabilir tarih":r["available"],"İlk kayıt":r["first_seen"],
+                         "Net milyon USD":r["net_usd_m"],"Akış / başlangıç AUM %":r["flow_aum_pct"],
+                         "Beyan edilen brüt akış baskısı %":r["reported_gross_pressure_pct"],
+                         "Geçmiş bağımsız dönem":r["reference_count"],"Tarihsel yüzdelik":r["magnitude_percentile"],
+                         "Tarihsel akış gücü":r["strength"],"Durum":"ARŞİV · güncel hareketli vade değil"})
     return rows

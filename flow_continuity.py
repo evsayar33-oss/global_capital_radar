@@ -38,6 +38,14 @@ def observed(symbol,provider,raw,today,calendar,meta,aum=None,*,retain_stale=Fal
     if not all(number(v) for v in raw.values()):raise ValueError("nonfinite source flow")
     days=sorted(raw);end=days[-1]
     h=analyze(raw,days,1e-6) if len(days)>=5 else {}
+    from flow_metrics import daily_window
+    for key in ("1H","1A","3A","1Y"):
+        extra=daily_window(raw,calendar,end,key)
+        if extra:
+            current=h.setdefault(key,dict(strength="Geçmiş yetersiz",magnitude_percentile=None,reference_count=0))
+            old=current.get("net_usd_m")
+            if old is None or abs(old-extra["net_usd_m"])<=0.001:
+                current.update(extra)
     # No normalized flow feature when the source lacks an exact beginning AUM.
     for v in h.values():
         v["action"]=WAIT

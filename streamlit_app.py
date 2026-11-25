@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import date
 import streamlit as st
 from flow_view import HORIZONS
-from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows, rotation_rows, continuity_rows, display_frame, expectation_rows, overview_rows
+from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows, rotation_rows, continuity_rows, display_frame, expectation_rows, overview_rows, monthly_reference_rows
 
 def table(rows, empty="Henüz kayıt yok."):
     if rows:
@@ -40,7 +40,11 @@ table(overview_rows(assets, continuity, key, expired))
 with st.expander("Birincil ETFdb kaydı ve kaynak hataları"):
     table(rotation_rows(assets, key, expired)) if key != "1G" else st.caption("Günlük akış için üstteki gözlemi kullanın; günlük üretim stratejisi yok.")
 st.caption("— veri yok veya hesaplanamıyor demektir; sıfır değildir. Eksik veri açıklaması ve kaynak tarihini kontrol edin.")
-st.caption("Yatay, ölçülen para hareketinin küçük olduğunu gösterir. Fiyat oynaklığı veya gelecek getiri tahmini vermez.")
+st.caption("Yönsel akış baskısı = 100 × net akış / mutlak günlük net akışlar toplamı. -100 ile +100 arasında; tarihsel güç yüzdeliği değildir. Fiyat verisi kullanmaz.")
+if key in ("1A","3A","1Y"):
+    with st.expander("Yayımlanmış aylık arşiv · ayrı referans", expanded=True):
+        st.caption("Son tamamlanmış takvim dönemleri; güncel hareketli vadenin yerine geçmez. Aylık beyan edilen brüt akış baskısı günlük net akış baskısından farklıdır.")
+        table(monthly_reference_rows(ROOT,key,data.get("seen_at")), "Doğrulanmış tamamlanmış aylık dönem yok.")
 
 continuity = data.get("continuity",{})
 if continuity:
