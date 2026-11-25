@@ -1,3 +1,2 @@
+# Streamlit deployment: UI only. Research dependencies are isolated.
 streamlit>=1.51,<2
-exchange-calendars==4.13.1
-pandas==2.2.3
