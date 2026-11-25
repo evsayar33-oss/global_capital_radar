@@ -1,46 +1,23 @@
-name: Official issuer history probe
+name: Official issuer history validation
 on:
   push:
     branches: ['fix/issuer-history-recovery']
-    paths: ['.github/workflows/issuer_history_probe.yml']
+  pull_request:
+    paths: ['issuer_flow_history.py', 'test_issuer_flow_history.py', 'flow_continuity.py', '.github/workflows/issuer_history_probe.yml']
 permissions:
   contents: read
 jobs:
-  inspect:
+  validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install xlrd==2.0.2
-      - run: |
-          python - <<'PY'
-          import urllib.request,xml.etree.ElementTree as ET
-          url='https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239855&component=fundDownload&userType=individual'
-          b=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=60).read()
-          open('slv.xls','wb').write(b)
-          print('BYTES',len(b),repr(b[:100]))
-          if b.lstrip().startswith(b'<'):
-              print('LINE47',repr(b.splitlines()[46]))
-              import re
-              b=re.sub(rb'&(?!amp;|lt;|gt;|quot;|apos;|#\\d+;|#x[0-9a-fA-F]+;)',b'&amp;',b)
-              root=ET.fromstring(b)
-              ns={'s':'urn:schemas-microsoft-com:office:spreadsheet'}
-              for sheet in root.findall('s:Worksheet',ns):
-                  print('SHEET',sheet.attrib)
-                  rows=sheet.findall('.//s:Row',ns)
-                  for row in rows[:10]+rows[-3:]:print([c.text for c in row.findall('.//s:Data',ns)])
-          else:
-              import xlrd
-              w=xlrd.open_workbook(file_contents=b)
-              for s in w.sheets():
-                  print('SHEET',s.name,s.nrows)
-                  for i in list(range(min(10,s.nrows)))+list(range(max(10,s.nrows-3),s.nrows)):print(s.row_values(i))
-          PY
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: slv-official-workbook
-          path: slv.xls
-          retention-days: 1
+      - run: python -m pip install -r requirements.txt -r requirements-research.txt
+      - run: python -m unittest -v
+      - run: python issuer_flow_history.py
+      - run: python flow_continuity.py

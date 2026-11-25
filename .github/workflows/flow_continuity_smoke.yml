@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'flow_continuity.py'
+      - 'issuer_flow_history.py'
+      - 'test_issuer_flow_history.py'
       - 'public_flow_source.py'
       - 'test_public_flow_source.py'
       - 'test_flow_continuity.py'
@@ -27,4 +29,5 @@ jobs:
       - run: python -m pip install exchange-calendars==4.13.1 pandas==2.2.3
       - run: python -m unittest -v test_flow_continuity test_notifications_experiments
       - run: python flow_continuity.py
+
 
