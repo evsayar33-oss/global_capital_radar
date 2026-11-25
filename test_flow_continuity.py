@@ -101,3 +101,19 @@ class StaleReferenceTests(unittest.TestCase):
         with patch('native_research.parse_history',return_value=(raw,{date(2026,11,16):100000000},{})):
             r=flow_continuity.etfiq_history('SPY',date(2026,11,25),calendar,lambda url:'{}')
         self.assertNotIn('flow_aum_pct',r['horizons']['1H'])
+
+
+class SessionCalendarTests(unittest.TestCase):
+    def test_no_price_dependency_and_early_close(self):
+        from flow_continuity import session_calendar,live
+        today=date(2026,11,27)
+        before=datetime(2026,11,27,17,59,tzinfo=timezone.utc)
+        after=datetime(2026,11,27,18,1,tzinfo=timezone.utc)
+        self.assertEqual(session_calendar(today,before)[-1],date(2026,11,25))
+        self.assertEqual(session_calendar(today,after)[-1],today)
+        self.assertNotIn(date(2026,11,26),session_calendar(today,after))
+        with patch("evaluate_rotation.prices",side_effect=RuntimeError("HTTP 429")), \
+             patch("flow_continuity.collect",return_value={"assets":{}}) as collect_mock:
+            result=live(Path("."),[],today,lambda url:"{}",after)
+        self.assertEqual(result["calendar_source"],"exchange_calendars XNYS")
+        self.assertEqual(collect_mock.call_args.args[3][-1],today)

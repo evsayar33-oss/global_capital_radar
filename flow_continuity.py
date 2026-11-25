@@ -158,15 +158,27 @@ def collect(root,assets,today,calendar,reader,now):
                 alternative_count=count,unavailable_count=unavailable,stale_reference_count=stale_count,assets=result,
                 policy="NO_MIXING_NO_PRODUCTION_PROMOTION")
 
+def session_calendar(today,now):
+    # A trading calendar is not a price feed. Include only closed NYSE
+    # sessions, including early closes, and never infer missing flow values.
+    import exchange_calendars as xcals
+    import pandas as pd
+    if now.tzinfo is None or now.astimezone(NY).date()!=today:
+        raise ValueError("invalid session clock")
+    cal=xcals.get_calendar("XNYS",start=str(today-timedelta(days=850)),end=str(today+timedelta(days=7)))
+    sessions=cal.sessions_in_range(str(today-timedelta(days=850)),str(today))
+    return [d.date() for d in sessions if cal.session_close(d)<=pd.Timestamp(now)]
+
+
 def live(root,assets,today,reader,now):
-    from evaluate_rotation import prices
     try:
-        # Calendar only: no return/price confirmation enters flow signals.
-        bars=prices("SGOV",today-timedelta(days=850),today)
-        calendar=sorted(d for d,v in bars.items() if v)
-        return collect(root,assets,today,calendar,reader,now)
+        calendar=session_calendar(today,now)
+        report=collect(root,assets,today,calendar,reader,now)
+        report["calendar_source"]="exchange_calendars XNYS"
+        return report
     except Exception as exc:
         return dict(status="UNAVAILABLE",reason=type(exc).__name__+": "+str(exc),assets={})
+
 
 def main():
     from rotation import ASSETS
