@@ -1,0 +1,14 @@
+{
+  "status": "OBSERVED_CURRENT_PUBLICATION",
+  "source": "US Treasury daily par real yield curve",
+  "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202611?_format=csv&field_tdr_date_value_month=202611&page=&type=daily_treasury_real_yield_curve",
+  "source_sha256": "f2e4b66aeece3549aac136dd501a58affd0e0f29b3edaf7db5803cb39b5e2372",
+  "source_date": "2026-11-24",
+  "real_yield_10y_pct": 2.79,
+  "historical_vintage_verified": false,
+  "publication_intraday_verified": false,
+  "role": "CURRENT_MACRO_CONTEXT_ONLY",
+  "production_proxy_allowed": false,
+  "first_seen_at": "2026-11-25T19:07:43.240703+00:00",
+  "source_digest": "3b529f4fb59ca9f3c19b0fda92bf960e2d08496c0f7ceb6badee4356f2d7d4fb"
+}
