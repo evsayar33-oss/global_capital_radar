@@ -38,3 +38,7 @@ class IssuerHistoryTests(unittest.TestCase):
         self.assertEqual(r['daily_flow_usd'],20)
     def test_entity_declarations_rejected(self):
         with self.assertRaises(ValueError):parse('<!DOCTYPE foo>'+workbook(self.rows),'SLV',self.today)
+
+    def test_iso_dates(self):
+        rows=[[d.isoformat(),10,100+i] for i,d in enumerate(self.days)]
+        self.assertEqual(len(parse(workbook(rows),"SLV",self.today)),len(rows))

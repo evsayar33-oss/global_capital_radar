@@ -51,7 +51,7 @@ def parse(text,symbol,today):
         if not any(row):continue
         if len(row)<=max(indices):raise ValueError('short issuer history row')
         ds,nav,shares=(row[i] for i in indices)
-        day=datetime.strptime(ds,'%b %d, %Y').date()
+        day=datetime.strptime(ds,'%Y-%m-%d' if re.fullmatch(r'\d{4}-\d{2}-\d{2}',ds) else '%b %d, %Y').date()
         if day>today or day in records:raise ValueError('issuer duplicate/future date')
         if nav in ('--','-','') or shares in ('--','-',''):continue
         nav=float(nav.replace(',',''));shares=float(shares.replace(',',''))
