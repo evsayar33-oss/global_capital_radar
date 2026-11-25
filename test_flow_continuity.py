@@ -126,3 +126,10 @@ class SessionCalendarTests(unittest.TestCase):
         self.assertEqual(sessions[-1],date(2026,11,27))
         self.assertTrue(all(d.weekday()<5 for d in sessions))
         self.assertGreaterEqual(sessions[0],today-timedelta(days=850))
+
+    def test_regular_close_boundary(self):
+        from flow_continuity import session_calendar
+        today=date(2026,11,25)
+        self.assertEqual(session_calendar(today,datetime(2026,11,25,20,59,tzinfo=timezone.utc))[-1],
+                         date(2026,11,24))
+        self.assertEqual(session_calendar(today,datetime(2026,11,25,21,1,tzinfo=timezone.utc))[-1],today)

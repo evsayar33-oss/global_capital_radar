@@ -65,7 +65,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python3 -m pip install exchange-calendars==4.11.1
+      - run: python3 -m pip install exchange-calendars==4.13.1 pandas==2.2.3
       - run: python3 -m unittest -v
       - id: collect
         if: github.event_name != 'schedule' || github.event.schedule == '27 23 * * *'

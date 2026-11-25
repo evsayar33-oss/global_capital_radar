@@ -169,8 +169,10 @@ def session_calendar(today,now):
     # Range endpoints can be holidays/weekends, or outside the first/last
     # actual session of a bounded calendar. Filter actual session labels.
     first=today-timedelta(days=850)
-    return [d.date() for d in cal.sessions
-            if first<=d.date()<=today and cal.session_close(d)<=pd.Timestamp(now)]
+    schedule=cal.schedule
+    closes=pd.to_datetime(schedule["close"],utc=True)
+    return [label.date() for label,close in zip(schedule.index,closes,strict=True)
+            if first<=label.date()<=today and close<=pd.Timestamp(now)]
 
 
 def live(root,assets,today,reader,now):
