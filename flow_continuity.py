@@ -75,9 +75,11 @@ def etfiq_daily(symbol,today,calendar,daily):
     prior=[x for x in calendar if x<d]
     if not prior or str(max(prior))!=r.get("start_aum_date"):
         raise ValueError("daily beginning AUM date not previous session")
-    return observed(symbol,"ETFIQ_DAILY",{d:r["flow_usd"]},today,calendar,
+    result=observed(symbol,"ETFIQ_DAILY",{d:r["flow_usd"]},today,calendar,
                     dict(source="ETFIQ (etfiq.com)",source_url=ETFIQ_URL,units="USD",
                          historical_publication_time_verified=False),r["start_aum_usd"],retain_stale=True)
+    result["daily_observation"].update(flow_aum_pct=100*r["flow_usd"]/r["start_aum_usd"],aum_asof=r["start_aum_date"])
+    return result
 
 def issuer_history(root,symbol,today,calendar,now):
     # Use only first-observed dated issuer evidence, not retrospective revised values.
@@ -113,6 +115,27 @@ def issuer_history(root,symbol,today,calendar,now):
                          estimate_basis="published net created shares times same-date rounded NAV",
                          publication_intraday_verified=False))
 
+def enrich_matching_daily(candidates):
+    """Same ETFIQ publisher, exact day and flow; no cross-provider stitching."""
+    daily=next((x for x in candidates if x.get("provider")=="ETFIQ_DAILY"),None)
+    if not daily:
+        return
+    d=daily.get("daily_observation") or {}
+    if not number(d.get("flow_aum_pct")) or not d.get("aum_asof"):
+        return
+    for h in candidates:
+        if (h.get("provider")=="ETFIQ_HISTORY" and h.get("flow_asof")==daily.get("flow_asof")
+            and h.get("daily_flow_usd")==daily.get("daily_flow_usd")):
+            h.setdefault("daily_observation",{}).update(flow_aum_pct=d["flow_aum_pct"],aum_asof=d["aum_asof"])
+
+
+def missing_horizons(candidates):
+    return {key for key in ("1H","1A","3A","1Y")
+            if not any(x.get("status")=="OBSERVED" and not x.get("stale")
+                       and number((x.get("horizons") or {}).get(key,{}).get("net_usd_m"))
+                       for x in candidates)}
+
+
 def choose(candidates):
     # Prefer the most recent observed source; at the same date prefer a
     # complete source-native history, then exact published issuer creation.
@@ -137,10 +160,11 @@ def collect(root,assets,today,calendar,reader,now):
         if daily is None:errors["ETFIQ_DAILY"]=daily_error
         else:attempt("ETFIQ_DAILY",lambda:etfiq_daily(sym,today,calendar,daily))
         if sym in ("USO","CPER"):attempt("USCF_CREATION",lambda:issuer_history(root,sym,today,calendar,now))
-        if not choose(candidates):
+        enrich_matching_daily(candidates)
+        if not choose(candidates) or missing_horizons(candidates):
             from public_flow_source import collect as public_collect
             attempt("PWD_DAILY_ROUNDED",lambda:public_collect(sym,today,calendar,reader))
-        if sym in ("IBIT","ETHA") and not choose(candidates):
+        if sym in ("IBIT","ETHA") and (not choose(candidates) or missing_horizons(candidates)):
             from public_flow_source import farside
             attempt("FARSIDE_DAILY",lambda:farside(sym,today,calendar,reader))
         selected=choose(candidates)

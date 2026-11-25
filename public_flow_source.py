@@ -58,6 +58,7 @@ def collect(symbol,today,calendar,reader):
     raw,meta=parse(reader(URL+symbol+'?r=1m'),symbol,today,calendar)
     result=observed(symbol,'PWD_DAILY_ROUNDED',raw,today,calendar,meta)
     result['action']='BEKLE · yuvarlanmış alternatif gözlem'
+    result['daily_observation'].update(strength='Yuvarlanmış gözlem · güç ölçülmedi',magnitude_percentile=None)
     for h in result['horizons'].values():
         h.update(action=result['action'],strength='Yuvarlanmış gözlem · güç ölçülmedi',magnitude_percentile=None)
     return result
@@ -103,5 +104,6 @@ def farside(symbol,today,calendar,reader):
               historical_publication_time_verified=False,independent_corroboration=False)
     r=observed(symbol,'FARSIDE_DAILY',raw,today,calendar,meta)
     r['action']='BEKLE · yuvarlanmış alternatif gözlem'
+    r['daily_observation'].update(strength='Yuvarlanmış gözlem · güç ölçülmedi',magnitude_percentile=None)
     for h in r['horizons'].values():h.update(action=r['action'],strength='Yuvarlanmış gözlem · güç ölçülmedi',magnitude_percentile=None)
     return r
