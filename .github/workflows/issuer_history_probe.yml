@@ -22,6 +22,9 @@ jobs:
           open('slv.xls','wb').write(b)
           print('BYTES',len(b),repr(b[:100]))
           if b.lstrip().startswith(b'<'):
+              print('LINE47',repr(b.splitlines()[46]))
+              import re
+              b=re.sub(rb'&(?!amp;|lt;|gt;|quot;|apos;|#\\d+;|#x[0-9a-fA-F]+;)',b'&amp;',b)
               root=ET.fromstring(b)
               ns={'s':'urn:schemas-microsoft-com:office:spreadsheet'}
               for sheet in root.findall('s:Worksheet',ns):
@@ -36,6 +39,7 @@ jobs:
                   for i in list(range(min(10,s.nrows)))+list(range(max(10,s.nrows-3),s.nrows)):print(s.row_values(i))
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: slv-official-workbook
           path: slv.xls
