@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-25T05:34:37.216058+00:00",
+  "seen_at": "2026-11-25T11:23:16.398930+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -624,8 +624,8 @@
               "change": 39.0
             }
           },
-          "total_return_pct": -6.013415438372149,
-          "excess_sgov_pp": -6.970763878862618,
+          "total_return_pct": -6.013426227035524,
+          "excess_sgov_pp": -6.970774667525992,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -783,8 +783,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 12.486098490248976,
-          "excess_sgov_pp": 8.738627656208253,
+          "total_return_pct": 12.486105717595187,
+          "excess_sgov_pp": 8.738634883554464,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -1040,8 +1040,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 1.802064979192619,
-          "excess_sgov_pp": -1.9454058548481035,
+          "total_return_pct": 1.8020552858682315,
+          "excess_sgov_pp": -1.945415548172491,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
