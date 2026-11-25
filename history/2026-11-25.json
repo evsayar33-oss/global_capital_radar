@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-25T18:29:12.801920+00:00",
+  "as_of": "2026-11-25T18:36:59.043080+00:00",
   "indicators": [
     {
       "id": "FORTREASNET69995",
@@ -271,14 +271,14 @@
       "source_series": "DHHNGSP",
       "observation_basis": "CURRENT_VINTAGE",
       "historical_vintage_verified": false,
-      "period": "2026-11-17",
-      "value": 3.1,
+      "period": "2026-11-24",
+      "value": 3.3,
       "changes": {
-        "1G": -3.125,
-        "1H": 3.3333,
-        "1A": -3.7267,
-        "3A": 11.9134,
-        "1Y": -16.442
+        "1G": 0.6098,
+        "1H": 6.4516,
+        "1A": 18.705,
+        "3A": 16.6078,
+        "1Y": -20.4819
       },
       "stale": false
     },
