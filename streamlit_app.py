@@ -1,7 +1,7 @@
 from pathlib import Path
 from datetime import date
 import streamlit as st
-from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows, rotation_rows, continuity_rows, display_frame
+from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows, rotation_rows, continuity_rows, display_frame, expectation_rows, overview_rows
 
 def table(rows, empty="Henüz kayıt yok."):
     if rows:
@@ -33,8 +33,11 @@ except ValueError:
     expired = True
 if expired:
     st.warning("Rapor güncellenmemiş. Kararlar son gözlem tarihine aittir.")
-rows = rotation_rows(assets, key, expired)
-table(rows)
+st.subheader("Kullanılabilir sermaye akışı · kaynak bazında")
+st.caption("Birincil kaynak geçerli değilse doğrulanmış alternatif gözlem gösterilir. Kaynaklar birleştirilmez; alternatif gözlem üretim sinyali değildir.")
+table(overview_rows(assets, continuity, key, expired))
+with st.expander("Birincil ETFdb kaydı ve kaynak hataları"):
+    table(rotation_rows(assets, key, expired))
 st.caption("— veri yok veya hesaplanamıyor demektir; sıfır değildir. Eksik veri açıklaması ve kaynak tarihini kontrol edin.")
 st.caption("Yatay, ölçülen para hareketinin küçük olduğunu gösterir. Fiyat oynaklığı veya gelecek getiri tahmini vermez.")
 
@@ -107,7 +110,7 @@ with macro:
     st.caption("Makro gözlem · " + str(mr.get("as_of", "Kayıt yok")))
     table(macro_rows(mr))
     st.subheader("Beklentiler")
-    table([{"Gösterge": name, "Dönem": item.get("period"), "Değer": item.get("value"), "Durum": "Kaynak hatası" if item.get("error") else ("Eski" if item.get("stale") else "Gözlem"), "Hata": item.get("error")} for name, item in mr.get("expectations", {}).items()])
+    table(expectation_rows(mr.get("expectations", {})))
     with st.expander("Beklenti kaynağı ayrıntıları"):
         st.json(mr.get("expectations", {}), expanded=False)
 with validation:
