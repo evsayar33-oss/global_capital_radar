@@ -8,13 +8,13 @@ from urllib.parse import urlencode
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError
 
-EIA = {"DCOILBRENTEU":("PET.RBRTE.D","RBRTE","$/BBL"),
-       "DHHNGSP":("NG.RNGWHHD.D","RNGWHHD","$/MMBTU")}
-BEA = {"PCEPI":("1",("personal consumption expenditures","pce")),
-       "PCEPILFE":("6",("pce excluding food and energy","personal consumption expenditures excluding food and energy"))}
+EIA = {"DCOILBRENTEU":("PET.RBRTE.D","RBRTE","$/BBL","petroleum/pri/spt"),
+       "DHHNGSP":("NG.RNGWHHD.D","RNGWHHD","$/MMBTU","natural-gas/pri/fut")}
+BEA = {"PCEPI":("1","DPCERG",("personal consumption expenditures","personal consumption expenditures (pce)","pce")),
+       "PCEPILFE":("25","DPCCRG",("pce excluding food and energy","personal consumption expenditures excluding food and energy"))}
 BLS_URL="https://api.bls.gov/publicAPI/v2/timeseries/data/"
 BEA_URL="https://apps.bea.gov/api/data/"
-EIA_URL="https://api.eia.gov/v2/seriesid/"
+EIA_URL="https://api.eia.gov/v2/"
 CENSUS_URL="https://api.census.gov/data/timeseries/intltrade/imports/hs"
 
 
@@ -57,37 +57,59 @@ def bls_authenticated(identity,today,request=request_json):
 
 def eia_series(key,today,request=request_json):
     from macro_sources import add
-    identity,code,unit=EIA[key]
-    p,h=request(EIA_URL+identity,params={"api_key":credential("EIA_API_KEY"),
-            "start":str(today-timedelta(days=800)),"end":str(today),"length":5000})
-    response=p["response"]
-    if response.get("frequency") not in (None,"daily"):
-        raise ValueError("EIA frequency mismatch")
-    data=response["data"];rows={}
-    if int(response.get("total",len(data)))>len(data):
-        raise ValueError("EIA truncated history")
-    for row in data:
-        if row.get("series")!=code or str(row.get("units","")).upper()!=unit:
-            raise ValueError("EIA series or units mismatch")
-        if row.get("value") in (None,"","."):
-            continue
-        add(rows,date.fromisoformat(row["period"]),row["value"],today)
-    return rows,provenance("EIA API",identity,EIA_URL+identity,h,"SOURCE_NATIVE_CURRENT_DAILY_SPOT")
+    identity,code,unit,route=EIA[key]
+    url=EIA_URL+route+"/data/"
+    first=today-timedelta(days=800)
+    params={"api_key":credential("EIA_API_KEY"),"frequency":"daily",
+            "data[]":"value","facets[series][]":code,
+            "start":str(first),"end":str(today),"length":5000,
+            "sort[0][column]":"period","sort[0][direction]":"asc"}
+    rows={}; hashes=[]; seen=set(); offset=0; total=None
+    for _ in range(16):
+        p,h=request(url,params={**params,"offset":offset})
+        response=p["response"]
+        if response.get("frequency") not in (None,"daily"):
+            raise ValueError("EIA frequency mismatch")
+        data=response["data"]
+        page_total=int(response["total"])
+        if total is None:
+            total=page_total
+        if page_total!=total or total<0 or offset+len(data)>total:
+            raise ValueError("EIA inconsistent pagination")
+        if not data and offset<total:
+            raise ValueError("EIA truncated history")
+        hashes.append(h)
+        for row in data:
+            if row.get("series")!=code or str(row.get("units","")).upper()!=unit:
+                raise ValueError("EIA series or units mismatch")
+            day=date.fromisoformat(row["period"])
+            if not first<=day<=today or day in seen:
+                raise ValueError("EIA date or pagination mismatch")
+            seen.add(day)
+            if row.get("value") not in (None,"","."):
+                add(rows,day,row["value"],today)
+        offset+=len(data)
+        if offset==total:
+            meta=provenance("EIA API",identity,url,hashes[0],"SOURCE_NATIVE_CURRENT_DAILY_SPOT")
+            meta["source_sha256"]=hashes
+            return rows,meta
+    raise ValueError("EIA truncated history")
 
 
 def bea_series(key,today,request=request_json):
     from macro_sources import add
-    line,labels=BEA[key]
+    line,series,labels=BEA[key]
     p,h=request(BEA_URL,params={"UserID":credential("BEA_API_KEY"),"method":"GetData",
         "datasetname":"NIPA","TableName":"T20804","Frequency":"M",
         "Year":",".join(str(y) for y in range(today.year-2,today.year+1)),"ResultFormat":"JSON"})
     result=p["BEAAPI"]["Results"]
     rows={}
     for row in result["Data"]:
-        if str(row.get("LineNumber"))!=line:
+        if str(row.get("LineNumber"))!=line and row.get("SeriesCode")!=series:
             continue
         desc=str(row.get("LineDescription","")).strip().lower()
-        if desc not in labels or row.get("TableName")!="T20804":
+        if (desc not in labels or row.get("TableName")!="T20804"
+                or str(row.get("LineNumber"))!=line or row.get("SeriesCode")!=series):
             raise ValueError("BEA line identity mismatch")
         period=row["TimePeriod"]
         if not re.fullmatch(r"\d{4}M(0[1-9]|1[0-2])",period):
@@ -95,7 +117,7 @@ def bea_series(key,today,request=request_json):
         if row["DataValue"] in ("","(NA)","(D)","--"):
             continue
         add(rows,date(int(period[:4]),int(period[-2:]),1),row["DataValue"].replace(",",""),today)
-    return rows,provenance("BEA API","NIPA T20804 line "+line,BEA_URL,h,"SOURCE_NATIVE_CURRENT_MONTHLY_PRICE_INDEX")
+    return rows,provenance("BEA API","NIPA T20804 line "+line+" / "+series,BEA_URL,h,"SOURCE_NATIVE_CURRENT_MONTHLY_PRICE_INDEX")
 
 
 def census_crude_imports(today,request=request_json):
@@ -127,6 +149,7 @@ def safe_failure(exc):
     # Never log upstream response bodies or credentials; only our own known messages.
     message=str(exc)
     allowed={"EIA frequency mismatch","EIA truncated history","EIA series or units mismatch",
+             "EIA inconsistent pagination","EIA date or pagination mismatch",
              "BEA line identity mismatch","BEA period mismatch","Census nonunique response",
              "Census country, product or period mismatch","negative Census import value",
              "missing, stale, short, or unauthenticated series",

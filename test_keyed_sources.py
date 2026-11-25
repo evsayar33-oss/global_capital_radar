@@ -24,7 +24,7 @@ class KeyedSourcesTests(unittest.TestCase):
             k.eia_series("DCOILBRENTEU",self.today,lambda *a,**kw:(p,"hash"))
 
     def test_bea_core_line_exact(self):
-        p={"BEAAPI":{"Results":{"Data":[{"TableName":"T20804","LineNumber":"6","LineDescription":"PCE excluding food and energy","TimePeriod":"2026M09","DataValue":"130.902"}]}}}
+        p={"BEAAPI":{"Results":{"Data":[{"TableName":"T20804","LineNumber":"25","SeriesCode":"DPCCRG","LineDescription":"PCE excluding food and energy","TimePeriod":"2026M09","DataValue":"130.902"}]}}}
         rows,meta=k.bea_series("PCEPILFE",self.today,lambda *a,**kw:(p,"hash"))
         self.assertEqual(rows[date(2026,9,1)],130.902)
         self.assertNotIn("test-secret",str(meta))
@@ -58,3 +58,32 @@ class KeyedSourcesTests(unittest.TestCase):
         self.assertEqual(k.safe_failure(ValueError("authenticated HTTP status 403")),"authenticated HTTP status 403")
         self.assertEqual(k.safe_failure(ValueError("BEA line identity mismatch")),"BEA line identity mismatch")
         self.assertEqual(k.safe_failure(ValueError("https://api.example?key=test-secret")),"ValueError")
+
+    def test_eia_pages_and_hashes(self):
+        calls=[]
+        def reply(url,params):
+            calls.append((url,params.copy()))
+            i=params["offset"]
+            row={"period":f"2026-11-{19+i}","series":"RBRTE","units":"$/bbl","value":"81"}
+            return {"response":{"frequency":"daily","total":"2","data":[row]}},f"hash-{i}"
+        rows,meta=k.eia_series("DCOILBRENTEU",self.today,reply)
+        self.assertEqual(len(rows),2)
+        self.assertEqual([c[1]["offset"] for c in calls],[0,1])
+        self.assertEqual(calls[0][1]["facets[series][]"],"RBRTE")
+        self.assertTrue(calls[0][0].endswith("/petroleum/pri/spt/data/"))
+        self.assertEqual(meta["source_sha256"],["hash-0","hash-1"])
+
+    def test_eia_duplicate_page_rejected(self):
+        row={"period":"2026-11-20","series":"RBRTE","units":"$/BBL","value":"81"}
+        with self.assertRaisesRegex(ValueError,"date or pagination mismatch"):
+            k.eia_series("DCOILBRENTEU",self.today,lambda *a,**kw:({"response":{"total":2,"data":[row]}},"hash"))
+
+    def test_bea_headline_and_wrong_series_rejected(self):
+        row={"TableName":"T20804","LineNumber":"1","SeriesCode":"DPCERG",
+             "LineDescription":"Personal consumption expenditures (PCE)","TimePeriod":"2026M09","DataValue":"130.902"}
+        reply=lambda *a,**kw:({"BEAAPI":{"Results":{"Data":[row]}}},"hash")
+        rows,_=k.bea_series("PCEPI",self.today,reply)
+        self.assertEqual(len(rows),1)
+        row["SeriesCode"]="DPCCRG"
+        with self.assertRaisesRegex(ValueError,"BEA line identity mismatch"):
+            k.bea_series("PCEPI",self.today,reply)
