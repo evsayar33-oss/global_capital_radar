@@ -25,10 +25,15 @@ def suffix(raw,calendar):
         days.append(d)
     return {d:raw[d] for d in sorted(days)}
 
-def observed(symbol,provider,raw,today,calendar,meta,aum=None):
+def observed(symbol,provider,raw,today,calendar,meta,aum=None,*,retain_stale=False):
     if not raw:raise ValueError("no source-native observations")
+    if max(raw)>today or max(raw) not in calendar:
+        raise ValueError("source data future or off calendar")
     raw=suffix(raw,calendar)
-    if not raw or not recent(max(raw),today,calendar):
+    if not raw or not 0<=(today-max(raw)).days<=7 or max(raw) not in calendar:
+        raise ValueError("source data stale, future or off calendar")
+    stale=not recent(max(raw),today,calendar)
+    if stale and not retain_stale:
         raise ValueError("source data stale, future or off calendar")
     if not all(number(v) for v in raw.values()):raise ValueError("nonfinite source flow")
     days=sorted(raw);end=days[-1]
@@ -36,18 +41,30 @@ def observed(symbol,provider,raw,today,calendar,meta,aum=None):
     # No normalized flow feature when the source lacks an exact beginning AUM.
     for v in h.values():
         v["action"]=WAIT
-    return dict(status="OBSERVED",symbol=symbol,provider=provider,
+    return dict(status="STALE_REFERENCE" if stale else "OBSERVED",symbol=symbol,provider=provider,
+                stale=stale,lag_sessions=sum(d>end for d in calendar),
                 flow_asof=str(end),daily_flow_usd=raw[end],daily_count=len(raw),
                 coverage_start=str(days[0]),coverage_end=str(end),
                 horizons=h,provenance=meta,start_aum_usd=aum,
-                role="SOURCE_SEPARATE_RESEARCH_ONLY",action=WAIT)
+                role="SOURCE_SEPARATE_RESEARCH_ONLY",action="BEKLE · alternatif veri eski" if stale else WAIT)
 
 def etfiq_history(symbol,today,calendar,reader):
     # Local import avoids a rotation/native_research import cycle.
     from native_research import parse_history,FLOW_URL
     p=json.loads(reader(FLOW_URL+symbol.lower()+".json"))
     raw,aum,meta=parse_history(p,symbol,today,calendar)
-    return observed(symbol,"ETFIQ_HISTORY",raw,today,calendar,meta)
+    result=observed(symbol,"ETFIQ_HISTORY",raw,today,calendar,meta,retain_stale=True)
+    from horizons import boundary
+    for key,h in result["horizons"].items():
+        target=boundary(max(raw),key,1)
+        previous=[d for d in calendar if d<=target]
+        start=max(previous) if previous else None
+        if start in aum and h.get("net_usd_m") is not None:
+            h["flow_aum_pct"]=100*h["net_usd_m"]*1e6/aum[start]
+            h["aum_asof"]=str(start)
+        if result["stale"]:
+            h["action"]="BEKLE · alternatif veri eski"
+    return result
 
 def etfiq_daily(symbol,today,calendar,daily):
     r=daily["funds"][symbol];d=date.fromisoformat(daily["source_date"])
@@ -57,7 +74,7 @@ def etfiq_daily(symbol,today,calendar,daily):
         raise ValueError("daily beginning AUM date not previous session")
     return observed(symbol,"ETFIQ_DAILY",{d:r["flow_usd"]},today,calendar,
                     dict(source="ETFIQ (etfiq.com)",source_url=ETFIQ_URL,units="USD",
-                         historical_publication_time_verified=False),r["start_aum_usd"])
+                         historical_publication_time_verified=False),r["start_aum_usd"],retain_stale=True)
 
 def issuer_history(root,symbol,today,calendar,now):
     # Use only first-observed dated issuer evidence, not retrospective revised values.
@@ -98,6 +115,7 @@ def choose(candidates):
     # complete source-native history, then exact published issuer creation.
     # The non-selected observations are retained for comparison, not merged.
     order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2}
+    candidates=[c for c in candidates if c.get("status")=="OBSERVED" and not c.get("stale")]
     return max(candidates,key=lambda x:(x["flow_asof"],x["daily_count"]>=5,
                                        order[x["provider"]])) if candidates else None
 
@@ -120,13 +138,15 @@ def collect(root,assets,today,calendar,reader,now):
         primary_ok=not any(row.get(k) for k in ("error","stale","cached_source")) and bool(row.get("flow_asof"))
         return sym,dict(status="PRIMARY_OBSERVED" if primary_ok else "ALTERNATIVE_OBSERVED" if selected else "UNAVAILABLE",
                         selected=selected,candidates=candidates,errors=errors,
+                        stale_reference=max((c for c in candidates if c.get("stale")),key=lambda c:(c["flow_asof"],c["daily_count"]),default=None),
                         primary_usable=primary_ok,production_eligible=False)
     with ThreadPoolExecutor(max_workers=4) as pool:
         result=dict(pool.map(one,assets))
     count=sum(x["status"]=="ALTERNATIVE_OBSERVED" for x in result.values())
     unavailable=sum(x["status"]=="UNAVAILABLE" for x in result.values())
+    stale_count=sum(x["stale_reference"] is not None for x in result.values())
     return dict(status="DEGRADED_RESEARCH_AVAILABLE" if count else "UNAVAILABLE" if unavailable else "PRIMARY_OBSERVED",
-                alternative_count=count,unavailable_count=unavailable,assets=result,
+                alternative_count=count,unavailable_count=unavailable,stale_reference_count=stale_count,assets=result,
                 policy="NO_MIXING_NO_PRODUCTION_PROMOTION")
 
 def live(root,assets,today,reader,now):
@@ -161,3 +181,4 @@ def main():
     return 0 if count>=8 and full>=8 else 1
 
 if __name__=="__main__":raise SystemExit(main())
+
