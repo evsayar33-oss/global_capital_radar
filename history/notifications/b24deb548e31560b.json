@@ -99,15 +99,15 @@
     "telegram_message_id": 2
   },
   "USO/1G/USCF_CREATION": {
-    "asof": "2026-11-23",
-    "start": "2026-11-23",
+    "asof": "2026-11-24",
+    "start": "2026-11-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Geçmiş yetersiz",
-    "net_usd_m": 79.986,
+    "net_usd_m": 68.225,
     "percentile": null,
-    "references": 0,
+    "references": 1,
     "confirmation": null,
-    "telegram_message_id": 2
+    "telegram_message_id": 7
   },
   "IBIT/1G/ETFIQ_HISTORY": {
     "asof": "2026-11-23",

@@ -2,7 +2,7 @@
   "continuity_status": "DEGRADED_RESEARCH_AVAILABLE",
   "alternative_count": 12,
   "alternative_unavailable": 0,
-  "checked_at": "2026-11-25T19:07:53.303369+00:00",
+  "checked_at": "2026-11-25T19:17:29.317877+00:00",
   "assets": [
     {
       "asset": "SPY",
@@ -158,7 +158,7 @@
     "Gerçek komisyon ve kayma kalibrasyonu"
   ],
   "native_context": {
-    "evaluated_at": "2026-11-24T23:00:58.390968+00:00",
+    "evaluated_at": "2026-11-25T19:07:43.240703+00:00",
     "status": {
       "BTC": "OBSERVED",
       "ETH": "OBSERVED",

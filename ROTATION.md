@@ -109,6 +109,6 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 |GLD|ETFIQ_HISTORY|2026-11-23|-359783532|400|BEKLE · alternatif kaynak araştırma aşamasında|
 |SLV|ETFIQ_HISTORY|2026-11-23|110862934|400|BEKLE · alternatif kaynak araştırma aşamasında|
 |CPER|USCF_CREATION|2026-11-23|-10179000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
-|USO|USCF_CREATION|2026-11-23|79986000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
+|USO|USCF_CREATION|2026-11-24|68225000.0|2|BEKLE · alternatif kaynak araştırma aşamasında|
 |IBIT|ETFIQ_HISTORY|2026-11-23|-544734320|400|BEKLE · alternatif kaynak araştırma aşamasında|
 |ETHA|ETFIQ_HISTORY|2026-11-23|-60839323|400|BEKLE · alternatif kaynak araştırma aşamasında|

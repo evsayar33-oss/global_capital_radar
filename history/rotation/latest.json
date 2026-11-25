@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-25T19:07:47.406744+00:00",
+  "seen_at": "2026-11-25T19:17:25.069080+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -1546,25 +1546,25 @@
           "daily_observation": {
             "strength": "Geçmiş yetersiz",
             "magnitude_percentile": null,
-            "reference_count": 0
+            "reference_count": 1
           },
           "status": "OBSERVED",
           "symbol": "USO",
           "provider": "USCF_CREATION",
           "stale": false,
-          "lag_sessions": 1,
-          "flow_asof": "2026-11-23",
-          "daily_flow_usd": 79986000.0,
-          "daily_count": 1,
+          "lag_sessions": 0,
+          "flow_asof": "2026-11-24",
+          "daily_flow_usd": 68225000.0,
+          "daily_count": 2,
           "coverage_start": "2026-11-23",
-          "coverage_end": "2026-11-23",
+          "coverage_end": "2026-11-24",
           "horizons": {},
           "provenance": {
-            "first_seen_at": "2026-11-24T13:39:22.607597+00:00",
+            "first_seen_at": "2026-11-25T19:08:54.750328+00:00",
             "source_url": "https://www.uscfinvestments.com/uso",
             "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
-            "source_sha256": "3e1cdb83e42fa29043b913600f037142884b9c304b56813731b579351d084160",
-            "creation_source_sha256": null,
+            "source_sha256": "bd72c7575f2c43316a78fb0ce98f215a15be81171c65fe01e83b8ca81e0eb338",
+            "creation_source_sha256": "d15218f060d0a0939894b7bb7a6e61b578e320770b923fe02645383f52bd7789",
             "source": "USCF",
             "units": "USD",
             "estimate_basis": "published net created shares times same-date rounded NAV",
@@ -1606,25 +1606,25 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 1
             },
             "status": "OBSERVED",
             "symbol": "USO",
             "provider": "USCF_CREATION",
             "stale": false,
-            "lag_sessions": 1,
-            "flow_asof": "2026-11-23",
-            "daily_flow_usd": 79986000.0,
-            "daily_count": 1,
+            "lag_sessions": 0,
+            "flow_asof": "2026-11-24",
+            "daily_flow_usd": 68225000.0,
+            "daily_count": 2,
             "coverage_start": "2026-11-23",
-            "coverage_end": "2026-11-23",
+            "coverage_end": "2026-11-24",
             "horizons": {},
             "provenance": {
-              "first_seen_at": "2026-11-24T13:39:22.607597+00:00",
+              "first_seen_at": "2026-11-25T19:08:54.750328+00:00",
               "source_url": "https://www.uscfinvestments.com/uso",
               "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
-              "source_sha256": "3e1cdb83e42fa29043b913600f037142884b9c304b56813731b579351d084160",
-              "creation_source_sha256": null,
+              "source_sha256": "bd72c7575f2c43316a78fb0ce98f215a15be81171c65fe01e83b8ca81e0eb338",
+              "creation_source_sha256": "d15218f060d0a0939894b7bb7a6e61b578e320770b923fe02645383f52bd7789",
               "source": "USCF",
               "units": "USD",
               "estimate_basis": "published net created shares times same-date rounded NAV",
@@ -2124,7 +2124,7 @@
             }
           },
           "total_return_pct": 8.643955714676865,
-          "excess_sgov_pp": 4.8964767225516015,
+          "excess_sgov_pp": 4.896484880636143,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2273,8 +2273,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 5.938608759482378,
-          "excess_sgov_pp": 2.191129767357114,
+          "total_return_pct": 5.938619494429442,
+          "excess_sgov_pp": 2.19114866038872,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2406,8 +2406,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 9.159423748461393,
-          "excess_sgov_pp": 5.411944756336129,
+          "total_return_pct": 9.159401918669396,
+          "excess_sgov_pp": 5.411931084628673,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2540,7 +2540,7 @@
             }
           },
           "total_return_pct": 12.486098490248976,
-          "excess_sgov_pp": 8.738619498123711,
+          "excess_sgov_pp": 8.738627656208253,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -2667,7 +2667,7 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 3.747478992125264,
+          "total_return_pct": 3.7474708340407226,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -2796,8 +2796,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 1.8020746725188497,
-          "excess_sgov_pp": -1.9454043196064141,
+          "total_return_pct": 1.8020843658469232,
+          "excess_sgov_pp": -1.9453864681937993,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2926,7 +2926,7 @@
             }
           },
           "total_return_pct": -14.400315161007104,
-          "excess_sgov_pp": -18.147794153132367,
+          "excess_sgov_pp": -18.147785995047826,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3075,7 +3075,7 @@
             }
           },
           "total_return_pct": -20.99506903554753,
-          "excess_sgov_pp": -24.742548027672793,
+          "excess_sgov_pp": -24.742539869588253,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3222,7 +3222,7 @@
             }
           },
           "total_return_pct": 4.468014665309683,
-          "excess_sgov_pp": 0.7205356731844192,
+          "excess_sgov_pp": 0.7205438312689605,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -3368,7 +3368,7 @@
             }
           },
           "total_return_pct": 92.31751803070176,
-          "excess_sgov_pp": 88.5700390385765,
+          "excess_sgov_pp": 88.57004719666104,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -3514,7 +3514,7 @@
             }
           },
           "total_return_pct": -33.24105492334321,
-          "excess_sgov_pp": -36.98853391546848,
+          "excess_sgov_pp": -36.98852575738394,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3643,7 +3643,7 @@
             }
           },
           "total_return_pct": -43.83073097530852,
-          "excess_sgov_pp": -47.578209967433786,
+          "excess_sgov_pp": -47.57820180934924,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
