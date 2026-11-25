@@ -1,0 +1,30 @@
+name: Authenticated official data health
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'keyed_sources.py'
+      - 'macro_sources.py'
+      - '.github/workflows/keyed_sources_health.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest -v test_keyed_sources
+      - name: Verify authenticated providers without logging keys
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+        run: python keyed_sources.py

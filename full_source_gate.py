@@ -11,7 +11,7 @@ def load_fresh(path,key,start):
     if seen.tzinfo is None or seen<start:raise ValueError("stale report "+str(path))
     return r
 
-def evaluate(native,details,filing,rotation):
+def evaluate(native,details,filing,rotation,filing_smoke=None):
     checks={}
     def add(key,ok,detail):checks[key]=dict(pass_=bool(ok),detail=detail)
     coverage={r["symbol"]:r for r in native.get("coverage",[])}
@@ -35,7 +35,11 @@ def evaluate(native,details,filing,rotation):
         add(k,statuses.get(k)==status,statuses.get(k))
     for sym,minimum in (("QQQ",84),("CPER",23),("USO",23)):
         r=filing.get("symbols",{}).get(sym,{})
-        add("monthly_"+sym,r.get("monthly_count",0)>=minimum and r.get("live_monthly_count",0)>0,r.get("monthly_count",0))
+        smoke=(filing_smoke or {}).get("symbols",{}).get(sym,{})
+        fresh=r.get("live_monthly_count",0)>0 or smoke.get("live_monthly_count",0)>0
+        add("monthly_"+sym,r.get("monthly_count",0)>=minimum and fresh,
+            dict(archived_count=r.get("monthly_count",0),live_count=r.get("live_monthly_count",0),
+                 smoke_count=smoke.get("live_monthly_count",0)))
     c=rotation.get("continuity",{}).get("assets",{})
     add("alternative_all12",all(c.get(s,{}).get("selected") for s in SYMBOLS),sum(bool(c.get(s,{}).get("selected")) for s in SYMBOLS))
     p={r["symbol"]:r for r in rotation.get("assets",[])}
@@ -48,6 +52,7 @@ def main():
     import argparse
     p=argparse.ArgumentParser()
     p.add_argument("--started",required=True);p.add_argument("--out",required=True)
+    p.add_argument("--filing-smoke")
     a=p.parse_args();start=datetime.fromisoformat(a.started)
     folder=Path("history/native_research")
     try:
@@ -55,7 +60,14 @@ def main():
         f=load_fresh(folder/"extended_history/results.json","evaluated_at",start)
         r=load_fresh(Path("history/rotation/latest.json"),"seen_at",start)
         d=json.loads((folder/"native_latest.json").read_text())
-        checks=evaluate(n,d,f,r)
+        smoke=None
+        if a.filing_smoke:
+            lines=[x[len("EXTENDED_HISTORY "):] for x in Path(a.filing_smoke).read_text().splitlines() if x.startswith("EXTENDED_HISTORY ")]
+            if len(lines)!=1:raise ValueError("missing unique live filing smoke")
+            smoke=json.loads(lines[0])
+            stamp=datetime.fromisoformat(smoke["evaluated_at"])
+            if stamp.tzinfo is None or stamp<start:raise ValueError("stale filing smoke")
+        checks=evaluate(n,d,f,r,smoke)
     except Exception as exc:
         checks={"fresh_reports":dict(pass_=False,detail=type(exc).__name__+": "+str(exc))}
     failures=[k for k,v in checks.items() if not v["pass_"]]

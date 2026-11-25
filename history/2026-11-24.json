@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-24T14:10:33.374376+00:00",
+  "as_of": "2026-11-24T16:23:50.631922+00:00",
   "indicators": [
     {
       "id": "FORTREASNET69995",
@@ -7,7 +7,18 @@
       "freq": "M",
       "change": "flow",
       "max_age": "100",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "FORTREASNET69995",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 82634.0,
+      "changes": {
+        "1A": 18821.0,
+        "3A": 107844.0,
+        "1Y": 79533.0
+      },
+      "stale": false
     },
     {
       "id": "FORLTEQTYNET69995",
@@ -15,7 +26,18 @@
       "freq": "M",
       "change": "flow",
       "max_age": "100",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "FORLTEQTYNET69995",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 67116.0,
+      "changes": {
+        "1A": -82814.0,
+        "3A": -115537.0,
+        "1Y": -61574.0
+      },
+      "stale": false
     },
     {
       "id": "FORLTCORPNET69995",
@@ -23,7 +45,18 @@
       "freq": "M",
       "change": "flow",
       "max_age": "100",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "FORLTCORPNET69995",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 27747.0,
+      "changes": {
+        "1A": -22066.0,
+        "3A": -11774.0,
+        "1Y": -10733.0
+      },
+      "stale": false
     },
     {
       "id": "DTWEXBGS",
@@ -31,7 +64,20 @@
       "freq": "D",
       "change": "pct",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DTWEXBGS",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 123.5978,
+      "changes": {
+        "1G": 0.0587,
+        "1H": 0.7725,
+        "1A": 2.0491,
+        "3A": 4.5182,
+        "1Y": 1.5687
+      },
+      "stale": false
     },
     {
       "id": "DEXJPUS",
@@ -39,7 +85,20 @@
       "freq": "D",
       "change": "inverse",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DEXJPUS",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 0.0062988158226253465,
+      "changes": {
+        "1G": 0.6299,
+        "1H": 0.737,
+        "1A": -0.3527,
+        "3A": 0.0567,
+        "1Y": -0.8503
+      },
+      "stale": false
     },
     {
       "id": "DEXUSEU",
@@ -47,7 +106,20 @@
       "freq": "D",
       "change": "pct",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DEXUSEU",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 1.0981,
+      "changes": {
+        "1G": 0.0,
+        "1H": -0.4803,
+        "1A": -2.2347,
+        "3A": -5.9765,
+        "1Y": -4.7945
+      },
+      "stale": false
     },
     {
       "id": "M2SL",
@@ -55,7 +127,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "90",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "M2SL",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 23413.9,
+      "changes": {
+        "1A": 0.485,
+        "3A": 1.4568,
+        "1Y": 5.7099
+      },
+      "stale": false
     },
     {
       "id": "TOTLL",
@@ -63,7 +146,19 @@
       "freq": "W",
       "change": "pct",
       "max_age": "30",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "TOTLL",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-11",
+      "value": 14264.2085,
+      "changes": {
+        "1H": 0.2687,
+        "1A": 0.6031,
+        "3A": 2.1627,
+        "1Y": 8.0501
+      },
+      "stale": false
     },
     {
       "id": "DRTSCILM",
@@ -71,7 +166,17 @@
       "freq": "Q",
       "change": "pp",
       "max_age": "175",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DRTSCILM",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-10-01",
+      "value": 1.7,
+      "changes": {
+        "3A": 1.7,
+        "1Y": -4.8
+      },
+      "stale": false
     },
     {
       "id": "BAMLH0A0HYM2",
@@ -79,7 +184,20 @@
       "freq": "D",
       "change": "bp",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "BAMLH0A0HYM2",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 3.76,
+      "changes": {
+        "1G": 24.0,
+        "1H": 53.0,
+        "1A": 43.0,
+        "3A": 101.0,
+        "1Y": 59.0
+      },
+      "stale": false
     },
     {
       "id": "VIXCLS",
@@ -87,7 +205,20 @@
       "freq": "D",
       "change": "points",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "VIXCLS",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-23",
+      "value": 26.62,
+      "changes": {
+        "1G": -9.27,
+        "1H": 3.71,
+        "1A": 7.17,
+        "3A": 11.49,
+        "1Y": 3.19
+      },
+      "stale": false
     },
     {
       "id": "NFCI",
@@ -95,7 +226,19 @@
       "freq": "W",
       "change": "points",
       "max_age": "30",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "NFCI",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-13",
+      "value": -0.478,
+      "changes": {
+        "1H": -0.005,
+        "1A": 0.006,
+        "3A": 0.066,
+        "1Y": 0.033
+      },
+      "stale": false
     },
     {
       "id": "DCOILBRENTEU",
@@ -103,7 +246,20 @@
       "freq": "D",
       "change": "pct",
       "max_age": "15",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DCOILBRENTEU",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-17",
+      "value": 92.94,
+      "changes": {
+        "1G": 0.0431,
+        "1H": 3.0834,
+        "1A": -22.1151,
+        "3A": 0.5518,
+        "1Y": 47.1501
+      },
+      "stale": false
     },
     {
       "id": "DHHNGSP",
@@ -111,7 +267,20 @@
       "freq": "D",
       "change": "pct",
       "max_age": "15",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DHHNGSP",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-17",
+      "value": 3.1,
+      "changes": {
+        "1G": -3.125,
+        "1H": 3.3333,
+        "1A": -3.7267,
+        "3A": 11.9134,
+        "1Y": -16.442
+      },
+      "stale": false
     },
     {
       "id": "IR",
@@ -119,7 +288,17 @@
       "freq": "M",
       "change": "pct",
       "max_age": "90",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "IR",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-10-01",
+      "value": 153.8,
+      "changes": {
+        "1A": 1.0512,
+        "3A": 2.6702
+      },
+      "stale": false
     },
     {
       "id": "CPIAUCSL",
@@ -127,7 +306,17 @@
       "freq": "M",
       "change": "pct",
       "max_age": "75",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "CPIAUCSL",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-10-01",
+      "value": 337.476,
+      "changes": {
+        "1A": 0.3503,
+        "3A": 1.4011
+      },
+      "stale": false
     },
     {
       "id": "CPILFESL",
@@ -135,7 +324,17 @@
       "freq": "M",
       "change": "pct",
       "max_age": "75",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "CPILFESL",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-10-01",
+      "value": 339.9,
+      "changes": {
+        "1A": 0.2963,
+        "3A": 0.9237
+      },
+      "stale": false
     },
     {
       "id": "PCEPILFE",
@@ -143,7 +342,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "90",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "PCEPILFE",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 130.902,
+      "changes": {
+        "1A": 0.3165,
+        "3A": 0.7179,
+        "1Y": 3.1212
+      },
+      "stale": false
     },
     {
       "id": "PCEPI",
@@ -151,7 +361,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "90",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "PCEPI",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 132.257,
+      "changes": {
+        "1A": 0.4908,
+        "3A": 0.8779,
+        "1Y": 3.6489
+      },
+      "stale": false
     },
     {
       "id": "PPIACO",
@@ -159,7 +380,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "90",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "PPIACO",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-10-01",
+      "value": 293.921,
+      "changes": {
+        "1A": -0.1875,
+        "3A": 3.1892,
+        "1Y": 12.7902
+      },
+      "stale": false
     },
     {
       "id": "CES0500000003",
@@ -167,7 +399,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "75",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "CES0500000003",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-10-01",
+      "value": 38.0,
+      "changes": {
+        "1A": 0.3698,
+        "3A": 0.9564,
+        "1Y": 3.1208
+      },
+      "stale": false
     },
     {
       "id": "T5YIE",
@@ -175,7 +418,20 @@
       "freq": "D",
       "change": "bp",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "T5YIE",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-23",
+      "value": 2.15,
+      "changes": {
+        "1G": -3.0,
+        "1H": -10.0,
+        "1A": -33.0,
+        "3A": -19.0,
+        "1Y": -17.0
+      },
+      "stale": false
     },
     {
       "id": "DGS2",
@@ -183,7 +439,20 @@
       "freq": "D",
       "change": "bp",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DGS2",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 4.63,
+      "changes": {
+        "1G": -13.0,
+        "1H": -25.0,
+        "1A": -16.0,
+        "3A": 44.0,
+        "1Y": 108.0
+      },
+      "stale": false
     },
     {
       "id": "DFII10",
@@ -191,7 +460,20 @@
       "freq": "D",
       "change": "bp",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DFII10",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 2.77,
+      "changes": {
+        "1G": -11.0,
+        "1H": -14.0,
+        "1A": 0.0,
+        "3A": 42.0,
+        "1Y": 91.0
+      },
+      "stale": false
     },
     {
       "id": "DFF",
@@ -199,7 +481,20 @@
       "freq": "D",
       "change": "bp",
       "max_age": "10",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "DFF",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-11-20",
+      "value": 3.88,
+      "changes": {
+        "1G": 0.0,
+        "1H": 0.0,
+        "1A": 0.0,
+        "3A": 25.0,
+        "1Y": 0.0
+      },
+      "stale": false
     },
     {
       "id": "BOPGIMP",
@@ -207,7 +502,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "100",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "BOPGIMP",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 346879.0,
+      "changes": {
+        "1A": 1.2853,
+        "3A": 12.1787,
+        "1Y": 26.4311
+      },
+      "stale": false
     },
     {
       "id": "BOPGEXP",
@@ -215,7 +521,18 @@
       "freq": "M",
       "change": "pct",
       "max_age": "100",
-      "error": "The read operation timed out"
+      "source": "FRED API",
+      "source_series": "BOPGEXP",
+      "observation_basis": "CURRENT_VINTAGE",
+      "historical_vintage_verified": false,
+      "period": "2026-09-01",
+      "value": 210968.0,
+      "changes": {
+        "1A": 2.4863,
+        "3A": 1.795,
+        "1Y": 13.1408
+      },
+      "stale": false
     },
     {
       "id": "ICI",
@@ -234,7 +551,10 @@
       "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"
     },
     "Fed SEP": {
-      "error": "The read operation timed out"
+      "2026": 4.1,
+      "2027": 4.1,
+      "2028": 3.9,
+      "2029": 3.6
     },
     "Vadeli Fed fonları (%)": {
       "freq": "D",
@@ -261,6 +581,30 @@
       "value": 135.663792466297,
       "changes": {
         "1Y": 0.2012
+      },
+      "stale": false
+    },
+    "Census · ABD ham petrol ithalatı (USD)": {
+      "freq": "M",
+      "change": "pct",
+      "max_age": 120,
+      "source": "US Census API",
+      "source_series": "HS 2709 / GEN_VAL_MO / all countries",
+      "source_urls": [
+        "https://api.census.gov/data/timeseries/intltrade/imports/hs"
+      ],
+      "source_sha256": [
+        "703efa0862bab688f9f4a5be259129d42b99bd57d7d68e6af21e3d29918f9bc8",
+        "91adade6545ccfcf193dc9cb5bdee35e516acfb66fe595e8890d62c47a6e5434"
+      ],
+      "observation_basis": "CUSTOMS_BASIS_CURRENT_MONTHLY_USD_NOT_BOP",
+      "authenticated_request": true,
+      "historical_vintage_verified": false,
+      "publication_intraday_verified": false,
+      "period": "2026-08-01",
+      "value": 15620795604.0,
+      "changes": {
+        "1Y": 28.1267
       },
       "stale": false
     }

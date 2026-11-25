@@ -46,9 +46,21 @@ jobs:
         id: filing
         continue-on-error: true
         run: python filing_history.py
+      - name: Actual monthly filing smoke (no archive mutation)
+        id: filing_smoke
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python filing_history.py --smoke | tee "$RUNNER_TEMP/filing-smoke.log"
       - name: Actual primary macro data
         id: macro
         continue-on-error: true
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
         run: python radar.py
       - name: Actual primary rotation and alternative flows
         id: rotation
@@ -64,7 +76,7 @@ jobs:
         run: python validation.py
       - name: Strict source acceptance
         if: always()
-        run: python full_source_gate.py --started "$(cat "$RUNNER_TEMP/started")" --out "$RUNNER_TEMP/full-source-gate.json"
+        run: python full_source_gate.py --started "$(cat "$RUNNER_TEMP/started")" --out "$RUNNER_TEMP/full-source-gate.json" --filing-smoke "$RUNNER_TEMP/filing-smoke.log"
       - name: Export test evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -72,6 +84,7 @@ jobs:
           name: full-source-validation-${{ github.sha }}
           path: |
             ${{ runner.temp }}/full-source-gate.json
+            ${{ runner.temp }}/filing-smoke.log
             history/native_research/results.json
             history/native_research/native_latest.json
             history/native_research/extended_history/results.json
@@ -82,6 +95,7 @@ jobs:
         run: |
           test '${{ steps.native.outcome }}' = success
           test '${{ steps.filing.outcome }}' = success
+          test '${{ steps.filing_smoke.outcome }}' = success
           test '${{ steps.macro.outcome }}' = success
           test '${{ steps.rotation.outcome }}' = success
           test '${{ steps.evaluation.outcome }}' = success

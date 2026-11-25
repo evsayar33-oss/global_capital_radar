@@ -4,20 +4,15 @@
     "source": "OKX",
     "source_url": "https://www.okx.com/api/v5/",
     "symbol": "BTC-USDT-SWAP",
-    "funding_asof": "2026-11-24T08:00:00+00:00",
-    "funding_rate": 2.21870316848e-05,
+    "funding_asof": "2026-11-24T16:00:00+00:00",
+    "funding_rate": 2.50961202131e-05,
     "interval_hours": 8.0,
-    "annualized_pct": 2.4294799694856,
+    "annualized_pct": 2.74802516333445,
     "history": [
-      {
-        "time": "2026-10-22T08:00:00+00:00",
-        "rate": 0.0001,
-        "interval_hours": null
-      },
       {
         "time": "2026-10-22T16:00:00+00:00",
         "rate": 7.81879787428e-05,
-        "interval_hours": 8.0
+        "interval_hours": null
       },
       {
         "time": "2026-10-23T00:00:00+00:00",
@@ -508,14 +503,19 @@
         "time": "2026-11-24T08:00:00+00:00",
         "rate": 2.21870316848e-05,
         "interval_hours": 8.0
+      },
+      {
+        "time": "2026-11-24T16:00:00+00:00",
+        "rate": 2.50961202131e-05,
+        "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.056643725957650215,
-    "quoted_spread_bps": 0.016671181779368705,
+    "basis_pct": -0.05353185145162698,
+    "quoted_spread_bps": 0.016683948456366855,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T15:11:30.097000+00:00",
+    "basis_asof": "2026-11-24T23:01:08.211000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T15:11:30.422000+00:00",
+    "quote_asof": "2026-11-24T23:01:08.167000+00:00",
     "spread_status": "OBSERVED"
   },
   "ETH": {
@@ -523,20 +523,15 @@
     "source": "OKX",
     "source_url": "https://www.okx.com/api/v5/",
     "symbol": "ETH-USDT-SWAP",
-    "funding_asof": "2026-11-24T08:00:00+00:00",
-    "funding_rate": 8.892955017e-07,
+    "funding_asof": "2026-11-24T16:00:00+00:00",
+    "funding_rate": 4.5872058862e-06,
     "interval_hours": 8.0,
-    "annualized_pct": 0.09737785743615,
+    "annualized_pct": 0.5022990445389,
     "history": [
-      {
-        "time": "2026-10-22T08:00:00+00:00",
-        "rate": 6.96651766023e-05,
-        "interval_hours": null
-      },
       {
         "time": "2026-10-22T16:00:00+00:00",
         "rate": 4.35367702962e-05,
-        "interval_hours": 8.0
+        "interval_hours": null
       },
       {
         "time": "2026-10-23T00:00:00+00:00",
@@ -1027,20 +1022,33 @@
         "time": "2026-11-24T08:00:00+00:00",
         "rate": 8.892955017e-07,
         "interval_hours": 8.0
+      },
+      {
+        "time": "2026-11-24T16:00:00+00:00",
+        "rate": 4.5872058862e-06,
+        "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.05470134256120307,
-    "quoted_spread_bps": 0.0594953013585211,
+    "basis_pct": -0.046303441889183894,
+    "quoted_spread_bps": 0.05939071069888557,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-24T15:11:29.959000+00:00",
+    "basis_asof": "2026-11-24T23:01:08.100000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-24T15:11:30.367000+00:00",
+    "quote_asof": "2026-11-24T23:01:07.766000+00:00",
     "spread_status": "OBSERVED"
   },
   "SHFE_copper_warrant": {
-    "status": "UNAVAILABLE",
+    "status": "OBSERVED",
     "source": "SHFE",
-    "error": "ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>"
+    "source_date": "2026-11-24",
+    "units": "metric tonnes",
+    "on_warrant_tonnes": 3952,
+    "change_tonnes": -422,
+    "regions": 4,
+    "scope": "SHFE copper warrants only; not COMEX inventories",
+    "source_sha256": "9fb1d39e4a1aa2451cb12ecb0f2807e6b6b10bf54db8b0f2bb3dd6d09b6fe35f",
+    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261124&query_params=dailystock",
+    "transport": "RENDERED_HTTP_200"
   },
   "TBF3_TFF": {
     "status": "NO_CURRENT_COT_SERIES",
@@ -1079,10 +1087,10 @@
     "calculated_aum_usd": 1749507515.93,
     "source_url": "https://www.uscfinvestments.com/uso",
     "publication_intraday_verified": false,
-    "source_sha256": "8a95ba3fae92c9361b40c3491e8191e05f9f801933499eee000c32de729c9f6a",
+    "source_sha256": "4f00c18031a1f122f8a1ea51303bea6410bde964918aac537ffa1e5025272cbf",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": 600000,
-    "creation_source_sha256": "b79d64ded695714c844106867dc3305de37a970a4419d15732cb58ec67b0a6f3",
+    "creation_source_sha256": "8a6478b275268bed655fcb64d4ae49fc35b3d251a5698e515a68362eda180f2b",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1103,10 +1111,10 @@
     "calculated_aum_usd": 505557000.0,
     "source_url": "https://www.uscfinvestments.com/cper",
     "publication_intraday_verified": false,
-    "source_sha256": "82de5b528717d28d812524a9dd77d57ecbaf157ea6c0c8d61be69eb4064ce448",
+    "source_sha256": "3edd4617e88748e5d64d0768235ee7b0d36c5c1fa820effd70698bf297ad580e",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": -300000,
-    "creation_source_sha256": "10dbf4e3461958c65459bedf5f1d6b569c62628f6301ecfa5c19d7638be71fc9",
+    "creation_source_sha256": "a19157e62e3249ad8ebcb57edf1083cd8ff0413f2ba88dad71158edd35ecd899",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1130,7 +1138,7 @@
     "flow_eligible": false,
     "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
     "publication_intraday_verified": false,
-    "source_sha256": "a84b30b24e96fff4a520b83d59cdb422533590526f4dd77fc8ccafc68ecf211d",
+    "source_sha256": "ec9204598c5e81c5ea50df8eb2c84ea5094ed56d2efcf1b8f418c45104ce5ff6",
     "transport": "RENDERED_HTTP_200"
   },
   "COMEX_copper": {
@@ -1138,12 +1146,1655 @@
     "error": "HTTPError: HTTP Error 403: Forbidden"
   },
   "ALFRED": {
-    "status": "UNAVAILABLE",
+    "status": "OBSERVED_DATE_VINTAGE",
     "series": "DFII10",
     "vintage": "2026-11-23",
-    "source": "ALFRED graph CSV",
-    "error": "TimeoutError",
-    "observations": []
+    "source": "FRED API / ALFRED",
+    "source_url": "https://api.stlouisfed.org/fred/series/observations",
+    "source_sha256": "09f02aad081a11d3e269c753009191b493bfff37d9cd8810046ad3f01877aa91",
+    "observations": [
+      {
+        "observation_date": "2025-10-20",
+        "value": 1.74,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-21",
+        "value": 1.7,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-22",
+        "value": 1.68,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-23",
+        "value": 1.71,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-24",
+        "value": 1.73,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-27",
+        "value": 1.73,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-28",
+        "value": 1.71,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-29",
+        "value": 1.78,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-30",
+        "value": 1.82,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-10-31",
+        "value": 1.81,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-03",
+        "value": 1.82,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-04",
+        "value": 1.81,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-05",
+        "value": 1.87,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-06",
+        "value": 1.83,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-07",
+        "value": 1.83,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-10",
+        "value": 1.84,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-12",
+        "value": 1.81,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-13",
+        "value": 1.83,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-14",
+        "value": 1.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-17",
+        "value": 1.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-18",
+        "value": 1.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-19",
+        "value": 1.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-20",
+        "value": 1.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-21",
+        "value": 1.82,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-24",
+        "value": 1.81,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-25",
+        "value": 1.79,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-26",
+        "value": 1.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-11-28",
+        "value": 1.79,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-01",
+        "value": 1.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-02",
+        "value": 1.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-03",
+        "value": 1.82,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-04",
+        "value": 1.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-05",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-08",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-09",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-10",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-11",
+        "value": 1.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-12",
+        "value": 1.93,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-15",
+        "value": 1.93,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-16",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-17",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-18",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-19",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-22",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-23",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-24",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-26",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-29",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-30",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2025-12-31",
+        "value": 1.93,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-02",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-05",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-06",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-07",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-08",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-09",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-12",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-13",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-14",
+        "value": 1.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-15",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-16",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-20",
+        "value": 1.97,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-21",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-22",
+        "value": 1.95,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-23",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-26",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-27",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-28",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-29",
+        "value": 1.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-01-30",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-02",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-03",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-04",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-05",
+        "value": 1.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-06",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-09",
+        "value": 1.87,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-10",
+        "value": 1.84,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-11",
+        "value": 1.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-12",
+        "value": 1.8,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-13",
+        "value": 1.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-17",
+        "value": 1.79,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-18",
+        "value": 1.8,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-19",
+        "value": 1.79,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-20",
+        "value": 1.8,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-23",
+        "value": 1.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-24",
+        "value": 1.78,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-25",
+        "value": 1.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-26",
+        "value": 1.74,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-02-27",
+        "value": 1.72,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-02",
+        "value": 1.76,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-03",
+        "value": 1.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-04",
+        "value": 1.8,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-05",
+        "value": 1.82,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-06",
+        "value": 1.8,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-09",
+        "value": 1.78,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-10",
+        "value": 1.82,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-11",
+        "value": 1.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-12",
+        "value": 1.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-13",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-16",
+        "value": 1.87,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-17",
+        "value": 1.83,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-18",
+        "value": 1.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-19",
+        "value": 1.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-20",
+        "value": 2.01,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-23",
+        "value": 2.01,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-24",
+        "value": 2.06,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-25",
+        "value": 2.02,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-26",
+        "value": 2.08,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-27",
+        "value": 2.13,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-30",
+        "value": 2.04,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-03-31",
+        "value": 2.0,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-01",
+        "value": 2.02,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-02",
+        "value": 1.97,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-03",
+        "value": 1.99,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-06",
+        "value": 1.98,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-07",
+        "value": 1.96,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-08",
+        "value": 1.96,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-09",
+        "value": 1.95,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-10",
+        "value": 1.95,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-13",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-14",
+        "value": 1.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-15",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-16",
+        "value": 1.93,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-17",
+        "value": 1.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-20",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-21",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-22",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-23",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-24",
+        "value": 1.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-27",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-28",
+        "value": 1.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-29",
+        "value": 1.96,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-04-30",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-01",
+        "value": 1.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-04",
+        "value": 1.95,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-05",
+        "value": 1.96,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-06",
+        "value": 1.94,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-07",
+        "value": 1.96,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-08",
+        "value": 1.93,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-11",
+        "value": 1.95,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-12",
+        "value": 1.99,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-13",
+        "value": 1.99,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-14",
+        "value": 2.0,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-15",
+        "value": 2.1,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-18",
+        "value": 2.13,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-19",
+        "value": 2.18,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-20",
+        "value": 2.13,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-21",
+        "value": 2.18,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-22",
+        "value": 2.16,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-26",
+        "value": 2.1,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-27",
+        "value": 2.09,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-28",
+        "value": 2.06,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-05-29",
+        "value": 2.07,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-01",
+        "value": 2.07,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-02",
+        "value": 2.07,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-03",
+        "value": 2.11,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-04",
+        "value": 2.11,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-05",
+        "value": 2.19,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-08",
+        "value": 2.21,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-09",
+        "value": 2.2,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-10",
+        "value": 2.21,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-11",
+        "value": 2.16,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-12",
+        "value": 2.17,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-15",
+        "value": 2.15,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-16",
+        "value": 2.14,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-17",
+        "value": 2.23,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-18",
+        "value": 2.21,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-22",
+        "value": 2.28,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-23",
+        "value": 2.29,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-24",
+        "value": 2.23,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-25",
+        "value": 2.19,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-26",
+        "value": 2.18,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-29",
+        "value": 2.16,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-06-30",
+        "value": 2.2,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-01",
+        "value": 2.25,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-02",
+        "value": 2.26,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-06",
+        "value": 2.24,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-07",
+        "value": 2.3,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-08",
+        "value": 2.31,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-09",
+        "value": 2.31,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-10",
+        "value": 2.32,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-13",
+        "value": 2.36,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-14",
+        "value": 2.33,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-15",
+        "value": 2.32,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-16",
+        "value": 2.35,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-17",
+        "value": 2.31,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-20",
+        "value": 2.35,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-21",
+        "value": 2.37,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-22",
+        "value": 2.39,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-23",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-24",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-27",
+        "value": 2.44,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-28",
+        "value": 2.41,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-29",
+        "value": 2.41,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-30",
+        "value": 2.41,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-07-31",
+        "value": 2.47,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-03",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-04",
+        "value": 2.4,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-05",
+        "value": 2.41,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-06",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-07",
+        "value": 2.4,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-10",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-11",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-12",
+        "value": 2.42,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-13",
+        "value": 2.39,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-14",
+        "value": 2.41,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-17",
+        "value": 2.44,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-18",
+        "value": 2.41,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-19",
+        "value": 2.35,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-20",
+        "value": 2.35,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-21",
+        "value": 2.4,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-24",
+        "value": 2.38,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-25",
+        "value": 2.32,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-26",
+        "value": 2.34,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-27",
+        "value": 2.34,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-28",
+        "value": 2.42,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-08-31",
+        "value": 2.44,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-01",
+        "value": 2.44,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-02",
+        "value": 2.45,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-03",
+        "value": 2.42,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-04",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-08",
+        "value": 2.43,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-09",
+        "value": 2.46,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-10",
+        "value": 2.55,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-11",
+        "value": 2.6,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-14",
+        "value": 2.6,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-15",
+        "value": 2.62,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-16",
+        "value": 2.68,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-17",
+        "value": 2.61,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-18",
+        "value": 2.68,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-21",
+        "value": 2.62,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-22",
+        "value": 2.63,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-23",
+        "value": 2.76,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-24",
+        "value": 2.85,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-25",
+        "value": 2.83,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-28",
+        "value": 2.9,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-29",
+        "value": 2.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-09-30",
+        "value": 2.93,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-01",
+        "value": 2.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-02",
+        "value": 2.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-05",
+        "value": 2.95,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-06",
+        "value": 2.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-07",
+        "value": 2.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-08",
+        "value": 2.87,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-09",
+        "value": 2.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-13",
+        "value": 2.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-14",
+        "value": 2.84,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-15",
+        "value": 2.78,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-16",
+        "value": 2.74,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-19",
+        "value": 2.8,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-20",
+        "value": 2.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-21",
+        "value": 2.76,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-22",
+        "value": 2.64,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-23",
+        "value": 2.66,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-26",
+        "value": 2.66,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-27",
+        "value": 2.64,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-28",
+        "value": 2.67,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-29",
+        "value": 2.63,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-10-30",
+        "value": 2.6,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-02",
+        "value": 2.62,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-03",
+        "value": 2.65,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-04",
+        "value": 2.64,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-05",
+        "value": 2.6,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-06",
+        "value": 2.63,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-09",
+        "value": 2.66,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-10",
+        "value": 2.78,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-12",
+        "value": 2.86,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-13",
+        "value": 2.91,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-16",
+        "value": 2.92,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-17",
+        "value": 2.89,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-18",
+        "value": 2.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-19",
+        "value": 2.88,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      },
+      {
+        "observation_date": "2026-11-20",
+        "value": 2.77,
+        "realtime_start": "2026-11-23",
+        "realtime_end": "2026-11-23"
+      }
+    ],
+    "realtime_interval_verified": true,
+    "publication_intraday_verified": false,
+    "role": "DATE_VINTAGE_RESEARCH_ONLY"
   },
   "WTI_CLOSE_PAIR": {
     "status": "OBSERVED_DELAYED_CLOSE_PAIR",
@@ -1153,13 +2804,13 @@
       "contract": "CLF27.NYM",
       "delivery_month": "2027-01",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLF27.NYM?range=10d&interval=1d",
-      "source_sha256": "cadc56408631213e9a6f860ba1ddd150b6597763f1cc33526abb7edd9c443114"
+      "source_sha256": "863f961db564957d651ed29a5e1f94bf4217d90886d150bdbe00ff3a25ebd3b2"
     },
     "next_contract": {
       "contract": "CLG27.NYM",
       "delivery_month": "2027-02",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLG27.NYM?range=10d&interval=1d",
-      "source_sha256": "95edb3bf7d072edc211b937e004cbb43a6c175cb868ce32b57d071666aee243a"
+      "source_sha256": "299e48e14177cc0c48ac8d2218048979258b6c2a9970608f23bad4b63e03dd35"
     },
     "front_close_usd_per_barrel": 80.16999816894531,
     "next_close_usd_per_barrel": 79.06999969482422,
@@ -1173,7 +2824,7 @@
     "status": "OBSERVED_AUCTION_CONTEXT",
     "source": "US TreasuryDirect",
     "source_url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?type=Bill&term=13-Week&format=json",
-    "source_sha256": "6f1aaeddfe3f763eab936e1b48d85bb32db6f6c0b4328b50c817f1431689f39d",
+    "source_sha256": "0b3abd7915e275fc1652c94262321710b9469394241020c7100b1fbd52749600",
     "source_date": "2026-11-23",
     "auction_date": "2026-11-23",
     "cusip": "912797WC7",
@@ -1191,7 +2842,7 @@
     "status": "OBSERVED_CURRENT_PUBLICATION",
     "source": "US Treasury daily par real yield curve",
     "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202611?_format=csv&field_tdr_date_value_month=202611&page=&type=daily_treasury_real_yield_curve",
-    "source_sha256": "2a81f81507c1737beff2f08e1b3db2a8c36958a88e9bc1f4554c701e424bf731",
+    "source_sha256": "f2e4b66aeece3549aac136dd501a58affd0e0f29b3edaf7db5803cb39b5e2372",
     "source_date": "2026-11-23",
     "real_yield_10y_pct": 2.79,
     "historical_vintage_verified": false,
@@ -1225,7 +2876,7 @@
     "roll_calendar_verified": false,
     "role": "ISSUER_VALUATION_CONTEXT_ONLY",
     "production_proxy_allowed": false,
-    "source_sha256": "2689b1a7b97b5216cd6907d7e7ecb02e6d3ac1caec0c0299fa3c32be565bdbab",
+    "source_sha256": "b24b0d65d43f15daf2c51e791c2c020c2f7dbed2e2b477d4b252f0c96724dfa1",
     "transport": "RENDERED_HTTP_200"
   },
   "TBF3": {

@@ -95,35 +95,44 @@ def archive(root,kind,now,obj):
 
 
 def alfred_vintage(series,asof,key,reader=read):
-    if not key:
+    api_error=None
+    if key:
+        query=urlencode(dict(series_id=series,api_key=key,file_type="json",
+                             realtime_start=str(asof),realtime_end=str(asof),
+                             observation_start=str(asof-timedelta(days=400)),observation_end=str(asof)))
         try:
-            return alfred_csv(series,asof,reader)
+            p=json.loads(reader(ALFRED_URL+"?"+query))
+            observations=[];seen=set()
+            for r in p["observations"]:
+                d=date.fromisoformat(r["date"])
+                start=date.fromisoformat(r["realtime_start"])
+                end=date.fromisoformat(r["realtime_end"])
+                if d>asof or d in seen or not start<=asof<=end:
+                    raise ValueError("ALFRED vintage or date violation")
+                seen.add(d)
+                if r["value"]!=".":
+                    v=float(r["value"])
+                    if not number(v):
+                        raise ValueError("ALFRED nonfinite")
+                    observations.append(dict(observation_date=str(d),value=v,realtime_start=str(start),realtime_end=str(end)))
+            if not observations or (asof-date.fromisoformat(max(r["observation_date"] for r in observations))).days>7:
+                raise ValueError("ALFRED stale or empty daily vintage")
+            return dict(status="OBSERVED_DATE_VINTAGE",series=series,vintage=str(asof),
+                        source="FRED API / ALFRED",source_url=ALFRED_URL,
+                        source_sha256=digest(observations),observations=observations,
+                        realtime_interval_verified=True,publication_intraday_verified=False,
+                        role="DATE_VINTAGE_RESEARCH_ONLY")
         except Exception as exc:
-            return dict(status="UNAVAILABLE",series=series,vintage=str(asof),
-                        source="ALFRED graph CSV",error=type(exc).__name__,observations=[])
-    query=urlencode(dict(series_id=series,api_key=key,file_type="json",
-                         realtime_start=str(asof),realtime_end=str(asof),
-                         observation_start=str(asof-timedelta(days=400)),observation_end=str(asof)))
+            # Never retain the exception message or URL of an authenticated request.
+            api_error=type(exc).__name__
     try:
-        p=json.loads(reader(ALFRED_URL+"?"+query))
-        observations=[]
-        for r in p["observations"]:
-            d=date.fromisoformat(r["date"])
-            start=date.fromisoformat(r["realtime_start"])
-            end=date.fromisoformat(r["realtime_end"])
-            if d>asof or not start<=asof<=end:
-                raise ValueError("ALFRED vintage violation")
-            if r["value"]!=".":
-                v=float(r["value"])
-                if not number(v):
-                    raise ValueError("ALFRED nonfinite")
-                observations.append(dict(observation_date=str(d),value=v,realtime_start=str(start),realtime_end=str(end)))
-        return dict(status="OBSERVED_DATE_VINTAGE" if observations else "UNAVAILABLE",
-                    series=series,vintage=str(asof),observations=observations,
-                    publication_intraday_verified=False)
+        result=alfred_csv(series,asof,reader)
+        if api_error:
+            result["api_error"]=api_error
+        return result
     except Exception as exc:
-        # Do not log the URL: it contains the API key.
-        return dict(status="UNAVAILABLE",series=series,vintage=str(asof),error=type(exc).__name__,observations=[])
+        return dict(status="UNAVAILABLE",series=series,vintage=str(asof),
+                    source="ALFRED graph CSV",api_error=api_error,error=type(exc).__name__,observations=[])
 
 
 def crypto(symbol,now,reader=read):
