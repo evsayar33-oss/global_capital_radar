@@ -22,3 +22,13 @@ class PublicFlowTests(unittest.TestCase):
                 with self.assertRaises(ValueError):parse(html,'SPY',self.today,self.calendar)
     def test_weekly_table_cannot_substitute_for_daily(self):
         with self.assertRaises(ValueError):parse(self.html.replace('daily-net-flows-1m','weekly-net-flows-1m'),'SPY',self.today,self.calendar)
+
+class FarsideTests(unittest.TestCase):
+    def test_column_identity_units_missing_and_negative(self):
+        from public_flow_source import farside_parse
+        days=[date(2026,11,d) for d in (16,17,18,19,20,23,24)]
+        html='<h1>Bitcoin ETF Flow (US$m)</h1><table><tr><td></td><td>OTHER</td><td>IBIT</td></tr>'+''.join('<tr><td>'+d.strftime('%d %b %Y')+'</td><td>9999</td><td>(1.2)</td></tr>' for d in days)+'<tr><td>25 Nov 2026</td><td>0</td><td>-</td></tr></table>'
+        r=farside_parse(html,'IBIT',date(2026,11,25),days)
+        self.assertEqual(len(r),7);self.assertEqual(r[days[-1]],-1200000)
+        with self.assertRaises(ValueError):farside_parse(html.replace('US$m','USD'),'IBIT',date(2026,11,25),days)
+        with self.assertRaises(ValueError):farside_parse(html.replace('<td>-</td>','<td>0</td>'),'IBIT',date(2026,11,25),days)

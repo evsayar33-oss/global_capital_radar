@@ -114,7 +114,7 @@ def choose(candidates):
     # Prefer the most recent observed source; at the same date prefer a
     # complete source-native history, then exact published issuer creation.
     # The non-selected observations are retained for comparison, not merged.
-    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1}
+    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1,"FARSIDE_DAILY":0}
     candidates=[c for c in candidates if c.get("status")=="OBSERVED" and not c.get("stale")]
     return max(candidates,key=lambda x:(x["flow_asof"],x["daily_count"]>=5,
                                        order[x["provider"]])) if candidates else None
@@ -137,6 +137,9 @@ def collect(root,assets,today,calendar,reader,now):
         if not choose(candidates):
             from public_flow_source import collect as public_collect
             attempt("PWD_DAILY_ROUNDED",lambda:public_collect(sym,today,calendar,reader))
+        if sym in ("IBIT","ETHA") and not choose(candidates):
+            from public_flow_source import farside
+            attempt("FARSIDE_DAILY",lambda:farside(sym,today,calendar,reader))
         selected=choose(candidates)
         primary_ok=not any(row.get(k) for k in ("error","stale","cached_source")) and bool(row.get("flow_asof"))
         return sym,dict(status="PRIMARY_OBSERVED" if primary_ok else "ALTERNATIVE_OBSERVED" if selected else "UNAVAILABLE",

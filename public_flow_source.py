@@ -61,3 +61,47 @@ def collect(symbol,today,calendar,reader):
     for h in result['horizons'].values():
         h.update(action=result['action'],strength='Yuvarlanmış gözlem · güç ölçülmedi',magnitude_percentile=None)
     return result
+
+class FlowRows(HTMLParser):
+    def __init__(self):
+        super().__init__();self.rows=[];self.cells=None;self.cell=None
+    def handle_starttag(self,tag,attrs):
+        if tag=='tr':self.cells=[]
+        if tag in ('td','th') and self.cells is not None:self.cell=''
+    def handle_data(self,data):
+        if self.cell is not None:self.cell+=data
+    def handle_endtag(self,tag):
+        if tag in ('td','th') and self.cell is not None:self.cells.append(self.cell.strip());self.cell=None
+        if tag=='tr' and self.cells is not None:self.rows.append(self.cells);self.cells=None
+
+def farside_parse(html,symbol,today,calendar):
+    name={'IBIT':'Bitcoin','ETHA':'Ethereum'}[symbol]
+    text=unescape(re.sub('<[^>]+>',' ',html))
+    if not re.search(name+r'\s+ETF Flow\s*\(US\$m\)',text):raise ValueError('Farside identity/unit mismatch')
+    p=FlowRows();p.feed(html);index=None;raw={}
+    for cells in p.rows:
+        if symbol in cells:
+            if cells.count(symbol)!=1:raise ValueError('ambiguous fund column')
+            index=cells.index(symbol);continue
+        if index is None or not cells or not re.fullmatch(r'\d{2} [A-Z][a-z]{2} \d{4}',cells[0]):continue
+        if len(cells)<=index:raise ValueError('incomplete flow row')
+        value=cells[index]
+        if value in ('','-','—'):continue
+        if not re.fullmatch(r'(?:\([\d,]+(?:\.\d+)?\)|-?[\d,]+(?:\.\d+)?)',value):raise ValueError('invalid fund flow')
+        d=datetime.strptime(cells[0],'%d %b %Y').date()
+        if d>today or d not in calendar or d in raw:raise ValueError('Farside calendar/duplicate date')
+        raw[d]=float(value.replace(',','').replace('(','-').replace(')',''))*1e6
+    if len(raw)<5:raise ValueError('Farside daily history missing')
+    return raw
+
+def farside(symbol,today,calendar,reader):
+    from flow_continuity import observed
+    url='https://farside.co.uk/'+{'IBIT':'btc','ETHA':'eth'}[symbol]+'/'
+    html=reader(url);raw=farside_parse(html,symbol,today,calendar)
+    meta=dict(source='Farside Investors',source_url=url,source_date=str(max(raw)),units='USD',
+              precision='PUBLISHER_ROUNDED',source_sha256=hashlib.sha256(html.encode()).hexdigest(),
+              historical_publication_time_verified=False,independent_corroboration=False)
+    r=observed(symbol,'FARSIDE_DAILY',raw,today,calendar,meta)
+    r['action']='BEKLE · yuvarlanmış alternatif gözlem'
+    for h in r['horizons'].values():h.update(action=r['action'],strength='Yuvarlanmış gözlem · güç ölçülmedi',magnitude_percentile=None)
+    return r

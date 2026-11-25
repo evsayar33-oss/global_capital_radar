@@ -7,6 +7,8 @@ on:
       - 'dashboard_data.py'
       - 'streamlit_app.py'
       - 'flow_continuity.py'
+      - 'public_flow_source.py'
+      - 'test_public_flow_source.py'
       - 'test_dashboard_data.py'
       - 'test_flow_continuity.py'
       - '.github/workflows/dashboard_ci.yml'
