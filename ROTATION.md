@@ -1,6 +1,6 @@
 # Varlıklar arası sermaye takibi
 
-2026-11-24 · Araştırma
+2026-11-25 · Araştırma
 
 Akışlar seçili ABD fonunda milyon USD. COT farkı haftalık yüzde puan.
 
@@ -100,15 +100,15 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 
 |Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
 |---|---|---|---:|---:|---|
-|SPY|ETFIQ_HISTORY|2026-11-20|-1539201250|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|QQQ|ETFIQ_HISTORY|2026-11-20|612981544|13|BEKLE · alternatif kaynak araştırma aşamasında|
-|DIA|ETFIQ_HISTORY|2026-11-20|-24539606|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|IWM|ETFIQ_HISTORY|2026-11-20|435781797|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|SGOV|ETFIQ_HISTORY|2026-11-20|422519105|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|SHY|ETFIQ_HISTORY|2026-11-20|-65106431|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|GLD|ETFIQ_HISTORY|2026-11-20|-441847067|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|SLV|ETFIQ_HISTORY|2026-11-20|60938561|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SPY|—|—|—|—|—|
+|QQQ|—|—|—|—|—|
+|DIA|—|—|—|—|—|
+|IWM|—|—|—|—|—|
+|SGOV|—|—|—|—|—|
+|SHY|—|—|—|—|—|
+|GLD|—|—|—|—|—|
+|SLV|—|—|—|—|—|
 |CPER|USCF_CREATION|2026-11-23|-10179000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
 |USO|USCF_CREATION|2026-11-23|79986000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
-|IBIT|ETFIQ_HISTORY|2026-11-20|-541071824|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|ETHA|ETFIQ_HISTORY|2026-11-20|-124223168|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|IBIT|—|—|—|—|—|
+|ETHA|—|—|—|—|—|

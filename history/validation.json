@@ -1,8 +1,8 @@
 {
   "continuity_status": "DEGRADED_RESEARCH_AVAILABLE",
-  "alternative_count": 12,
-  "alternative_unavailable": 0,
-  "checked_at": "2026-11-24T16:24:01.720964+00:00",
+  "alternative_count": 2,
+  "alternative_unavailable": 10,
+  "checked_at": "2026-11-25T05:34:49.311403+00:00",
   "assets": [
     {
       "asset": "SPY",
@@ -158,11 +158,11 @@
     "Gerçek komisyon ve kayma kalibrasyonu"
   ],
   "native_context": {
-    "evaluated_at": "2026-11-24T16:19:09.289042+00:00",
+    "evaluated_at": "2026-11-24T23:00:58.390968+00:00",
     "status": {
       "BTC": "OBSERVED",
       "ETH": "OBSERVED",
-      "SHFE_copper_warrant": "UNAVAILABLE",
+      "SHFE_copper_warrant": "OBSERVED",
       "TBF3_TFF": "NO_CURRENT_COT_SERIES",
       "issuer_USO": "OBSERVED",
       "issuer_CPER": "OBSERVED",
@@ -177,7 +177,6 @@
       "WTI": "UNAVAILABLE_CURRENT_OFFICIAL"
     },
     "errors": {
-      "SHFE_copper_warrant": "HTTPError: HTTP Error 404: Not Found; ValueError: SHFE report title/date mismatch; URLError: <urlopen error [Errno 101] Network is unreachable>; URLError: <urlopen error [Errno 104] Connection reset by peer>; ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>",
       "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden"
     },
     "scope": "RESEARCH_ONLY_NOT_PRODUCTION_CONFIRMATION"
