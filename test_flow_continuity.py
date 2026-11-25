@@ -134,3 +134,37 @@ class SessionCalendarTests(unittest.TestCase):
                          date(2026,11,24))
         self.assertEqual(session_calendar(today,datetime(2026,11,25,21,1,tzinfo=timezone.utc))[-1],today)
 
+
+class HorizonRecoveryTests(unittest.TestCase):
+    def test_daily_aum_same_source_exact_match_only(self):
+        from flow_continuity import enrich_matching_daily
+        today=date(2026,11,24)
+        days=[date(2026,11,d) for d in (16,17,18,19,20,23)]
+        daily=etfiq_daily("SPY",today,days,{"source_date":"2026-11-23","funds":{"SPY":{
+            "status":"OBSERVED","flow_usd":-20,"start_aum_usd":1000,"start_aum_date":"2026-11-20"}}})
+        self.assertEqual(daily["daily_observation"]["flow_aum_pct"],-2)
+        history=observed("SPY","ETFIQ_HISTORY",{d:-20 for d in days},today,days,{})
+        other=dict(history,provider="OTHER",daily_observation={})
+        mismatch=dict(history,daily_flow_usd=-21,daily_observation={})
+        enrich_matching_daily([daily,history,other,mismatch])
+        self.assertEqual(history["daily_observation"]["flow_aum_pct"],-2)
+        self.assertEqual(history["daily_observation"]["aum_asof"],"2026-11-20")
+        self.assertNotIn("flow_aum_pct",other["daily_observation"])
+        self.assertNotIn("flow_aum_pct",mismatch["daily_observation"])
+
+    def test_short_history_still_attempts_independent_source(self):
+        from flow_continuity import missing_horizons
+        day=date(2026,11,23)
+        days=[date(2026,11,d) for d in (16,17,18,19,20,23)]
+        current=observed("QQQ","ETFIQ_HISTORY",{d:100 for d in days},day,days,{})
+        alternate=dict(current,provider="PWD_DAILY_ROUNDED",
+                       horizons={"1A":{"net_usd_m":123}})
+        self.assertIn("1A",missing_horizons([current]))
+        with patch("flow_continuity.etfiq_history",return_value=current), \
+             patch("public_flow_source.collect",return_value=alternate) as fallback:
+            result=collect(Path("."),[{"symbol":"QQQ","error":"403"}],day,days,
+                           lambda _:"{}",datetime(2026,11,23,23,tzinfo=timezone.utc))
+        fallback.assert_called_once()
+        self.assertEqual(len(result["assets"]["QQQ"]["candidates"]),2)
+        self.assertNotIn("1A",missing_horizons(result["assets"]["QQQ"]["candidates"]))
+

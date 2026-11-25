@@ -81,6 +81,9 @@ def collect(today,calendar,reader=download):
         source_history_start=str(min(records)),source_history_end=str(max(records)),source_observations=len(records),
         skipped_discontinuities=skipped,historical_publication_time_verified=False,independent_corroboration=False)
     result=observed('GLD','SPDR_GOLD_HISTORY',raw,today,calendar,meta)
+    prior=[d for d in calendar if d<max(raw)]
+    if prior and prior[-1] in records:
+        result['daily_observation'].update(flow_aum_pct=100*raw[max(raw)]/records[prior[-1]][1],aum_asof=str(prior[-1]))
     for key,h in result['horizons'].items():
         prior=[d for d in calendar if d<=boundary(max(raw),key,1)]
         if prior and prior[-1] in records and h.get('net_usd_m') is not None:

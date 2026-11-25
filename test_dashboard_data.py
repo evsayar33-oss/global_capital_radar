@@ -150,3 +150,15 @@ class HorizonObservationTests(unittest.TestCase):
                     self.assertTrue(pd.isna(got))
                 else:
                     self.assertAlmostEqual(got,value)
+
+
+    def test_daily_prefers_verified_same_date_aum(self):
+        from flow_view import observation
+        a={"asset":"SPY","symbol":"SPY","error":"403"}
+        h={"provider":"ETFIQ_HISTORY","status":"OBSERVED","flow_asof":"2026-11-23",
+           "daily_flow_usd":100,"daily_count":400,"daily_observation":{"reference_count":52}}
+        d={"provider":"ETFIQ_DAILY","status":"OBSERVED","flow_asof":"2026-11-23",
+           "daily_flow_usd":100,"daily_count":1,"daily_observation":{"flow_aum_pct":0.1}}
+        o=observation(a,{"assets":{"SPY":{"selected":h,"candidates":[h,d]}}},"1G")
+        self.assertEqual(o["h"]["flow_aum_pct"],0.1)
+        self.assertEqual(o["source"],"ETFIQ_DAILY")

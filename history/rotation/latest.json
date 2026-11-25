@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-25T19:17:25.069080+00:00",
+  "seen_at": "2026-11-25T19:24:28.346487+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -26,7 +26,9 @@
           "daily_observation": {
             "strength": "Olağanüstü giriş",
             "magnitude_percentile": 94.2,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": 1.342018201718288,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "SPY",
@@ -100,7 +102,9 @@
             "daily_observation": {
               "strength": "Olağanüstü giriş",
               "magnitude_percentile": 94.2,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": 1.342018201718288,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SPY",
@@ -173,7 +177,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": 1.342018201718288,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SPY",
@@ -208,7 +214,9 @@
           "daily_observation": {
             "strength": "Zayıf çıkış",
             "magnitude_percentile": 38.5,
-            "reference_count": 13
+            "reference_count": 13,
+            "flow_aum_pct": -0.2880806625066696,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "QQQ",
@@ -276,7 +284,9 @@
             "daily_observation": {
               "strength": "Zayıf çıkış",
               "magnitude_percentile": 38.5,
-              "reference_count": 13
+              "reference_count": 13,
+              "flow_aum_pct": -0.2880806625066696,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "QQQ",
@@ -343,7 +353,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -0.2880806625066696,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "QQQ",
@@ -365,6 +377,67 @@
             "start_aum_usd": 422872505013,
             "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+              "magnitude_percentile": null,
+              "reference_count": 21
+            },
+            "status": "OBSERVED",
+            "symbol": "QQQ",
+            "provider": "PWD_DAILY_ROUNDED",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 0.0,
+            "daily_count": 22,
+            "coverage_start": "2026-10-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -3507.0,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 3,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              },
+              "1A": {
+                "net_usd_m": 12517.0,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              },
+              "3A": {
+                "net_usd_m": null,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              },
+              "1Y": {
+                "net_usd_m": null,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              }
+            },
+            "provenance": {
+              "source": "Private Wealth Daily",
+              "source_url": "https://www.privatewealthdaily.com/etf/QQQ?r=1m",
+              "source_date": "2026-11-23",
+              "units": "USD",
+              "precision": "PUBLISHER_ROUNDED",
+              "source_sha256": "e50c808674afbd356090377703467a9ef844eaca4f6424d87865b6ae745d33d7",
+              "historical_publication_time_verified": false,
+              "independent_corroboration": false,
+              "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · yuvarlanmış alternatif gözlem"
           }
         ],
         "errors": {},
@@ -378,7 +451,9 @@
           "daily_observation": {
             "strength": "Zayıf çıkış",
             "magnitude_percentile": 38.5,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": -0.39462026963535646,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "DIA",
@@ -452,7 +527,9 @@
             "daily_observation": {
               "strength": "Zayıf çıkış",
               "magnitude_percentile": 38.5,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": -0.39462026963535646,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "DIA",
@@ -525,7 +602,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -0.39462026963535646,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "DIA",
@@ -560,7 +639,9 @@
           "daily_observation": {
             "strength": "Olağanüstü giriş",
             "magnitude_percentile": 90.4,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": 2.06426135114453,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "IWM",
@@ -634,7 +715,9 @@
             "daily_observation": {
               "strength": "Olağanüstü giriş",
               "magnitude_percentile": 90.4,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": 2.06426135114453,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "IWM",
@@ -707,7 +790,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": 2.06426135114453,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "IWM",
@@ -742,7 +827,9 @@
           "daily_observation": {
             "strength": "Olağanüstü giriş",
             "magnitude_percentile": 92.3,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": 0.6864024961098403,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "SGOV",
@@ -816,7 +903,9 @@
             "daily_observation": {
               "strength": "Olağanüstü giriş",
               "magnitude_percentile": 92.3,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": 0.6864024961098403,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SGOV",
@@ -889,7 +978,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": 0.6864024961098403,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SGOV",
@@ -924,7 +1015,9 @@
           "daily_observation": {
             "strength": "Zayıf çıkış",
             "magnitude_percentile": 19.2,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": -0.06110601836277217,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "SHY",
@@ -998,7 +1091,9 @@
             "daily_observation": {
               "strength": "Zayıf çıkış",
               "magnitude_percentile": 19.2,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": -0.06110601836277217,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SHY",
@@ -1071,7 +1166,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -0.06110601836277217,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SHY",
@@ -1106,7 +1203,9 @@
           "daily_observation": {
             "strength": "Olağan çıkış",
             "magnitude_percentile": 71.2,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": -0.30311380562505713,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "GLD",
@@ -1180,7 +1279,9 @@
             "daily_observation": {
               "strength": "Olağan çıkış",
               "magnitude_percentile": 71.2,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": -0.30311380562505713,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "GLD",
@@ -1253,7 +1354,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -0.30311380562505713,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "GLD",
@@ -1288,7 +1391,9 @@
           "daily_observation": {
             "strength": "Güçlü giriş",
             "magnitude_percentile": 88.5,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": 0.5208801133996454,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "SLV",
@@ -1362,7 +1467,9 @@
             "daily_observation": {
               "strength": "Güçlü giriş",
               "magnitude_percentile": 88.5,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": 0.5208801133996454,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SLV",
@@ -1435,7 +1542,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": 0.5208801133996454,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "SLV",
@@ -1534,7 +1643,8 @@
         ],
         "errors": {
           "ETFIQ_HISTORY": "ValueError: ETFIQ fund history stale/future",
-          "ETFIQ_DAILY": "ValueError: daily fund unavailable"
+          "ETFIQ_DAILY": "ValueError: daily fund unavailable",
+          "PWD_DAILY_ROUNDED": "HTTPError: HTTP Error 404: Not Found"
         },
         "stale_reference": null,
         "primary_usable": false,
@@ -1579,7 +1689,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -21.9923502087358,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "USO",
@@ -1636,7 +1748,8 @@
           }
         ],
         "errors": {
-          "ETFIQ_HISTORY": "ValueError: insufficient contiguous daily observations"
+          "ETFIQ_HISTORY": "ValueError: insufficient contiguous daily observations",
+          "PWD_DAILY_ROUNDED": "HTTPError: HTTP Error 404: Not Found"
         },
         "stale_reference": null,
         "primary_usable": false,
@@ -1648,7 +1761,9 @@
           "daily_observation": {
             "strength": "Olağanüstü çıkış",
             "magnitude_percentile": 98.1,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": -1.2109099505263388,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "IBIT",
@@ -1722,7 +1837,9 @@
             "daily_observation": {
               "strength": "Olağanüstü çıkış",
               "magnitude_percentile": 98.1,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": -1.2109099505263388,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "IBIT",
@@ -1795,7 +1912,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -1.2109099505263388,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "IBIT",
@@ -1830,7 +1949,9 @@
           "daily_observation": {
             "strength": "Olağan çıkış",
             "magnitude_percentile": 48.1,
-            "reference_count": 52
+            "reference_count": 52,
+            "flow_aum_pct": -1.4101852222294862,
+            "aum_asof": "2026-11-20"
           },
           "status": "OBSERVED",
           "symbol": "ETHA",
@@ -1904,7 +2025,9 @@
             "daily_observation": {
               "strength": "Olağan çıkış",
               "magnitude_percentile": 48.1,
-              "reference_count": 52
+              "reference_count": 52,
+              "flow_aum_pct": -1.4101852222294862,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "ETHA",
@@ -1977,7 +2100,9 @@
             "daily_observation": {
               "strength": "Geçmiş yetersiz",
               "magnitude_percentile": null,
-              "reference_count": 0
+              "reference_count": 0,
+              "flow_aum_pct": -1.4101852222294862,
+              "aum_asof": "2026-11-20"
             },
             "status": "OBSERVED",
             "symbol": "ETHA",
@@ -2098,7 +2223,7 @@
             }
           },
           "total_return_pct": -5.619742473516965,
-          "excess_sgov_pp": -6.577098639195056,
+          "excess_sgov_pp": -6.577090914007433,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2124,13 +2249,13 @@
             }
           },
           "total_return_pct": 8.643955714676865,
-          "excess_sgov_pp": 4.896484880636143,
+          "excess_sgov_pp": 4.89646856446575,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.894974889468619,
+          "breadth_rsp_spy_pp": 7.89496520380264,
           "relative_rank": 4,
           "rank_count": 12
         }
@@ -2246,7 +2371,7 @@
             }
           },
           "total_return_pct": -9.564378989785816,
-          "excess_sgov_pp": -10.521735155463908,
+          "excess_sgov_pp": -10.521727430276284,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2273,14 +2398,14 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 5.938619494429442,
-          "excess_sgov_pp": 2.19114866038872,
+          "total_return_pct": 5.938608759482378,
+          "excess_sgov_pp": 2.1911216092712626,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.894974889468619,
+          "breadth_rsp_spy_pp": 7.89496520380264,
           "relative_rank": 5,
           "rank_count": 12
         }
@@ -2380,8 +2505,8 @@
               "change": 39.0
             }
           },
-          "total_return_pct": -6.0134046497063,
-          "excess_sgov_pp": -6.970760815384391,
+          "total_return_pct": -6.013426227035524,
+          "excess_sgov_pp": -6.970774667525992,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2406,14 +2531,14 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 9.159401918669396,
-          "excess_sgov_pp": 5.411931084628673,
+          "total_return_pct": 9.159394642074004,
+          "excess_sgov_pp": 5.411907491862888,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.894974889468619,
+          "breadth_rsp_spy_pp": 7.89496520380264,
           "relative_rank": 3,
           "rank_count": 12
         }
@@ -2514,7 +2639,7 @@
             }
           },
           "total_return_pct": -10.112516925184977,
-          "excess_sgov_pp": -11.06987309086307,
+          "excess_sgov_pp": -11.069865365675446,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2540,13 +2665,13 @@
             }
           },
           "total_return_pct": 12.486098490248976,
-          "excess_sgov_pp": 8.738627656208253,
+          "excess_sgov_pp": 8.73861134003786,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.894974889468619,
+          "breadth_rsp_spy_pp": 7.89496520380264,
           "relative_rank": 2,
           "rank_count": 12
         }
@@ -2642,7 +2767,7 @@
               "change": 39.0
             }
           },
-          "total_return_pct": 0.9573561656780916,
+          "total_return_pct": 0.9573484404904686,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -2667,7 +2792,7 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 3.7474708340407226,
+          "total_return_pct": 3.747487150211115,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -2772,7 +2897,7 @@
             }
           },
           "total_return_pct": 0.38197858031920884,
-          "excess_sgov_pp": -0.5753775853588827,
+          "excess_sgov_pp": -0.5753698601712598,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2796,8 +2921,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 1.8020843658469232,
-          "excess_sgov_pp": -1.9453864681937993,
+          "total_return_pct": 1.802064979192619,
+          "excess_sgov_pp": -1.945422171018496,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2901,7 +3026,7 @@
             }
           },
           "total_return_pct": -23.72682501467267,
-          "excess_sgov_pp": -24.684181180350762,
+          "excess_sgov_pp": -24.68417345516314,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2926,7 +3051,7 @@
             }
           },
           "total_return_pct": -14.400315161007104,
-          "excess_sgov_pp": -18.147785995047826,
+          "excess_sgov_pp": -18.147802311218218,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3047,7 +3172,7 @@
             }
           },
           "total_return_pct": -40.771704661234956,
-          "excess_sgov_pp": -41.72906082691305,
+          "excess_sgov_pp": -41.72905310172543,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3075,7 +3200,7 @@
             }
           },
           "total_return_pct": -20.99506903554753,
-          "excess_sgov_pp": -24.742539869588253,
+          "excess_sgov_pp": -24.742556185758644,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3195,7 +3320,7 @@
             }
           },
           "total_return_pct": -18.891938488839134,
-          "excess_sgov_pp": -19.849294654517227,
+          "excess_sgov_pp": -19.8492869293296,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3222,7 +3347,7 @@
             }
           },
           "total_return_pct": 4.468014665309683,
-          "excess_sgov_pp": 0.7205438312689605,
+          "excess_sgov_pp": 0.7205275150985679,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -3341,7 +3466,7 @@
             }
           },
           "total_return_pct": 2.435508507977646,
-          "excess_sgov_pp": 1.4781523422995546,
+          "excess_sgov_pp": 1.4781600674871775,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -3368,7 +3493,7 @@
             }
           },
           "total_return_pct": 92.31751803070176,
-          "excess_sgov_pp": 88.57004719666104,
+          "excess_sgov_pp": 88.57003088049065,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -3487,7 +3612,7 @@
             }
           },
           "total_return_pct": -24.37276258260478,
-          "excess_sgov_pp": -25.33011874828287,
+          "excess_sgov_pp": -25.33011102309525,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3514,7 +3639,7 @@
             }
           },
           "total_return_pct": -33.24105492334321,
-          "excess_sgov_pp": -36.98852575738394,
+          "excess_sgov_pp": -36.98854207355433,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3618,7 +3743,7 @@
             }
           },
           "total_return_pct": -32.422289852802976,
-          "excess_sgov_pp": -33.37964601848107,
+          "excess_sgov_pp": -33.379638293293446,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3643,7 +3768,7 @@
             }
           },
           "total_return_pct": -43.83073097530852,
-          "excess_sgov_pp": -47.57820180934924,
+          "excess_sgov_pp": -47.57821812551963,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",

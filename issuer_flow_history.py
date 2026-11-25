@@ -81,6 +81,9 @@ def collect(symbol,today,calendar,reader):
         historical_publication_time_verified=False,independent_corroboration=False)
     result=observed(symbol,'ISHARES_HISTORY',raw,today,calendar,meta)
     end=max(raw)
+    prior=[d for d in calendar if d<end]
+    if prior and prior[-1] in aum:
+        result["daily_observation"].update(flow_aum_pct=100*raw[end]/aum[prior[-1]],aum_asof=str(prior[-1]),aum_basis=meta["aum_basis"])
     for key,h in result['horizons'].items():
         prior=[d for d in calendar if d<=boundary(end,key,1)]
         start=prior[-1] if prior else None
