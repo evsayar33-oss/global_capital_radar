@@ -1,0 +1,3791 @@
+{
+  "price_errors": {},
+  "schema_version": 5,
+  "seen_at": "2026-11-25T19:24:28.346487+00:00",
+  "cot_error": null,
+  "cot_source": {
+    "transport": "CFTC archive + matched API",
+    "api_overlap_verified": true
+  },
+  "secondary_flow": {
+    "source": "ETFIQ (etfiq.com)",
+    "date": "2026-11-23",
+    "observed": 11,
+    "same_date_comparisons": 0,
+    "role": "SHADOW_CORROBORATION_ONLY"
+  },
+  "continuity": {
+    "status": "DEGRADED_RESEARCH_AVAILABLE",
+    "alternative_count": 12,
+    "unavailable_count": 0,
+    "stale_reference_count": 0,
+    "assets": {
+      "SPY": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü giriş",
+            "magnitude_percentile": 94.2,
+            "reference_count": 52,
+            "flow_aum_pct": 1.342018201718288,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "SPY",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": 9756524531,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": 4651.249,
+              "strength": "Olağan giriş",
+              "magnitude_percentile": 40.4,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 0.5923348963464329,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": 3318.699,
+              "strength": "Yatay",
+              "magnitude_percentile": 0.0,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 0.4107598848510491,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": -2617.237,
+              "strength": "Yatay",
+              "magnitude_percentile": 0.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -0.31910133247930733,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": 25920.247,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 3.8026237796313387,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/spy.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "d8ab456a3d2afe37eaee7cdce4f93e9893d5f7c8e49932259e2ec58abb4eb6e6",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 94.2,
+              "reference_count": 52,
+              "flow_aum_pct": 1.342018201718288,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SPY",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 9756524531,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": 4651.249,
+                "strength": "Olağan giriş",
+                "magnitude_percentile": 40.4,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 0.5923348963464329,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": 3318.699,
+                "strength": "Yatay",
+                "magnitude_percentile": 0.0,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 0.4107598848510491,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": -2617.237,
+                "strength": "Yatay",
+                "magnitude_percentile": 0.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -0.31910133247930733,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": 25920.247,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 3.8026237796313387,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/spy.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "d8ab456a3d2afe37eaee7cdce4f93e9893d5f7c8e49932259e2ec58abb4eb6e6",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": 1.342018201718288,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SPY",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 9756524531,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 727003890000,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "QQQ": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Zayıf çıkış",
+            "magnitude_percentile": 38.5,
+            "reference_count": 13,
+            "flow_aum_pct": -0.2880806625066696,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "QQQ",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -1218213914,
+          "daily_count": 14,
+          "coverage_start": "2026-11-04",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": -4695.553,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 1,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -1.0144809118311782,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": null,
+              "strength": "Veri eksik",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+            },
+            "3A": {
+              "net_usd_m": null,
+              "strength": "Veri eksik",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+            },
+            "1Y": {
+              "net_usd_m": null,
+              "strength": "Veri eksik",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2026-11-04",
+            "coverage_end": "2026-11-23",
+            "daily_count": 14,
+            "skipped_count": 4,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "7d60d8d8b4251ad0e4a12b48c262f5ab42e9e61671c8ea4dc441f440122a3a61",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 38.5,
+              "reference_count": 13,
+              "flow_aum_pct": -0.2880806625066696,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "QQQ",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -1218213914,
+            "daily_count": 14,
+            "coverage_start": "2026-11-04",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -4695.553,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 1,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -1.0144809118311782,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": null,
+                "strength": "Veri eksik",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+              },
+              "3A": {
+                "net_usd_m": null,
+                "strength": "Veri eksik",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+              },
+              "1Y": {
+                "net_usd_m": null,
+                "strength": "Veri eksik",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2026-11-04",
+              "coverage_end": "2026-11-23",
+              "daily_count": 14,
+              "skipped_count": 4,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "7d60d8d8b4251ad0e4a12b48c262f5ab42e9e61671c8ea4dc441f440122a3a61",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -0.2880806625066696,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "QQQ",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -1218213914,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 422872505013,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+              "magnitude_percentile": null,
+              "reference_count": 21
+            },
+            "status": "OBSERVED",
+            "symbol": "QQQ",
+            "provider": "PWD_DAILY_ROUNDED",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 0.0,
+            "daily_count": 22,
+            "coverage_start": "2026-10-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -3507.0,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 3,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              },
+              "1A": {
+                "net_usd_m": 12517.0,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              },
+              "3A": {
+                "net_usd_m": null,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              },
+              "1Y": {
+                "net_usd_m": null,
+                "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · yuvarlanmış alternatif gözlem"
+              }
+            },
+            "provenance": {
+              "source": "Private Wealth Daily",
+              "source_url": "https://www.privatewealthdaily.com/etf/QQQ?r=1m",
+              "source_date": "2026-11-23",
+              "units": "USD",
+              "precision": "PUBLISHER_ROUNDED",
+              "source_sha256": "e50c808674afbd356090377703467a9ef844eaca4f6424d87865b6ae745d33d7",
+              "historical_publication_time_verified": false,
+              "independent_corroboration": false,
+              "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · yuvarlanmış alternatif gözlem"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "DIA": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Zayıf çıkış",
+            "magnitude_percentile": 38.5,
+            "reference_count": 52,
+            "flow_aum_pct": -0.39462026963535646,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "DIA",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -168318015,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": 118.926,
+              "strength": "Yatay",
+              "magnitude_percentile": 5.8,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 0.261780865338898,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": 284.859,
+              "strength": "Yatay",
+              "magnitude_percentile": 5.6,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 0.6219309707908,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": 1136.189,
+              "strength": "Güçlü giriş",
+              "magnitude_percentile": 80.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 2.4755448336704546,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": 1166.241,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 2.934365704500727,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/dia.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "c1eb8d2088f84b336016a0ee26a7500c1028565642c62a2756405224d5544a1c",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 38.5,
+              "reference_count": 52,
+              "flow_aum_pct": -0.39462026963535646,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "DIA",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -168318015,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": 118.926,
+                "strength": "Yatay",
+                "magnitude_percentile": 5.8,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 0.261780865338898,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": 284.859,
+                "strength": "Yatay",
+                "magnitude_percentile": 5.6,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 0.6219309707908,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": 1136.189,
+                "strength": "Güçlü giriş",
+                "magnitude_percentile": 80.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 2.4755448336704546,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": 1166.241,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 2.934365704500727,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/dia.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "c1eb8d2088f84b336016a0ee26a7500c1028565642c62a2756405224d5544a1c",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -0.39462026963535646,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "DIA",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -168318015,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 42653160000,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "IWM": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü giriş",
+            "magnitude_percentile": 90.4,
+            "reference_count": 52,
+            "flow_aum_pct": 2.06426135114453,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "IWM",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": 1476708922,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": 2169.507,
+              "strength": "Olağan giriş",
+              "magnitude_percentile": 71.2,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 2.8818514777795863,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": 4136.105,
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 94.4,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 5.573320709701142,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": 3387.996,
+              "strength": "Olağan giriş",
+              "magnitude_percentile": 60.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 4.15088498170023,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": 1064.529,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 1.6137027534573343,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/iwm.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "44913f02e17b221c1469c319cb678c810e1daa614fa3bdcd160cdf98c9dc72de",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 90.4,
+              "reference_count": 52,
+              "flow_aum_pct": 2.06426135114453,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "IWM",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 1476708922,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": 2169.507,
+                "strength": "Olağan giriş",
+                "magnitude_percentile": 71.2,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 2.8818514777795863,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": 4136.105,
+                "strength": "Olağanüstü giriş",
+                "magnitude_percentile": 94.4,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 5.573320709701142,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": 3387.996,
+                "strength": "Olağan giriş",
+                "magnitude_percentile": 60.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 4.15088498170023,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": 1064.529,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 1.6137027534573343,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/iwm.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "44913f02e17b221c1469c319cb678c810e1daa614fa3bdcd160cdf98c9dc72de",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": 2.06426135114453,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "IWM",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 1476708922,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 71536916640,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "SGOV": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü giriş",
+            "magnitude_percentile": 92.3,
+            "reference_count": 52,
+            "flow_aum_pct": 0.6864024961098403,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "SGOV",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": 820151843,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": 2882.146,
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 96.2,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 2.4560599632033506,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": 3551.416,
+              "strength": "Zayıf giriş",
+              "magnitude_percentile": 38.9,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 3.041146711287291,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": 15523.124,
+              "strength": "Güçlü giriş",
+              "magnitude_percentile": 80.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 14.819912744304796,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": 56519.335,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 88.78396029021953,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/sgov.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "6315216af5c43eaa549511c8d693141b3f825e121d49d8ae563e49ba7c638b89",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 92.3,
+              "reference_count": 52,
+              "flow_aum_pct": 0.6864024961098403,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SGOV",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 820151843,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": 2882.146,
+                "strength": "Olağanüstü giriş",
+                "magnitude_percentile": 96.2,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 2.4560599632033506,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": 3551.416,
+                "strength": "Zayıf giriş",
+                "magnitude_percentile": 38.9,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 3.041146711287291,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": 15523.124,
+                "strength": "Güçlü giriş",
+                "magnitude_percentile": 80.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 14.819912744304796,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": 56519.335,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 88.78396029021953,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/sgov.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "6315216af5c43eaa549511c8d693141b3f825e121d49d8ae563e49ba7c638b89",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": 0.6864024961098403,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SGOV",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 820151843,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 119485556601,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "SHY": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Zayıf çıkış",
+            "magnitude_percentile": 19.2,
+            "reference_count": 52,
+            "flow_aum_pct": -0.06110601836277217,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "SHY",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -16317281,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": -40.856,
+              "strength": "Yatay",
+              "magnitude_percentile": 7.7,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -0.15350181937116547,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": -565.303,
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 66.7,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -2.0767603245113206,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": 1372.434,
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 100.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 5.395729371220921,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": 3461.779,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 14.634745068832464,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/shy.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "2d7ef26456c1ec45964d4f9e4734c69910da5618d5bb0719f6a9fc58193e1727",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 19.2,
+              "reference_count": 52,
+              "flow_aum_pct": -0.06110601836277217,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SHY",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -16317281,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -40.856,
+                "strength": "Yatay",
+                "magnitude_percentile": 7.7,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -0.15350181937116547,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": -565.303,
+                "strength": "Olağan çıkış",
+                "magnitude_percentile": 66.7,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -2.0767603245113206,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": 1372.434,
+                "strength": "Olağanüstü giriş",
+                "magnitude_percentile": 100.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 5.395729371220921,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": 3461.779,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 14.634745068832464,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/shy.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "2d7ef26456c1ec45964d4f9e4734c69910da5618d5bb0719f6a9fc58193e1727",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -0.06110601836277217,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SHY",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -16317281,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 26703230610,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "GLD": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Olağan çıkış",
+            "magnitude_percentile": 71.2,
+            "reference_count": 52,
+            "flow_aum_pct": -0.30311380562505713,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "GLD",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -359783532,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": -1770.776,
+              "strength": "Güçlü çıkış",
+              "magnitude_percentile": 78.8,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -1.3577832714509164,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": -1164.857,
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 27.8,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -0.8668984685668276,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": -1734.255,
+              "strength": "Yatay",
+              "magnitude_percentile": 0.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -1.1243800831255502,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": -809.828,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -0.5944674611360873,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/gld.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "bb5795f12d81852eaad966aa0f7eb386fd09428070dfef3530974cf77d25efa1",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 71.2,
+              "reference_count": 52,
+              "flow_aum_pct": -0.30311380562505713,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "GLD",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -359783532,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -1770.776,
+                "strength": "Güçlü çıkış",
+                "magnitude_percentile": 78.8,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -1.3577832714509164,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": -1164.857,
+                "strength": "Zayıf çıkış",
+                "magnitude_percentile": 27.8,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -0.8668984685668276,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": -1734.255,
+                "strength": "Yatay",
+                "magnitude_percentile": 0.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -1.1243800831255502,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": -809.828,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -0.5944674611360873,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/gld.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "bb5795f12d81852eaad966aa0f7eb386fd09428070dfef3530974cf77d25efa1",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -0.30311380562505713,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "GLD",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -359783532,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 118695857900,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "SLV": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Güçlü giriş",
+            "magnitude_percentile": 88.5,
+            "reference_count": 52,
+            "flow_aum_pct": 0.5208801133996454,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "SLV",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": 110862934,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": -7.028,
+              "strength": "Yatay",
+              "magnitude_percentile": 5.8,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -0.029169993623317785,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": 341.093,
+              "strength": "Olağan giriş",
+              "magnitude_percentile": 55.6,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 1.2703354987977098,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": 791.491,
+              "strength": "Zayıf giriş",
+              "magnitude_percentile": 40.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 2.3161307815929675,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": 131.642,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 0.5488861236705367,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/slv.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "a98a75ee68dc1e78264f654f2f0160ef8bcf8b185d1ef2c13f21cb65cce2ea68",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Güçlü giriş",
+              "magnitude_percentile": 88.5,
+              "reference_count": 52,
+              "flow_aum_pct": 0.5208801133996454,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SLV",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 110862934,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -7.028,
+                "strength": "Yatay",
+                "magnitude_percentile": 5.8,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -0.029169993623317785,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": 341.093,
+                "strength": "Olağan giriş",
+                "magnitude_percentile": 55.6,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 1.2703354987977098,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": 791.491,
+                "strength": "Zayıf giriş",
+                "magnitude_percentile": 40.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 2.3161307815929675,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": 131.642,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 0.5488861236705367,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/slv.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "a98a75ee68dc1e78264f654f2f0160ef8bcf8b185d1ef2c13f21cb65cce2ea68",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": 0.5208801133996454,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "SLV",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": 110862934,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 21283771668,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "CPER": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Geçmiş yetersiz",
+            "magnitude_percentile": null,
+            "reference_count": 0
+          },
+          "status": "OBSERVED",
+          "symbol": "CPER",
+          "provider": "USCF_CREATION",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -10179000.0,
+          "daily_count": 1,
+          "coverage_start": "2026-11-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {},
+          "provenance": {
+            "first_seen_at": "2026-11-24T13:39:22.607597+00:00",
+            "source_url": "https://www.uscfinvestments.com/cper",
+            "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
+            "source_sha256": "844467fc7a7cf9f2870891ef7cd8830a99409a437d2fad239ae334b7a372e63a",
+            "creation_source_sha256": null,
+            "source": "USCF",
+            "units": "USD",
+            "estimate_basis": "published net created shares times same-date rounded NAV",
+            "publication_intraday_verified": false
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
+            "status": "OBSERVED",
+            "symbol": "CPER",
+            "provider": "USCF_CREATION",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -10179000.0,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "first_seen_at": "2026-11-24T13:39:22.607597+00:00",
+              "source_url": "https://www.uscfinvestments.com/cper",
+              "creation_source_url": "https://www.uscfinvestments.com/holdings/cper",
+              "source_sha256": "844467fc7a7cf9f2870891ef7cd8830a99409a437d2fad239ae334b7a372e63a",
+              "creation_source_sha256": null,
+              "source": "USCF",
+              "units": "USD",
+              "estimate_basis": "published net created shares times same-date rounded NAV",
+              "publication_intraday_verified": false
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {
+          "ETFIQ_HISTORY": "ValueError: ETFIQ fund history stale/future",
+          "ETFIQ_DAILY": "ValueError: daily fund unavailable",
+          "PWD_DAILY_ROUNDED": "HTTPError: HTTP Error 404: Not Found"
+        },
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "USO": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Geçmiş yetersiz",
+            "magnitude_percentile": null,
+            "reference_count": 1
+          },
+          "status": "OBSERVED",
+          "symbol": "USO",
+          "provider": "USCF_CREATION",
+          "stale": false,
+          "lag_sessions": 0,
+          "flow_asof": "2026-11-24",
+          "daily_flow_usd": 68225000.0,
+          "daily_count": 2,
+          "coverage_start": "2026-11-23",
+          "coverage_end": "2026-11-24",
+          "horizons": {},
+          "provenance": {
+            "first_seen_at": "2026-11-25T19:08:54.750328+00:00",
+            "source_url": "https://www.uscfinvestments.com/uso",
+            "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
+            "source_sha256": "bd72c7575f2c43316a78fb0ce98f215a15be81171c65fe01e83b8ca81e0eb338",
+            "creation_source_sha256": "d15218f060d0a0939894b7bb7a6e61b578e320770b923fe02645383f52bd7789",
+            "source": "USCF",
+            "units": "USD",
+            "estimate_basis": "published net created shares times same-date rounded NAV",
+            "publication_intraday_verified": false
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -21.9923502087358,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "USO",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -513042000,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 2332820254,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 1
+            },
+            "status": "OBSERVED",
+            "symbol": "USO",
+            "provider": "USCF_CREATION",
+            "stale": false,
+            "lag_sessions": 0,
+            "flow_asof": "2026-11-24",
+            "daily_flow_usd": 68225000.0,
+            "daily_count": 2,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-24",
+            "horizons": {},
+            "provenance": {
+              "first_seen_at": "2026-11-25T19:08:54.750328+00:00",
+              "source_url": "https://www.uscfinvestments.com/uso",
+              "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
+              "source_sha256": "bd72c7575f2c43316a78fb0ce98f215a15be81171c65fe01e83b8ca81e0eb338",
+              "creation_source_sha256": "d15218f060d0a0939894b7bb7a6e61b578e320770b923fe02645383f52bd7789",
+              "source": "USCF",
+              "units": "USD",
+              "estimate_basis": "published net created shares times same-date rounded NAV",
+              "publication_intraday_verified": false
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {
+          "ETFIQ_HISTORY": "ValueError: insufficient contiguous daily observations",
+          "PWD_DAILY_ROUNDED": "HTTPError: HTTP Error 404: Not Found"
+        },
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "IBIT": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü çıkış",
+            "magnitude_percentile": 98.1,
+            "reference_count": 52,
+            "flow_aum_pct": -1.2109099505263388,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "IBIT",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -544734320,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": -1367.522,
+              "strength": "Olağanüstü çıkış",
+              "magnitude_percentile": 100.0,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -2.6864849118949827,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": -3418.967,
+              "strength": "Güçlü çıkış",
+              "magnitude_percentile": 77.8,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -5.189846334730617,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": 637.58,
+              "strength": "Yatay",
+              "magnitude_percentile": 0.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": 1.08477696538541,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": -0.442,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -0.0006751724889904842,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/ibit.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "cb2734c55e9c6bb47216b0e6a1d53678491ea274a67e0cfbe1bf0880efad2f98",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Olağanüstü çıkış",
+              "magnitude_percentile": 98.1,
+              "reference_count": 52,
+              "flow_aum_pct": -1.2109099505263388,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "IBIT",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -544734320,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -1367.522,
+                "strength": "Olağanüstü çıkış",
+                "magnitude_percentile": 100.0,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -2.6864849118949827,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": -3418.967,
+                "strength": "Güçlü çıkış",
+                "magnitude_percentile": 77.8,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -5.189846334730617,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": 637.58,
+                "strength": "Yatay",
+                "magnitude_percentile": 0.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": 1.08477696538541,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": -0.442,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -0.0006751724889904842,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/ibit.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "cb2734c55e9c6bb47216b0e6a1d53678491ea274a67e0cfbe1bf0880efad2f98",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -1.2109099505263388,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "IBIT",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -544734320,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 44985535032,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      },
+      "ETHA": {
+        "status": "ALTERNATIVE_OBSERVED",
+        "selected": {
+          "daily_observation": {
+            "strength": "Olağan çıkış",
+            "magnitude_percentile": 48.1,
+            "reference_count": 52,
+            "flow_aum_pct": -1.4101852222294862,
+            "aum_asof": "2026-11-20"
+          },
+          "status": "OBSERVED",
+          "symbol": "ETHA",
+          "provider": "ETFIQ_HISTORY",
+          "stale": false,
+          "lag_sessions": 1,
+          "flow_asof": "2026-11-23",
+          "daily_flow_usd": -60839323,
+          "daily_count": 400,
+          "coverage_start": "2025-04-23",
+          "coverage_end": "2026-11-23",
+          "horizons": {
+            "1H": {
+              "net_usd_m": -230.087,
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 69.2,
+              "reference_count": 52,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -4.532654024370094,
+              "aum_asof": "2026-11-16"
+            },
+            "1A": {
+              "net_usd_m": -1278.252,
+              "strength": "Güçlü çıkış",
+              "magnitude_percentile": 77.8,
+              "reference_count": 18,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -16.355165501178732,
+              "aum_asof": "2026-10-23"
+            },
+            "3A": {
+              "net_usd_m": -1036.783,
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 60.0,
+              "reference_count": 5,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -13.492153525403006,
+              "aum_asof": "2026-08-21"
+            },
+            "1Y": {
+              "net_usd_m": -1961.357,
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+              "flow_aum_pct": -19.921557516268038,
+              "aum_asof": "2025-11-21"
+            }
+          },
+          "provenance": {
+            "source": "ETFIQ",
+            "source_url": "https://etfiq.com/data/flows/funds/etha.json",
+            "source_date": "2026-11-23",
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "daily_count": 400,
+            "skipped_count": 0,
+            "units": "USD",
+            "aum_basis": "ETFIQ-derived; not independently verified",
+            "source_digest": "2b2e3e921f90648cd738b8985f61df25da431113dde2137b83e00eeeb5c2ec59",
+            "historical_publication_time_verified": false,
+            "license": "ETFIQ computed, attribution required",
+            "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+          },
+          "start_aum_usd": null,
+          "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+          "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+        },
+        "candidates": [
+          {
+            "daily_observation": {
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 48.1,
+              "reference_count": 52,
+              "flow_aum_pct": -1.4101852222294862,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "ETHA",
+            "provider": "ETFIQ_HISTORY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -60839323,
+            "daily_count": 400,
+            "coverage_start": "2025-04-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {
+              "1H": {
+                "net_usd_m": -230.087,
+                "strength": "Olağan çıkış",
+                "magnitude_percentile": 69.2,
+                "reference_count": 52,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -4.532654024370094,
+                "aum_asof": "2026-11-16"
+              },
+              "1A": {
+                "net_usd_m": -1278.252,
+                "strength": "Güçlü çıkış",
+                "magnitude_percentile": 77.8,
+                "reference_count": 18,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -16.355165501178732,
+                "aum_asof": "2026-10-23"
+              },
+              "3A": {
+                "net_usd_m": -1036.783,
+                "strength": "Olağan çıkış",
+                "magnitude_percentile": 60.0,
+                "reference_count": 5,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -13.492153525403006,
+                "aum_asof": "2026-08-21"
+              },
+              "1Y": {
+                "net_usd_m": -1961.357,
+                "strength": "Geçmiş yetersiz",
+                "magnitude_percentile": null,
+                "reference_count": 0,
+                "action": "BEKLE · alternatif kaynak araştırma aşamasında",
+                "flow_aum_pct": -19.921557516268038,
+                "aum_asof": "2025-11-21"
+              }
+            },
+            "provenance": {
+              "source": "ETFIQ",
+              "source_url": "https://etfiq.com/data/flows/funds/etha.json",
+              "source_date": "2026-11-23",
+              "coverage_start": "2025-04-23",
+              "coverage_end": "2026-11-23",
+              "daily_count": 400,
+              "skipped_count": 0,
+              "units": "USD",
+              "aum_basis": "ETFIQ-derived; not independently verified",
+              "source_digest": "2b2e3e921f90648cd738b8985f61df25da431113dde2137b83e00eeeb5c2ec59",
+              "historical_publication_time_verified": false,
+              "license": "ETFIQ computed, attribution required",
+              "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+            },
+            "start_aum_usd": null,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          },
+          {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0,
+              "flow_aum_pct": -1.4101852222294862,
+              "aum_asof": "2026-11-20"
+            },
+            "status": "OBSERVED",
+            "symbol": "ETHA",
+            "provider": "ETFIQ_DAILY",
+            "stale": false,
+            "lag_sessions": 1,
+            "flow_asof": "2026-11-23",
+            "daily_flow_usd": -60839323,
+            "daily_count": 1,
+            "coverage_start": "2026-11-23",
+            "coverage_end": "2026-11-23",
+            "horizons": {},
+            "provenance": {
+              "source": "ETFIQ (etfiq.com)",
+              "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+              "units": "USD",
+              "historical_publication_time_verified": false
+            },
+            "start_aum_usd": 4314278865,
+            "role": "SOURCE_SEPARATE_RESEARCH_ONLY",
+            "action": "BEKLE · alternatif kaynak araştırma aşamasında"
+          }
+        ],
+        "errors": {},
+        "stale_reference": null,
+        "primary_usable": false,
+        "production_eligible": false
+      }
+    },
+    "policy": "NO_MIXING_NO_PRODUCTION_PROMOTION",
+    "calendar_source": "exchange_calendars XNYS"
+  },
+  "assets": [
+    {
+      "symbol": "SPY",
+      "asset": "S&P 500",
+      "cash_source": "https://etfdb.com/etf/SPY/",
+      "cot_code": "13874A",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": 2.39,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -11652.04,
+        "1H": -7096.55,
+        "1A": -6484.783,
+        "3A": -7287.221,
+        "1Y": 20120.424
+      },
+      "weekly_percentile": 17,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -7096.55,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -1.8649955080278446,
+          "excess_sgov_pp": -1.9345922142287253,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.030740855267498,
+          "relative_rank": 5,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": -6484.783,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -5.419943286461837,
+          "excess_sgov_pp": -5.748630808533262,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 4.228483670567019,
+          "relative_rank": 5,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": -7287.221,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -5.619742473516965,
+          "excess_sgov_pp": -6.577090914007433,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 2.3909223620147584,
+          "relative_rank": 4,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 20120.424,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 8.643955714676865,
+          "excess_sgov_pp": 4.89646856446575,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 7.89496520380264,
+          "relative_rank": 4,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 9756524531,
+        "start_aum_usd": 727003890000,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "QQQ",
+      "asset": "Nasdaq-100",
+      "cash_source": "https://etfdb.com/etf/QQQ/",
+      "cot_code": "209742",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -8.637,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -1286.458,
+        "1H": 1309.247,
+        "1A": 9808.897,
+        "3A": 6520.256,
+        "1Y": 27438.693
+      },
+      "weekly_percentile": 56,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 1309.247,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 32.7,
+          "reference_count": 52,
+          "cot_change_pp": -8.637,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -2.869325865109107,
+          "excess_sgov_pp": -2.9389225713099876,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.030740855267498,
+          "relative_rank": 6,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": 9808.897,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -15.907,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -9.41227236374318,
+          "excess_sgov_pp": -9.740959885814604,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 4.228483670567019,
+          "relative_rank": 6,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 6520.256,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 71.4,
+          "reference_count": 42,
+          "cot_change_pp": 15.357,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -9.564378989785816,
+          "excess_sgov_pp": -10.521727430276284,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 2.3909223620147584,
+          "relative_rank": 6,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 27438.693,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 5.938608759482378,
+          "excess_sgov_pp": 2.1911216092712626,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 7.89496520380264,
+          "relative_rank": 5,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -1218213914,
+        "start_aum_usd": 422872505013,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "DIA",
+      "asset": "Dow Jones",
+      "cash_source": "https://etfdb.com/etf/DIA/",
+      "cot_code": "124603",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -4.82,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": 551.9,
+        "1H": 363.998,
+        "1A": 1297.357,
+        "3A": 1781.384,
+        "1Y": 440.903
+      },
+      "weekly_percentile": 73,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 363.998,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -1.3824718278305892,
+          "excess_sgov_pp": -1.4520685340314698,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.030740855267498,
+          "relative_rank": 4,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": 1297.357,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -4.041934115687518,
+          "excess_sgov_pp": -4.370621637758942,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 4.228483670567019,
+          "relative_rank": 4,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 1781.384,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -6.013426227035524,
+          "excess_sgov_pp": -6.970774667525992,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 2.3909223620147584,
+          "relative_rank": 5,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 440.903,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 9.159394642074004,
+          "excess_sgov_pp": 5.411907491862888,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 7.89496520380264,
+          "relative_rank": 3,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -168318015,
+        "start_aum_usd": 42653160000,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "IWM",
+      "asset": "Russell 2000",
+      "cash_source": "https://etfdb.com/etf/IWM/",
+      "cot_code": "239742",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -2.11,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -202.49,
+        "1H": 480.385,
+        "1A": 312.143,
+        "3A": 1148.206,
+        "1Y": -2585.529
+      },
+      "weekly_percentile": 67,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 480.385,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -0.7098952726959262,
+          "excess_sgov_pp": -0.7794919788968069,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 1.030740855267498,
+          "relative_rank": 3,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": 312.143,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -3.122388160131462,
+          "excess_sgov_pp": -3.4510756822028865,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 4.228483670567019,
+          "relative_rank": 3,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 1148.206,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -10.112516925184977,
+          "excess_sgov_pp": -11.069865365675446,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 2.3909223620147584,
+          "relative_rank": 7,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": -2585.529,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 12.486098490248976,
+          "excess_sgov_pp": 8.73861134003786,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "breadth_rsp_spy_pp": 7.89496520380264,
+          "relative_rank": 2,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 1476708922,
+        "start_aum_usd": 71536916640,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "SGOV",
+      "asset": "ABD Hazine bonosu · 0–3 ay",
+      "cash_source": "https://etfdb.com/etf/SGOV/",
+      "cot_code": null,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": 829.863,
+        "1H": 1830.514,
+        "1A": 2736.323,
+        "3A": 14979.54,
+        "1Y": 56704.596
+      },
+      "weekly_percentile": 85,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 1830.514,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": 0.06959670620088065,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 2,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": 2736.323,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": 0.3286875220714247,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 2,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 14979.54,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": 0.9573484404904686,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 2,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 56704.596,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 3.747487150211115,
+          "excess_sgov_pp": 0.0,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 7,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 820151843,
+        "start_aum_usd": 119485556601,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "SHY",
+      "asset": "ABD Hazine tahvili · 1–3 yıl",
+      "cash_source": "https://etfdb.com/etf/SHY/",
+      "cot_code": "042601",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": 2.771,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": 0.0,
+        "1H": -1217.053,
+        "1A": -483.942,
+        "3A": 1634.341,
+        "1Y": 3360.793
+      },
+      "weekly_percentile": 0,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -1217.053,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": 0.3074274482761874,
+          "excess_sgov_pp": 0.23783074207530674,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": -483.942,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": 0.3980221157411812,
+          "excess_sgov_pp": 0.06933459366975647,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 1634.341,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": 0.38197858031920884,
+          "excess_sgov_pp": -0.5753698601712598,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 3,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 3360.793,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 1.802064979192619,
+          "excess_sgov_pp": -1.945422171018496,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -16317281,
+        "start_aum_usd": 26703230610,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "GLD",
+      "asset": "Altın",
+      "cash_source": "https://etfdb.com/etf/GLD/",
+      "cot_code": "088691",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -6.237,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -723.356,
+        "1H": -294.202,
+        "1A": -2583.698,
+        "3A": 873.532,
+        "1Y": -427.148
+      },
+      "weekly_percentile": 37,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -294.202,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -7.668519614391778,
+          "excess_sgov_pp": -7.738116320592659,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 10,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": -2583.698,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -11.227182779830914,
+          "excess_sgov_pp": -11.555870301902338,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 7,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 873.532,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -23.72682501467267,
+          "excess_sgov_pp": -24.68417345516314,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": -427.148,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": -14.400315161007104,
+          "excess_sgov_pp": -18.147802311218218,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -359783532,
+        "start_aum_usd": 118695857900,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "SLV",
+      "asset": "Gümüş",
+      "cash_source": "https://etfdb.com/etf/SLV/",
+      "cot_code": "084691",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -1.866,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": 51.575,
+        "1H": -147.201,
+        "1A": 207.846,
+        "3A": 661.891,
+        "1Y": 11.618
+      },
+      "weekly_percentile": 25,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -147.201,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 48.1,
+          "reference_count": 52,
+          "cot_change_pp": -1.866,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -13.602249812575263,
+          "excess_sgov_pp": -13.671846518776142,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -5.9337301981834845,
+          "relative_rank": 12,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": 207.846,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 44.2,
+          "reference_count": 52,
+          "cot_change_pp": -5.994,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -24.38423803459786,
+          "excess_sgov_pp": -24.712925556669283,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -13.157055254766947,
+          "relative_rank": 10,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 661.891,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 76.2,
+          "reference_count": 42,
+          "cot_change_pp": -5.662,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -40.771704661234956,
+          "excess_sgov_pp": -41.72905310172543,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -17.044879646562286,
+          "relative_rank": 12,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 11.618,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": -20.99506903554753,
+          "excess_sgov_pp": -24.742556185758644,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "silver_gold_pp": -6.594753874540427,
+          "relative_rank": 10,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": 110862934,
+        "start_aum_usd": 21283771668,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "CPER",
+      "asset": "Bakır vadeli",
+      "cash_source": "https://etfdb.com/etf/CPER/",
+      "cot_code": "085692",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -3.558,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -11.938,
+        "1H": -35.527,
+        "1A": -80.268,
+        "3A": -135.962,
+        "1Y": 171.099
+      },
+      "weekly_percentile": 4,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -35.527,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 84.6,
+          "reference_count": 52,
+          "cot_change_pp": -3.558,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -9.697142305372275,
+          "excess_sgov_pp": -9.766739011573154,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": -80.268,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 94.2,
+          "reference_count": 52,
+          "cot_change_pp": -16.19,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -16.794677784565327,
+          "excess_sgov_pp": -17.12336530663675,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": -135.962,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 95.2,
+          "reference_count": 42,
+          "cot_change_pp": -21.419,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -18.891938488839134,
+          "excess_sgov_pp": -19.8492869293296,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 171.099,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 88.9,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 4.468014665309683,
+          "excess_sgov_pp": 0.7205275150985679,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 6,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "UNAVAILABLE",
+        "flow_usd": null,
+        "start_aum_usd": null,
+        "start_aum_date": null,
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "USO",
+      "asset": "WTI petrol vadeli",
+      "cash_source": "https://etfdb.com/etf/USO/",
+      "cot_code": "067651",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -0.482,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -54.725,
+        "1H": 269.404,
+        "1A": 670.564,
+        "3A": 214.858,
+        "1Y": 238.796
+      },
+      "weekly_percentile": 92,
+      "horizons": {
+        "1H": {
+          "net_usd_m": 269.404,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 82.7,
+          "reference_count": 52,
+          "cot_change_pp": -0.482,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -3.4298435745692246,
+          "excess_sgov_pp": -3.4994402807701053,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 7,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": 670.564,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "cot_change_pp": -1.904,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -20.114437768567917,
+          "excess_sgov_pp": -20.443125290639344,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 214.858,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 40.5,
+          "reference_count": 42,
+          "cot_change_pp": -1.865,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": 2.435508507977646,
+          "excess_sgov_pp": 1.4781600674871775,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 238.796,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 9,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": 92.31751803070176,
+          "excess_sgov_pp": 88.57003088049065,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "ALIM ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 1,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -513042000,
+        "start_aum_usd": 2332820254,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "IBIT",
+      "asset": "Bitcoin",
+      "cash_source": "https://etfdb.com/etf/IBIT/",
+      "cot_code": "133741",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -4.393,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -148.663,
+        "1H": -629.028,
+        "1A": -1657.197,
+        "3A": 2511.122,
+        "1Y": 790.471
+      },
+      "weekly_percentile": 17,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -629.028,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 67.3,
+          "reference_count": 52,
+          "cot_change_pp": -4.393,
+          "cot_start": "2026-11-10",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -6.585503896817824,
+          "excess_sgov_pp": -6.655100603018704,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 8,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": -1657.197,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 39.4,
+          "reference_count": 33,
+          "cot_change_pp": -4.276,
+          "cot_start": "2026-10-13",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -26.544823772768865,
+          "excess_sgov_pp": -26.87351129484029,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": 2511.122,
+          "strength": "Yatay",
+          "magnitude_percentile": 10.0,
+          "reference_count": 10,
+          "cot_change_pp": -10.309,
+          "cot_start": "2026-08-11",
+          "cot_end": "2026-11-17",
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -24.37276258260478,
+          "excess_sgov_pp": -25.33011102309525,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 10,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": 790.471,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 1,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": -33.24105492334321,
+          "excess_sgov_pp": -36.98854207355433,
+          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -544734320,
+        "start_aum_usd": 44985535032,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    },
+    {
+      "symbol": "ETHA",
+      "asset": "Ether",
+      "cash_source": "https://etfdb.com/etf/ETHA/",
+      "cot_code": "146021",
+      "cot_asof": "2026-11-17",
+      "cot_change_pp": -1.326,
+      "error": "HTTP Error 403: Forbidden",
+      "status": "VERİ EKSİK",
+      "flow_asof": "2026-11-19",
+      "net_usd_m": {
+        "1G": -17.423,
+        "1H": -107.037,
+        "1A": -1326.381,
+        "3A": -7159.366,
+        "1Y": -8526.556
+      },
+      "weekly_percentile": 42,
+      "horizons": {
+        "1H": {
+          "net_usd_m": -107.037,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 0.7725
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": -13.0
+            }
+          },
+          "total_return_pct": -6.937268361549576,
+          "excess_sgov_pp": -7.006865067750456,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 9,
+          "rank_count": 12
+        },
+        "1A": {
+          "net_usd_m": -1326.381,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 2.0491
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 13.0
+            }
+          },
+          "total_return_pct": -30.048075905701367,
+          "excess_sgov_pp": -30.376763427772794,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 12,
+          "rank_count": 12
+        },
+        "3A": {
+          "net_usd_m": -7159.366,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 4.5182
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 39.0
+            }
+          },
+          "total_return_pct": -32.422289852802976,
+          "excess_sgov_pp": -33.379638293293446,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 11,
+          "rank_count": 12
+        },
+        "1Y": {
+          "net_usd_m": -8526.556,
+          "confirmation": "TEYİTSİZ · kaynak okunamadı",
+          "action": "BEKLE · kaynak kullanılamıyor",
+          "strength": "Güç ölçülemedi",
+          "macro_context": {
+            "dollar": {
+              "asof": "2026-11-20",
+              "change": 1.5687
+            },
+            "real_yield": {
+              "asof": "2026-11-23",
+              "change": 97.0
+            }
+          },
+          "total_return_pct": -43.83073097530852,
+          "excess_sgov_pp": -47.57821812551963,
+          "price_confirmation": "YÖN UYUMLU",
+          "models": {
+            "price_only": "AZALTMA ADAYI",
+            "price_flow": "BEKLE"
+          },
+          "relative_rank": 12,
+          "rank_count": 12
+        }
+      },
+      "secondary_flow": {
+        "status": "OBSERVED",
+        "flow_usd": -60839323,
+        "start_aum_usd": 4314278865,
+        "start_aum_date": "2026-11-20",
+        "source_date": "2026-11-23"
+      },
+      "price_asof": "2026-11-24"
+    }
+  ]
+}

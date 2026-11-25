@@ -537,5 +537,16 @@
     "references": 0,
     "confirmation": null,
     "telegram_message_id": 6
+  },
+  "QQQ/1A/PWD_DAILY_ROUNDED": {
+    "asof": "2026-11-23",
+    "start": "2026-10-23",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
+    "net_usd_m": 12517.0,
+    "percentile": null,
+    "references": 0,
+    "confirmation": null,
+    "telegram_message_id": 8
   }
 }
