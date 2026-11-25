@@ -298,5 +298,15 @@
     "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
     "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
     "first_seen_at": "2026-11-24T14:04:38.553930+00:00"
+  },
+  "2026-11-23": {
+    "symbol": "QQQ",
+    "source_date": "2026-11-23",
+    "prior_nav_date": "2026-11-20",
+    "flow_usd": -1218213914,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-25T23:21:20.303134+00:00"
   }
 }
