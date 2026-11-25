@@ -86,3 +86,28 @@ class DashboardOutageTests(unittest.TestCase):
         self.assertEqual(row['Günlük net USD'],0)
         self.assertIn('ESKİ',row['Durum'])
         self.assertEqual(row['Karar'],'BEKLE · alternatif veri eski')
+
+
+class ObservedProjectionTests(unittest.TestCase):
+    def test_year_keyed_expectations_and_archived_values(self):
+        from dashboard_data import expectation_rows
+        rows=expectation_rows({"Fed SEP":{"2026":4.1,"2027":4.0},
+            "IMF":{"error":"403","archive":"WEO","archived_forecast":{"2026":4.7}},
+            "Future":{"period":"2026-11-25","value":0}})
+        self.assertEqual([(r["Dönem"],r["Değer"]) for r in rows[:2]],[("2026",4.1),("2027",4.0)])
+        self.assertIn("Arşiv",rows[2]["Durum"])
+        self.assertEqual(rows[2]["Hata"],"403")
+        self.assertEqual(rows[3]["Değer"],0)
+
+    def test_overview_never_mixes_failed_primary_with_alternative(self):
+        from dashboard_data import overview_rows
+        asset={"asset":"S&P","symbol":"SPY","error":"403","horizons":{"1H":{"net_usd_m":999}}}
+        obs={"provider":"ETFIQ_HISTORY","flow_asof":"2026-11-23","daily_flow_usd":100,
+             "status":"OBSERVED","horizons":{"1H":{"net_usd_m":2,"flow_aum_pct":0}}}
+        continuity={"assets":{"SPY":{"selected":obs,"status":"ALTERNATIVE_OBSERVED"}}}
+        row=overview_rows([asset],continuity,"1H")[0]
+        self.assertEqual(row["Vade net milyon USD"],2)
+        self.assertEqual(row["Akış / başlangıç fon büyüklüğü %"],0)
+        self.assertIn("üretim onayı yok",row["Karar"])
+        self.assertIsNone(overview_rows([asset],{},"1H")[0]["Vade net milyon USD"])
+        self.assertIsNone(overview_rows([asset],continuity,"1Y")[0]["Vade net milyon USD"])

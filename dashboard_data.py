@@ -161,3 +161,57 @@ def rotation_rows(assets, key, expired=False):
                      "Etkin yöntem":"Devre dışı · kaynak kullanılamıyor" if any(asset.get(k) for k in ("error","stale","cached_source")) else h.get("selected_method") or "Varsayılan · doğrulama sürüyor","Yöntem örnek sayısı":h.get("method_samples"),
                      "Karar":"BEKLE · rapor eski" if expired else h.get("action","BEKLE"),"Akış tarihi":asset.get("flow_asof"),"Vadeli tarih":h.get("cot_end") or asset.get("cot_asof"),"CFTC pozisyon farkı (puan)":h.get("cot_change_pp"),"Birincil kaynak hatası":asset.get("error"),"Fiyat tarihi":asset.get("price_asof"),"Eksik veri açıklaması":missing_reason(asset,h)})
     return rows
+
+
+def expectation_rows(expectations):
+    """Project year-keyed forecasts without inventing a scalar or a date."""
+    rows = []
+    for name, item in expectations.items():
+        status = "Kaynak hatası" if item.get("error") else "Eski" if item.get("stale") else "Gözlem"
+        years = {k: v for k, v in item.items() if re.fullmatch(r"\d{4}", k)}
+        archive = item.get("archived_forecast") or {}
+        if years or archive:
+            for year, value in sorted(years.items()):
+                rows.append({"Gösterge": name, "Dönem": year, "Değer": value,
+                             "Durum": status, "Hata": item.get("error"), "Kaynak": item.get("source")})
+            for year, value in sorted(archive.items()):
+                rows.append({"Gösterge": name, "Dönem": year, "Değer": value,
+                             "Durum": "Arşiv · güncel kaynak doğrulanmadı", "Hata": item.get("error"),
+                             "Kaynak": item.get("source"), "Arşiv": item.get("archive")})
+        else:
+            rows.append({"Gösterge": name, "Dönem": item.get("period"), "Değer": item.get("value"),
+                         "Durum": status, "Hata": item.get("error"), "Kaynak": item.get("source")})
+    return rows
+
+
+def overview_rows(assets, continuity, key, expired=False):
+    """Read-only observed data view: a complete row always comes from one source."""
+    primary = rotation_rows(assets, key, expired)
+    alternative = continuity_rows(assets, continuity, key, expired)
+    rows = []
+    for asset, p, a in zip(assets, primary, alternative, strict=True):
+        broken = any(asset.get(k) for k in ("error", "cached_source", "stale"))
+        record = continuity.get("assets", {}).get(asset["symbol"], {})
+        selected = record.get("selected") or record.get("stale_reference")
+        if broken and selected:
+            rows.append({"Fon": a["Fon"], "Varlık": asset["asset"], "Akış kaynağı": a["Kaynak"],
+                         "Akış tarihi": a["Akış tarihi"], "Günlük net USD": a["Günlük net USD"],
+                         "Vade net milyon USD": a["Vade net milyon USD"],
+                         "Akış / başlangıç fon büyüklüğü %": a["Akış / başlangıç fon büyüklüğü %"],
+                         "Akış gücü": a["Akış gücü"], "Yüzdelik": a["Yüzdelik"],
+                         "Geçmiş dönem": a["Geçmiş dönem"], "Veri durumu": a["Durum"],
+                         "Karar": "BEKLE · araştırma gözlemi; üretim onayı yok",
+                         "Eksik veri açıklaması": a["Eksik veri açıklaması"]})
+        else:
+            rows.append({"Fon": p["Fon"], "Varlık": p["Varlık"],
+                         "Akış kaynağı": "ETFdb / birincil" if not broken else "Birincil · kullanılamıyor",
+                         "Akış tarihi": p["Akış tarihi"], "Günlük net USD": None,
+                         "Vade net milyon USD": p["Net milyon USD"] if not broken else None,
+                         "Akış / başlangıç fon büyüklüğü %": p["Akış / başlangıç fon büyüklüğü %"] if not broken else None,
+                         "Akış gücü": p["Akış"] if not broken else "Veri eksik",
+                         "Yüzdelik": p["Yüzdelik"] if not broken else None,
+                         "Geçmiş dönem": p["Geçmiş dönem"] if not broken else None,
+                         "Veri durumu": "Birincil gözlem" if not broken else "UNAVAILABLE",
+                         "Karar": p["Karar"] if not broken else "BEKLE · veri yok",
+                         "Eksik veri açıklaması": p["Eksik veri açıklaması"]})
+    return rows
