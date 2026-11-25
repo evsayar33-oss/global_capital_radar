@@ -26,6 +26,8 @@ on:
   pull_request:
     paths:
       - '**.py'
+      - 'requirements.txt'
+      - 'requirements-research.txt'
       - '.github/workflows/radar.yml'
   schedule:
     - cron: '27 23 * * *'
@@ -48,7 +50,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python3 -m pip install -r requirements.txt
+      - run: python3 -m pip install -r requirements.txt -r requirements-research.txt
       - run: python3 -m unittest -v
   research:
     if: github.event_name != 'pull_request'
@@ -65,7 +67,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python3 -m pip install exchange-calendars==4.13.1 pandas==2.2.3
+      - run: python3 -m pip install -r requirements-research.txt
       - run: python3 -m unittest -v
       - id: collect
         if: github.event_name != 'schedule' || github.event.schedule == '27 23 * * *'
