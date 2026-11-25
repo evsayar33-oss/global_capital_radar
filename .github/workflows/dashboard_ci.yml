@@ -1,0 +1,29 @@
+name: Dashboard regression tests
+on:
+  push:
+    branches: ['fix/dashboard-source-health']
+  pull_request:
+    paths:
+      - 'dashboard_data.py'
+      - 'streamlit_app.py'
+      - 'flow_continuity.py'
+      - 'public_flow_source.py'
+      - 'test_public_flow_source.py'
+      - 'test_dashboard_data.py'
+      - 'test_flow_continuity.py'
+      - '.github/workflows/dashboard_ci.yml'
+permissions:
+  contents: read
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest -v

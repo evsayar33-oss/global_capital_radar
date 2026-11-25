@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'flow_continuity.py'
+      - 'public_flow_source.py'
+      - 'test_public_flow_source.py'
       - 'test_flow_continuity.py'
       - 'rotation.py'
       - 'native_research.py'
@@ -24,3 +26,4 @@ jobs:
           python-version: '3.11'
       - run: python -m unittest -v test_flow_continuity test_notifications_experiments
       - run: python flow_continuity.py
+

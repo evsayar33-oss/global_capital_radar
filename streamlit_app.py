@@ -1,7 +1,14 @@
 from pathlib import Path
 from datetime import date
 import streamlit as st
-from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows
+from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows, rotation_rows, continuity_rows, display_frame
+
+def table(rows, empty="Henüz kayıt yok."):
+    if rows:
+        st.dataframe(display_frame(rows), hide_index=True, width="stretch")
+    else:
+        st.info(empty)
+
 
 st.set_page_config(page_title="Küresel Sermaye Radarı", layout="wide")
 st.title("Küresel Sermaye Radarı")
@@ -9,7 +16,7 @@ ROOT = Path(__file__).parent / "history"
 data, primary_error = read_report(ROOT, "rotation/latest.json")
 if primary_error:
     st.error(primary_error)
-st.caption("Ana gözlem · " + data.get("seen_at", "Kayıt yok") + " · Akışlar seçili ABD fonlarında milyon USD.")
+st.caption("Ana gözlem · " + str(data.get("seen_at") or "Kayıt yok") + " · Akışlar seçili ABD fonlarında milyon USD.")
 assets = data.get("assets", [])
 continuity = data.get("continuity", {})
 cols = st.columns(3)
@@ -21,21 +28,14 @@ if any(a.get("error") for a in assets):
 key = st.radio("Yatırım vadesi", ["1H","1A","3A","1Y"], horizontal=True,
                format_func={"1H":"1 hafta","1A":"1 ay","3A":"3 ay","1Y":"1 yıl"}.get)
 try:
-    expired = (date.today()-date.fromisoformat(data.get("seen_at", "")[:10])).days > 7
+    expired = (date.today()-date.fromisoformat((data.get("seen_at") or "")[:10])).days > 7
 except ValueError:
     expired = True
 if expired:
     st.warning("Rapor güncellenmemiş. Kararlar son gözlem tarihine aittir.")
-rows = []
-for asset in assets:
-    h = asset.get("horizons",{}).get(key,{})
-    rows.append({"Varlık":asset["asset"],"Fon":asset["symbol"],"Net milyon USD":h.get("net_usd_m"),
-                 "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),"Toplam getiri %":h.get("total_return_pct"),"SGOV farkı (puan)":h.get("excess_sgov_pp"),"Göreli sıra":h.get("relative_rank"),"Fiyat gözlemi · kararı etkilemez":h.get("price_confirmation","TEYİTSİZ"),
-                 "Akış":h.get("strength","Veri eksik"),"Geçmiş dönem":h.get("reference_count"),
-                 "Yüzdelik":h.get("magnitude_percentile"),"Vadeli teyit":h.get("confirmation","TEYİTSİZ"),
-                 "Etkin yöntem":h.get("selected_method") or "Varsayılan · flow_position","Yöntem örnek sayısı":h.get("method_samples"),
-                 "Karar":"BEKLE · rapor eski" if expired else h.get("action","BEKLE"),"Akış tarihi":asset.get("flow_asof"),"Vadeli tarih":h.get("cot_end") or asset.get("cot_asof"),"CFTC pozisyon farkı (puan)":asset.get("cot_change_pp"),"Birincil kaynak hatası":asset.get("error"),"Fiyat tarihi":asset.get("price_asof")})
-st.dataframe(rows,hide_index=True,width="stretch")
+rows = rotation_rows(assets, key, expired)
+table(rows)
+st.caption("— veri yok veya hesaplanamıyor demektir; sıfır değildir. Eksik veri açıklaması ve kaynak tarihini kontrol edin.")
 st.caption("Yatay, ölçülen para hareketinin küçük olduğunu gösterir. Fiyat oynaklığı veya gelecek getiri tahmini vermez.")
 
 continuity = data.get("continuity",{})
@@ -43,17 +43,8 @@ if continuity:
     st.subheader("Alternatif veri kaynakları · araştırma")
     st.caption("Birincil kaynak ayrı kalır. Alternatif veri üretim kararı veya onaylanmış strateji değildir.")
     st.write("Durum: "+continuity.get("status","UNAVAILABLE"))
-    alternative=[]
-    for asset in assets:
-        r=continuity.get("assets",{}).get(asset["symbol"],{})
-        c=r.get("selected") or {};h=c.get("horizons",{}).get(key,{})
-        alternative.append({"Fon":asset["symbol"],"Kaynak":c.get("provider"),
-                            "Durum":r.get("status","UNAVAILABLE"),"Akış tarihi":c.get("flow_asof"),
-                            "Günlük net USD":c.get("daily_flow_usd"),"Ardışık gün":c.get("daily_count"),
-                            "Vade net milyon USD":h.get("net_usd_m"),"Geçmiş dönem":h.get("reference_count"),
-                            "Akış gücü":h.get("strength"),"Yüzdelik":h.get("magnitude_percentile"),
-                            "Karar":"BEKLE · rapor eski" if expired else c.get("action","BEKLE · veri yok")})
-    st.dataframe(alternative,hide_index=True,width="stretch")
+    table(continuity_rows(assets, continuity, key, expired))
+
 
 
 st.header("Bağımsız araştırma ve veri sağlığı")
@@ -65,11 +56,6 @@ def report(relative):
         st.warning(error)
     return obj
 
-def table(rows, empty="Henüz kayıt yok."):
-    if rows:
-        st.dataframe(rows, hide_index=True, width="stretch")
-    else:
-        st.info(empty)
 
 native, methods, history, macro, validation = st.tabs([
     "Vadeli / native kaynaklar", "Yöntem ve ileri test", "Tarihsel kapsam", "Makro", "Veri sağlığı"
@@ -136,3 +122,4 @@ with validation:
     for symbol, result in continuity.get("assets", {}).items():
         with st.expander(symbol + " · " + str(result.get("status", "—"))):
             st.json(result, expanded=False)
+
