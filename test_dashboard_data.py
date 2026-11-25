@@ -62,3 +62,27 @@ class DashboardDataTests(unittest.TestCase):
         self.assertEqual(len(app.tabs), 5)
         self.assertTrue(any("Vadeli / native" in tab.label for tab in app.tabs))
         self.assertGreaterEqual(len(app.dataframe), 6)
+
+
+class DashboardOutageTests(unittest.TestCase):
+    def test_selected_horizon_and_disabled_method(self):
+        from dashboard_data import rotation_rows
+        asset=dict(asset='S&P 500',symbol='SPY',error='403',cot_change_pp=2.39,
+                   horizons={'1A':dict(cot_change_pp=9.5,action='BEKLE')})
+        row=rotation_rows([asset],'1A')[0]
+        self.assertEqual(row['CFTC pozisyon farkı (puan)'],9.5)
+        self.assertIn('Devre dışı',row['Etkin yöntem'])
+        self.assertIn('Dönem başı',row['Eksik veri açıklaması'])
+        self.assertIsNone(rotation_rows([asset],'1Y')[0]['CFTC pozisyon farkı (puan)'])
+
+    def test_missing_and_stale_alternative_are_explained(self):
+        from dashboard_data import continuity_rows
+        assets=[{'symbol':'SPY'}]
+        report={'assets':{'SPY':{'errors':{'ETFIQ_HISTORY':'stale'},'selected':None}}}
+        row=continuity_rows(assets,report,'1H')[0]
+        self.assertIn('stale',row['Kaynak hataları'])
+        report['assets']['SPY']['stale_reference']={'stale':True,'lag_sessions':2,'daily_flow_usd':0}
+        row=continuity_rows(assets,report,'1H')[0]
+        self.assertEqual(row['Günlük net USD'],0)
+        self.assertIn('ESKİ',row['Durum'])
+        self.assertEqual(row['Karar'],'BEKLE · alternatif veri eski')

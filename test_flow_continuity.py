@@ -60,3 +60,44 @@ class ContinuityTests(unittest.TestCase):
         self.assertEqual(etfiq_daily("SPY",self.today,self.calendar,daily)["daily_flow_usd"],0)
         daily["funds"]["SPY"]["start_aum_date"]="2026-11-19"
         with self.assertRaises(ValueError):etfiq_daily("SPY",self.today,self.calendar,daily)
+
+
+class StaleReferenceTests(unittest.TestCase):
+    def test_stale_reference_is_never_selected(self):
+        calendar=[date(2026,11,d) for d in (13,16,17,18,19,20,23,24)]
+        raw={d:0 for d in calendar[:-2]}
+        r=observed('SPY','ETFIQ_HISTORY',raw,date(2026,11,25),calendar,{},retain_stale=True)
+        self.assertEqual(r['status'],'STALE_REFERENCE')
+        self.assertEqual(r['lag_sessions'],2)
+        self.assertEqual(r['daily_flow_usd'],0)
+        self.assertIsNone(choose([r]))
+        self.assertTrue(r['action'].startswith('BEKLE'))
+        with self.assertRaises(ValueError):
+            observed('SPY','ETFIQ_HISTORY',raw,date(2026,11,25),calendar,{})
+        for bad in (date(2026,11,26),date(2026,11,22)):
+            with self.assertRaises(ValueError):
+                observed('SPY','ETFIQ_HISTORY',{**raw,bad:20},date(2026,11,25),calendar,{},retain_stale=True)
+
+    def test_collect_reports_reference_without_counting_it_fresh(self):
+        import flow_continuity
+        stale=dict(status='STALE_REFERENCE',stale=True,flow_asof='2026-11-20',daily_count=10,
+                   provider='ETFIQ_HISTORY',symbol='SPY')
+        with patch.object(flow_continuity,'etfiq_history',return_value=stale):
+            r=collect(Path('.'),[dict(symbol='SPY',error='403')],date(2026,11,25),
+                      [date(2026,11,24)],lambda url:'{}',datetime(2026,11,25,tzinfo=timezone.utc))
+        self.assertEqual(r['alternative_count'],0)
+        self.assertEqual(r['unavailable_count'],1)
+        self.assertIsNone(r['assets']['SPY']['selected'])
+        self.assertEqual(r['assets']['SPY']['stale_reference'],stale)
+        self.assertFalse(r['assets']['SPY']['production_eligible'])
+
+    def test_history_aum_is_used_only_at_exact_period_start(self):
+        import flow_continuity
+        calendar=[date(2026,11,d) for d in (13,16,17,18,19,20,23,24)]
+        raw={d:1000000 for d in calendar}
+        with patch('native_research.parse_history',return_value=(raw,{date(2026,11,17):100000000},{})):
+            r=flow_continuity.etfiq_history('SPY',date(2026,11,25),calendar,lambda url:'{}')
+        self.assertEqual(r['horizons']['1H']['flow_aum_pct'],5)
+        with patch('native_research.parse_history',return_value=(raw,{date(2026,11,16):100000000},{})):
+            r=flow_continuity.etfiq_history('SPY',date(2026,11,25),calendar,lambda url:'{}')
+        self.assertNotIn('flow_aum_pct',r['horizons']['1H'])

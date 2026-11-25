@@ -4,6 +4,60 @@ import re
 from pathlib import Path
 
 
+def display_frame(rows):
+    """Keep numeric types and CSV nulls; render missing cells explicitly."""
+    import pandas as pd
+    return pd.DataFrame(rows).style.format(na_rep="—", precision=3)
+
+
+def missing_reason(asset, horizon):
+    reasons = []
+    if any(asset.get(k) for k in ("error", "cached_source", "stale")):
+        reasons.append("Akış güncel değil; varsa tutar önceki gözlemdir")
+    if horizon.get("net_usd_m") is None:
+        reasons.append("Seçili vade için kesintisiz akış yok")
+    if horizon.get("flow_aum_pct") is None:
+        reasons.append("Dönem başı fon büyüklüğü doğrulanmadı")
+    if horizon.get("magnitude_percentile") is None:
+        reasons.append("Güç hesabı için yeterli geçmiş dönem yok")
+    if horizon.get("method_samples") is None:
+        reasons.append("Doğrulanmış yöntem örnek sayısı yok")
+    if asset.get("cot_code") is None and asset.get("symbol") == "SGOV":
+        reasons.append("TBF3 pozisyon serisi yok")
+    return "; ".join(reasons) or "—"
+
+
+def continuity_rows(assets, continuity, key, expired=False):
+    rows = []
+    for asset in assets:
+        r = continuity.get("assets", {}).get(asset["symbol"], {})
+        c = r.get("selected") or r.get("stale_reference") or {}
+        h = c.get("horizons", {}).get(key, {})
+        reasons = []
+        if c.get("stale"):
+            reasons.append(f"Eski gözlem; {c.get('lag_sessions')} seans geride; sinyalde kullanılmaz")
+        if h.get("net_usd_m") is None:
+            reasons.append("Seçili vade için kesintisiz akış yok")
+        if h.get("magnitude_percentile") is None:
+            reasons.append("Yüzdelik için yeterli geçmiş dönem yok")
+        errors = "; ".join(f"{provider}: {error}" for provider, error in r.get("errors", {}).items())
+        if not c and not errors:
+            errors = continuity.get("reason") or "Doğrulanmış alternatif gözlem yok"
+        rows.append({
+            "Fon": asset["symbol"], "Kaynak": c.get("provider"),
+            "Veri hassasiyeti": (c.get("provenance") or {}).get("precision", "Kaynak doğrulamasına tabi"),
+            "Durum": "ESKİ · yalnız referans" if c.get("stale") else r.get("status", "UNAVAILABLE"),
+            "Akış tarihi": c.get("flow_asof"), "Günlük net USD": c.get("daily_flow_usd"),
+            "Ardışık gün": c.get("daily_count"), "Vade net milyon USD": h.get("net_usd_m"),
+            "Akış / başlangıç fon büyüklüğü %": h.get("flow_aum_pct"),
+            "Geçmiş dönem": h.get("reference_count"), "Akış gücü": h.get("strength"),
+            "Yüzdelik": h.get("magnitude_percentile"),
+            "Karar": "BEKLE · rapor eski" if expired else "BEKLE · alternatif veri eski" if c.get("stale") else c.get("action", "BEKLE · veri yok"),
+            "Eksik veri açıklaması": "; ".join(reasons), "Kaynak hataları": errors,
+        })
+    return rows
+
+
 def read_report(root, relative):
     try:
         data = json.loads((Path(root) / relative).read_text(encoding="utf-8"))
@@ -93,3 +147,17 @@ def macro_rows(report):
         "Son doğrulanmış değer (eski)": (row.get("last_verified") or {}).get("value"),
         "Önceki kayıt UTC": (row.get("last_verified") or {}).get("observed_at"),
     } for row in report.get("indicators", [])]
+
+
+
+def rotation_rows(assets, key, expired=False):
+    rows = []
+    for asset in assets:
+        h = asset.get("horizons",{}).get(key,{})
+        rows.append({"Varlık":asset["asset"],"Fon":asset["symbol"],"Net milyon USD":h.get("net_usd_m"),
+                     "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),"Toplam getiri %":h.get("total_return_pct"),"SGOV farkı (puan)":h.get("excess_sgov_pp"),"Göreli sıra":h.get("relative_rank"),"Fiyat gözlemi · kararı etkilemez":h.get("price_confirmation","TEYİTSİZ"),
+                     "Akış":h.get("strength","Veri eksik"),"Geçmiş dönem":h.get("reference_count"),
+                     "Yüzdelik":h.get("magnitude_percentile"),"Vadeli teyit":h.get("confirmation","TEYİTSİZ"),
+                     "Etkin yöntem":"Devre dışı · kaynak kullanılamıyor" if any(asset.get(k) for k in ("error","stale","cached_source")) else h.get("selected_method") or "Varsayılan · doğrulama sürüyor","Yöntem örnek sayısı":h.get("method_samples"),
+                     "Karar":"BEKLE · rapor eski" if expired else h.get("action","BEKLE"),"Akış tarihi":asset.get("flow_asof"),"Vadeli tarih":h.get("cot_end") or asset.get("cot_asof"),"CFTC pozisyon farkı (puan)":h.get("cot_change_pp"),"Birincil kaynak hatası":asset.get("error"),"Fiyat tarihi":asset.get("price_asof"),"Eksik veri açıklaması":missing_reason(asset,h)})
+    return rows
