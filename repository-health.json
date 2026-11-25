@@ -1,11 +1,11 @@
 {
   "repository": "evsayar33-oss/global_capital_radar",
-  "observed_at": "2026-11-25T17:28:27.440185+00:00",
+  "observed_at": "2026-11-25T19:07:42.362535+00:00",
   "metrics": {
-    "repository_bytes": 668672,
+    "repository_bytes": 671744,
     "cache_bytes": 0,
-    "artifact_bytes": 181146,
-    "artifact_count": 9,
+    "artifact_bytes": 209456,
+    "artifact_count": 11,
     "release_count": 1,
     "release_asset_bytes": 110354
   },
@@ -19,7 +19,7 @@
     }
   ],
   "billing_quota": "unknown: account billing permission required",
-  "archive_candidates": 1,
+  "archive_candidates": 0,
   "archive_pending": 0,
   "workflow_states": {
     ".github/workflows/dashboard_ci.yml": "active",
