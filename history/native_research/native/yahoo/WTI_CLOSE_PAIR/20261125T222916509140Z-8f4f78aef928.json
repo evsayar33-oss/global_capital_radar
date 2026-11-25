@@ -1,0 +1,26 @@
+{
+  "status": "OBSERVED_DELAYED_CLOSE_PAIR",
+  "source": "Yahoo Finance NYMEX contract charts",
+  "source_date": "2026-11-24",
+  "front_contract": {
+    "contract": "CLF27.NYM",
+    "delivery_month": "2027-01",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLF27.NYM?range=10d&interval=1d",
+    "source_sha256": "d68d22f1ea95c55bf2b5d442cfe23e9bd3f9fa315420bc5a79e3e07429f54ee4"
+  },
+  "next_contract": {
+    "contract": "CLG27.NYM",
+    "delivery_month": "2027-02",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLG27.NYM?range=10d&interval=1d",
+    "source_sha256": "88a0235204f11fe47c3a552bf1af00832f42d41af85ecc96db80549c248b0a23"
+  },
+  "front_close_usd_per_barrel": 82.05000305175781,
+  "next_close_usd_per_barrel": 81.06999969482422,
+  "front_minus_next_usd_per_barrel": 0.9800033569335938,
+  "official_settlement_verified": false,
+  "roll_calendar_verified": false,
+  "role": "PRICE_DERIVED_CONTEXT_ONLY",
+  "production_proxy_allowed": false,
+  "first_seen_at": "2026-11-25T22:29:16.509140+00:00",
+  "source_digest": "62c7ffaa554d24df190ed2e6d487bbf841e647b2eee7c6f8eff539e4a174fdc5"
+}

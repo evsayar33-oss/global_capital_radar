@@ -510,12 +510,12 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.03237266612267087,
-    "quoted_spread_bps": 0.016692414716123757,
+    "basis_pct": -0.0372775412798898,
+    "quoted_spread_bps": 0.01664789616349979,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-25T19:07:52.426000+00:00",
+    "basis_asof": "2026-11-25T22:29:20.980000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-25T19:07:52.969000+00:00",
+    "quote_asof": "2026-11-25T22:29:21.269000+00:00",
     "spread_status": "OBSERVED"
   },
   "ETH": {
@@ -1029,25 +1029,25 @@
         "interval_hours": 8.0
       }
     ],
-    "basis_pct": -0.03797498397929422,
-    "quoted_spread_bps": 0.05935299302300169,
+    "basis_pct": -0.04215501169653191,
+    "quoted_spread_bps": 0.05939811886152164,
     "caveat": "settled funding only; quoted spread is not execution cost",
-    "basis_asof": "2026-11-25T19:07:52.454000+00:00",
+    "basis_asof": "2026-11-25T22:29:21.111000+00:00",
     "basis_status": "OBSERVED",
-    "quote_asof": "2026-11-25T19:07:53.469000+00:00",
+    "quote_asof": "2026-11-25T22:29:20.967000+00:00",
     "spread_status": "OBSERVED"
   },
   "SHFE_copper_warrant": {
     "status": "OBSERVED",
     "source": "SHFE",
-    "source_date": "2026-11-24",
+    "source_date": "2026-11-25",
     "units": "metric tonnes",
-    "on_warrant_tonnes": 3952,
-    "change_tonnes": -422,
+    "on_warrant_tonnes": 3180,
+    "change_tonnes": -772,
     "regions": 4,
     "scope": "SHFE copper warrants only; not COMEX inventories",
-    "source_sha256": "49d150b7e43d0790a7b78626e1195c78c73a9223b9e6f0db8f6bd75ba1d0f72c",
-    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261124&query_params=dailystock",
+    "source_sha256": "36b9e245dc4eee978d7a0514a02ba890070cb2eefdcb25651a5f6daf44f6cde8",
+    "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261125&query_params=dailystock",
     "transport": "RENDERED_HTTP_200"
   },
   "TBF3_TFF": {
@@ -1087,10 +1087,10 @@
     "calculated_aum_usd": 1872585629.35,
     "source_url": "https://www.uscfinvestments.com/uso",
     "publication_intraday_verified": false,
-    "source_sha256": "bd72c7575f2c43316a78fb0ce98f215a15be81171c65fe01e83b8ca81e0eb338",
+    "source_sha256": "84cf04c2c4e11fbcbdbabb20222df39a4e6573a8adc13b1b2ba14509cb801fe6",
     "transport": "RENDERED_HTTP_200",
     "net_created_shares": 500000,
-    "creation_source_sha256": "d15218f060d0a0939894b7bb7a6e61b578e320770b923fe02645383f52bd7789",
+    "creation_source_sha256": "ff805634c7ade5772e34d2cc4efb478ca43ff52ce2866b88ed78798e70faf8fb",
     "creation_status": "OBSERVED",
     "creation_source_url": "https://www.uscfinvestments.com/holdings/uso",
     "creation_transport": "RENDERED_HTTP_200",
@@ -1112,7 +1112,7 @@
     "calculated_aum_usd": 471726000.00000006,
     "source_url": "https://www.uscfinvestments.com/cper",
     "publication_intraday_verified": false,
-    "source_sha256": "ef6d9a0b275ec2f71ff29abad41dc187b477a90a5e00e6b01e73129016f73efc",
+    "source_sha256": "aa5ceb903dfde6723f577b64e29ae879768310307591dc7a48013d4e94962acc",
     "transport": "RENDERED_HTTP_200",
     "creation_status": "UNAVAILABLE",
     "creation_error": "creation dated observation missing",
@@ -1135,7 +1135,7 @@
     "flow_eligible": false,
     "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
     "publication_intraday_verified": false,
-    "source_sha256": "effbe79b8f438ba42d96fe660f3366804c3391c2da14f0d6892cede099269e46",
+    "source_sha256": "5e0fd78efda0d09dcd8bd2c5005e15414b29a3f034a7ac7d6d1af467125a98c4",
     "transport": "RENDERED_HTTP_200",
     "adjacent_creation_estimate_usd": null
   },
@@ -2808,13 +2808,13 @@
       "contract": "CLF27.NYM",
       "delivery_month": "2027-01",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLF27.NYM?range=10d&interval=1d",
-      "source_sha256": "910f2a25eaac993f28e3756ae1b04655c683706c32fc0f7001d4253e7f446bf2"
+      "source_sha256": "d68d22f1ea95c55bf2b5d442cfe23e9bd3f9fa315420bc5a79e3e07429f54ee4"
     },
     "next_contract": {
       "contract": "CLG27.NYM",
       "delivery_month": "2027-02",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLG27.NYM?range=10d&interval=1d",
-      "source_sha256": "f457540f5c294d8225f4742604bbf91e107009b77e13552d4f3e20ee5eb68b1c"
+      "source_sha256": "88a0235204f11fe47c3a552bf1af00832f42d41af85ecc96db80549c248b0a23"
     },
     "front_close_usd_per_barrel": 82.05000305175781,
     "next_close_usd_per_barrel": 81.06999969482422,
@@ -2846,7 +2846,7 @@
     "status": "OBSERVED_CURRENT_PUBLICATION",
     "source": "US Treasury daily par real yield curve",
     "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202611?_format=csv&field_tdr_date_value_month=202611&page=&type=daily_treasury_real_yield_curve",
-    "source_sha256": "f2e4b66aeece3549aac136dd501a58affd0e0f29b3edaf7db5803cb39b5e2372",
+    "source_sha256": "b93fb4c585163ca9a0eb52a9fa6234b62e00b87cfc248fd8e8314f211d90fd24",
     "source_date": "2026-11-24",
     "real_yield_10y_pct": 2.79,
     "historical_vintage_verified": false,
@@ -2880,7 +2880,7 @@
     "roll_calendar_verified": false,
     "role": "ISSUER_VALUATION_CONTEXT_ONLY",
     "production_proxy_allowed": false,
-    "source_sha256": "025f5bff66585400ce20edeea73a39b07e9cbacb6ae94b8023d932a9fec9ec26",
+    "source_sha256": "ede59076577e28845ad1a9d7aba4443e3e29454bc74f404605aa1c9ce32ef6e1",
     "transport": "RENDERED_HTTP_200"
   },
   "TBF3": {

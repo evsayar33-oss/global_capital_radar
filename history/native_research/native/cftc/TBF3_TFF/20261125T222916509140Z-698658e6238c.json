@@ -1,0 +1,25 @@
+{
+  "status": "NO_CURRENT_COT_SERIES",
+  "source": "CFTC TFF",
+  "upstream_id": "CFTC",
+  "reports": {
+    "futures_only": {
+      "status": "NO_CURRENT_COT_SERIES",
+      "latest_report_date": null,
+      "count": 0,
+      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+      "upstream_id": "CFTC"
+    },
+    "combined": {
+      "status": "NO_CURRENT_COT_SERIES",
+      "latest_report_date": null,
+      "count": 0,
+      "source_url": "https://publicreporting.cftc.gov/resource/yw9f-hn96.json?cftc_contract_market_code=041741&%24limit=5000&%24order=report_date_as_yyyy_mm_dd+DESC",
+      "upstream_id": "CFTC"
+    }
+  },
+  "proxy_used": false,
+  "caveat": "report availability only; TFF categories are not Legacy net noncommercial positions",
+  "first_seen_at": "2026-11-25T22:29:16.509140+00:00",
+  "source_digest": "5b208362a6b898e1e32236a0db36a6821e091e997ab273a457eb82684f65776c"
+}

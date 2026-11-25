@@ -1,0 +1,23 @@
+{
+  "status": "OBSERVED",
+  "symbol": "QQQ",
+  "source": "Invesco",
+  "upstream_id": "Invesco",
+  "source_date": "2026-11-24",
+  "nav_usd": null,
+  "shares": 695400000.0,
+  "shares_unit": "shares",
+  "shares_precision": "rounded",
+  "reported_aum_usd": 443630000000.0,
+  "calculated_aum_usd": null,
+  "aum_precision": "rounded",
+  "snapshot_only": true,
+  "flow_eligible": false,
+  "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
+  "publication_intraday_verified": false,
+  "source_sha256": "5e0fd78efda0d09dcd8bd2c5005e15414b29a3f034a7ac7d6d1af467125a98c4",
+  "transport": "RENDERED_HTTP_200",
+  "adjacent_creation_estimate_usd": null,
+  "first_seen_at": "2026-11-25T22:29:16.509140+00:00",
+  "source_digest": "a366d97256cfcfe4fc601155b326c2026f7b003ac54b6c3e0372c6e98750f7c7"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "OBSERVED",
+  "source": "SHFE",
+  "source_date": "2026-11-25",
+  "units": "metric tonnes",
+  "on_warrant_tonnes": 3180,
+  "change_tonnes": -772,
+  "regions": 4,
+  "scope": "SHFE copper warrants only; not COMEX inventories",
+  "source_sha256": "36b9e245dc4eee978d7a0514a02ba890070cb2eefdcb25651a5f6daf44f6cde8",
+  "source_url": "https://www.shfe.com.cn/eng/reports/StatisticalData/DailyData/?query_date=20261125&query_params=dailystock",
+  "transport": "RENDERED_HTTP_200",
+  "first_seen_at": "2026-11-25T22:29:16.509140+00:00",
+  "source_digest": "25210e12f61eed8c8b45c119384f5bdc73534971eb0306e51f237f854f09c043"
+}

@@ -1,6 +1,6 @@
 # ETFIQ independent research / native evidence
 
-2026-11-25T19:07:43.240703+00:00
+2026-11-25T22:29:16.509140+00:00
 
 Separate ETFIQ source history; no production override, no mixing with ETFdb. Current vintage replay is exploratory.
 
