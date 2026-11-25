@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-25T18:37:03.488919+00:00",
+  "seen_at": "2026-11-25T19:07:47.406744+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -23,6 +23,11 @@
       "SPY": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü giriş",
+            "magnitude_percentile": 94.2,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "SPY",
           "provider": "ETFIQ_HISTORY",
@@ -92,6 +97,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 94.2,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "SPY",
             "provider": "ETFIQ_HISTORY",
@@ -160,6 +170,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "SPY",
             "provider": "ETFIQ_DAILY",
@@ -190,6 +205,11 @@
       "QQQ": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Zayıf çıkış",
+            "magnitude_percentile": 38.5,
+            "reference_count": 13
+          },
           "status": "OBSERVED",
           "symbol": "QQQ",
           "provider": "ETFIQ_HISTORY",
@@ -253,6 +273,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 38.5,
+              "reference_count": 13
+            },
             "status": "OBSERVED",
             "symbol": "QQQ",
             "provider": "ETFIQ_HISTORY",
@@ -315,6 +340,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "QQQ",
             "provider": "ETFIQ_DAILY",
@@ -345,6 +375,11 @@
       "DIA": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Zayıf çıkış",
+            "magnitude_percentile": 38.5,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "DIA",
           "provider": "ETFIQ_HISTORY",
@@ -414,6 +449,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 38.5,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "DIA",
             "provider": "ETFIQ_HISTORY",
@@ -482,6 +522,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "DIA",
             "provider": "ETFIQ_DAILY",
@@ -512,6 +557,11 @@
       "IWM": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü giriş",
+            "magnitude_percentile": 90.4,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "IWM",
           "provider": "ETFIQ_HISTORY",
@@ -581,6 +631,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 90.4,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "IWM",
             "provider": "ETFIQ_HISTORY",
@@ -649,6 +704,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "IWM",
             "provider": "ETFIQ_DAILY",
@@ -679,6 +739,11 @@
       "SGOV": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü giriş",
+            "magnitude_percentile": 92.3,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "SGOV",
           "provider": "ETFIQ_HISTORY",
@@ -748,6 +813,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Olağanüstü giriş",
+              "magnitude_percentile": 92.3,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "SGOV",
             "provider": "ETFIQ_HISTORY",
@@ -816,6 +886,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "SGOV",
             "provider": "ETFIQ_DAILY",
@@ -846,6 +921,11 @@
       "SHY": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Zayıf çıkış",
+            "magnitude_percentile": 19.2,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "SHY",
           "provider": "ETFIQ_HISTORY",
@@ -915,6 +995,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Zayıf çıkış",
+              "magnitude_percentile": 19.2,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "SHY",
             "provider": "ETFIQ_HISTORY",
@@ -983,6 +1068,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "SHY",
             "provider": "ETFIQ_DAILY",
@@ -1013,6 +1103,11 @@
       "GLD": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Olağan çıkış",
+            "magnitude_percentile": 71.2,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "GLD",
           "provider": "ETFIQ_HISTORY",
@@ -1082,6 +1177,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 71.2,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "GLD",
             "provider": "ETFIQ_HISTORY",
@@ -1150,6 +1250,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "GLD",
             "provider": "ETFIQ_DAILY",
@@ -1180,6 +1285,11 @@
       "SLV": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Güçlü giriş",
+            "magnitude_percentile": 88.5,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "SLV",
           "provider": "ETFIQ_HISTORY",
@@ -1249,6 +1359,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Güçlü giriş",
+              "magnitude_percentile": 88.5,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "SLV",
             "provider": "ETFIQ_HISTORY",
@@ -1317,6 +1432,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "SLV",
             "provider": "ETFIQ_DAILY",
@@ -1347,6 +1467,11 @@
       "CPER": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Geçmiş yetersiz",
+            "magnitude_percentile": null,
+            "reference_count": 0
+          },
           "status": "OBSERVED",
           "symbol": "CPER",
           "provider": "USCF_CREATION",
@@ -1375,6 +1500,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "CPER",
             "provider": "USCF_CREATION",
@@ -1413,6 +1543,11 @@
       "USO": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Geçmiş yetersiz",
+            "magnitude_percentile": null,
+            "reference_count": 0
+          },
           "status": "OBSERVED",
           "symbol": "USO",
           "provider": "USCF_CREATION",
@@ -1441,6 +1576,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "USO",
             "provider": "ETFIQ_DAILY",
@@ -1463,6 +1603,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "USO",
             "provider": "USCF_CREATION",
@@ -1500,6 +1645,11 @@
       "IBIT": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Olağanüstü çıkış",
+            "magnitude_percentile": 98.1,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "IBIT",
           "provider": "ETFIQ_HISTORY",
@@ -1569,6 +1719,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Olağanüstü çıkış",
+              "magnitude_percentile": 98.1,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "IBIT",
             "provider": "ETFIQ_HISTORY",
@@ -1637,6 +1792,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "IBIT",
             "provider": "ETFIQ_DAILY",
@@ -1667,6 +1827,11 @@
       "ETHA": {
         "status": "ALTERNATIVE_OBSERVED",
         "selected": {
+          "daily_observation": {
+            "strength": "Olağan çıkış",
+            "magnitude_percentile": 48.1,
+            "reference_count": 52
+          },
           "status": "OBSERVED",
           "symbol": "ETHA",
           "provider": "ETFIQ_HISTORY",
@@ -1736,6 +1901,11 @@
         },
         "candidates": [
           {
+            "daily_observation": {
+              "strength": "Olağan çıkış",
+              "magnitude_percentile": 48.1,
+              "reference_count": 52
+            },
             "status": "OBSERVED",
             "symbol": "ETHA",
             "provider": "ETFIQ_HISTORY",
@@ -1804,6 +1974,11 @@
             "action": "BEKLE · alternatif kaynak araştırma aşamasında"
           },
           {
+            "daily_observation": {
+              "strength": "Geçmiş yetersiz",
+              "magnitude_percentile": null,
+              "reference_count": 0
+            },
             "status": "OBSERVED",
             "symbol": "ETHA",
             "provider": "ETFIQ_DAILY",
@@ -1832,7 +2007,8 @@
         "production_eligible": false
       }
     },
-    "policy": "NO_MIXING_NO_PRODUCTION_PROMOTION"
+    "policy": "NO_MIXING_NO_PRODUCTION_PROMOTION",
+    "calendar_source": "exchange_calendars XNYS"
   },
   "assets": [
     {
@@ -2204,8 +2380,8 @@
               "change": 39.0
             }
           },
-          "total_return_pct": -6.013415438372149,
-          "excess_sgov_pp": -6.970771604050241,
+          "total_return_pct": -6.0134046497063,
+          "excess_sgov_pp": -6.970760815384391,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -2230,8 +2406,8 @@
               "change": 97.0
             }
           },
-          "total_return_pct": 9.159409195265766,
-          "excess_sgov_pp": 5.4119302031405025,
+          "total_return_pct": 9.159423748461393,
+          "excess_sgov_pp": 5.411944756336129,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
