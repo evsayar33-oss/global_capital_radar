@@ -1,6 +1,7 @@
 from pathlib import Path
 from datetime import date
 import streamlit as st
+from flow_view import HORIZONS
 from dashboard_data import read_report, latest_macro, coverage_rows, method_rows, native_rows, historical_rows, macro_rows, rotation_rows, continuity_rows, display_frame, expectation_rows, overview_rows
 
 def table(rows, empty="Henüz kayıt yok."):
@@ -25,19 +26,19 @@ cols[1].metric("Alternatif gözlem", continuity.get("alternative_count", "—"))
 cols[2].metric("Alternatif veri yok", continuity.get("unavailable_count", "—"))
 if any(a.get("error") for a in assets):
     st.warning("Birincil akış kaynağı kullanılamıyor. Eski akış değerleri yalnız referanstır; alternatif araştırma verisi aşağıda ayrıdır. Üretim kararı değiştirilmedi.")
-key = st.radio("Yatırım vadesi", ["1H","1A","3A","1Y"], horizontal=True,
-               format_func={"1H":"1 hafta","1A":"1 ay","3A":"3 ay","1Y":"1 yıl"}.get)
+key = st.radio("Yatırım vadesi", list(HORIZONS), index=1, horizontal=True,
+               format_func=HORIZONS.get)
 try:
     expired = (date.today()-date.fromisoformat((data.get("seen_at") or "")[:10])).days > 7
 except ValueError:
     expired = True
 if expired:
     st.warning("Rapor güncellenmemiş. Kararlar son gözlem tarihine aittir.")
-st.subheader("Kullanılabilir sermaye akışı · kaynak bazında")
-st.caption("Birincil kaynak geçerli değilse doğrulanmış alternatif gözlem gösterilir. Kaynaklar birleştirilmez; alternatif gözlem üretim sinyali değildir.")
+st.subheader("Kullanılabilir sermaye akışı · " + HORIZONS[key])
+st.caption("Her vade için kullanılabilir kaynak ayrı seçilir. Tarih sınırı ve akış tutarı seçili vadeye aittir; alternatif gözlem üretim sinyali değildir. 1 günlük gözlem araştırma amaçlıdır.")
 table(overview_rows(assets, continuity, key, expired))
 with st.expander("Birincil ETFdb kaydı ve kaynak hataları"):
-    table(rotation_rows(assets, key, expired))
+    table(rotation_rows(assets, key, expired)) if key != "1G" else st.caption("Günlük akış için üstteki gözlemi kullanın; günlük üretim stratejisi yok.")
 st.caption("— veri yok veya hesaplanamıyor demektir; sıfır değildir. Eksik veri açıklaması ve kaynak tarihini kontrol edin.")
 st.caption("Yatay, ölçülen para hareketinin küçük olduğunu gösterir. Fiyat oynaklığı veya gelecek getiri tahmini vermez.")
 
@@ -46,7 +47,7 @@ if continuity:
     st.subheader("Alternatif veri kaynakları · araştırma")
     st.caption("Birincil kaynak ayrı kalır. Alternatif veri üretim kararı veya onaylanmış strateji değildir.")
     st.write("Durum: "+continuity.get("status","UNAVAILABLE"))
-    table(continuity_rows(assets, continuity, key, expired))
+    table(continuity_rows(assets, continuity, key, expired)) if key != "1G" else st.caption("Günlük akış gözlemi üst tabloda gösterilir.")
 
 
 

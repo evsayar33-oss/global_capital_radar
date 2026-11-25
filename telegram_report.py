@@ -1,4 +1,4 @@
-"""Güçlü giriş ve karar değişimlerini kalıcı gönderim kaydıyla bildirir."""
+"""Notify new dated flow observations and material revisions, never trade orders."""
 import hashlib
 import json
 import os
@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+
+from flow_view import observation, HORIZONS, number
 
 ROOT = Path(__file__).resolve().parent
 
@@ -15,29 +17,57 @@ def message(data):
 
 
 def events(data, state):
-    output = []
+    output=[]
+    continuity=data.get("continuity") or {}
     for asset in data["assets"]:
-        if asset.get("error") or asset.get("stale") or asset.get("cached_source"):
-            continue
-        for horizon,h in asset.get("horizons",{}).items():
-            key = asset["symbol"]+"/"+horizon
-            action = h.get("action","BEKLE")
-            # Veri arızası ekonomik karar değişimi sayılmaz.
-            if any(word in action for word in ("veri","önbellek","önceki gözlem")):
+        for horizon,label in HORIZONS.items():
+            o=observation(asset,continuity,horizon)
+            h=o["h"]; value=h.get("net_usd_m")
+            if o["stale"] or not number(value) or not o["asof"]:
                 continue
-            strong = h.get("strength") in ("Güçlü giriş","Olağanüstü giriş")
-            current = {"action":action,"strong":strong,"strength":h.get("strength")}
-            old = state.get(key)
-            reasons = []
-            if strong and (not old or not old.get("strong") or old.get("strength")!=current["strength"]):
-                reasons.append(h["strength"])
-            if old and old["action"] != action:
-                reasons.append(old["action"]+" → "+action)
-            text = f"{asset['asset']} · {horizon}\n"+ " · ".join(reasons)
-            value = h.get("net_usd_m")
-            text += f"\nNet akış {value} milyon USD · {asset.get('flow_asof','—')}\n{h.get('confirmation','TEYİTSİZ')}\nKarar {action}"
+            key=asset["symbol"]+"/"+horizon+"/"+o["source"]
+            current=dict(asof=o["asof"],start=o["period_start"],action=o["action"],
+                         strength=h.get("strength","Geçmiş yetersiz"),net_usd_m=value,
+                         percentile=h.get("magnitude_percentile"),references=h.get("reference_count"),
+                         confirmation=h.get("confirmation") if o["primary"] else None)
+            old=state.get(key)
+            if old and old.get("asof","")>current["asof"]:
+                continue
+            reasons=[]
+            if not old or old.get("asof")!=current["asof"]:
+                reasons.append("Yeni kaynak tarihi")
+            elif any(old.get(k)!=current.get(k) for k in ("action","strength","net_usd_m","percentile","confirmation")):
+                reasons.append("Aynı tarih · veri/karar revizyonu")
+            pct=current["percentile"]
+            text=(f"{asset['symbol']} · {o['source']} · {o['asof']}\\n"
+                  f"{o['direction']} {abs(value):,.3f} milyon USD · {current['strength']} · "
+                  f"yüzdelik {pct if pct is not None else 'ölçülemedi'} · n={current['references'] if current['references'] is not None else '—'}\\n"
+                  f"{current['action']}")
+            if o.get("precision"):
+                text+=f" · {o['precision']}"
+            if current["confirmation"]:
+                text+=" · "+current["confirmation"]
+            if reasons:
+                text+="\\n"+" / ".join(reasons)
             output.append((key,text if reasons else None,current))
     return output
+
+
+def batches(changes):
+    # One bounded message per horizon where possible; per-source receipt keys
+    # are committed only after Telegram acknowledges that message.
+    for horizon,label in HORIZONS.items():
+        title=f"Sermaye radarı · {label} · yeni akış gözlemleri\\nAraştırma; işlem emri değildir."
+        body=title; pending=[]
+        for key,text,current in changes:
+            if not text or key.split("/")[1]!=horizon:
+                continue
+            if pending and len(body)+len(text)+2>3800:
+                yield body,pending
+                body=title;pending=[]
+            body+="\\n\\n"+text;pending.append((key,current))
+        if pending:
+            yield body,pending
 
 
 def save(path, state):
@@ -60,18 +90,21 @@ def main():
     folder.mkdir(parents=True,exist_ok=True)
     path = folder/(hashlib.sha256(chat.encode()).hexdigest()[:16]+".json")
     state = json.loads(path.read_text()) if path.exists() else {}
-    for key,text,current in events(data,state):
-        if text:
-            request = Request("https://api.telegram.org/bot"+token+"/sendMessage",
-                              data=urlencode({"chat_id":chat,"text":"Sermaye radarı · araştırma\n"+text}).encode())
-            try:
-                with urlopen(request,timeout=20) as response:
-                    if not json.load(response).get("ok"):
-                        raise ValueError()
-            except Exception:
-                raise SystemExit("Telegram teslimatı doğrulanamadı.") from None
-        state[key] = current
+    changes=events(data,state)
+    for text,pending in batches(changes):
+        request = Request("https://api.telegram.org/bot"+token+"/sendMessage",
+                          data=urlencode({"chat_id":chat,"text":text}).encode())
+        try:
+            with urlopen(request,timeout=20) as response:
+                receipt=json.load(response)
+                if not receipt.get("ok") or not receipt.get("result",{}).get("message_id"):
+                    raise ValueError()
+        except Exception:
+            raise SystemExit("Telegram teslimatı doğrulanamadı.") from None
+        for key,current in pending:
+            state[key]={**current,"telegram_message_id":receipt["result"]["message_id"]}
         save(path,state)
+    print(f"FLOW_NOTIFICATION_SENT {sum(bool(text) for _,text,_ in changes)}",flush=True)
 
 
 if __name__=="__main__":

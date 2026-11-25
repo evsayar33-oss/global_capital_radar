@@ -7,7 +7,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date,datetime,timedelta,timezone
 from zoneinfo import ZoneInfo
-from horizons import analyze
+from horizons import analyze, describe
 from secondary_sources import number,parse_etfiq,ETFIQ_URL
 
 WAIT="BEKLE · alternatif kaynak araştırma aşamasında"
@@ -41,7 +41,10 @@ def observed(symbol,provider,raw,today,calendar,meta,aum=None,*,retain_stale=Fal
     # No normalized flow feature when the source lacks an exact beginning AUM.
     for v in h.values():
         v["action"]=WAIT
-    return dict(status="STALE_REFERENCE" if stale else "OBSERVED",symbol=symbol,provider=provider,
+    daily_past=[raw[d] for d in days[-53:-1]]
+    daily_strength,daily_rank=describe(raw[end],daily_past)
+    return dict(daily_observation=dict(strength=daily_strength,magnitude_percentile=daily_rank,reference_count=len(daily_past)),
+                status="STALE_REFERENCE" if stale else "OBSERVED",symbol=symbol,provider=provider,
                 stale=stale,lag_sessions=sum(d>end for d in calendar),
                 flow_asof=str(end),daily_flow_usd=raw[end],daily_count=len(raw),
                 coverage_start=str(days[0]),coverage_end=str(end),
@@ -155,15 +158,32 @@ def collect(root,assets,today,calendar,reader,now):
                 alternative_count=count,unavailable_count=unavailable,stale_reference_count=stale_count,assets=result,
                 policy="NO_MIXING_NO_PRODUCTION_PROMOTION")
 
+def session_calendar(today,now):
+    # A trading calendar is not a price feed. Include only closed NYSE
+    # sessions, including early closes, and never infer missing flow values.
+    import exchange_calendars as xcals
+    import pandas as pd
+    if now.tzinfo is None or now.astimezone(NY).date()!=today:
+        raise ValueError("invalid session clock")
+    cal=xcals.get_calendar("XNYS",start=str(today-timedelta(days=850)),end=str(today+timedelta(days=7)))
+    # Range endpoints can be holidays/weekends, or outside the first/last
+    # actual session of a bounded calendar. Filter actual session labels.
+    first=today-timedelta(days=850)
+    schedule=cal.schedule
+    closes=pd.to_datetime(schedule["close"],utc=True)
+    return [label.date() for label,close in zip(schedule.index,closes,strict=True)
+            if first<=label.date()<=today and close<=pd.Timestamp(now)]
+
+
 def live(root,assets,today,reader,now):
-    from evaluate_rotation import prices
     try:
-        # Calendar only: no return/price confirmation enters flow signals.
-        bars=prices("SGOV",today-timedelta(days=850),today)
-        calendar=sorted(d for d,v in bars.items() if v)
-        return collect(root,assets,today,calendar,reader,now)
+        calendar=session_calendar(today,now)
+        report=collect(root,assets,today,calendar,reader,now)
+        report["calendar_source"]="exchange_calendars XNYS"
+        return report
     except Exception as exc:
         return dict(status="UNAVAILABLE",reason=type(exc).__name__+": "+str(exc),assets={})
+
 
 def main():
     from rotation import ASSETS

@@ -185,33 +185,18 @@ def expectation_rows(expectations):
 
 
 def overview_rows(assets, continuity, key, expired=False):
-    """Read-only observed data view: a complete row always comes from one source."""
-    primary = rotation_rows(assets, key, expired)
-    alternative = continuity_rows(assets, continuity, key, expired)
-    rows = []
-    for asset, p, a in zip(assets, primary, alternative, strict=True):
-        broken = any(asset.get(k) for k in ("error", "cached_source", "stale"))
-        record = continuity.get("assets", {}).get(asset["symbol"], {})
-        selected = record.get("selected") or record.get("stale_reference")
-        if broken and selected:
-            rows.append({"Fon": a["Fon"], "Varlık": asset["asset"], "Akış kaynağı": a["Kaynak"],
-                         "Akış tarihi": a["Akış tarihi"], "Günlük net USD": a["Günlük net USD"],
-                         "Vade net milyon USD": a["Vade net milyon USD"],
-                         "Akış / başlangıç fon büyüklüğü %": a["Akış / başlangıç fon büyüklüğü %"],
-                         "Akış gücü": a["Akış gücü"], "Yüzdelik": a["Yüzdelik"],
-                         "Geçmiş dönem": a["Geçmiş dönem"], "Veri durumu": a["Durum"],
-                         "Karar": "BEKLE · araştırma gözlemi; üretim onayı yok",
-                         "Eksik veri açıklaması": a["Eksik veri açıklaması"]})
-        else:
-            rows.append({"Fon": p["Fon"], "Varlık": p["Varlık"],
-                         "Akış kaynağı": "ETFdb / birincil" if not broken else "Birincil · kullanılamıyor",
-                         "Akış tarihi": p["Akış tarihi"], "Günlük net USD": None,
-                         "Vade net milyon USD": p["Net milyon USD"] if not broken else None,
-                         "Akış / başlangıç fon büyüklüğü %": p["Akış / başlangıç fon büyüklüğü %"] if not broken else None,
-                         "Akış gücü": p["Akış"] if not broken else "Veri eksik",
-                         "Yüzdelik": p["Yüzdelik"] if not broken else None,
-                         "Geçmiş dönem": p["Geçmiş dönem"] if not broken else None,
-                         "Veri durumu": "Birincil gözlem" if not broken else "UNAVAILABLE",
-                         "Karar": p["Karar"] if not broken else "BEKLE · veri yok",
-                         "Eksik veri açıklaması": p["Eksik veri açıklaması"]})
+    """The displayed horizon and notification use the same source-separated observation."""
+    from flow_view import observation,HORIZONS
+    rows=[]
+    for asset in assets:
+        o=observation(asset,continuity,key,expired); h=o["h"]
+        rows.append({"Fon":asset["symbol"],"Varlık":asset["asset"],"Vade":HORIZONS[key],
+                     "Akış kaynağı":o["source"],"Vade başlangıç sınırı":o["period_start"],
+                     "Akış tarihi":o["asof"],"Vade net milyon USD":h.get("net_usd_m"),
+                     "Akış yönü":o.get("direction","Veri eksik"),
+                     "Akış / başlangıç fon büyüklüğü %":h.get("flow_aum_pct"),
+                     "Akış gücü":h.get("strength","Veri eksik"),"Yüzdelik":h.get("magnitude_percentile"),
+                     "Geçmiş dönem":h.get("reference_count"),"Veri durumu":o["status"],
+                     "Veri hassasiyeti":o.get("precision"),"Karar":o["action"],
+                     "Eksik veri açıklaması":o["explanation"]})
     return rows
