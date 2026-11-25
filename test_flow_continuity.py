@@ -117,3 +117,12 @@ class SessionCalendarTests(unittest.TestCase):
             result=live(Path("."),[],today,lambda url:"{}",after)
         self.assertEqual(result["calendar_source"],"exchange_calendars XNYS")
         self.assertEqual(collect_mock.call_args.args[3][-1],today)
+
+    def test_non_session_bounds_and_weekend(self):
+        from flow_continuity import session_calendar
+        today=date(2026,11,29)
+        now=datetime(2026,11,29,14,tzinfo=timezone.utc)
+        sessions=session_calendar(today,now)
+        self.assertEqual(sessions[-1],date(2026,11,27))
+        self.assertTrue(all(d.weekday()<5 for d in sessions))
+        self.assertGreaterEqual(sessions[0],today-timedelta(days=850))

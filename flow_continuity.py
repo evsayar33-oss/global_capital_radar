@@ -166,8 +166,11 @@ def session_calendar(today,now):
     if now.tzinfo is None or now.astimezone(NY).date()!=today:
         raise ValueError("invalid session clock")
     cal=xcals.get_calendar("XNYS",start=str(today-timedelta(days=850)),end=str(today+timedelta(days=7)))
-    sessions=cal.sessions_in_range(str(today-timedelta(days=850)),str(today))
-    return [d.date() for d in sessions if cal.session_close(d)<=pd.Timestamp(now)]
+    # Range endpoints can be holidays/weekends, or outside the first/last
+    # actual session of a bounded calendar. Filter actual session labels.
+    first=today-timedelta(days=850)
+    return [d.date() for d in cal.sessions
+            if first<=d.date()<=today and cal.session_close(d)<=pd.Timestamp(now)]
 
 
 def live(root,assets,today,reader,now):
