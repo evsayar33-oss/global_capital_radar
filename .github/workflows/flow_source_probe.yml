@@ -1,0 +1,37 @@
+name: Replacement flow source probe
+on:
+  push:
+    branches: ['fix/dashboard-source-health']
+    paths: ['.github/workflows/flow_source_probe.yml']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python - <<'PY'
+          import urllib.request,re,json
+          from concurrent.futures import ThreadPoolExecutor
+          def probe(sym):
+              url='https://www.privatewealthdaily.com/etf/'+sym+'?r=1m'
+              try:
+                  html=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=45).read().decode()
+                  print('SOURCE',sym,len(html),flush=True)
+                  if sym=='SPY':
+                      for needle in ('flowHistory','netFlow','flow_usd','flowUsd','dailyFlows','creation','Flows through'):
+                          for m in list(re.finditer(needle,html,re.I))[-3:]:
+                              print('SCHEMA',needle,html[max(0,m.start()-100):m.end()+500],flush=True)
+                      open('spy.html','w').write(html)
+              except Exception as e: print('ERROR',sym,str(e),flush=True)
+          with ThreadPoolExecutor(max_workers=4) as p:list(p.map(probe,['SPY','QQQ','DIA','IWM','SGOV','SHY','GLD','SLV','CPER','USO','IBIT','ETHA']))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-flow-source
+          path: spy.html
+          retention-days: 1
