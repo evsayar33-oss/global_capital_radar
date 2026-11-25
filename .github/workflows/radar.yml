@@ -18,6 +18,8 @@ on:
       - 'macro_sources.py'
       - 'keyed_sources.py'
       - 'dashboard_data.py'
+      - 'flow_view.py'
+      - 'telegram_report.py'
       - 'price_context.py'
       - 'evaluate_rotation.py'
       - '.github/workflows/radar.yml'
@@ -27,6 +29,9 @@ on:
       - '.github/workflows/radar.yml'
   schedule:
     - cron: '27 23 * * *'
+    # Source polling during US publication hours; full macro/evaluation stays daily.
+    - cron: '17 13-22 * * 1-5'
+    - cron: '17 0-3 * * 2-6'
 permissions:
   contents: write
 concurrency:
@@ -62,6 +67,7 @@ jobs:
           python-version: '3.11'
       - run: python3 -m unittest -v
       - id: collect
+        if: github.event_name != 'schedule' || github.event.schedule == '27 23 * * *'
         continue-on-error: true
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
@@ -74,6 +80,7 @@ jobs:
         continue-on-error: true
         run: python3 rotation.py
       - id: evaluation
+        if: github.event_name != 'schedule' || github.event.schedule == '27 23 * * *'
         continue-on-error: true
         run: python3 evaluate_rotation.py
       - id: validation

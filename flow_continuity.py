@@ -7,7 +7,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date,datetime,timedelta,timezone
 from zoneinfo import ZoneInfo
-from horizons import analyze
+from horizons import analyze, describe
 from secondary_sources import number,parse_etfiq,ETFIQ_URL
 
 WAIT="BEKLE · alternatif kaynak araştırma aşamasında"
@@ -41,7 +41,10 @@ def observed(symbol,provider,raw,today,calendar,meta,aum=None,*,retain_stale=Fal
     # No normalized flow feature when the source lacks an exact beginning AUM.
     for v in h.values():
         v["action"]=WAIT
-    return dict(status="STALE_REFERENCE" if stale else "OBSERVED",symbol=symbol,provider=provider,
+    daily_past=[raw[d] for d in days[-53:-1]]
+    daily_strength,daily_rank=describe(raw[end],daily_past)
+    return dict(daily_observation=dict(strength=daily_strength,magnitude_percentile=daily_rank,reference_count=len(daily_past)),
+                status="STALE_REFERENCE" if stale else "OBSERVED",symbol=symbol,provider=provider,
                 stale=stale,lag_sessions=sum(d>end for d in calendar),
                 flow_asof=str(end),daily_flow_usd=raw[end],daily_count=len(raw),
                 coverage_start=str(days[0]),coverage_end=str(end),

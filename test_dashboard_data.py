@@ -111,3 +111,42 @@ class ObservedProjectionTests(unittest.TestCase):
         self.assertIn("üretim onayı yok",row["Karar"])
         self.assertIsNone(overview_rows([asset],{},"1H")[0]["Vade net milyon USD"])
         self.assertIsNone(overview_rows([asset],continuity,"1Y")[0]["Vade net milyon USD"])
+
+
+class HorizonObservationTests(unittest.TestCase):
+    def test_source_selection_uses_requested_horizon_not_daily_winner(self):
+        from dashboard_data import overview_rows
+        asset={"asset":"Oil","symbol":"USO","error":"403"}
+        short={"provider":"USCF_CREATION","status":"OBSERVED","flow_asof":"2026-11-24","daily_flow_usd":1000000}
+        long={"provider":"ETFIQ_HISTORY","status":"OBSERVED","flow_asof":"2026-11-23",
+              "daily_flow_usd":2000000,"horizons":{"1H":{"net_usd_m":11},"1A":{"net_usd_m":22},
+                                                  "3A":{"net_usd_m":33},"1Y":{"net_usd_m":44}}}
+        c={"assets":{"USO":{"selected":short,"candidates":[short,long]}}}
+        for key,value in (("1G",1),("1H",11),("1A",22),("3A",33),("1Y",44)):
+            r=overview_rows([asset],c,key)[0]
+            self.assertEqual(r["Vade net milyon USD"],value)
+            self.assertEqual(r["Akış kaynağı"],"USCF_CREATION" if key=="1G" else "ETFIQ_HISTORY")
+        self.assertEqual(overview_rows([asset],c,"1A")[0]["Vade başlangıç sınırı"],"2026-10-23")
+
+    def test_live_snapshot_all_horizons_streamlit(self):
+        try:
+            from streamlit.testing.v1 import AppTest
+        except ImportError:
+            self.skipTest("Streamlit unavailable")
+        from dashboard_data import overview_rows
+        root=Path(__file__).parent
+        report=json.loads((root/"history/rotation/latest.json").read_text())
+        app=AppTest.from_file(str(root/"streamlit_app.py")).run(timeout=30)
+        for key in ("1G","1H","1A","3A","1Y"):
+            app.radio[0].set_value(key).run(timeout=30)
+            self.assertFalse(app.exception)
+            actual=app.dataframe[0].value.set_index("Fon")
+            expected=overview_rows(report["assets"],report.get("continuity",{}),key)
+            for row in expected:
+                value=row["Vade net milyon USD"]
+                got=actual.loc[row["Fon"],"Vade net milyon USD"]
+                if value is None:
+                    import pandas as pd
+                    self.assertTrue(pd.isna(got))
+                else:
+                    self.assertAlmostEqual(got,value)
