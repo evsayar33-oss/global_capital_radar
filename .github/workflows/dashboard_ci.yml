@@ -8,6 +8,8 @@ on:
       - 'requirements.txt'
       - 'requirements-research.txt'
       - 'flow_view.py'
+      - 'flow_metrics.py'
+      - 'test_flow_metrics.py'
       - 'streamlit_app.py'
       - 'flow_continuity.py'
       - 'public_flow_source.py'
