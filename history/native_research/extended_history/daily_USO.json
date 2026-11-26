@@ -338,5 +338,15 @@
     "source_url": "https://etfiq.com/data/flows/funds/uso.json",
     "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
     "first_seen_at": "2026-11-25T23:21:20.303134+00:00"
+  },
+  "2026-11-24": {
+    "symbol": "USO",
+    "source_date": "2026-11-24",
+    "prior_nav_date": "2026-11-23",
+    "flow_usd": 79986000,
+    "source": "ETFIQ (etfiq.com)",
+    "source_url": "https://etfiq.com/data/flows/funds/uso.json",
+    "role": "SPARSE_ARCHIVE_NOT_CONTIGUOUS_OR_PIT_VERIFIED",
+    "first_seen_at": "2026-11-26T23:20:20.534362+00:00"
   }
 }
