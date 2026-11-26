@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-26T15:31:41.730615+00:00",
+  "seen_at": "2026-11-26T15:36:07.177665+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -502,7 +502,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "1b30bf42f5dee680d2bcc6219947cc82d919d1d4a91eb3ce418d05e2eb20baea",
+              "source_sha256": "5997498930d3e8354f27e3999b84284bb5d65045783f93b1ed5c8c84935ed641",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -3375,7 +3375,7 @@
             }
           },
           "total_return_pct": -6.192664160059625,
-          "excess_sgov_pp": -7.170076039454465,
+          "excess_sgov_pp": -7.170068312732181,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3400,14 +3400,14 @@
               "change": 98.0
             }
           },
-          "total_return_pct": 7.320122875482227,
-          "excess_sgov_pp": 3.5726656900925136,
+          "total_return_pct": 7.320113066929501,
+          "excess_sgov_pp": 3.572655881539788,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542293374894738,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 4,
           "rank_count": 12
         }
@@ -3523,7 +3523,7 @@
             }
           },
           "total_return_pct": -10.711590942989424,
-          "excess_sgov_pp": -11.689002822384264,
+          "excess_sgov_pp": -11.68899509566198,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3557,7 +3557,7 @@
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542293374894738,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 5,
           "rank_count": 12
         }
@@ -3658,7 +3658,7 @@
             }
           },
           "total_return_pct": -6.005709832035489,
-          "excess_sgov_pp": -6.9831217114303294,
+          "excess_sgov_pp": -6.983113984708045,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3683,14 +3683,14 @@
               "change": 98.0
             }
           },
-          "total_return_pct": 7.927353319569952,
-          "excess_sgov_pp": 4.179896134180239,
+          "total_return_pct": 7.9273675026798385,
+          "excess_sgov_pp": 4.179910317290125,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542293374894738,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 3,
           "rank_count": 12
         }
@@ -3791,7 +3791,7 @@
             }
           },
           "total_return_pct": -9.911369830362649,
-          "excess_sgov_pp": -10.888781709757488,
+          "excess_sgov_pp": -10.888773983035204,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3823,7 +3823,7 @@
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542293374894738,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 2,
           "rank_count": 12
         }
@@ -3919,7 +3919,7 @@
               "change": 41.0
             }
           },
-          "total_return_pct": 0.9774118793948405,
+          "total_return_pct": 0.9774041526725563,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -4048,8 +4048,8 @@
               "change": 41.0
             }
           },
-          "total_return_pct": 0.3702004924375668,
-          "excess_sgov_pp": -0.6072113869572737,
+          "total_return_pct": 0.370191077951354,
+          "excess_sgov_pp": -0.6072130747212023,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4073,8 +4073,8 @@
               "change": 98.0
             }
           },
-          "total_return_pct": 1.8281203371559807,
-          "excess_sgov_pp": -1.9193368482337325,
+          "total_return_pct": 1.8281300271291823,
+          "excess_sgov_pp": -1.919327158260531,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4178,7 +4178,7 @@
             }
           },
           "total_return_pct": -23.50549989384756,
-          "excess_sgov_pp": -24.4829117732424,
+          "excess_sgov_pp": -24.482904046520115,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4324,7 +4324,7 @@
             }
           },
           "total_return_pct": -40.46855157927366,
-          "excess_sgov_pp": -41.4459634586685,
+          "excess_sgov_pp": -41.44595573194621,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4472,7 +4472,7 @@
             }
           },
           "total_return_pct": -20.240432629364424,
-          "excess_sgov_pp": -21.217844508759264,
+          "excess_sgov_pp": -21.21783678203698,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4618,7 +4618,7 @@
             }
           },
           "total_return_pct": 10.891793656420102,
-          "excess_sgov_pp": 9.914381777025262,
+          "excess_sgov_pp": 9.914389503747547,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -4764,7 +4764,7 @@
             }
           },
           "total_return_pct": -23.81485070476359,
-          "excess_sgov_pp": -24.79226258415843,
+          "excess_sgov_pp": -24.792254857436145,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4895,7 +4895,7 @@
             }
           },
           "total_return_pct": -31.594984425028382,
-          "excess_sgov_pp": -32.57239630442322,
+          "excess_sgov_pp": -32.57238857770094,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",

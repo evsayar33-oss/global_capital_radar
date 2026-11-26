@@ -1,0 +1,252 @@
+{
+  "SPY/1G": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "QQQ/1G": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "DIA/1G": {
+    "asof": "2026-11-24",
+    "direction": "Net sıfır",
+    "source": "ETFIQ_HISTORY"
+  },
+  "IWM/1G": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "SGOV/1G": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SHY/1G": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "GLD/1G": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "SPDR_GOLD_HISTORY"
+  },
+  "SLV/1G": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "CPER/1G": {
+    "asof": "2026-11-23",
+    "direction": "Çıkış",
+    "source": "USCF_CREATION"
+  },
+  "USO/1G": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_DAILY"
+  },
+  "IBIT/1G": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "ETHA/1G": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "SPY/1H": {
+    "asof": "2026-11-24",
+    "direction": "Çıkış",
+    "source": "ETFIQ_HISTORY"
+  },
+  "QQQ/1H": {
+    "asof": "2026-11-24",
+    "direction": "Çıkış",
+    "source": "ETFIQ_HISTORY"
+  },
+  "DIA/1H": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "IWM/1H": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SGOV/1H": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SHY/1H": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "GLD/1H": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "SPDR_GOLD_HISTORY"
+  },
+  "SLV/1H": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "IBIT/1H": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "ETHA/1H": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "SPY/1A": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "DIA/1A": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "IWM/1A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SGOV/1A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SHY/1A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "GLD/1A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "SPDR_GOLD_HISTORY"
+  },
+  "SLV/1A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "IBIT/1A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "ETHA/1A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "SPY/3A": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "DIA/3A": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "IWM/3A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SGOV/3A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SHY/3A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "GLD/3A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "SPDR_GOLD_HISTORY"
+  },
+  "SLV/3A": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "IBIT/3A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "ETHA/3A": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "SPY/1Y": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "DIA/1Y": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY"
+  },
+  "IWM/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "SGOV/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "SHY/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY"
+  },
+  "GLD/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "SPDR_GOLD_HISTORY"
+  },
+  "SLV/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "IBIT/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "ETHA/1Y": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ISHARES_HISTORY"
+  },
+  "QQQ/1A": {
+    "asof": "2026-11-24",
+    "direction": "Giriş",
+    "source": "PWD_DAILY_ROUNDED"
+  }
+}
