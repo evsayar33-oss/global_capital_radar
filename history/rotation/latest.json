@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-26T05:16:31.812076+00:00",
+  "seen_at": "2026-11-26T08:26:03.852216+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -86,7 +86,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "c5490476c43001aaf90f2c9eac2ce08c9832f2b16817898d79d3cae81bbeb9db",
+            "source_sha256": "163b5f39085fa034a78b974467896efe283bce1d5c737a663678096e7472d18c",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -288,7 +288,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "c5490476c43001aaf90f2c9eac2ce08c9832f2b16817898d79d3cae81bbeb9db",
+              "source_sha256": "163b5f39085fa034a78b974467896efe283bce1d5c737a663678096e7472d18c",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -467,7 +467,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "58db0621f4373473f331381751aca98d5d768d105ec4138bf7e61394f117b52b",
+            "source_sha256": "5372831be789b7d03d7ad0b4ae6adf45031813260e04b0e0e856731a4a7da1c6",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -645,7 +645,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "58db0621f4373473f331381751aca98d5d768d105ec4138bf7e61394f117b52b",
+              "source_sha256": "5372831be789b7d03d7ad0b4ae6adf45031813260e04b0e0e856731a4a7da1c6",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -800,7 +800,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "123631a90579a04a90bdbbd7644d68d472ee9f8064cd6a1bf63a709cf9052e55",
+            "source_sha256": "831e9651b0cfc9c60859720bcdd1781ee54c784ea8de220f88fb0164f7f7cfc6",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1002,7 +1002,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "123631a90579a04a90bdbbd7644d68d472ee9f8064cd6a1bf63a709cf9052e55",
+              "source_sha256": "831e9651b0cfc9c60859720bcdd1781ee54c784ea8de220f88fb0164f7f7cfc6",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1181,7 +1181,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "04daed8f7be2182ae64f54c88bad8251c30f6cfbfbf99419164463b4ed1a752d",
+            "source_sha256": "c19b03a016d33c1e50d2546dfc963e0343b0b8a74d23c9f6c229bbb4b5d3eb21",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1383,7 +1383,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "04daed8f7be2182ae64f54c88bad8251c30f6cfbfbf99419164463b4ed1a752d",
+              "source_sha256": "c19b03a016d33c1e50d2546dfc963e0343b0b8a74d23c9f6c229bbb4b5d3eb21",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1562,7 +1562,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "e605e565980fe6956b84df770d812628115b0f7e83e1e216616b976260d13ffa",
+            "source_sha256": "0b3ded86f45048b5209a69b429f9e7a5ad8aa239fe787a255f906c11e0b07e24",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1764,7 +1764,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "e605e565980fe6956b84df770d812628115b0f7e83e1e216616b976260d13ffa",
+              "source_sha256": "0b3ded86f45048b5209a69b429f9e7a5ad8aa239fe787a255f906c11e0b07e24",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1943,7 +1943,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "f3df34699e5a60a4d28698a2bc6cdb6798df5c230a4d69b40fdd2842d825f08b",
+            "source_sha256": "30bfb165a3ae29eb8a696d95faf152f23e5989a4fd22b3935c9a716abc7f6c26",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -2145,7 +2145,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "f3df34699e5a60a4d28698a2bc6cdb6798df5c230a4d69b40fdd2842d825f08b",
+              "source_sha256": "30bfb165a3ae29eb8a696d95faf152f23e5989a4fd22b3935c9a716abc7f6c26",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -2324,7 +2324,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "56a9cd617ea755a6e5c8cdbbb905670c688bea71f45bbae5091fbf763d6f4c71",
+            "source_sha256": "104b68c9ccc5a02d0a0497cc06ceb574e7a2b8339e15f35bc9142d1e7dcd0133",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -2526,7 +2526,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "56a9cd617ea755a6e5c8cdbbb905670c688bea71f45bbae5091fbf763d6f4c71",
+              "source_sha256": "104b68c9ccc5a02d0a0497cc06ceb574e7a2b8339e15f35bc9142d1e7dcd0133",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -3084,7 +3084,7 @@
             "source_date": "2026-11-25",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "2461793472d1b2c6ae22da918e71c0fbafd26c93e4d4ca69b93040ae447ab79b",
+            "source_sha256": "01cfa3529395fbe1c9fe7c3a05d87abac733da1de55141a0b24566c581117f4b",
             "historical_publication_time_verified": false,
             "independent_corroboration": false
           },
@@ -3279,7 +3279,7 @@
               "source_date": "2026-11-25",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "2461793472d1b2c6ae22da918e71c0fbafd26c93e4d4ca69b93040ae447ab79b",
+              "source_sha256": "01cfa3529395fbe1c9fe7c3a05d87abac733da1de55141a0b24566c581117f4b",
               "historical_publication_time_verified": false,
               "independent_corroboration": false
             },
@@ -3453,7 +3453,7 @@
             "source_date": "2026-11-25",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "6eb1862f45949eea175cc94b4c40a6b77bcb4fcdeeb063d5edf1ba991a03db6c",
+            "source_sha256": "66368b18dda0d0560ea7a401d9ce6067b6aa9a420b2e737b891b4797ab2bc467",
             "historical_publication_time_verified": false,
             "independent_corroboration": false
           },
@@ -3648,7 +3648,7 @@
               "source_date": "2026-11-25",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "6eb1862f45949eea175cc94b4c40a6b77bcb4fcdeeb063d5edf1ba991a03db6c",
+              "source_sha256": "66368b18dda0d0560ea7a401d9ce6067b6aa9a420b2e737b891b4797ab2bc467",
               "historical_publication_time_verified": false,
               "independent_corroboration": false
             },
@@ -3854,7 +3854,7 @@
             }
           },
           "total_return_pct": -6.192664160059625,
-          "excess_sgov_pp": -7.170068312732181,
+          "excess_sgov_pp": -7.170076039454465,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -3879,14 +3879,14 @@
               "change": 98.0
             }
           },
-          "total_return_pct": 7.320113066929501,
-          "excess_sgov_pp": 3.572639568614333,
+          "total_return_pct": 7.320122875482227,
+          "excess_sgov_pp": 3.57265753363043,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542303183447464,
+          "breadth_rsp_spy_pp": 8.542293374894738,
           "relative_rank": 4,
           "rank_count": 12
         }
@@ -4002,7 +4002,7 @@
             }
           },
           "total_return_pct": -10.711590942989424,
-          "excess_sgov_pp": -11.68899509566198,
+          "excess_sgov_pp": -11.689002822384264,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4030,13 +4030,13 @@
             }
           },
           "total_return_pct": 4.6015666000396305,
-          "excess_sgov_pp": 0.8540931017244624,
+          "excess_sgov_pp": 0.8541012581878338,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542303183447464,
+          "breadth_rsp_spy_pp": 8.542293374894738,
           "relative_rank": 5,
           "rank_count": 12
         }
@@ -4136,8 +4136,8 @@
               "change": 41.0
             }
           },
-          "total_return_pct": -6.005709832035489,
-          "excess_sgov_pp": -6.983113984708045,
+          "total_return_pct": -6.005720589532936,
+          "excess_sgov_pp": -6.983132468927777,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4163,13 +4163,13 @@
             }
           },
           "total_return_pct": 7.927360411124451,
-          "excess_sgov_pp": 4.179886912809283,
+          "excess_sgov_pp": 4.179895069272654,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542303183447464,
+          "breadth_rsp_spy_pp": 8.542293374894738,
           "relative_rank": 3,
           "rank_count": 12
         }
@@ -4270,7 +4270,7 @@
             }
           },
           "total_return_pct": -9.911369830362649,
-          "excess_sgov_pp": -10.888773983035204,
+          "excess_sgov_pp": -10.888781709757488,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4296,13 +4296,13 @@
             }
           },
           "total_return_pct": 10.79904100189748,
-          "excess_sgov_pp": 7.051567503582312,
+          "excess_sgov_pp": 7.051575660045684,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 8.542303183447464,
+          "breadth_rsp_spy_pp": 8.542293374894738,
           "relative_rank": 2,
           "rank_count": 12
         }
@@ -4398,7 +4398,7 @@
               "change": 41.0
             }
           },
-          "total_return_pct": 0.9774041526725563,
+          "total_return_pct": 0.9774118793948405,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -4423,7 +4423,7 @@
               "change": 98.0
             }
           },
-          "total_return_pct": 3.747473498315168,
+          "total_return_pct": 3.7474653418517967,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -4527,8 +4527,8 @@
               "change": 41.0
             }
           },
-          "total_return_pct": 0.3702004924375668,
-          "excess_sgov_pp": -0.6072036602349895,
+          "total_return_pct": 0.370191077951354,
+          "excess_sgov_pp": -0.6072208014434866,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4552,8 +4552,8 @@
               "change": 98.0
             }
           },
-          "total_return_pct": 1.8281300271291823,
-          "excess_sgov_pp": -1.9193434711859858,
+          "total_return_pct": 1.828139717104249,
+          "excess_sgov_pp": -1.9193256247475476,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4657,7 +4657,7 @@
             }
           },
           "total_return_pct": -23.50549989384756,
-          "excess_sgov_pp": -24.482904046520115,
+          "excess_sgov_pp": -24.4829117732424,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4682,7 +4682,7 @@
             }
           },
           "total_return_pct": -13.847078568875848,
-          "excess_sgov_pp": -17.594552067191017,
+          "excess_sgov_pp": -17.594543910727644,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4803,7 +4803,7 @@
             }
           },
           "total_return_pct": -40.46855157927366,
-          "excess_sgov_pp": -41.44595573194621,
+          "excess_sgov_pp": -41.4459634586685,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4831,7 +4831,7 @@
             }
           },
           "total_return_pct": -20.505678316465403,
-          "excess_sgov_pp": -24.253151814780573,
+          "excess_sgov_pp": -24.2531436583172,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4951,7 +4951,7 @@
             }
           },
           "total_return_pct": -20.240432629364424,
-          "excess_sgov_pp": -21.21783678203698,
+          "excess_sgov_pp": -21.217844508759264,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4978,7 +4978,7 @@
             }
           },
           "total_return_pct": 4.265548439191802,
-          "excess_sgov_pp": 0.5180749408766339,
+          "excess_sgov_pp": 0.5180830973400052,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -5097,7 +5097,7 @@
             }
           },
           "total_return_pct": 10.891793656420102,
-          "excess_sgov_pp": 9.914389503747547,
+          "excess_sgov_pp": 9.914381777025262,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -5124,7 +5124,7 @@
             }
           },
           "total_return_pct": 102.00721933523238,
-          "excess_sgov_pp": 98.2597458369172,
+          "excess_sgov_pp": 98.25975399338058,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -5243,7 +5243,7 @@
             }
           },
           "total_return_pct": -23.81485070476359,
-          "excess_sgov_pp": -24.792254857436145,
+          "excess_sgov_pp": -24.79226258415843,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5270,7 +5270,7 @@
             }
           },
           "total_return_pct": -31.255046911307595,
-          "excess_sgov_pp": -35.00252040962276,
+          "excess_sgov_pp": -35.002512253159395,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5374,7 +5374,7 @@
             }
           },
           "total_return_pct": -31.594984425028382,
-          "excess_sgov_pp": -32.57238857770094,
+          "excess_sgov_pp": -32.57239630442322,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5399,7 +5399,7 @@
             }
           },
           "total_return_pct": -42.506403795965696,
-          "excess_sgov_pp": -46.25387729428086,
+          "excess_sgov_pp": -46.25386913781749,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
