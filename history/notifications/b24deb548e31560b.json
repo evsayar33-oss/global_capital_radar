@@ -1,36 +1,36 @@
 {
   "SPY/1G/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-11-23",
+    "asof": "2026-11-24",
+    "start": "2026-11-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Olağanüstü giriş",
-    "net_usd_m": 9756.524531,
-    "percentile": 94.2,
+    "strength": "Zayıf giriş",
+    "net_usd_m": 1985.662762,
+    "percentile": 28.8,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 2
+    "telegram_message_id": 14
   },
   "QQQ/1G/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-11-23",
+    "asof": "2026-11-24",
+    "start": "2026-11-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Zayıf çıkış",
-    "net_usd_m": -1218.213914,
-    "percentile": 38.5,
-    "references": 13,
+    "strength": "Olağan giriş",
+    "net_usd_m": 2050.291073,
+    "percentile": 57.1,
+    "references": 14,
     "confirmation": null,
-    "telegram_message_id": 2
+    "telegram_message_id": 14
   },
   "DIA/1G/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-11-23",
+    "asof": "2026-11-24",
+    "start": "2026-11-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Zayıf çıkış",
-    "net_usd_m": -168.318015,
-    "percentile": 38.5,
+    "strength": "Yatay",
+    "net_usd_m": 0.0,
+    "percentile": 2.9,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 2
+    "telegram_message_id": 14
   },
   "IWM/1G/ETFIQ_HISTORY": {
     "asof": "2026-11-23",
@@ -132,37 +132,37 @@
     "telegram_message_id": 2
   },
   "SPY/1H/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-11-16",
+    "asof": "2026-11-24",
+    "start": "2026-11-17",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Olağan giriş",
-    "net_usd_m": 4651.249,
-    "percentile": 40.4,
+    "strength": "Yatay",
+    "net_usd_m": -94.568,
+    "percentile": 0.0,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 3
+    "telegram_message_id": 15
   },
   "QQQ/1H/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-11-16",
+    "asof": "2026-11-24",
+    "start": "2026-11-17",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Geçmiş yetersiz",
-    "net_usd_m": -4695.553,
+    "net_usd_m": -991.035,
     "percentile": null,
     "references": 1,
     "confirmation": null,
-    "telegram_message_id": 3
+    "telegram_message_id": 15
   },
   "DIA/1H/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-11-16",
+    "asof": "2026-11-24",
+    "start": "2026-11-17",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Yatay",
-    "net_usd_m": 118.926,
-    "percentile": 5.8,
+    "strength": "Olağan giriş",
+    "net_usd_m": 840.908,
+    "percentile": 65.4,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 3
+    "telegram_message_id": 15
   },
   "IWM/1H/ETFIQ_HISTORY": {
     "asof": "2026-11-23",
@@ -242,26 +242,26 @@
     "telegram_message_id": 3
   },
   "SPY/1A/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-10-23",
+    "asof": "2026-11-24",
+    "start": "2026-10-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Yatay",
-    "net_usd_m": 3318.699,
-    "percentile": 0.0,
+    "strength": "Olağan giriş",
+    "net_usd_m": 5304.362,
+    "percentile": 44.4,
     "references": 18,
     "confirmation": null,
-    "telegram_message_id": 4
+    "telegram_message_id": 16
   },
   "DIA/1A/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-10-23",
+    "asof": "2026-11-24",
+    "start": "2026-10-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Yatay",
     "net_usd_m": 284.859,
     "percentile": 5.6,
     "references": 18,
     "confirmation": null,
-    "telegram_message_id": 4
+    "telegram_message_id": 16
   },
   "IWM/1A/ETFIQ_HISTORY": {
     "asof": "2026-11-23",
@@ -341,26 +341,26 @@
     "telegram_message_id": 4
   },
   "SPY/3A/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-08-23",
+    "asof": "2026-11-24",
+    "start": "2026-08-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Yatay",
-    "net_usd_m": -2617.237,
-    "percentile": 0.0,
+    "strength": "Zayıf giriş",
+    "net_usd_m": 8631.938,
+    "percentile": 20.0,
     "references": 5,
     "confirmation": null,
-    "telegram_message_id": 5
+    "telegram_message_id": 17
   },
   "DIA/3A/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2026-08-23",
+    "asof": "2026-11-24",
+    "start": "2026-08-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Güçlü giriş",
-    "net_usd_m": 1136.189,
-    "percentile": 80.0,
+    "strength": "Olağan giriş",
+    "net_usd_m": 1242.624,
+    "percentile": 60.0,
     "references": 5,
     "confirmation": null,
-    "telegram_message_id": 5
+    "telegram_message_id": 17
   },
   "IWM/3A/ETFIQ_HISTORY": {
     "asof": "2026-11-23",
@@ -440,26 +440,26 @@
     "telegram_message_id": 5
   },
   "SPY/1Y/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2025-11-23",
+    "asof": "2026-11-24",
+    "start": "2025-11-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Geçmiş yetersiz",
-    "net_usd_m": 25920.247,
+    "net_usd_m": 28136.509,
     "percentile": null,
     "references": 0,
     "confirmation": null,
-    "telegram_message_id": 6
+    "telegram_message_id": 18
   },
   "DIA/1Y/ETFIQ_HISTORY": {
-    "asof": "2026-11-23",
-    "start": "2025-11-23",
+    "asof": "2026-11-24",
+    "start": "2025-11-24",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Geçmiş yetersiz",
-    "net_usd_m": 1166.241,
+    "net_usd_m": 981.262,
     "percentile": null,
     "references": 0,
     "confirmation": null,
-    "telegram_message_id": 6
+    "telegram_message_id": 18
   },
   "IWM/1Y/ETFIQ_HISTORY": {
     "asof": "2026-11-23",
@@ -812,5 +812,401 @@
     "references": 0,
     "confirmation": null,
     "telegram_message_id": 11
+  },
+  "IWM/1G/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -578.4018773500001,
+    "percentile": 55.8,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "SGOV/1G/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü giriş",
+    "net_usd_m": 543.6479538,
+    "percentile": 90.4,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "SHY/1G/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü giriş",
+    "net_usd_m": 106.0876388,
+    "percentile": 80.8,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "GLD/1G/SPDR_GOLD_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Yatay",
+    "net_usd_m": 63.5156364259491,
+    "percentile": 13.5,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "SLV/1G/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -26.662203,
+    "percentile": 42.3,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "USO/1G/ETFIQ_DAILY": {
+    "asof": "2026-11-24",
+    "start": "2026-11-24",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Geçmiş yetersiz",
+    "net_usd_m": 79.986,
+    "percentile": null,
+    "references": 0,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "IBIT/1G/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -176.38734359999998,
+    "percentile": 63.5,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "ETHA/1G/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Zayıf çıkış",
+    "net_usd_m": -38.061368,
+    "percentile": 32.7,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 14
+  },
+  "IWM/1H/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Zayıf giriş",
+    "net_usd_m": 426.462,
+    "percentile": 26.9,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "SGOV/1H/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü giriş",
+    "net_usd_m": 2395.051,
+    "percentile": 96.2,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "SHY/1H/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Yatay",
+    "net_usd_m": 57.125,
+    "percentile": 11.5,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "GLD/1H/SPDR_GOLD_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü çıkış",
+    "net_usd_m": -1909.838,
+    "percentile": 90.4,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "SLV/1H/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Zayıf giriş",
+    "net_usd_m": 127.568,
+    "percentile": 34.6,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "IBIT/1H/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü çıkış",
+    "net_usd_m": -1899.462,
+    "percentile": 100.0,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "ETHA/1H/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü çıkış",
+    "net_usd_m": -321.82,
+    "percentile": 90.4,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 15
+  },
+  "IWM/1A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü giriş",
+    "net_usd_m": 2775.82,
+    "percentile": 78.8,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "SGOV/1A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü giriş",
+    "net_usd_m": 3878.161,
+    "percentile": 80.8,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "SHY/1A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -427.931,
+    "percentile": 48.1,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "GLD/1A/SPDR_GOLD_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -1524.124,
+    "percentile": 61.5,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "SLV/1A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan giriş",
+    "net_usd_m": 240.269,
+    "percentile": 48.1,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "IBIT/1A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü çıkış",
+    "net_usd_m": -4042.396,
+    "percentile": 78.8,
+    "references": 33,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "ETHA/1A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-10-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü çıkış",
+    "net_usd_m": -1389.484,
+    "percentile": 89.3,
+    "references": 28,
+    "confirmation": null,
+    "telegram_message_id": 16
+  },
+  "IWM/3A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan giriş",
+    "net_usd_m": 2575.661,
+    "percentile": 65.4,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "SGOV/3A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü giriş",
+    "net_usd_m": 15362.013,
+    "percentile": 95.8,
+    "references": 24,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "SHY/3A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan giriş",
+    "net_usd_m": 1379.475,
+    "percentile": 61.5,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "GLD/3A/SPDR_GOLD_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -2275.983,
+    "percentile": 51.9,
+    "references": 52,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "SLV/3A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan giriş",
+    "net_usd_m": 524.797,
+    "percentile": 70.6,
+    "references": 51,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "IBIT/3A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Yatay",
+    "net_usd_m": -451.868,
+    "percentile": 0.0,
+    "references": 10,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "ETHA/3A/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-08-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü çıkış",
+    "net_usd_m": -1390.777,
+    "percentile": 75.0,
+    "references": 8,
+    "confirmation": null,
+    "telegram_message_id": 17
+  },
+  "IWM/1Y/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -2259.703,
+    "percentile": 62.5,
+    "references": 24,
+    "confirmation": null,
+    "telegram_message_id": 18
+  },
+  "SGOV/1Y/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağanüstü giriş",
+    "net_usd_m": 56496.237,
+    "percentile": 100.0,
+    "references": 5,
+    "confirmation": null,
+    "telegram_message_id": 18
+  },
+  "SHY/1Y/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Güçlü giriş",
+    "net_usd_m": 3606.47,
+    "percentile": 87.0,
+    "references": 23,
+    "confirmation": null,
+    "telegram_message_id": 18
+  },
+  "GLD/1Y/SPDR_GOLD_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Yatay",
+    "net_usd_m": -872.903,
+    "percentile": 5.6,
+    "references": 18,
+    "confirmation": null,
+    "telegram_message_id": 18
+  },
+  "SLV/1Y/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Olağan çıkış",
+    "net_usd_m": -1079.765,
+    "percentile": 66.7,
+    "references": 12,
+    "confirmation": null,
+    "telegram_message_id": 18
+  },
+  "IBIT/1Y/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Geçmiş yetersiz",
+    "net_usd_m": -222.911,
+    "percentile": null,
+    "references": 1,
+    "confirmation": null,
+    "telegram_message_id": 18
+  },
+  "ETHA/1Y/ISHARES_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2025-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Geçmiş yetersiz",
+    "net_usd_m": -2063.703,
+    "percentile": null,
+    "references": 1,
+    "confirmation": null,
+    "telegram_message_id": 18
   }
 }

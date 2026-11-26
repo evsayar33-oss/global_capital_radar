@@ -1,8 +1,8 @@
 {
   "continuity_status": "DEGRADED_RESEARCH_AVAILABLE",
-  "alternative_count": 10,
-  "alternative_unavailable": 2,
-  "checked_at": "2026-11-26T08:26:12.395920+00:00",
+  "alternative_count": 11,
+  "alternative_unavailable": 1,
+  "checked_at": "2026-11-26T09:50:53.232738+00:00",
   "assets": [
     {
       "asset": "SPY",
