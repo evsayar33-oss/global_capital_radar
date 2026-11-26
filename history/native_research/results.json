@@ -1,6 +1,6 @@
 {
   "version": "adaptive-flow-v2.0",
-  "evaluated_at": "2026-11-25T22:29:16.509140+00:00",
+  "evaluated_at": "2026-11-26T22:19:48.321780+00:00",
   "source": "ETFIQ (etfiq.com)",
   "price_errors": {},
   "coverage": [
@@ -10,24 +10,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/spy.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "d8ab456a3d2afe37eaee7cdce4f93e9893d5f7c8e49932259e2ec58abb4eb6e6",
+        "source_digest": "85ac68c760cd81960f532187dc65f4b23adc45866044b8688b9e89ec7a872396",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -36,21 +36,21 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
-        "source_date": "2026-11-23",
+        "source_date": "2026-11-24",
         "coverage_start": "2026-11-04",
-        "coverage_end": "2026-11-23",
-        "daily_count": 14,
+        "coverage_end": "2026-11-24",
+        "daily_count": 15,
         "skipped_count": 4,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "7d60d8d8b4251ad0e4a12b48c262f5ab42e9e61671c8ea4dc441f440122a3a61",
+        "source_digest": "a5aa5b597b8e6a1852783303bc68929da4bc09950f04c27851eb1f46978cb7b0",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 2,
+        "1H": 1,
         "1A": 0,
         "3A": 0,
         "1Y": 0
@@ -62,24 +62,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/dia.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "c1eb8d2088f84b336016a0ee26a7500c1028565642c62a2756405224d5544a1c",
+        "source_digest": "90d5d655241fbad2d71065c5993f36a3d27298a961c59c8d0f03f5120cc54b93",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -88,24 +88,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/iwm.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "44913f02e17b221c1469c319cb678c810e1daa614fa3bdcd160cdf98c9dc72de",
+        "source_digest": "116eb9e419bf03b89b2da4d81f819c3d2e79ec14c8f9aaa54c7cfb13a8fad981",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -114,14 +114,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/sgov.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "6315216af5c43eaa549511c8d693141b3f825e121d49d8ae563e49ba7c638b89",
+        "source_digest": "b267f97c721df9b08a510e7070b91310772bd6e3c563771d0a9d573d5aff8e0e",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -140,24 +140,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/shy.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "2d7ef26456c1ec45964d4f9e4734c69910da5618d5bb0719f6a9fc58193e1727",
+        "source_digest": "f289c7caf89ab01d44d292f593597ff9abab60d46d0b3c1a598d78ac8060f233",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -166,24 +166,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/gld.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "bb5795f12d81852eaad966aa0f7eb386fd09428070dfef3530974cf77d25efa1",
+        "source_digest": "f1dcb654201d6cd865bed935fbc45e1fdf9563fb4e4c5c57fb68ef40cb0246e7",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -192,24 +192,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/slv.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "a98a75ee68dc1e78264f654f2f0160ef8bcf8b185d1ef2c13f21cb65cce2ea68",
+        "source_digest": "58e802b92b194eda09276caaddc311cef77607d344d3b59a4fc89cea5e20367a",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -232,24 +232,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/ibit.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "cb2734c55e9c6bb47216b0e6a1d53678491ea274a67e0cfbe1bf0880efad2f98",
+        "source_digest": "ae819f8ecb4252599f56e8e8d3175e4e9131906fe99c73ce9544d3846cdbc926",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     },
     {
@@ -258,24 +258,24 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/etha.json",
-        "source_date": "2026-11-23",
-        "coverage_start": "2025-04-23",
-        "coverage_end": "2026-11-23",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "2b2e3e921f90648cd738b8985f61df25da431113dde2137b83e00eeeb5c2ec59",
+        "source_digest": "e88a2b3420669882db55bc4fa9e492476721e36af7e221851b86faafdbb2785b",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 3,
-        "1A": 3,
-        "3A": 3,
-        "1Y": 2
+        "1H": 2,
+        "1A": 2,
+        "3A": 2,
+        "1Y": 1
       }
     }
   ],
@@ -303,25 +303,25 @@
         "M01_raw_percentile": {
           "available": 38,
           "active": 12,
-          "hit_rate": 0.3333333333333333,
+          "hit_rate": 0.5833333333333334,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.04135284413972919,
-              "positive": 4,
-              "lower95_pp": -0.3369850213528146
+              "mean_pp": 0.006504719693757397,
+              "positive": 7,
+              "lower95_pp": -0.2958653694737808
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.1045107388765713,
-              "positive": 3,
-              "lower95_pp": -0.4036274397009427
+              "mean_pp": -0.05665317504308469,
+              "positive": 6,
+              "lower95_pp": -0.36019917734150525
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.16766863361341341,
-              "positive": 2,
-              "lower95_pp": -0.4731811545640575
+              "mean_pp": -0.1198110697799268,
+              "positive": 6,
+              "lower95_pp": -0.42745918603740424
             }
           }
         },
@@ -526,25 +526,25 @@
         "M01_raw_percentile": {
           "available": 38,
           "active": 12,
-          "hit_rate": 0.16666666666666666,
+          "hit_rate": 0.4166666666666667,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.18979502146383995,
-              "positive": 2,
-              "lower95_pp": -0.3806264800507207
+              "mean_pp": -0.01868038860785861,
+              "positive": 5,
+              "lower95_pp": -0.2330682002801027
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.25295291620068205,
-              "positive": 2,
-              "lower95_pp": -0.4596100428081791
+              "mean_pp": -0.08183828334470071,
+              "positive": 4,
+              "lower95_pp": -0.299531402054631
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.31611081093752413,
-              "positive": 2,
-              "lower95_pp": -0.5414824453687266
+              "mean_pp": -0.1449961780815428,
+              "positive": 4,
+              "lower95_pp": -0.36996981500585424
             }
           }
         },
@@ -748,26 +748,26 @@
         },
         "M01_raw_percentile": {
           "available": 38,
-          "active": 8,
-          "hit_rate": 0.5,
+          "active": 9,
+          "hit_rate": 0.4444444444444444,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.09944310832886716,
+              "mean_pp": -0.06853644733709255,
               "positive": 4,
-              "lower95_pp": -0.3829704870092181
+              "lower95_pp": -0.3536144568429703
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.14154837148676186,
+              "mean_pp": -0.1159048683897241,
               "positive": 3,
-              "lower95_pp": -0.43195933269699444
+              "lower95_pp": -0.4060640751098092
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.18365363464465662,
+              "mean_pp": -0.1632732894423557,
               "positive": 3,
-              "lower95_pp": -0.48310280209694667
+              "lower95_pp": -0.4609586611677162
             }
           }
         },
@@ -971,26 +971,26 @@
         },
         "M01_raw_percentile": {
           "available": 38,
-          "active": 8,
-          "hit_rate": 0.0,
+          "active": 7,
+          "hit_rate": 0.2857142857142857,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.047461798677405874,
-              "positive": 0,
-              "lower95_pp": -0.08610674829784118
+              "mean_pp": -0.016323934892241928,
+              "positive": 2,
+              "lower95_pp": -0.04328110023399058
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.08956706183530061,
-              "positive": 0,
-              "lower95_pp": -0.1507213568189342
+              "mean_pp": -0.05316604015539982,
+              "positive": 1,
+              "lower95_pp": -0.09679931620998665
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.13167232499319534,
+              "mean_pp": -0.09000814541855771,
               "positive": 0,
-              "lower95_pp": -0.2175023257262894
+              "lower95_pp": -0.15580527298138303
             }
           }
         },
@@ -1194,26 +1194,26 @@
         },
         "M01_raw_percentile": {
           "available": 38,
-          "active": 10,
-          "hit_rate": 0.4,
+          "active": 8,
+          "hit_rate": 0.625,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.39853348147032064,
-              "positive": 4,
-              "lower95_pp": -1.0410006508044902
+              "mean_pp": 0.10992500055100683,
+              "positive": 5,
+              "lower95_pp": -0.5421976886547774
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.45116506041768906,
+              "mean_pp": 0.06781973739311209,
               "positive": 4,
-              "lower95_pp": -1.1036718821403901
+              "lower95_pp": -0.5820649451156747
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.5037966393650575,
+              "mean_pp": 0.025714474235217333,
               "positive": 4,
-              "lower95_pp": -1.1674056012384635
+              "lower95_pp": -0.6229894065218101
             }
           }
         },
@@ -1417,26 +1417,26 @@
         },
         "M01_raw_percentile": {
           "available": 38,
-          "active": 12,
-          "hit_rate": 0.4166666666666667,
+          "active": 13,
+          "hit_rate": 0.46153846153846156,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.21848657230119578,
-              "positive": 5,
-              "lower95_pp": -2.1048176729434585
+              "mean_pp": 0.2634010491070647,
+              "positive": 6,
+              "lower95_pp": -0.9169884671144084
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.28164446703803797,
-              "positive": 5,
-              "lower95_pp": -2.1698581301402964
+              "mean_pp": 0.19497999647548564,
+              "positive": 6,
+              "lower95_pp": -0.9827539547403932
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.34480236177488,
-              "positive": 5,
-              "lower95_pp": -2.235371412891263
+              "mean_pp": 0.12655894384390673,
+              "positive": 6,
+              "lower95_pp": -1.049308638578979
             }
           }
         },
@@ -1645,21 +1645,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": 0.48241083008251484,
+              "mean_pp": 0.2746497845561393,
               "positive": 4,
-              "lower95_pp": -0.3913616191834276
+              "lower95_pp": -0.34087782068939876
             },
             "0.3": {
               "n": 38,
-              "mean_pp": 0.4455687248193569,
+              "mean_pp": 0.23780767929298144,
               "positive": 4,
-              "lower95_pp": -0.41916136869669024
+              "lower95_pp": -0.370627281345857
             },
             "0.5": {
               "n": 38,
-              "mean_pp": 0.408726619556199,
+              "mean_pp": 0.2009655740298235,
               "positive": 4,
-              "lower95_pp": -0.447594699440712
+              "lower95_pp": -0.4013301963655299
             }
           }
         },
@@ -1863,26 +1863,26 @@
         },
         "M01_raw_percentile": {
           "available": 38,
-          "active": 11,
-          "hit_rate": 0.2727272727272727,
+          "active": 8,
+          "hit_rate": 0.375,
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -1.240221694424123,
+              "mean_pp": 0.08759594574938437,
               "positive": 3,
-              "lower95_pp": -2.521281772589039
+              "lower95_pp": -0.6885888696533653
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -1.298116431266228,
+              "mean_pp": 0.045490682591489605,
               "positive": 3,
-              "lower95_pp": -2.593711466815847
+              "lower95_pp": -0.7292874017214573
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -1.3560111681083333,
+              "mean_pp": 0.0033854194335948564,
               "positive": 3,
-              "lower95_pp": -2.6666318107059706
+              "lower95_pp": -0.7708754008127854
             }
           }
         },
@@ -2086,26 +2086,26 @@
         },
         "M01_raw_percentile": {
           "available": 6,
-          "active": 2,
-          "hit_rate": 0.5,
+          "active": 1,
+          "hit_rate": 1.0,
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.6118514732523229,
+              "mean_pp": 0.16305227763371846,
               "positive": 1,
-              "lower95_pp": -1.0611987425096459
+              "lower95_pp": -0.15653018652836978
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 0.5451848065856562,
+              "mean_pp": 0.1297189443003851,
               "positive": 1,
-              "lower95_pp": -1.0920589573433708
+              "lower95_pp": -0.12453018652836972
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 0.4785181399189895,
+              "mean_pp": 0.09638561096705178,
               "positive": 1,
-              "lower95_pp": -1.126379452704922
+              "lower95_pp": -0.09253018652836972
             }
           }
         },
@@ -2309,26 +2309,26 @@
         },
         "M01_raw_percentile": {
           "available": 6,
-          "active": 3,
-          "hit_rate": 0.6666666666666666,
+          "active": 4,
+          "hit_rate": 0.75,
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.6312245888320467,
-              "positive": 2,
-              "lower95_pp": -0.4680974339890609
+              "mean_pp": 0.9571689962569409,
+              "positive": 3,
+              "lower95_pp": -0.5196333727071462
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 0.5312245888320467,
-              "positive": 2,
-              "lower95_pp": -0.5266958309733395
+              "mean_pp": 0.8238356629236074,
+              "positive": 3,
+              "lower95_pp": -0.6217506553783585
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 0.43122458883204673,
+              "mean_pp": 0.6905023295902741,
               "positive": 2,
-              "lower95_pp": -0.5911494715895371
+              "lower95_pp": -0.7280015979925676
             }
           }
         },
@@ -2537,21 +2537,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.5975742514529907,
+              "mean_pp": 0.15498169695353056,
               "positive": 1,
-              "lower95_pp": -1.3038644315182335
+              "lower95_pp": -2.404246111965194
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 0.530907584786324,
+              "mean_pp": 0.08831503028686383,
               "positive": 1,
-              "lower95_pp": -1.3398848613471561
+              "lower95_pp": -2.4660387064561817
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 0.46424091811965734,
+              "mean_pp": 0.021648363620197102,
               "positive": 1,
-              "lower95_pp": -1.3791035179917983
+              "lower95_pp": -2.530499372915759
             }
           }
         },
@@ -2760,21 +2760,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.062041812993298306,
+              "mean_pp": -0.05356178257162242,
               "positive": 0,
-              "lower95_pp": -0.183643766460163
+              "lower95_pp": -0.15854287641200238
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.09537514632663165,
+              "mean_pp": -0.08689511590495576,
               "positive": 0,
-              "lower95_pp": -0.2823104331268297
+              "lower95_pp": -0.25720954307866906
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.12870847965996499,
+              "mean_pp": -0.12022844923828908,
               "positive": 0,
-              "lower95_pp": -0.38097709979349637
+              "lower95_pp": -0.35587620974533574
             }
           }
         },
@@ -2983,21 +2983,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.3672488437543436,
+              "mean_pp": 0.023367583828550458,
               "positive": 1,
-              "lower95_pp": -3.383099510927161
+              "lower95_pp": -2.1904395288836653
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.43391551042101034,
+              "mean_pp": -0.043299082838116267,
               "positive": 1,
-              "lower95_pp": -3.4633426278091686
+              "lower95_pp": -2.2575673069257944
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.500582177087677,
+              "mean_pp": -0.109965749504783,
               "positive": 1,
-              "lower95_pp": -3.5457687222223018
+              "lower95_pp": -2.3277765228431733
             }
           }
         },
@@ -3206,21 +3206,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 1.6899999725091062,
+              "mean_pp": 1.2115819360956903,
               "positive": 1,
-              "lower95_pp": -1.622399973608742
+              "lower95_pp": -1.163118658651863
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 1.6566666391757725,
+              "mean_pp": 1.178248602762357,
               "positive": 1,
-              "lower95_pp": -1.5903999736087424
+              "lower95_pp": -1.131118658651863
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 1.6233333058424393,
+              "mean_pp": 1.1449152694290237,
               "positive": 1,
-              "lower95_pp": -1.5583999736087424
+              "lower95_pp": -1.099118658651863
             }
           }
         },
@@ -3882,7 +3882,8 @@
     "SHFE_copper_warrant": {},
     "TBF3_TFF": {},
     "issuer_USO": {
-      "creation_status": "OBSERVED"
+      "creation_status": "UNAVAILABLE",
+      "creation_error": "creation dated observation missing"
     },
     "issuer_CPER": {
       "creation_status": "UNAVAILABLE",

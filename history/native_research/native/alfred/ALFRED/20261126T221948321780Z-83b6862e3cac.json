@@ -1,0 +1,13 @@
+{
+  "status": "OBSERVED_DATE_VINTAGE",
+  "series": "DFII10",
+  "vintage": "2026-11-25",
+  "source": "FRED API / ALFRED",
+  "source_url": "https://api.stlouisfed.org/fred/series/observations",
+  "source_sha256": "902045a32b168103bff1aba583e79a5480e4bdb6499a731bf31864ff34851d59",
+  "realtime_interval_verified": true,
+  "publication_intraday_verified": false,
+  "role": "DATE_VINTAGE_RESEARCH_ONLY",
+  "first_seen_at": "2026-11-26T22:19:48.321780+00:00",
+  "source_digest": "e07fafc28e1cae8ad1885df3be6d873b9e8d7eeccffec14aec11b70bf8de0a91"
+}
