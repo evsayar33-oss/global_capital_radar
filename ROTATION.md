@@ -1,6 +1,6 @@
 # Varlıklar arası sermaye takibi
 
-2026-11-25 · Araştırma
+2026-11-26 · Araştırma
 
 Akışlar seçili ABD fonunda milyon USD. COT farkı haftalık yüzde puan.
 
@@ -100,15 +100,15 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 
 |Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
 |---|---|---|---:|---:|---|
-|SPY|ETFIQ_HISTORY|2026-11-23|9756524531|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|QQQ|ETFIQ_HISTORY|2026-11-23|-1218213914|14|BEKLE · alternatif kaynak araştırma aşamasında|
-|DIA|ETFIQ_HISTORY|2026-11-23|-168318015|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|IWM|ETFIQ_HISTORY|2026-11-23|1476708922|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|SGOV|ETFIQ_HISTORY|2026-11-23|820151843|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|SHY|ETFIQ_HISTORY|2026-11-23|-16317281|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|GLD|ETFIQ_HISTORY|2026-11-23|-359783532|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|SLV|ETFIQ_HISTORY|2026-11-23|110862934|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|CPER|USCF_CREATION|2026-11-23|-10179000.0|1|BEKLE · alternatif kaynak araştırma aşamasında|
+|SPY|PWD_DAILY_ROUNDED|2026-11-24|2000000000.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|QQQ|PWD_DAILY_ROUNDED|2026-11-24|2000000000.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|DIA|PWD_DAILY_ROUNDED|2026-11-24|0.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|IWM|PWD_DAILY_ROUNDED|2026-11-24|-744400000.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|SGOV|PWD_DAILY_ROUNDED|2026-11-24|-221400000.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|SHY|PWD_DAILY_ROUNDED|2026-11-24|32600000.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|GLD|PWD_DAILY_ROUNDED|2026-11-24|0.0|22|BEKLE · yuvarlanmış alternatif gözlem|
+|SLV|—|—|—|—|—|
+|CPER|—|—|—|—|—|
 |USO|USCF_CREATION|2026-11-24|68225000.0|2|BEKLE · alternatif kaynak araştırma aşamasında|
-|IBIT|ETFIQ_HISTORY|2026-11-23|-544734320|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|ETHA|ETFIQ_HISTORY|2026-11-23|-60839323|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|IBIT|FARSIDE_DAILY|2026-11-24|-175300000.0|12|BEKLE · yuvarlanmış alternatif gözlem|
+|ETHA|FARSIDE_DAILY|2026-11-24|-37800000.0|12|BEKLE · yuvarlanmış alternatif gözlem|
