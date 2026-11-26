@@ -1,7 +1,7 @@
 {
   "price_errors": {},
   "schema_version": 5,
-  "seen_at": "2026-11-26T02:10:52.484022+00:00",
+  "seen_at": "2026-11-26T05:16:31.812076+00:00",
   "cot_error": null,
   "cot_source": {
     "transport": "CFTC archive + matched API",
@@ -86,7 +86,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "6d8549859d88b3e5e2e893ab9cb6d330970e0932f35664c1068b4ad73a9f8864",
+            "source_sha256": "c5490476c43001aaf90f2c9eac2ce08c9832f2b16817898d79d3cae81bbeb9db",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -288,7 +288,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "6d8549859d88b3e5e2e893ab9cb6d330970e0932f35664c1068b4ad73a9f8864",
+              "source_sha256": "c5490476c43001aaf90f2c9eac2ce08c9832f2b16817898d79d3cae81bbeb9db",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -467,7 +467,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "b2b9d9d5167f75b32047214d115262339decfe34a16505834ee9f306a1ff7804",
+            "source_sha256": "58db0621f4373473f331381751aca98d5d768d105ec4138bf7e61394f117b52b",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -645,7 +645,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "b2b9d9d5167f75b32047214d115262339decfe34a16505834ee9f306a1ff7804",
+              "source_sha256": "58db0621f4373473f331381751aca98d5d768d105ec4138bf7e61394f117b52b",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -800,7 +800,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "e26271c4caac8e87d635818da9c82ed3c997398c5c7166593fb77990566eeb9a",
+            "source_sha256": "123631a90579a04a90bdbbd7644d68d472ee9f8064cd6a1bf63a709cf9052e55",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1002,7 +1002,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "e26271c4caac8e87d635818da9c82ed3c997398c5c7166593fb77990566eeb9a",
+              "source_sha256": "123631a90579a04a90bdbbd7644d68d472ee9f8064cd6a1bf63a709cf9052e55",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1181,7 +1181,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "c1a4b5b4b78813154e682fe682573afbdf48a4b144ea9acfbd0a17950e7fda78",
+            "source_sha256": "04daed8f7be2182ae64f54c88bad8251c30f6cfbfbf99419164463b4ed1a752d",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1383,7 +1383,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "c1a4b5b4b78813154e682fe682573afbdf48a4b144ea9acfbd0a17950e7fda78",
+              "source_sha256": "04daed8f7be2182ae64f54c88bad8251c30f6cfbfbf99419164463b4ed1a752d",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1562,7 +1562,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "d85832c8f7ae4b51adbbd6b23ae9c96ee0d64723ebf48f1a4618c04a3f055e1e",
+            "source_sha256": "e605e565980fe6956b84df770d812628115b0f7e83e1e216616b976260d13ffa",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1764,7 +1764,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "d85832c8f7ae4b51adbbd6b23ae9c96ee0d64723ebf48f1a4618c04a3f055e1e",
+              "source_sha256": "e605e565980fe6956b84df770d812628115b0f7e83e1e216616b976260d13ffa",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -1943,7 +1943,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "121e93bd637c5da993c98e8e5f2ad64b7e138a77f2be45e970fb587d02b4e191",
+            "source_sha256": "f3df34699e5a60a4d28698a2bc6cdb6798df5c230a4d69b40fdd2842d825f08b",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -2145,7 +2145,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "121e93bd637c5da993c98e8e5f2ad64b7e138a77f2be45e970fb587d02b4e191",
+              "source_sha256": "f3df34699e5a60a4d28698a2bc6cdb6798df5c230a4d69b40fdd2842d825f08b",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -2324,7 +2324,7 @@
             "source_date": "2026-11-24",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "2d6b26b14524677a20e3e07002b46c5b46c6c984182822dcc0ce4544bc5ca4f6",
+            "source_sha256": "56a9cd617ea755a6e5c8cdbbb905670c688bea71f45bbae5091fbf763d6f4c71",
             "historical_publication_time_verified": false,
             "independent_corroboration": false,
             "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -2526,7 +2526,7 @@
               "source_date": "2026-11-24",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "2d6b26b14524677a20e3e07002b46c5b46c6c984182822dcc0ce4544bc5ca4f6",
+              "source_sha256": "56a9cd617ea755a6e5c8cdbbb905670c688bea71f45bbae5091fbf763d6f4c71",
               "historical_publication_time_verified": false,
               "independent_corroboration": false,
               "caveat": "Published rounded daily amounts; observation only, not exact cash flows or strategy evidence"
@@ -3030,21 +3030,21 @@
           "daily_observation": {
             "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
             "magnitude_percentile": null,
-            "reference_count": 11
+            "reference_count": 12
           },
           "status": "OBSERVED",
           "symbol": "IBIT",
           "provider": "FARSIDE_DAILY",
           "stale": false,
-          "lag_sessions": 1,
-          "flow_asof": "2026-11-24",
-          "daily_flow_usd": -175300000.0,
-          "daily_count": 12,
+          "lag_sessions": 0,
+          "flow_asof": "2026-11-25",
+          "daily_flow_usd": -329700000.0,
+          "daily_count": 13,
           "coverage_start": "2026-11-09",
-          "coverage_end": "2026-11-24",
+          "coverage_end": "2026-11-25",
           "horizons": {
             "1H": {
-              "net_usd_m": -1919.1,
+              "net_usd_m": -2100.1,
               "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
               "magnitude_percentile": null,
               "reference_count": 1,
@@ -3052,8 +3052,8 @@
               "directional_sessions": 5,
               "positive_sessions_pct": 0.0,
               "pressure_basis": "DAILY_NET_OVER_ABSOLUTE_DAILY_NET",
-              "pressure_start": "2026-11-17",
-              "pressure_end": "2026-11-24",
+              "pressure_start": "2026-11-18",
+              "pressure_end": "2026-11-25",
               "action": "BEKLE · yuvarlanmış alternatif gözlem"
             },
             "1A": {
@@ -3081,10 +3081,10 @@
           "provenance": {
             "source": "Farside Investors",
             "source_url": "https://farside.co.uk/btc/",
-            "source_date": "2026-11-24",
+            "source_date": "2026-11-25",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "9889f8b12a5ae8f8ab65d458d89214d85ba0525bd753cb50c26c86e95559dcbe",
+            "source_sha256": "2461793472d1b2c6ae22da918e71c0fbafd26c93e4d4ca69b93040ae447ab79b",
             "historical_publication_time_verified": false,
             "independent_corroboration": false
           },
@@ -3225,21 +3225,21 @@
             "daily_observation": {
               "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
               "magnitude_percentile": null,
-              "reference_count": 11
+              "reference_count": 12
             },
             "status": "OBSERVED",
             "symbol": "IBIT",
             "provider": "FARSIDE_DAILY",
             "stale": false,
-            "lag_sessions": 1,
-            "flow_asof": "2026-11-24",
-            "daily_flow_usd": -175300000.0,
-            "daily_count": 12,
+            "lag_sessions": 0,
+            "flow_asof": "2026-11-25",
+            "daily_flow_usd": -329700000.0,
+            "daily_count": 13,
             "coverage_start": "2026-11-09",
-            "coverage_end": "2026-11-24",
+            "coverage_end": "2026-11-25",
             "horizons": {
               "1H": {
-                "net_usd_m": -1919.1,
+                "net_usd_m": -2100.1,
                 "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
                 "magnitude_percentile": null,
                 "reference_count": 1,
@@ -3247,8 +3247,8 @@
                 "directional_sessions": 5,
                 "positive_sessions_pct": 0.0,
                 "pressure_basis": "DAILY_NET_OVER_ABSOLUTE_DAILY_NET",
-                "pressure_start": "2026-11-17",
-                "pressure_end": "2026-11-24",
+                "pressure_start": "2026-11-18",
+                "pressure_end": "2026-11-25",
                 "action": "BEKLE · yuvarlanmış alternatif gözlem"
               },
               "1A": {
@@ -3276,10 +3276,10 @@
             "provenance": {
               "source": "Farside Investors",
               "source_url": "https://farside.co.uk/btc/",
-              "source_date": "2026-11-24",
+              "source_date": "2026-11-25",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "9889f8b12a5ae8f8ab65d458d89214d85ba0525bd753cb50c26c86e95559dcbe",
+              "source_sha256": "2461793472d1b2c6ae22da918e71c0fbafd26c93e4d4ca69b93040ae447ab79b",
               "historical_publication_time_verified": false,
               "independent_corroboration": false
             },
@@ -3399,21 +3399,21 @@
           "daily_observation": {
             "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
             "magnitude_percentile": null,
-            "reference_count": 11
+            "reference_count": 12
           },
           "status": "OBSERVED",
           "symbol": "ETHA",
           "provider": "FARSIDE_DAILY",
           "stale": false,
-          "lag_sessions": 1,
-          "flow_asof": "2026-11-24",
-          "daily_flow_usd": -37800000.0,
-          "daily_count": 12,
+          "lag_sessions": 0,
+          "flow_asof": "2026-11-25",
+          "daily_flow_usd": -68500000.0,
+          "daily_count": 13,
           "coverage_start": "2026-11-09",
-          "coverage_end": "2026-11-24",
+          "coverage_end": "2026-11-25",
           "horizons": {
             "1H": {
-              "net_usd_m": -330.7,
+              "net_usd_m": -381.8,
               "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
               "magnitude_percentile": null,
               "reference_count": 1,
@@ -3421,8 +3421,8 @@
               "directional_sessions": 5,
               "positive_sessions_pct": 0.0,
               "pressure_basis": "DAILY_NET_OVER_ABSOLUTE_DAILY_NET",
-              "pressure_start": "2026-11-17",
-              "pressure_end": "2026-11-24",
+              "pressure_start": "2026-11-18",
+              "pressure_end": "2026-11-25",
               "action": "BEKLE · yuvarlanmış alternatif gözlem"
             },
             "1A": {
@@ -3450,10 +3450,10 @@
           "provenance": {
             "source": "Farside Investors",
             "source_url": "https://farside.co.uk/eth/",
-            "source_date": "2026-11-24",
+            "source_date": "2026-11-25",
             "units": "USD",
             "precision": "PUBLISHER_ROUNDED",
-            "source_sha256": "7ac743d4e95a6aaca6e73b41da16886b5fa87020845c376878f58b94f9117547",
+            "source_sha256": "6eb1862f45949eea175cc94b4c40a6b77bcb4fcdeeb063d5edf1ba991a03db6c",
             "historical_publication_time_verified": false,
             "independent_corroboration": false
           },
@@ -3594,21 +3594,21 @@
             "daily_observation": {
               "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
               "magnitude_percentile": null,
-              "reference_count": 11
+              "reference_count": 12
             },
             "status": "OBSERVED",
             "symbol": "ETHA",
             "provider": "FARSIDE_DAILY",
             "stale": false,
-            "lag_sessions": 1,
-            "flow_asof": "2026-11-24",
-            "daily_flow_usd": -37800000.0,
-            "daily_count": 12,
+            "lag_sessions": 0,
+            "flow_asof": "2026-11-25",
+            "daily_flow_usd": -68500000.0,
+            "daily_count": 13,
             "coverage_start": "2026-11-09",
-            "coverage_end": "2026-11-24",
+            "coverage_end": "2026-11-25",
             "horizons": {
               "1H": {
-                "net_usd_m": -330.7,
+                "net_usd_m": -381.8,
                 "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
                 "magnitude_percentile": null,
                 "reference_count": 1,
@@ -3616,8 +3616,8 @@
                 "directional_sessions": 5,
                 "positive_sessions_pct": 0.0,
                 "pressure_basis": "DAILY_NET_OVER_ABSOLUTE_DAILY_NET",
-                "pressure_start": "2026-11-17",
-                "pressure_end": "2026-11-24",
+                "pressure_start": "2026-11-18",
+                "pressure_end": "2026-11-25",
                 "action": "BEKLE · yuvarlanmış alternatif gözlem"
               },
               "1A": {
@@ -3645,10 +3645,10 @@
             "provenance": {
               "source": "Farside Investors",
               "source_url": "https://farside.co.uk/eth/",
-              "source_date": "2026-11-24",
+              "source_date": "2026-11-25",
               "units": "USD",
               "precision": "PUBLISHER_ROUNDED",
-              "source_sha256": "7ac743d4e95a6aaca6e73b41da16886b5fa87020845c376878f58b94f9117547",
+              "source_sha256": "6eb1862f45949eea175cc94b4c40a6b77bcb4fcdeeb063d5edf1ba991a03db6c",
               "historical_publication_time_verified": false,
               "independent_corroboration": false
             },
@@ -3797,19 +3797,19 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -1.8649955080278446,
-          "excess_sgov_pp": -1.9345922142287253,
+          "total_return_pct": -1.8488085146967093,
+          "excess_sgov_pp": -1.9283331988598773,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 1.030740855267498,
-          "relative_rank": 5,
+          "breadth_rsp_spy_pp": 1.9927127192748362,
+          "relative_rank": 6,
           "rank_count": 12
         },
         "1A": {
@@ -3823,18 +3823,18 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -5.419943286461837,
-          "excess_sgov_pp": -5.748630808533262,
+          "total_return_pct": -5.693640560042179,
+          "excess_sgov_pp": -6.042258907473341,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 4.228483670567019,
+          "breadth_rsp_spy_pp": 5.324199432411003,
           "relative_rank": 5,
           "rank_count": 12
         },
@@ -3849,19 +3849,19 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -5.619742473516965,
-          "excess_sgov_pp": -6.577098639195056,
+          "total_return_pct": -6.192664160059625,
+          "excess_sgov_pp": -7.170068312732181,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 2.3909223620147584,
-          "relative_rank": 4,
+          "breadth_rsp_spy_pp": 3.8393079543753266,
+          "relative_rank": 5,
           "rank_count": 12
         },
         "1Y": {
@@ -3875,18 +3875,18 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 8.643955714676865,
-          "excess_sgov_pp": 4.896484880636143,
+          "total_return_pct": 7.320113066929501,
+          "excess_sgov_pp": 3.572639568614333,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.89496520380264,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 4,
           "rank_count": 12
         }
@@ -3898,7 +3898,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "QQQ",
@@ -3935,19 +3935,19 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -2.869325865109107,
-          "excess_sgov_pp": -2.9389225713099876,
+          "total_return_pct": -3.8786397038817255,
+          "excess_sgov_pp": -3.9581643880448936,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 1.030740855267498,
-          "relative_rank": 6,
+          "breadth_rsp_spy_pp": 1.9927127192748362,
+          "relative_rank": 9,
           "rank_count": 12
         },
         "1A": {
@@ -3966,18 +3966,18 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -9.41227236374318,
-          "excess_sgov_pp": -9.740959885814604,
+          "total_return_pct": -10.00426310275897,
+          "excess_sgov_pp": -10.352881450190132,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 4.228483670567019,
+          "breadth_rsp_spy_pp": 5.324199432411003,
           "relative_rank": 6,
           "rank_count": 12
         },
@@ -3997,19 +3997,19 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -9.564378989785816,
-          "excess_sgov_pp": -10.521735155463908,
+          "total_return_pct": -10.711590942989424,
+          "excess_sgov_pp": -11.68899509566198,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 2.3909223620147584,
-          "relative_rank": 6,
+          "breadth_rsp_spy_pp": 3.8393079543753266,
+          "relative_rank": 7,
           "rank_count": 12
         },
         "1Y": {
@@ -4025,18 +4025,18 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 5.938619494429442,
-          "excess_sgov_pp": 2.19114866038872,
+          "total_return_pct": 4.6015666000396305,
+          "excess_sgov_pp": 0.8540931017244624,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.89496520380264,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 5,
           "rank_count": 12
         }
@@ -4048,7 +4048,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "DIA",
@@ -4080,18 +4080,18 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -1.3824718278305892,
-          "excess_sgov_pp": -1.4520685340314698,
+          "total_return_pct": 0.019589100203276644,
+          "excess_sgov_pp": -0.0599355839598914,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 1.030740855267498,
+          "breadth_rsp_spy_pp": 1.9927127192748362,
           "relative_rank": 4,
           "rank_count": 12
         },
@@ -4106,18 +4106,18 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -4.041934115687518,
-          "excess_sgov_pp": -4.370621637758942,
+          "total_return_pct": -3.7481498948213177,
+          "excess_sgov_pp": -4.09676824225248,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 4.228483670567019,
+          "breadth_rsp_spy_pp": 5.324199432411003,
           "relative_rank": 4,
           "rank_count": 12
         },
@@ -4132,19 +4132,19 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -6.013415438372149,
-          "excess_sgov_pp": -6.970771604050241,
+          "total_return_pct": -6.005709832035489,
+          "excess_sgov_pp": -6.983113984708045,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 2.3909223620147584,
-          "relative_rank": 5,
+          "breadth_rsp_spy_pp": 3.8393079543753266,
+          "relative_rank": 4,
           "rank_count": 12
         },
         "1Y": {
@@ -4158,18 +4158,18 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 9.159409195265766,
-          "excess_sgov_pp": 5.411938361225044,
+          "total_return_pct": 7.927360411124451,
+          "excess_sgov_pp": 4.179886912809283,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.89496520380264,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 3,
           "rank_count": 12
         }
@@ -4181,7 +4181,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "IWM",
@@ -4213,19 +4213,19 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -0.7098952726959262,
-          "excess_sgov_pp": -0.7794919788968069,
+          "total_return_pct": -0.4627573014199471,
+          "excess_sgov_pp": -0.5422819855831151,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 1.030740855267498,
-          "relative_rank": 3,
+          "breadth_rsp_spy_pp": 1.9927127192748362,
+          "relative_rank": 5,
           "rank_count": 12
         },
         "1A": {
@@ -4239,18 +4239,18 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -3.122388160131462,
-          "excess_sgov_pp": -3.4510756822028865,
+          "total_return_pct": -2.495015370013598,
+          "excess_sgov_pp": -2.84363371744476,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 4.228483670567019,
+          "breadth_rsp_spy_pp": 5.324199432411003,
           "relative_rank": 3,
           "rank_count": 12
         },
@@ -4265,19 +4265,19 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -10.112516925184977,
-          "excess_sgov_pp": -11.06987309086307,
+          "total_return_pct": -9.911369830362649,
+          "excess_sgov_pp": -10.888773983035204,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 2.3909223620147584,
-          "relative_rank": 7,
+          "breadth_rsp_spy_pp": 3.8393079543753266,
+          "relative_rank": 6,
           "rank_count": 12
         },
         "1Y": {
@@ -4291,18 +4291,18 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 12.486105717595187,
-          "excess_sgov_pp": 8.738634883554464,
+          "total_return_pct": 10.79904100189748,
+          "excess_sgov_pp": 7.051567503582312,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "breadth_rsp_spy_pp": 7.89496520380264,
+          "breadth_rsp_spy_pp": 8.542303183447464,
           "relative_rank": 2,
           "rank_count": 12
         }
@@ -4314,7 +4314,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "SGOV",
@@ -4344,18 +4344,18 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": 0.06959670620088065,
+          "total_return_pct": 0.07952468416316805,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "relative_rank": 2,
+          "relative_rank": 3,
           "rank_count": 12
         },
         "1A": {
@@ -4369,11 +4369,11 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": 0.3286875220714247,
+          "total_return_pct": 0.34861834743116216,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -4394,11 +4394,11 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": 0.9573561656780916,
+          "total_return_pct": 0.9774041526725563,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -4419,11 +4419,11 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 3.7474708340407226,
+          "total_return_pct": 3.747473498315168,
           "excess_sgov_pp": 0.0,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
@@ -4441,7 +4441,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "SHY",
@@ -4473,18 +4473,18 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": 0.3074274482761874,
-          "excess_sgov_pp": 0.23783074207530674,
+          "total_return_pct": 0.36882599614533884,
+          "excess_sgov_pp": 0.2893013119821708,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "relative_rank": 1,
+          "relative_rank": 2,
           "rank_count": 12
         },
         "1A": {
@@ -4498,12 +4498,12 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": 0.3980221157411812,
-          "excess_sgov_pp": 0.06933459366975647,
+          "total_return_pct": 0.4841791702385523,
+          "excess_sgov_pp": 0.13556082280739012,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -4523,12 +4523,12 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": 0.38197858031920884,
-          "excess_sgov_pp": -0.5753775853588827,
+          "total_return_pct": 0.3702004924375668,
+          "excess_sgov_pp": -0.6072036602349895,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4548,12 +4548,12 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 1.8020746725188497,
-          "excess_sgov_pp": -1.945396161521873,
+          "total_return_pct": 1.8281300271291823,
+          "excess_sgov_pp": -1.9193434711859858,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4570,7 +4570,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "GLD",
@@ -4602,12 +4602,12 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -7.668519614391778,
-          "excess_sgov_pp": -7.738116320592659,
+          "total_return_pct": -4.02707879365094,
+          "excess_sgov_pp": -4.106603477814108,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4627,12 +4627,12 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -11.227182779830914,
-          "excess_sgov_pp": -11.555870301902338,
+          "total_return_pct": -10.681643902028092,
+          "excess_sgov_pp": -11.030262249459255,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4652,12 +4652,12 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -23.72682501467267,
-          "excess_sgov_pp": -24.684181180350762,
+          "total_return_pct": -23.50549989384756,
+          "excess_sgov_pp": -24.482904046520115,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4677,12 +4677,12 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": -14.400315161007104,
-          "excess_sgov_pp": -18.147785995047826,
+          "total_return_pct": -13.847078568875848,
+          "excess_sgov_pp": -17.594552067191017,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4699,7 +4699,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "SLV",
@@ -4736,18 +4736,18 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -13.602249812575263,
-          "excess_sgov_pp": -13.671846518776142,
+          "total_return_pct": -8.845214303033732,
+          "excess_sgov_pp": -8.9247389871969,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "silver_gold_pp": -5.9337301981834845,
+          "silver_gold_pp": -4.818135509382792,
           "relative_rank": 12,
           "rank_count": 12
         },
@@ -4767,18 +4767,18 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -24.38423803459786,
-          "excess_sgov_pp": -24.712925556669283,
+          "total_return_pct": -23.850579752539524,
+          "excess_sgov_pp": -24.199198099970687,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "silver_gold_pp": -13.157055254766947,
+          "silver_gold_pp": -13.168935850511431,
           "relative_rank": 10,
           "rank_count": 12
         },
@@ -4798,18 +4798,18 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -40.771704661234956,
-          "excess_sgov_pp": -41.72906082691305,
+          "total_return_pct": -40.46855157927366,
+          "excess_sgov_pp": -41.44595573194621,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "silver_gold_pp": -17.044879646562286,
+          "silver_gold_pp": -16.963051685426098,
           "relative_rank": 12,
           "rank_count": 12
         },
@@ -4826,18 +4826,18 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": -20.99506903554753,
-          "excess_sgov_pp": -24.742539869588253,
+          "total_return_pct": -20.505678316465403,
+          "excess_sgov_pp": -24.253151814780573,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "silver_gold_pp": -6.594753874540427,
+          "silver_gold_pp": -6.658599747589555,
           "relative_rank": 10,
           "rank_count": 12
         }
@@ -4849,7 +4849,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "CPER",
@@ -4886,12 +4886,12 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -9.697142305372275,
-          "excess_sgov_pp": -9.766739011573154,
+          "total_return_pct": -4.662757254357541,
+          "excess_sgov_pp": -4.742281938520709,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4916,12 +4916,12 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -16.794677784565327,
-          "excess_sgov_pp": -17.12336530663675,
+          "total_return_pct": -16.76908044411044,
+          "excess_sgov_pp": -17.117698791541603,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4946,12 +4946,12 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -18.891938488839134,
-          "excess_sgov_pp": -19.849294654517227,
+          "total_return_pct": -20.240432629364424,
+          "excess_sgov_pp": -21.21783678203698,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -4973,12 +4973,12 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 4.468014665309683,
-          "excess_sgov_pp": 0.7205438312689605,
+          "total_return_pct": 4.265548439191802,
+          "excess_sgov_pp": 0.5180749408766339,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -4995,7 +4995,7 @@
         "start_aum_date": null,
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "USO",
@@ -5032,18 +5032,18 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -3.4298435745692246,
-          "excess_sgov_pp": -3.4994402807701053,
-          "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
+          "total_return_pct": 2.7771646185779097,
+          "excess_sgov_pp": 2.6976399344147417,
+          "price_confirmation": "YÖN UYUMLU",
           "models": {
-            "price_only": "AZALTMA ADAYI",
+            "price_only": "ALIM ADAYI",
             "price_flow": "BEKLE"
           },
-          "relative_rank": 7,
+          "relative_rank": 1,
           "rank_count": 12
         },
         "1A": {
@@ -5062,12 +5062,12 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -20.114437768567917,
-          "excess_sgov_pp": -20.443125290639344,
+          "total_return_pct": -17.483630981579466,
+          "excess_sgov_pp": -17.83224932901063,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5092,12 +5092,12 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": 2.435508507977646,
-          "excess_sgov_pp": 1.4781523422995546,
+          "total_return_pct": 10.891793656420102,
+          "excess_sgov_pp": 9.914389503747547,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -5119,12 +5119,12 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": 92.31751803070176,
-          "excess_sgov_pp": 88.57004719666104,
+          "total_return_pct": 102.00721933523238,
+          "excess_sgov_pp": 98.2597458369172,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "ALIM ADAYI",
@@ -5141,7 +5141,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "IBIT",
@@ -5178,12 +5178,12 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -6.585503896817824,
-          "excess_sgov_pp": -6.655100603018704,
+          "total_return_pct": -3.6481925714381913,
+          "excess_sgov_pp": -3.7277172556013594,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5208,12 +5208,12 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -26.544823772768865,
-          "excess_sgov_pp": -26.87351129484029,
+          "total_return_pct": -25.870321206480206,
+          "excess_sgov_pp": -26.21893955391137,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5238,12 +5238,12 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -24.37276258260478,
-          "excess_sgov_pp": -25.33011874828287,
+          "total_return_pct": -23.81485070476359,
+          "excess_sgov_pp": -24.792254857436145,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5265,12 +5265,12 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": -33.24105492334321,
-          "excess_sgov_pp": -36.98852575738394,
+          "total_return_pct": -31.255046911307595,
+          "excess_sgov_pp": -35.00252040962276,
           "price_confirmation": "TEYİTSİZ · fiyat yönü desteklemiyor",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5287,7 +5287,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     },
     {
       "symbol": "ETHA",
@@ -5319,18 +5319,18 @@
               "change": 0.7725
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": -13.0
+              "asof": "2026-11-24",
+              "change": -10.0
             }
           },
-          "total_return_pct": -6.937268361549576,
-          "excess_sgov_pp": -7.006865067750456,
+          "total_return_pct": -3.5624143427984367,
+          "excess_sgov_pp": -3.6419390269616048,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
             "price_flow": "BEKLE"
           },
-          "relative_rank": 9,
+          "relative_rank": 7,
           "rank_count": 12
         },
         "1A": {
@@ -5344,12 +5344,12 @@
               "change": 2.0491
             },
             "real_yield": {
-              "asof": "2026-11-23",
+              "asof": "2026-11-24",
               "change": 13.0
             }
           },
-          "total_return_pct": -30.048075905701367,
-          "excess_sgov_pp": -30.376763427772794,
+          "total_return_pct": -29.419384473787645,
+          "excess_sgov_pp": -29.768002821218808,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5369,12 +5369,12 @@
               "change": 4.5182
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 39.0
+              "asof": "2026-11-24",
+              "change": 41.0
             }
           },
-          "total_return_pct": -32.422289852802976,
-          "excess_sgov_pp": -33.37964601848107,
+          "total_return_pct": -31.594984425028382,
+          "excess_sgov_pp": -32.57238857770094,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5394,12 +5394,12 @@
               "change": 1.5687
             },
             "real_yield": {
-              "asof": "2026-11-23",
-              "change": 97.0
+              "asof": "2026-11-24",
+              "change": 98.0
             }
           },
-          "total_return_pct": -43.83073097530852,
-          "excess_sgov_pp": -47.57820180934924,
+          "total_return_pct": -42.506403795965696,
+          "excess_sgov_pp": -46.25387729428086,
           "price_confirmation": "YÖN UYUMLU",
           "models": {
             "price_only": "AZALTMA ADAYI",
@@ -5416,7 +5416,7 @@
         "start_aum_date": "2026-11-20",
         "source_date": "2026-11-23"
       },
-      "price_asof": "2026-11-24"
+      "price_asof": "2026-11-25"
     }
   ]
 }

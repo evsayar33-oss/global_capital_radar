@@ -110,5 +110,5 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 |SLV|—|—|—|—|—|
 |CPER|—|—|—|—|—|
 |USO|USCF_CREATION|2026-11-24|68225000.0|2|BEKLE · alternatif kaynak araştırma aşamasında|
-|IBIT|FARSIDE_DAILY|2026-11-24|-175300000.0|12|BEKLE · yuvarlanmış alternatif gözlem|
-|ETHA|FARSIDE_DAILY|2026-11-24|-37800000.0|12|BEKLE · yuvarlanmış alternatif gözlem|
+|IBIT|FARSIDE_DAILY|2026-11-25|-329700000.0|13|BEKLE · yuvarlanmış alternatif gözlem|
+|ETHA|FARSIDE_DAILY|2026-11-25|-68500000.0|13|BEKLE · yuvarlanmış alternatif gözlem|

@@ -627,26 +627,26 @@
     "telegram_message_id": 9
   },
   "IBIT/1G/FARSIDE_DAILY": {
-    "asof": "2026-11-24",
-    "start": "2026-11-24",
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
-    "net_usd_m": -175.3,
+    "net_usd_m": -329.7,
     "percentile": null,
-    "references": 11,
+    "references": 12,
     "confirmation": null,
-    "telegram_message_id": 9
+    "telegram_message_id": 12
   },
   "ETHA/1G/FARSIDE_DAILY": {
-    "asof": "2026-11-24",
-    "start": "2026-11-24",
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
-    "net_usd_m": -37.8,
+    "net_usd_m": -68.5,
     "percentile": null,
-    "references": 11,
+    "references": 12,
     "confirmation": null,
-    "telegram_message_id": 9
+    "telegram_message_id": 12
   },
   "SPY/1H/PWD_DAILY_ROUNDED": {
     "asof": "2026-11-24",
@@ -726,26 +726,26 @@
     "telegram_message_id": 10
   },
   "IBIT/1H/FARSIDE_DAILY": {
-    "asof": "2026-11-24",
-    "start": "2026-11-17",
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
-    "net_usd_m": -1919.1,
+    "net_usd_m": -2100.1,
     "percentile": null,
     "references": 1,
     "confirmation": null,
-    "telegram_message_id": 10
+    "telegram_message_id": 13
   },
   "ETHA/1H/FARSIDE_DAILY": {
-    "asof": "2026-11-24",
-    "start": "2026-11-17",
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Yuvarlanmış gözlem · güç ölçülmedi",
-    "net_usd_m": -330.7,
+    "net_usd_m": -381.8,
     "percentile": null,
     "references": 1,
     "confirmation": null,
-    "telegram_message_id": 10
+    "telegram_message_id": 13
   },
   "SPY/1A/PWD_DAILY_ROUNDED": {
     "asof": "2026-11-24",
