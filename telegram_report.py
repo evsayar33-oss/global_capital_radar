@@ -1,4 +1,4 @@
-"""Notify new dated flow observations and material revisions, never trade orders."""
+"""Notify only new dated flow observations in a concise, combined report."""
 import hashlib
 import json
 import os
@@ -12,65 +12,69 @@ from flow_view import observation, HORIZONS, number
 ROOT = Path(__file__).resolve().parent
 
 
+TITLE = "YENİ AKIŞ TARİHİ GÜNCELLEMESİ\n\nAKIŞ TARİHİ GÜNCELLENEN VARLIKLAR:"
+MAX_MESSAGE_LENGTH = 3800
+
+
 def message(data):
-    return "\n".join(line for _,line,_ in events(data,{}) if line)
+    return "\n\n".join(text for text, _ in batches(events(data, {})))
 
 
 def events(data, state):
-    output=[]
-    continuity=data.get("continuity") or {}
+    # Keep the existing per-source receipts for auditing, but compare dates
+    # across all sources for the same asset and investment horizon.
+    latest = {}
+    for key, receipt in state.items():
+        identity = key.rsplit("/", 1)[0]
+        asof = receipt.get("asof")
+        if asof:
+            latest[identity] = max(latest.get(identity, ""), asof)
+
+    output = []
+    continuity = data.get("continuity") or {}
     for asset in data["assets"]:
-        for horizon,label in HORIZONS.items():
-            o=observation(asset,continuity,horizon)
-            h=o["h"]; value=h.get("net_usd_m")
+        symbol = asset["symbol"]
+        name = asset.get("asset")
+        display = f"{name} ({symbol})" if name and name != symbol else symbol
+        for horizon, label in HORIZONS.items():
+            o = observation(asset, continuity, horizon)
+            h = o["h"]
+            value = h.get("net_usd_m")
             if o["stale"] or not number(value) or not o["asof"]:
                 continue
-            key=asset["symbol"]+"/"+horizon+"/"+o["source"]
-            current=dict(asof=o["asof"],start=o["period_start"],action=o["action"],
-                         strength=h.get("strength","Geçmiş yetersiz"),net_usd_m=value,
-                         percentile=h.get("magnitude_percentile"),references=h.get("reference_count"),
-                         confirmation=h.get("confirmation") if o["primary"] else None)
-            old=state.get(key)
-            if old and old.get("asof","")>current["asof"]:
+            identity = symbol + "/" + horizon
+            key = identity + "/" + o["source"]
+            current = dict(asof=o["asof"], start=o["period_start"], action=o["action"],
+                           strength=h.get("strength", "Geçmiş yetersiz"), net_usd_m=value,
+                           percentile=h.get("magnitude_percentile"), references=h.get("reference_count"),
+                           confirmation=h.get("confirmation") if o["primary"] else None)
+            previous = latest.get(identity, "")
+            if current["asof"] < previous:
                 continue
-            reasons=[]
-            if not old or old.get("asof")!=current["asof"]:
-                reasons.append("Yeni kaynak tarihi")
-            elif any(old.get(k)!=current.get(k) for k in ("action","strength","net_usd_m","percentile","confirmation")):
-                reasons.append("Aynı tarih · veri/karar revizyonu")
-            pct=current["percentile"]
-            text=(f"{asset['symbol']} · {o['source']} · {o['asof']}\\n"
-                  f"{o['direction']} {abs(value):,.3f} milyon USD · {current['strength']} · "
-                  f"yüzdelik {pct if pct is not None else 'ölçülemedi'} · n={current['references'] if current['references'] is not None else '—'}\\n"
-                  f"{current['action']}")
-            pressure=h.get("directional_pressure_pct")
-            if number(pressure):
-                text+=f" · yönsel akış baskısı {pressure:+.2f}% (tarihsel yüzdelik değil)"
-            if o.get("precision"):
-                text+=f" · {o['precision']}"
-            if current["confirmation"]:
-                text+=" · "+current["confirmation"]
-            if reasons:
-                text+="\\n"+" / ".join(reasons)
-            output.append((key,text if reasons else None,current))
+            # A same-date revision or source switch is not a new flow date.
+            line = None
+            if current["asof"] > previous:
+                line = f"{display} = {current['asof']} - {o['direction']} - {label}"
+            output.append((key, line, current))
     return output
 
 
 def batches(changes):
-    # One bounded message per horizon where possible; per-source receipt keys
-    # are committed only after Telegram acknowledges that message.
-    for horizon,label in HORIZONS.items():
-        title=f"Sermaye radarı · {label} · yeni akış gözlemleri\\nAraştırma; işlem emri değildir."
-        body=title; pending=[]
-        for key,text,current in changes:
-            if not text or key.split("/")[1]!=horizon:
-                continue
-            if pending and len(body)+len(text)+2>3800:
-                yield body,pending
-                body=title;pending=[]
-            body+="\\n\\n"+text;pending.append((key,current))
-        if pending:
-            yield body,pending
+    # Combine all changed horizons into one message where possible.
+    # Keep delivery receipts per row; main persists them only after acknowledgement.
+    body = TITLE
+    pending = []
+    for key, line, current in changes:
+        if not line:
+            continue
+        if pending and len(body) + len(line) + 1 > MAX_MESSAGE_LENGTH:
+            yield body, pending
+            body = TITLE
+            pending = []
+        body += "\n" + line
+        pending.append((key, current))
+    if pending:
+        yield body, pending
 
 
 def save(path, state):
