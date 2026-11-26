@@ -125,7 +125,7 @@ class SessionCalendarTests(unittest.TestCase):
         sessions=session_calendar(today,now)
         self.assertEqual(sessions[-1],date(2026,11,27))
         self.assertTrue(all(d.weekday()<5 for d in sessions))
-        self.assertGreaterEqual(sessions[0],today-timedelta(days=850))
+        self.assertGreaterEqual(sessions[0],today-timedelta(days=25*366))
 
     def test_regular_close_boundary(self):
         from flow_continuity import session_calendar
@@ -167,3 +167,4 @@ class HorizonRecoveryTests(unittest.TestCase):
         fallback.assert_called_once()
         self.assertEqual(len(result["assets"]["QQQ"]["candidates"]),2)
         self.assertNotIn("1A",missing_horizons(result["assets"]["QQQ"]["candidates"]))
+

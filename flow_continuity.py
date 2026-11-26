@@ -148,7 +148,7 @@ def choose(candidates):
     # Prefer the most recent observed source; at the same date prefer a
     # complete source-native history, then exact published issuer creation.
     # The non-selected observations are retained for comparison, not merged.
-    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1,"FARSIDE_DAILY":0}
+    order={"ETFIQ_HISTORY":1,"ETFIQ_DAILY":0,"USCF_CREATION":2,"PWD_DAILY_ROUNDED":-1,"FARSIDE_DAILY":0,"ISHARES_HISTORY":3,"SPDR_GOLD_HISTORY":3}
     candidates=[c for c in candidates if c.get("status")=="OBSERVED" and not c.get("stale")]
     return max(candidates,key=lambda x:(x["flow_asof"],x["daily_count"]>=5,
                                        order[x["provider"]])) if candidates else None
@@ -168,6 +168,12 @@ def collect(root,assets,today,calendar,reader,now):
         if daily is None:errors["ETFIQ_DAILY"]=daily_error
         else:attempt("ETFIQ_DAILY",lambda:etfiq_daily(sym,today,calendar,daily))
         if sym in ("USO","CPER"):attempt("USCF_CREATION",lambda:issuer_history(root,sym,today,calendar,now))
+        from issuer_flow_history import FUNDS, collect as issuer_collect
+        if sym in FUNDS:
+            attempt("ISHARES_HISTORY",lambda:issuer_collect(sym,today,calendar,reader))
+        if sym=="GLD":
+            from gold_flow_history import collect as gold_collect
+            attempt("SPDR_GOLD_HISTORY",lambda:gold_collect(today,calendar))
         enrich_matching_daily(candidates)
         if not choose(candidates) or missing_horizons(candidates):
             from public_flow_source import collect as public_collect
@@ -197,10 +203,10 @@ def session_calendar(today,now):
     import pandas as pd
     if now.tzinfo is None or now.astimezone(NY).date()!=today:
         raise ValueError("invalid session clock")
-    cal=xcals.get_calendar("XNYS",start=str(today-timedelta(days=850)),end=str(today+timedelta(days=7)))
+    cal=xcals.get_calendar("XNYS",start=str(today-timedelta(days=25*366)),end=str(today+timedelta(days=7)))
     # Range endpoints can be holidays/weekends, or outside the first/last
     # actual session of a bounded calendar. Filter actual session labels.
-    first=today-timedelta(days=850)
+    first=today-timedelta(days=25*366)
     schedule=cal.schedule
     closes=pd.to_datetime(schedule["close"],utc=True)
     return [label.date() for label,close in zip(schedule.index,closes,strict=True)
@@ -239,4 +245,5 @@ def main():
     return 0 if count>=8 and full>=8 else 1
 
 if __name__=="__main__":raise SystemExit(main())
+
 

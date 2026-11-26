@@ -9,6 +9,10 @@ on:
       - 'secondary_sources.py'
       - 'rotation.py'
       - 'flow_continuity.py'
+      - 'issuer_flow_history.py'
+      - 'gold_flow_history.py'
+      - 'test_gold_flow_history.py'
+      - 'test_issuer_flow_history.py'
       - 'public_flow_source.py'
       - 'test_public_flow_source.py'
       - 'experiments.py'
@@ -126,4 +130,5 @@ jobs:
         run: |
           probe="$RUNNER_TEMP/repo-resource-$GITHUB_RUN_ID-$GITHUB_JOB/probe.py"
           if test -f "$probe"; then python3 "$probe" finish; else echo "::warning::Resource telemetry unavailable"; fi
+
 
