@@ -1,6 +1,6 @@
 # Varlıklar arası sermaye takibi
 
-2026-11-26 · Araştırma
+2026-11-27 · Araştırma
 
 Akışlar seçili ABD fonunda milyon USD. COT farkı haftalık yüzde puan.
 
@@ -103,7 +103,7 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 |SPY|ETFIQ_HISTORY|2026-11-24|1985662762|400|BEKLE · alternatif kaynak araştırma aşamasında|
 |QQQ|ETFIQ_HISTORY|2026-11-24|2050291073|15|BEKLE · alternatif kaynak araştırma aşamasında|
 |DIA|ETFIQ_HISTORY|2026-11-24|0|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|IWM|ISHARES_HISTORY|2026-11-25|-578401877.35|6302|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|IWM|ISHARES_HISTORY|2026-11-25|-578401877.35|6301|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |SGOV|ISHARES_HISTORY|2026-11-25|543647953.8|1635|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |SHY|ISHARES_HISTORY|2026-11-25|106087638.8|6127|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |GLD|SPDR_GOLD_HISTORY|2026-11-25|63515636.4259491|4788|BEKLE · resmî NAV/varlık kaynaklı akış tahmini|

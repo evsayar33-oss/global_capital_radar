@@ -1,4 +1,4 @@
-# Sermaye radarı · 2026-11-26
+# Sermaye radarı · 2026-11-27
 
 ## Gözlenen yabancı net alımları
 
@@ -60,6 +60,6 @@ Henüz sonuçlanmış ileri test yok.
 
 - IMF · {"error": "HTTP Error 403: Forbidden", "archive": "WEO 2026-10-13", "archived_forecast": {"2026": 4.7, "2027": 4.1}, "source": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026"}
 - Fed SEP · {"2026": 4.1, "2027": 4.1, "2028": 3.9, "2029": 3.6}
-- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-26", "value": 4.055000305175781, "changes": {"1G": 0.4997, "1H": -1.9997, "1A": 0.0, "3A": 19.0002, "1Y": 107.4997}, "stale": false}
+- Vadeli Fed fonları (%) · {"freq": "D", "change": "bp", "max_age": 7, "contract": "ZQZ26.CBT", "target": "2026-12-01", "period": "2026-11-27", "value": 4.055000305175781, "changes": {"1G": 0.4997, "1H": 1.4999, "1A": 1.0002, "3A": 18.4998, "1Y": 107.4997}, "stale": false}
 - Dünya geniş para / GSYH (%) · {"freq": "Y", "change": "pp", "max_age": 1100, "period": "2024-01-01", "value": 135.663792466297, "changes": {"1Y": 0.2012}, "stale": false}
 - Census · ABD ham petrol ithalatı (USD) · {"freq": "M", "change": "pct", "max_age": 120, "source": "US Census API", "source_series": "HS 2709 / GEN_VAL_MO / all countries", "source_urls": ["https://api.census.gov/data/timeseries/intltrade/imports/hs"], "source_sha256": ["703efa0862bab688f9f4a5be259129d42b99bd57d7d68e6af21e3d29918f9bc8", "91adade6545ccfcf193dc9cb5bdee35e516acfb66fe595e8890d62c47a6e5434"], "observation_basis": "CUSTOMS_BASIS_CURRENT_MONTHLY_USD_NOT_BOP", "authenticated_request": true, "historical_vintage_verified": false, "publication_intraday_verified": false, "period": "2026-08-01", "value": 15620795604.0, "changes": {"1Y": 28.1267}, "stale": false}
