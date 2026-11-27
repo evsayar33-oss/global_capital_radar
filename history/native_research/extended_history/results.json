@@ -1,12 +1,12 @@
 {
-  "evaluated_at": "2026-11-26T23:20:20.534362+00:00",
+  "evaluated_at": "2026-11-27T22:58:45.111550+00:00",
   "policy": "MONTHLY_RESEARCH_ONLY_NO_DAILY_INTERPOLATION",
   "symbols": {
     "QQQ": {
-      "sparse_daily_count": 32,
-      "live_daily_count": 32,
+      "sparse_daily_count": 33,
+      "live_daily_count": 33,
       "daily_start": "2026-10-06",
-      "daily_end": "2026-11-24",
+      "daily_end": "2026-11-25",
       "monthly_count": 84,
       "live_monthly_count": 84,
       "monthly_start": "2019-07",
@@ -32,10 +32,10 @@
       "production_eligible": false
     },
     "USO": {
-      "sparse_daily_count": 35,
-      "live_daily_count": 35,
+      "sparse_daily_count": 36,
+      "live_daily_count": 36,
       "daily_start": "2026-10-06",
-      "daily_end": "2026-11-24",
+      "daily_end": "2026-11-25",
       "monthly_count": 23,
       "live_monthly_count": 0,
       "monthly_start": "2024-11",
