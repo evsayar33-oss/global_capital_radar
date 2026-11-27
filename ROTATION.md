@@ -100,15 +100,15 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 
 |Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
 |---|---|---|---:|---:|---|
-|SPY|ETFIQ_HISTORY|2026-11-24|1985662762|400|BEKLE · alternatif kaynak araştırma aşamasında|
-|QQQ|ETFIQ_HISTORY|2026-11-24|2050291073|15|BEKLE · alternatif kaynak araştırma aşamasında|
-|DIA|ETFIQ_HISTORY|2026-11-24|0|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|SPY|—|—|—|—|—|
+|QQQ|ETFIQ_HISTORY|2026-11-25|2902657116|16|BEKLE · alternatif kaynak araştırma aşamasında|
+|DIA|—|—|—|—|—|
 |IWM|ISHARES_HISTORY|2026-11-25|-578401877.35|6301|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |SGOV|ISHARES_HISTORY|2026-11-25|543647953.8|1635|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |SHY|ISHARES_HISTORY|2026-11-25|106087638.8|6127|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |GLD|SPDR_GOLD_HISTORY|2026-11-25|63515636.4259491|4788|BEKLE · resmî NAV/varlık kaynaklı akış tahmini|
-|SLV|ISHARES_HISTORY|2026-11-25|-26662203.0|3313|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|SLV|ISHARES_HISTORY|2026-11-27|23842174.2|3314|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |CPER|—|—|—|—|—|
-|USO|USCF_CREATION|2026-11-24|68225000.0|2|BEKLE · alternatif kaynak araştırma aşamasında|
+|USO|ETFIQ_HISTORY|2026-11-25|68225000|5|BEKLE · alternatif kaynak araştırma aşamasında|
 |IBIT|ISHARES_HISTORY|2026-11-25|-176387343.6|725|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |ETHA|ISHARES_HISTORY|2026-11-25|-38061368.0|609|BEKLE · resmî pay/NAV kaynaklı akış tahmini|

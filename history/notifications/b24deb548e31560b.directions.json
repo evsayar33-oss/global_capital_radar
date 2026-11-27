@@ -5,7 +5,7 @@
     "source": "ETFIQ_HISTORY"
   },
   "QQQ/1G": {
-    "asof": "2026-11-24",
+    "asof": "2026-11-25",
     "direction": "Giriş",
     "source": "ETFIQ_HISTORY"
   },
@@ -35,9 +35,10 @@
     "source": "SPDR_GOLD_HISTORY"
   },
   "SLV/1G": {
-    "asof": "2026-11-25",
-    "direction": "Çıkış",
-    "source": "ISHARES_HISTORY"
+    "asof": "2026-11-27",
+    "direction": "Giriş",
+    "source": "ISHARES_HISTORY",
+    "telegram_message_id": 20
   },
   "CPER/1G": {
     "asof": "2026-11-23",
@@ -45,9 +46,9 @@
     "source": "USCF_CREATION"
   },
   "USO/1G": {
-    "asof": "2026-11-24",
+    "asof": "2026-11-25",
     "direction": "Giriş",
-    "source": "ETFIQ_DAILY"
+    "source": "ETFIQ_HISTORY"
   },
   "IBIT/1G": {
     "asof": "2026-11-25",
@@ -65,9 +66,10 @@
     "source": "ETFIQ_HISTORY"
   },
   "QQQ/1H": {
-    "asof": "2026-11-24",
-    "direction": "Çıkış",
-    "source": "ETFIQ_HISTORY"
+    "asof": "2026-11-25",
+    "direction": "Giriş",
+    "source": "ETFIQ_HISTORY",
+    "telegram_message_id": 20
   },
   "DIA/1H": {
     "asof": "2026-11-24",
@@ -95,7 +97,7 @@
     "source": "SPDR_GOLD_HISTORY"
   },
   "SLV/1H": {
-    "asof": "2026-11-25",
+    "asof": "2026-11-27",
     "direction": "Giriş",
     "source": "ISHARES_HISTORY"
   },
@@ -140,7 +142,7 @@
     "source": "SPDR_GOLD_HISTORY"
   },
   "SLV/1A": {
-    "asof": "2026-11-25",
+    "asof": "2026-11-27",
     "direction": "Giriş",
     "source": "ISHARES_HISTORY"
   },
@@ -185,7 +187,7 @@
     "source": "SPDR_GOLD_HISTORY"
   },
   "SLV/3A": {
-    "asof": "2026-11-25",
+    "asof": "2026-11-27",
     "direction": "Giriş",
     "source": "ISHARES_HISTORY"
   },
@@ -230,7 +232,7 @@
     "source": "SPDR_GOLD_HISTORY"
   },
   "SLV/1Y": {
-    "asof": "2026-11-25",
+    "asof": "2026-11-27",
     "direction": "Çıkış",
     "source": "ISHARES_HISTORY"
   },
@@ -248,5 +250,10 @@
     "asof": "2026-11-24",
     "direction": "Giriş",
     "source": "PWD_DAILY_ROUNDED"
+  },
+  "USO/1H": {
+    "asof": "2026-11-25",
+    "direction": "Çıkış",
+    "source": "ETFIQ_HISTORY"
   }
 }

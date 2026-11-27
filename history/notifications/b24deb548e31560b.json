@@ -11,15 +11,15 @@
     "telegram_message_id": 14
   },
   "QQQ/1G/ETFIQ_HISTORY": {
-    "asof": "2026-11-24",
-    "start": "2026-11-24",
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Olağan giriş",
-    "net_usd_m": 2050.291073,
-    "percentile": 57.1,
-    "references": 14,
+    "strength": "Güçlü giriş",
+    "net_usd_m": 2902.657116,
+    "percentile": 80.0,
+    "references": 15,
     "confirmation": null,
-    "telegram_message_id": 14
+    "telegram_message_id": 19
   },
   "DIA/1G/ETFIQ_HISTORY": {
     "asof": "2026-11-24",
@@ -143,15 +143,15 @@
     "telegram_message_id": 15
   },
   "QQQ/1H/ETFIQ_HISTORY": {
-    "asof": "2026-11-24",
-    "start": "2026-11-17",
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Geçmiş yetersiz",
-    "net_usd_m": -991.035,
+    "net_usd_m": 3061.257,
     "percentile": null,
-    "references": 1,
+    "references": 2,
     "confirmation": null,
-    "telegram_message_id": 15
+    "telegram_message_id": 19
   },
   "DIA/1H/ETFIQ_HISTORY": {
     "asof": "2026-11-24",
@@ -858,15 +858,15 @@
     "telegram_message_id": 14
   },
   "SLV/1G/ISHARES_HISTORY": {
-    "asof": "2026-11-25",
-    "start": "2026-11-25",
+    "asof": "2026-11-27",
+    "start": "2026-11-27",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
-    "strength": "Olağan çıkış",
-    "net_usd_m": -26.662203,
-    "percentile": 42.3,
+    "strength": "Zayıf giriş",
+    "net_usd_m": 23.8421742,
+    "percentile": 38.5,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 14
+    "telegram_message_id": 19
   },
   "USO/1G/ETFIQ_DAILY": {
     "asof": "2026-11-24",
@@ -946,15 +946,15 @@
     "telegram_message_id": 15
   },
   "SLV/1H/ISHARES_HISTORY": {
-    "asof": "2026-11-25",
-    "start": "2026-11-18",
+    "asof": "2026-11-27",
+    "start": "2026-11-20",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Zayıf giriş",
-    "net_usd_m": 127.568,
-    "percentile": 34.6,
+    "net_usd_m": 43.285,
+    "percentile": 19.2,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 15
+    "telegram_message_id": 19
   },
   "IBIT/1H/ISHARES_HISTORY": {
     "asof": "2026-11-25",
@@ -1023,15 +1023,15 @@
     "telegram_message_id": 16
   },
   "SLV/1A/ISHARES_HISTORY": {
-    "asof": "2026-11-25",
-    "start": "2026-10-25",
+    "asof": "2026-11-27",
+    "start": "2026-10-27",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Olağan giriş",
-    "net_usd_m": 240.269,
-    "percentile": 48.1,
+    "net_usd_m": 264.111,
+    "percentile": 57.7,
     "references": 52,
     "confirmation": null,
-    "telegram_message_id": 16
+    "telegram_message_id": 19
   },
   "IBIT/1A/ISHARES_HISTORY": {
     "asof": "2026-11-25",
@@ -1100,15 +1100,15 @@
     "telegram_message_id": 17
   },
   "SLV/3A/ISHARES_HISTORY": {
-    "asof": "2026-11-25",
-    "start": "2026-08-25",
+    "asof": "2026-11-27",
+    "start": "2026-08-27",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Olağan giriş",
-    "net_usd_m": 524.797,
-    "percentile": 70.6,
+    "net_usd_m": 585.76,
+    "percentile": 74.5,
     "references": 51,
     "confirmation": null,
-    "telegram_message_id": 17
+    "telegram_message_id": 19
   },
   "IBIT/3A/ISHARES_HISTORY": {
     "asof": "2026-11-25",
@@ -1177,15 +1177,15 @@
     "telegram_message_id": 18
   },
   "SLV/1Y/ISHARES_HISTORY": {
-    "asof": "2026-11-25",
-    "start": "2025-11-25",
+    "asof": "2026-11-27",
+    "start": "2025-11-27",
     "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
     "strength": "Olağan çıkış",
-    "net_usd_m": -1079.765,
+    "net_usd_m": -1055.923,
     "percentile": 66.7,
     "references": 12,
     "confirmation": null,
-    "telegram_message_id": 18
+    "telegram_message_id": 19
   },
   "IBIT/1Y/ISHARES_HISTORY": {
     "asof": "2026-11-25",
@@ -1208,5 +1208,27 @@
     "references": 1,
     "confirmation": null,
     "telegram_message_id": 18
+  },
+  "USO/1G/ETFIQ_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-25",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Geçmiş yetersiz",
+    "net_usd_m": 68.225,
+    "percentile": null,
+    "references": 4,
+    "confirmation": null,
+    "telegram_message_id": 19
+  },
+  "USO/1H/ETFIQ_HISTORY": {
+    "asof": "2026-11-25",
+    "start": "2026-11-18",
+    "action": "BEKLE · araştırma gözlemi; üretim onayı yok",
+    "strength": "Veri eksik",
+    "net_usd_m": -392.147,
+    "percentile": null,
+    "references": 0,
+    "confirmation": null,
+    "telegram_message_id": 19
   }
 }
