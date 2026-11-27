@@ -39,6 +39,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 443628078692,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "IBIT": {
@@ -60,6 +67,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 44827943873,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "GLD": {
@@ -81,6 +95,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 119646600000,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "IWM": {
@@ -102,6 +123,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 75192940990,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "SGOV": {
@@ -123,6 +151,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 120109089280,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "ETHA": {
@@ -144,6 +179,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 4351532755,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "SHY": {
@@ -165,6 +207,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 26704673051,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "SLV": {
@@ -186,6 +235,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 21381361687,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "USO": {
@@ -207,6 +263,13 @@
       "source": "ETFIQ",
       "source_url": "https://etfiq.com/data/flows/daily/latest.json",
       "first_seen": "2026-11-26T22:19:48.321780+00:00"
+    },
+    "2026-11-24": {
+      "value": 1872620791,
+      "source_date": "2026-11-25",
+      "source": "ETFIQ",
+      "source_url": "https://etfiq.com/data/flows/daily/latest.json",
+      "first_seen": "2026-11-27T21:57:10.143824+00:00"
     }
   },
   "DIA": {

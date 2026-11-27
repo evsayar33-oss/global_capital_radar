@@ -1,6 +1,6 @@
 {
   "version": "adaptive-flow-v2.0",
-  "evaluated_at": "2026-11-26T22:19:48.321780+00:00",
+  "evaluated_at": "2026-11-27T21:57:10.143824+00:00",
   "source": "ETFIQ (etfiq.com)",
   "price_errors": {},
   "coverage": [
@@ -17,17 +17,17 @@
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "85ac68c760cd81960f532187dc65f4b23adc45866044b8688b9e89ec7a872396",
+        "source_digest": "48a3b99e2b0e6960b26ed0c36ab3fbbb68a0e937d78c8cc7123e7e5372317819",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 2,
-        "1A": 2,
-        "3A": 2,
-        "1Y": 1
+        "1H": 1,
+        "1A": 1,
+        "3A": 1,
+        "1Y": 0
       }
     },
     {
@@ -36,14 +36,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
-        "source_date": "2026-11-24",
+        "source_date": "2026-11-25",
         "coverage_start": "2026-11-04",
-        "coverage_end": "2026-11-24",
-        "daily_count": 15,
+        "coverage_end": "2026-11-25",
+        "daily_count": 16,
         "skipped_count": 4,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "a5aa5b597b8e6a1852783303bc68929da4bc09950f04c27851eb1f46978cb7b0",
+        "source_digest": "08150d6af209350e1beb888b8b596cebdb358e7fcbca4c4977065da9d6b9701c",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -69,17 +69,17 @@
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "90d5d655241fbad2d71065c5993f36a3d27298a961c59c8d0f03f5120cc54b93",
+        "source_digest": "09c93cfbcc124fabfa21a5cc9d73e8805b03eacd0f66c153e345e09c25706a9d",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
       },
       "error": null,
       "model_coverage": {
-        "1H": 2,
-        "1A": 2,
-        "3A": 2,
-        "1Y": 1
+        "1H": 1,
+        "1A": 1,
+        "3A": 1,
+        "1Y": 0
       }
     },
     {
@@ -88,14 +88,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/iwm.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "116eb9e419bf03b89b2da4d81f819c3d2e79ec14c8f9aaa54c7cfb13a8fad981",
+        "source_digest": "1386c1f6b8d003229a9fc281f5bb32b7a1d6a0f86c3299a5eb63f246dad1737d",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -114,14 +114,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/sgov.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "b267f97c721df9b08a510e7070b91310772bd6e3c563771d0a9d573d5aff8e0e",
+        "source_digest": "adea078bd55782bc2142a749f1a71f060bffd2927dd7bee8ebec0cbed06fe1c8",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -140,14 +140,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/shy.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "f289c7caf89ab01d44d292f593597ff9abab60d46d0b3c1a598d78ac8060f233",
+        "source_digest": "4ae1a6f544c1d640a15b9b282a0f0e4087bf2406896ee4636a18d2e1b0545287",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -166,14 +166,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/gld.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "f1dcb654201d6cd865bed935fbc45e1fdf9563fb4e4c5c57fb68ef40cb0246e7",
+        "source_digest": "2fc933e91755cd9f6ec3edc920cb8ba5b5512f47faf4445300ac474ab0474f37",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -192,14 +192,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/slv.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "58e802b92b194eda09276caaddc311cef77607d344d3b59a4fc89cea5e20367a",
+        "source_digest": "c0ca580cd64f8eac78c32c9fb72cf745a147b1807c7e19ebed079b3b488b4d01",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -221,10 +221,29 @@
     },
     {
       "symbol": "USO",
-      "status": "UNAVAILABLE",
-      "provenance": null,
-      "error": "ValueError: insufficient contiguous daily observations",
-      "model_coverage": {}
+      "status": "OBSERVED",
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/uso.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2026-11-19",
+        "coverage_end": "2026-11-25",
+        "daily_count": 5,
+        "skipped_count": 2,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "6435cf6a5ca6d3c96e674dda6e6a324cba2a1cb6018a676bf93916c620fd9407",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "error": null,
+      "model_coverage": {
+        "1H": 0,
+        "1A": 0,
+        "3A": 0,
+        "1Y": 0
+      }
     },
     {
       "symbol": "IBIT",
@@ -232,14 +251,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/ibit.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "ae819f8ecb4252599f56e8e8d3175e4e9131906fe99c73ce9544d3846cdbc926",
+        "source_digest": "09989431c1ee49d671456175086f58a74137037f9042804f25da3261d9580941",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -258,14 +277,14 @@
       "provenance": {
         "source": "ETFIQ",
         "source_url": "https://etfiq.com/data/flows/funds/etha.json",
-        "source_date": "2026-11-24",
-        "coverage_start": "2025-04-24",
-        "coverage_end": "2026-11-24",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
         "daily_count": 400,
         "skipped_count": 0,
         "units": "USD",
         "aum_basis": "ETFIQ-derived; not independently verified",
-        "source_digest": "e88a2b3420669882db55bc4fa9e492476721e36af7e221851b86faafdbb2785b",
+        "source_digest": "9ccf2812b95eccc4004e074f55816c882389bbaa503c0f49b503d7108f34cbf1",
         "historical_publication_time_verified": false,
         "license": "ETFIQ computed, attribution required",
         "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
@@ -307,21 +326,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": 0.006504719693757397,
+              "mean_pp": 0.006504052338989166,
               "positive": 7,
-              "lower95_pp": -0.2958653694737808
+              "lower95_pp": -0.29586584091232365
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.05665317504308469,
+              "mean_pp": -0.05665384239785292,
               "positive": 6,
-              "lower95_pp": -0.36019917734150525
+              "lower95_pp": -0.3601996807755346
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.1198110697799268,
+              "mean_pp": -0.11981173713469503,
               "positive": 6,
-              "lower95_pp": -0.42745918603740424
+              "lower95_pp": -0.42745972247713615
             }
           }
         },
@@ -530,21 +549,21 @@
           "cost_stress": {
             "0.1": {
               "n": 38,
-              "mean_pp": -0.01868038860785861,
+              "mean_pp": -0.018679856185040786,
               "positive": 5,
-              "lower95_pp": -0.2330682002801027
+              "lower95_pp": -0.23306889207204717
             },
             "0.3": {
               "n": 38,
-              "mean_pp": -0.08183828334470071,
+              "mean_pp": -0.08183775092188288,
               "positive": 4,
-              "lower95_pp": -0.299531402054631
+              "lower95_pp": -0.29953204051022386
             },
             "0.5": {
               "n": 38,
-              "mean_pp": -0.1449961780815428,
+              "mean_pp": -0.144995645658725,
               "positive": 4,
-              "lower95_pp": -0.36996981500585424
+              "lower95_pp": -0.36997038194579945
             }
           }
         },
@@ -728,7 +747,7 @@
       "status": "EXPLORATORY_ONLY"
     },
     "IWM/1H": {
-      "independent_periods": 38,
+      "independent_periods": 37,
       "models": {
         "M00_flow_position": {
           "available": 0,
@@ -747,27 +766,27 @@
           }
         },
         "M01_raw_percentile": {
-          "available": 38,
-          "active": 9,
-          "hit_rate": 0.4444444444444444,
+          "available": 37,
+          "active": 7,
+          "hit_rate": 0.42857142857142855,
           "cost_stress": {
             "0.1": {
-              "n": 38,
-              "mean_pp": -0.06853644733709255,
-              "positive": 4,
-              "lower95_pp": -0.3536144568429703
+              "n": 37,
+              "mean_pp": -0.04036448152426814,
+              "positive": 3,
+              "lower95_pp": -0.2451521159385583
             },
             "0.3": {
-              "n": 38,
-              "mean_pp": -0.1159048683897241,
+              "n": 37,
+              "mean_pp": -0.07820231936210598,
               "positive": 3,
-              "lower95_pp": -0.4060640751098092
+              "lower95_pp": -0.28793957153497085
             },
             "0.5": {
-              "n": 38,
-              "mean_pp": -0.1632732894423557,
+              "n": 37,
+              "mean_pp": -0.1160401571999438,
               "positive": 3,
-              "lower95_pp": -0.4609586611677162
+              "lower95_pp": -0.3336429714272833
             }
           }
         },
@@ -951,7 +970,7 @@
       "status": "EXPLORATORY_ONLY"
     },
     "SHY/1H": {
-      "independent_periods": 38,
+      "independent_periods": 37,
       "models": {
         "M00_flow_position": {
           "available": 0,
@@ -970,27 +989,27 @@
           }
         },
         "M01_raw_percentile": {
-          "available": 38,
-          "active": 7,
-          "hit_rate": 0.2857142857142857,
+          "available": 37,
+          "active": 11,
+          "hit_rate": 0.09090909090909091,
           "cost_stress": {
             "0.1": {
-              "n": 38,
-              "mean_pp": -0.016323934892241928,
-              "positive": 2,
-              "lower95_pp": -0.04328110023399058
+              "n": 37,
+              "mean_pp": -0.058809319861674265,
+              "positive": 1,
+              "lower95_pp": -0.10477330409040975
             },
             "0.3": {
-              "n": 38,
-              "mean_pp": -0.05316604015539982,
+              "n": 37,
+              "mean_pp": -0.11826877932113372,
               "positive": 1,
-              "lower95_pp": -0.09679931620998665
+              "lower95_pp": -0.18732216525653186
             },
             "0.5": {
-              "n": 38,
-              "mean_pp": -0.09000814541855771,
+              "n": 37,
+              "mean_pp": -0.17772823878059318,
               "positive": 0,
-              "lower95_pp": -0.15580527298138303
+              "lower95_pp": -0.27368399739428684
             }
           }
         },
@@ -1174,7 +1193,7 @@
       "status": "EXPLORATORY_ONLY"
     },
     "GLD/1H": {
-      "independent_periods": 38,
+      "independent_periods": 37,
       "models": {
         "M00_flow_position": {
           "available": 0,
@@ -1193,27 +1212,27 @@
           }
         },
         "M01_raw_percentile": {
-          "available": 38,
-          "active": 8,
-          "hit_rate": 0.625,
+          "available": 37,
+          "active": 10,
+          "hit_rate": 0.8,
           "cost_stress": {
             "0.1": {
-              "n": 38,
-              "mean_pp": 0.10992500055100683,
-              "positive": 5,
-              "lower95_pp": -0.5421976886547774
+              "n": 37,
+              "mean_pp": 0.6733727967547316,
+              "positive": 8,
+              "lower95_pp": -0.17478285951229044
             },
             "0.3": {
-              "n": 38,
-              "mean_pp": 0.06781973739311209,
-              "positive": 4,
-              "lower95_pp": -0.5820649451156747
+              "n": 37,
+              "mean_pp": 0.6193187427006775,
+              "positive": 8,
+              "lower95_pp": -0.21688432435124727
             },
             "0.5": {
-              "n": 38,
-              "mean_pp": 0.025714474235217333,
-              "positive": 4,
-              "lower95_pp": -0.6229894065218101
+              "n": 37,
+              "mean_pp": 0.5652646886466235,
+              "positive": 8,
+              "lower95_pp": -0.25983336792344636
             }
           }
         },
@@ -1397,7 +1416,7 @@
       "status": "EXPLORATORY_ONLY"
     },
     "SLV/1H": {
-      "independent_periods": 38,
+      "independent_periods": 37,
       "models": {
         "M00_flow_position": {
           "available": 0,
@@ -1416,27 +1435,27 @@
           }
         },
         "M01_raw_percentile": {
-          "available": 38,
-          "active": 13,
-          "hit_rate": 0.46153846153846156,
+          "available": 37,
+          "active": 11,
+          "hit_rate": 0.5454545454545454,
           "cost_stress": {
             "0.1": {
-              "n": 38,
-              "mean_pp": 0.2634010491070647,
+              "n": 37,
+              "mean_pp": 0.23165753717423868,
               "positive": 6,
-              "lower95_pp": -0.9169884671144084
+              "lower95_pp": -0.9249416976970302
             },
             "0.3": {
-              "n": 38,
-              "mean_pp": 0.19497999647548564,
+              "n": 37,
+              "mean_pp": 0.1721980777147791,
               "positive": 6,
-              "lower95_pp": -0.9827539547403932
+              "lower95_pp": -0.9817798560598332
             },
             "0.5": {
-              "n": 38,
-              "mean_pp": 0.12655894384390673,
+              "n": 37,
+              "mean_pp": 0.11273861825531967,
               "positive": 6,
-              "lower95_pp": -1.049308638578979
+              "lower95_pp": -1.0393862918180912
             }
           }
         },
@@ -1620,7 +1639,7 @@
       "status": "EXPLORATORY_ONLY"
     },
     "IBIT/1H": {
-      "independent_periods": 38,
+      "independent_periods": 37,
       "models": {
         "M00_flow_position": {
           "available": 0,
@@ -1639,27 +1658,27 @@
           }
         },
         "M01_raw_percentile": {
-          "available": 38,
-          "active": 7,
-          "hit_rate": 0.5714285714285714,
+          "available": 37,
+          "active": 1,
+          "hit_rate": 0.0,
           "cost_stress": {
             "0.1": {
-              "n": 38,
-              "mean_pp": 0.2746497845561393,
-              "positive": 4,
-              "lower95_pp": -0.34087782068939876
+              "n": 37,
+              "mean_pp": -0.00037282730368875107,
+              "positive": 0,
+              "lower95_pp": -0.0011035688189187033
             },
             "0.3": {
-              "n": 38,
-              "mean_pp": 0.23780767929298144,
-              "positive": 4,
-              "lower95_pp": -0.370627281345857
+              "n": 37,
+              "mean_pp": -0.005778232709094156,
+              "positive": 0,
+              "lower95_pp": -0.017103568818918703
             },
             "0.5": {
-              "n": 38,
-              "mean_pp": 0.2009655740298235,
-              "positive": 4,
-              "lower95_pp": -0.4013301963655299
+              "n": 37,
+              "mean_pp": -0.011183638114499562,
+              "positive": 0,
+              "lower95_pp": -0.03310356881891871
             }
           }
         },
@@ -1843,7 +1862,7 @@
       "status": "EXPLORATORY_ONLY"
     },
     "ETHA/1H": {
-      "independent_periods": 38,
+      "independent_periods": 37,
       "models": {
         "M00_flow_position": {
           "available": 0,
@@ -1862,27 +1881,27 @@
           }
         },
         "M01_raw_percentile": {
-          "available": 38,
-          "active": 8,
-          "hit_rate": 0.375,
+          "available": 37,
+          "active": 6,
+          "hit_rate": 0.6666666666666666,
           "cost_stress": {
             "0.1": {
-              "n": 38,
-              "mean_pp": 0.08759594574938437,
-              "positive": 3,
-              "lower95_pp": -0.6885888696533653
+              "n": 37,
+              "mean_pp": 0.21357259298553877,
+              "positive": 4,
+              "lower95_pp": -0.7759783946915865
             },
             "0.3": {
-              "n": 38,
-              "mean_pp": 0.045490682591489605,
-              "positive": 3,
-              "lower95_pp": -0.7292874017214573
+              "n": 37,
+              "mean_pp": 0.1811401605531063,
+              "positive": 4,
+              "lower95_pp": -0.8048381209709473
             },
             "0.5": {
-              "n": 38,
-              "mean_pp": 0.0033854194335948564,
-              "positive": 3,
-              "lower95_pp": -0.7708754008127854
+              "n": 37,
+              "mean_pp": 0.14870772812067387,
+              "positive": 4,
+              "lower95_pp": -0.8342750059863859
             }
           }
         },
@@ -2314,21 +2333,21 @@
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.9571689962569409,
+              "mean_pp": 0.9571677597031001,
               "positive": 3,
-              "lower95_pp": -0.5196333727071462
+              "lower95_pp": -0.5196382030190887
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 0.8238356629236074,
+              "mean_pp": 0.8238344263697667,
               "positive": 3,
-              "lower95_pp": -0.6217506553783585
+              "lower95_pp": -0.6217556071084588
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 0.6905023295902741,
+              "mean_pp": 0.6905010930364334,
               "positive": 2,
-              "lower95_pp": -0.7280015979925676
+              "lower95_pp": -0.7280066653045515
             }
           }
         },
@@ -2533,25 +2552,25 @@
         "M01_raw_percentile": {
           "available": 6,
           "active": 2,
-          "hit_rate": 0.5,
+          "hit_rate": 0.0,
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.15498169695353056,
-              "positive": 1,
-              "lower95_pp": -2.404246111965194
+              "mean_pp": -0.8059437645091093,
+              "positive": 0,
+              "lower95_pp": -2.28683194912532
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 0.08831503028686383,
-              "positive": 1,
-              "lower95_pp": -2.4660387064561817
+              "mean_pp": -0.8726104311757761,
+              "positive": 0,
+              "lower95_pp": -2.410461328787888
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 0.021648363620197102,
-              "positive": 1,
-              "lower95_pp": -2.530499372915759
+              "mean_pp": -0.9392770978424427,
+              "positive": 0,
+              "lower95_pp": -2.5363368880378765
             }
           }
         },
@@ -2755,26 +2774,26 @@
         },
         "M01_raw_percentile": {
           "available": 6,
-          "active": 1,
+          "active": 3,
           "hit_rate": 0.0,
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": -0.05356178257162242,
+              "mean_pp": -0.07312840598652036,
               "positive": 0,
-              "lower95_pp": -0.15854287641200238
+              "lower95_pp": -0.17528336516110077
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.08689511590495576,
+              "mean_pp": -0.17312840598652038,
               "positive": 0,
-              "lower95_pp": -0.25720954307866906
+              "lower95_pp": -0.34446444732480064
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.12022844923828908,
+              "mean_pp": -0.2731284059865204,
               "positive": 0,
-              "lower95_pp": -0.35587620974533574
+              "lower95_pp": -0.5254037366056388
             }
           }
         },
@@ -2978,26 +2997,26 @@
         },
         "M01_raw_percentile": {
           "available": 6,
-          "active": 2,
-          "hit_rate": 0.5,
+          "active": 1,
+          "hit_rate": 0.0,
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 0.023367583828550458,
-              "positive": 1,
-              "lower95_pp": -2.1904395288836653
+              "mean_pp": -0.8876451990236234,
+              "positive": 0,
+              "lower95_pp": -2.627429789109925
             },
             "0.3": {
               "n": 6,
-              "mean_pp": -0.043299082838116267,
-              "positive": 1,
-              "lower95_pp": -2.2575673069257944
+              "mean_pp": -0.9209785323569567,
+              "positive": 0,
+              "lower95_pp": -2.726096455776592
             },
             "0.5": {
               "n": 6,
-              "mean_pp": -0.109965749504783,
-              "positive": 1,
-              "lower95_pp": -2.3277765228431733
+              "mean_pp": -0.9543118656902901,
+              "positive": 0,
+              "lower95_pp": -2.824763122443259
             }
           }
         },
@@ -3202,25 +3221,25 @@
         "M01_raw_percentile": {
           "available": 6,
           "active": 1,
-          "hit_rate": 1.0,
+          "hit_rate": 0.0,
           "cost_stress": {
             "0.1": {
               "n": 6,
-              "mean_pp": 1.2115819360956903,
-              "positive": 1,
-              "lower95_pp": -1.163118658651863
+              "mean_pp": -1.7262401906906328,
+              "positive": 0,
+              "lower95_pp": -5.109670964444273
             },
             "0.3": {
               "n": 6,
-              "mean_pp": 1.178248602762357,
-              "positive": 1,
-              "lower95_pp": -1.131118658651863
+              "mean_pp": -1.7595735240239663,
+              "positive": 0,
+              "lower95_pp": -5.208337631110941
             },
             "0.5": {
               "n": 6,
-              "mean_pp": 1.1449152694290237,
-              "positive": 1,
-              "lower95_pp": -1.099118658651863
+              "mean_pp": -1.7929068573572995,
+              "positive": 0,
+              "lower95_pp": -5.307004297777607
             }
           }
         },
@@ -3853,7 +3872,7 @@
   "native_status": {
     "BTC": "OBSERVED",
     "ETH": "OBSERVED",
-    "SHFE_copper_warrant": "OBSERVED",
+    "SHFE_copper_warrant": "UNAVAILABLE",
     "TBF3_TFF": "NO_CURRENT_COT_SERIES",
     "issuer_USO": "OBSERVED",
     "issuer_CPER": "OBSERVED",
@@ -3868,6 +3887,7 @@
     "WTI": "UNAVAILABLE_CURRENT_OFFICIAL"
   },
   "native_errors": {
+    "SHFE_copper_warrant": "ValueError: SHFE Chinese report date/title missing; URLError: <urlopen error [Errno 104] Connection reset by peer>; Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.shfe.com.cn/data/tradedata/future/stockdata/dailystock_20261126/ZH/all.html\nCall log:\n  - navigating to \"https://www.shfe.com.cn/data/tradedata/futu; URLError: <urlopen error [Errno 104] Connection reset by peer>; URLError: <urlopen error [Errno 104] Connection reset by peer>; URLError: <urlopen error [Errno 104] Connection reset by peer>",
     "COMEX_copper": "HTTPError: HTTP Error 403: Forbidden"
   },
   "native_substatus": {

@@ -1,0 +1,22 @@
+{
+  "status": "OBSERVED",
+  "symbol": "CPER",
+  "source": "USCF",
+  "upstream_id": "USCF",
+  "source_date": "2026-11-25",
+  "nav_usd": 32.13,
+  "shares": 14600000.0,
+  "shares_unit": "shares",
+  "shares_precision": "exact_integer",
+  "reported_aum_usd": 469153218.31,
+  "calculated_aum_usd": 469098000.00000006,
+  "source_url": "https://www.uscfinvestments.com/cper",
+  "publication_intraday_verified": false,
+  "source_sha256": "5b84e797605aed74b165446a05022a850de06a54032546d5d0893b1cf90b9041",
+  "transport": "RENDERED_HTTP_200",
+  "creation_status": "UNAVAILABLE",
+  "creation_error": "creation dated observation missing",
+  "adjacent_creation_estimate_usd": 0.0,
+  "first_seen_at": "2026-11-27T21:57:10.143824+00:00",
+  "source_digest": "2b39185d9f99316f194a468b038b956cf0ebbb01185a02cb9833f682788e5d21"
+}

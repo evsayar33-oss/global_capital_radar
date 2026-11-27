@@ -1,0 +1,2324 @@
+{
+  "seen_at": "2026-11-27T21:57:10.143824+00:00",
+  "source": "ETFIQ",
+  "assets": [
+    {
+      "symbol": "SPY",
+      "asset": "S&P 500",
+      "flow_asof": "2026-11-24",
+      "horizons": {
+        "1H": {
+          "net_usd_m": -94.568,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": -94.56757600000128,
+            "normalized": null,
+            "raw_rank": 0.0,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": 5304.362,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 44.4,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 5304.361654999997,
+            "normalized": 0.6565280498822336,
+            "raw_rank": 44.4,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.5454545454545454,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": 8631.938,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 20.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 8631.937844999999,
+            "normalized": null,
+            "raw_rank": 20.0,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.47692307692307695,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": 28136.509,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": 28136.509234999987,
+            "normalized": null,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.5099601593625498,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/spy.json",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "48a3b99e2b0e6960b26ed0c36ab3fbbb68a0e937d78c8cc7123e7e5372317819",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "QQQ",
+      "asset": "Nasdaq-100",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": 3061.257,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 2,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": 3061.257155,
+            "normalized": 0.6674175015494739,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.6,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.7142857142857142
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/qqq.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2026-11-04",
+        "coverage_end": "2026-11-25",
+        "daily_count": 16,
+        "skipped_count": 4,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "08150d6af209350e1beb888b8b596cebdb358e7fcbca4c4977065da9d6b9701c",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "DIA",
+      "asset": "Dow Jones",
+      "flow_asof": "2026-11-24",
+      "horizons": {
+        "1H": {
+          "net_usd_m": 840.908,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 65.4,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 840.9081549999999,
+            "normalized": null,
+            "raw_rank": 65.4,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": 284.859,
+          "strength": "Yatay",
+          "magnitude_percentile": 5.6,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 284.85851999999994,
+            "normalized": 0.6219299228096374,
+            "raw_rank": 5.6,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4090909090909091,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": 1242.624,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 60.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 1242.624069,
+            "normalized": null,
+            "raw_rank": 60.0,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4461538461538462,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": 981.262,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": 981.2616529999987,
+            "normalized": null,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4262948207171315,
+            "flow_regime": null,
+            "source_end": "2026-11-24",
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/dia.json",
+        "source_date": "2026-11-24",
+        "coverage_start": "2025-04-24",
+        "coverage_end": "2026-11-24",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "09c93cfbcc124fabfa21a5cc9d73e8805b03eacd0f66c153e345e09c25706a9d",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "IWM",
+      "asset": "Russell 2000",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": 392.063,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 26.9,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 392.0631840000001,
+            "normalized": 0.5230179547304807,
+            "raw_rank": 26.9,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.1428571428571428
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": 2818.167,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 72.2,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 2818.167193,
+            "normalized": 3.7974252539882905,
+            "raw_rank": 72.2,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.6086956521739131,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": 2609.631,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 60.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 2609.6305379999994,
+            "normalized": 3.226885060312447,
+            "raw_rank": 60.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.5384615384615384,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.33333333333333326
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": -2204.682,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": -2204.6820439999938,
+            "normalized": -3.120550970153291,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.5139442231075697,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.6666666666666667
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/iwm.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "1386c1f6b8d003229a9fc281f5bb32b7a1d6a0f86c3299a5eb63f246dad1737d",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "SGOV",
+      "asset": "ABD Hazine bonosu · 0–3 ay",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": 2394.645,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 96.2,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 2394.64549,
+            "normalized": 2.0262271335051194,
+            "raw_rank": 96.2,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.8,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "ALIM ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": 3873.528,
+          "strength": "Olağan giriş",
+          "magnitude_percentile": 50.0,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 3873.5279699999996,
+            "normalized": 3.3169774667470198,
+            "raw_rank": 50.0,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.7391304347826086,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.6666666666666667
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": 15352.171,
+          "strength": "Güçlü giriş",
+          "magnitude_percentile": 80.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 15352.170936999995,
+            "normalized": 14.585052056421711,
+            "raw_rank": 80.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.8307692307692308,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "ALIM ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": 56459.147,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": 56459.14652999998,
+            "normalized": 88.14157056279508,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.8446215139442231,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/sgov.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "adea078bd55782bc2142a749f1a71f060bffd2927dd7bee8ebec0cbed06fe1c8",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "SHY",
+      "asset": "ABD Hazine tahvili · 1–3 yıl",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": 57.199,
+          "strength": "Yatay",
+          "magnitude_percentile": 11.5,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 57.198692,
+            "normalized": 0.214378886714591,
+            "raw_rank": 11.5,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.1428571428571429
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": -426.681,
+          "strength": "Olağan çıkış",
+          "magnitude_percentile": 55.6,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -426.68095000000005,
+            "normalized": -1.5675028580863692,
+            "raw_rank": 55.6,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.2608695652173913,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.33333333333333337
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": 1379.878,
+          "strength": "Olağanüstü giriş",
+          "magnitude_percentile": 100.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": 1379.8776680000003,
+            "normalized": 5.390158302884856,
+            "raw_rank": 100.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.6153846153846154,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.6666666666666667
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "ALIM ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": 3608.71,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": 3608.7099689999973,
+            "normalized": 15.246888290707712,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.44621513944223107,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.6666666666666667
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "ALIM ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/shy.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "4ae1a6f544c1d640a15b9b282a0f0e4087bf2406896ee4636a18d2e1b0545287",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "GLD",
+      "asset": "Altın",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": -1929.021,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 90.4,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -1929.0214640000002,
+            "normalized": -1.528861564120814,
+            "raw_rank": 90.4,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.8,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.4285714285714286
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "AZALTMA ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": -1568.893,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 33.3,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": -1568.892768,
+            "normalized": -1.1675860109221743,
+            "raw_rank": 33.3,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4782608695652174,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": -2303.412,
+          "strength": "Zayıf çıkış",
+          "magnitude_percentile": 20.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": -2303.411985999999,
+            "normalized": -1.4810427300841749,
+            "raw_rank": 20.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.46153846153846156,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.6666666666666667
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": -1251.33,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": -1251.3303060000023,
+            "normalized": -0.9064153106779866,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.4302788844621514,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/gld.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "2fc933e91755cd9f6ec3edc920cb8ba5b5512f47faf4445300ac474ab0474f37",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "SLV",
+      "asset": "Gümüş",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": 129.417,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 34.6,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 129.41705800000003,
+            "normalized": 0.5662030487898145,
+            "raw_rank": 34.6,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.6,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.4285714285714286
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": 247.136,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 38.9,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 247.13616800000003,
+            "normalized": 0.9204112873827214,
+            "raw_rank": 38.9,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.30434782608695654,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.33333333333333326
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": 545.853,
+          "strength": "Zayıf giriş",
+          "magnitude_percentile": 40.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": 545.8533249999999,
+            "normalized": 1.6289576200022597,
+            "raw_rank": 40.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.3076923076923077,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": -474.983,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": -474.9828870000001,
+            "normalized": -1.852181500188608,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.43824701195219123,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.33333333333333337
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/slv.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "c0ca580cd64f8eac78c32c9fb72cf745a147b1807c7e19ebed079b3b488b4d01",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "CPER",
+      "asset": "Bakır vadeli",
+      "error": "ValueError: ETFIQ fund history stale/future",
+      "source_status": "UNAVAILABLE"
+    },
+    {
+      "symbol": "USO",
+      "asset": "WTI petrol vadeli",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": null,
+          "strength": "Veri eksik",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "cot_z": null,
+            "cross_rank": null
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": null,
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/uso.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2026-11-19",
+        "coverage_end": "2026-11-25",
+        "daily_count": 5,
+        "skipped_count": 2,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "6435cf6a5ca6d3c96e674dda6e6a324cba2a1cb6018a676bf93916c620fd9407",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "IBIT",
+      "asset": "Bitcoin",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": -1919.111,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 100.0,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -1919.111304,
+            "normalized": -3.927279805159582,
+            "raw_rank": 100.0,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 1.0,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.7142857142857143
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "AZALTMA ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": -4103.609,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 83.3,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -4103.6094650000005,
+            "normalized": -6.229104446195626,
+            "raw_rank": 83.3,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.782608695652174,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.6666666666666667
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "AZALTMA ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": -495.269,
+          "strength": "Yatay",
+          "magnitude_percentile": 0.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · akış zayıf veya yatay",
+          "adaptive_features": {
+            "raw": -495.2694750000004,
+            "normalized": -0.8165915992835855,
+            "raw_rank": 0.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.49230769230769234,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -0.33333333333333337
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "BEKLE",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": -413.949,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": -413.9485529999996,
+            "normalized": -0.612379600790445,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.49800796812749004,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": 0.33333333333333326
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "BEKLE",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/ibit.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "09989431c1ee49d671456175086f58a74137037f9042804f25da3261d9580941",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    },
+    {
+      "symbol": "ETHA",
+      "asset": "Ether",
+      "flow_asof": "2026-11-25",
+      "horizons": {
+        "1H": {
+          "net_usd_m": -330.825,
+          "strength": "Olağanüstü çıkış",
+          "magnitude_percentile": 90.4,
+          "reference_count": 52,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -330.82523000000003,
+            "normalized": -6.80952606670543,
+            "raw_rank": 90.4,
+            "normalized_rank": null,
+            "normalized_n": 3,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 1.0,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "AZALTMA ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1A": {
+          "net_usd_m": -1406.592,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 88.9,
+          "reference_count": 18,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -1406.5918279999999,
+            "normalized": -17.997266688841894,
+            "raw_rank": 88.9,
+            "normalized_rank": null,
+            "normalized_n": 2,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.782608695652174,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "AZALTMA ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "3A": {
+          "net_usd_m": -1406.87,
+          "strength": "Güçlü çıkış",
+          "magnitude_percentile": 80.0,
+          "reference_count": 5,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · yön teyitsiz",
+          "adaptive_features": {
+            "raw": -1406.870008,
+            "normalized": -17.403123421683414,
+            "raw_rank": 80.0,
+            "normalized_rank": null,
+            "normalized_n": 1,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.5846153846153846,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": "AZALTMA ADAYI",
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        },
+        "1Y": {
+          "net_usd_m": -2128.62,
+          "strength": "Geçmiş yetersiz",
+          "magnitude_percentile": null,
+          "reference_count": 0,
+          "confirmation": "TEYİTSİZ · karşılaştırılabilir vadeli veri yok",
+          "action": "BEKLE · veri yetersiz",
+          "adaptive_features": {
+            "raw": -2128.619844,
+            "normalized": -20.0819059948477,
+            "raw_rank": null,
+            "normalized_rank": null,
+            "normalized_n": 0,
+            "z": null,
+            "robust_z": null,
+            "ewma_z": null,
+            "acceleration": null,
+            "acceleration_z": null,
+            "persistence": 0.5219123505976095,
+            "flow_regime": null,
+            "source_end": "2026-11-25",
+            "cot_z": null,
+            "cross_rank": -1.0
+          },
+          "early_methods": {
+            "flow_position": "BEKLE"
+          },
+          "adaptive_version": "adaptive-flow-v2.0",
+          "adaptive_methods": {
+            "M00_flow_position": null,
+            "M01_raw_percentile": null,
+            "M02_aum_percentile": null,
+            "M03_zscore": null,
+            "M04_robust_zscore": null,
+            "M05_ewma_zscore": null,
+            "M06_acceleration": null,
+            "M07_persistence": null,
+            "M08_cot_anomaly": null,
+            "M09_cross_asset": "AZALTMA ADAYI",
+            "M10_regime": null,
+            "M11_cost_proxy": null,
+            "M12_ensemble": null
+          },
+          "adaptive_shadow_method": "M00_flow_position",
+          "adaptive_shadow_action": null
+        }
+      },
+      "provenance": {
+        "source": "ETFIQ",
+        "source_url": "https://etfiq.com/data/flows/funds/etha.json",
+        "source_date": "2026-11-25",
+        "coverage_start": "2025-04-25",
+        "coverage_end": "2026-11-25",
+        "daily_count": 400,
+        "skipped_count": 0,
+        "units": "USD",
+        "aum_basis": "ETFIQ-derived; not independently verified",
+        "source_digest": "9ccf2812b95eccc4004e074f55816c882389bbaa503c0f49b503d7108f34cbf1",
+        "historical_publication_time_verified": false,
+        "license": "ETFIQ computed, attribution required",
+        "role": "INDEPENDENT_SHADOW_NOT_PRODUCTION"
+      },
+      "costs": {
+        "observed_median_spread_bps": null,
+        "commission_bps": null,
+        "slippage_bps": null,
+        "scenario_roundtrip_bps": [
+          10,
+          30,
+          50
+        ],
+        "realized_cost_verified": false
+      },
+      "source_status": "OBSERVED"
+    }
+  ],
+  "source_status": "SHADOW_ONLY",
+  "cot_source": {
+    "transport": "CFTC archive + matched API",
+    "api_overlap_verified": true
+  }
+}

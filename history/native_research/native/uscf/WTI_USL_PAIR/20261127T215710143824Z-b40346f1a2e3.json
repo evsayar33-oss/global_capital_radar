@@ -1,0 +1,31 @@
+{
+  "status": "OBSERVED_ISSUER_VALUATION_PAIR",
+  "source": "USCF USL published holdings",
+  "source_url": "https://www.uscfinvestments.com/holdings/usl",
+  "source_date": "2026-11-25",
+  "front_contract": {
+    "contract": "CLF27.NYM",
+    "delivery_month": "2027-01",
+    "contracts": 48,
+    "valuation_usd_per_barrel": 83.68,
+    "market_value_usd": 4016640.0
+  },
+  "next_contract": {
+    "contract": "CLG27.NYM",
+    "delivery_month": "2027-02",
+    "contracts": 47,
+    "valuation_usd_per_barrel": 82.35,
+    "market_value_usd": 3870450.0
+  },
+  "front_valuation_usd_per_barrel": 83.68,
+  "next_valuation_usd_per_barrel": 82.35,
+  "front_minus_next_usd_per_barrel": 1.3300000000000125,
+  "official_settlement_verified": false,
+  "roll_calendar_verified": false,
+  "role": "ISSUER_VALUATION_CONTEXT_ONLY",
+  "production_proxy_allowed": false,
+  "source_sha256": "b64eca1a30ac0dfb4efb74f7937015dad87fde4b3e4b31cbabcd9160422a700c",
+  "transport": "RENDERED_HTTP_200",
+  "first_seen_at": "2026-11-27T21:57:10.143824+00:00",
+  "source_digest": "98ca959348f9fb1308011900e2b5f9b4b8b8b2954bb1ec2b205d0d5b89cc8e0b"
+}
