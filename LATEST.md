@@ -1,4 +1,4 @@
-# Sermaye radarı · 2026-11-27
+# Sermaye radarı · 2026-11-28
 
 ## Gözlenen yabancı net alımları
 
@@ -19,8 +19,8 @@ Henüz sonuçlanmış ileri test yok.
 
 ## Makro koşullar
 
-- Risk iştahı (1A) · zayıflıyor · {'BAMLH0A0HYM2': 34.0, 'VIXCLS': 6.91, 'NFCI': 0.03}
-- ABD kredi erişimi (3A) · karışık veya yatay · {'TOTLL': 2.1627, 'DRTSCILM': 1.7}
+- Risk iştahı (1A) · zayıflıyor · {'BAMLH0A0HYM2': 47.0, 'VIXCLS': 8.41, 'NFCI': 0.03}
+- ABD kredi erişimi (3A) · karışık veya yatay · {'TOTLL': 1.9716, 'DRTSCILM': 1.7}
 - Dolar gücü (1A) · artıyor · {'DTWEXBGS': 2.0491, 'DEXJPUS': -0.3527, 'DEXUSEU': -2.2347}
 
 ## Gösterge değişimleri
@@ -34,10 +34,10 @@ Henüz sonuçlanmış ileri test yok.
 |JPY/USD (bir yenin dolar değeri)|2026-11-20|0.00629882|%|0.6299|0.737|-0.3527|0.0567|-0.8503|
 |EUR/USD|2026-11-20|1.0981|%|0.0|-0.4803|-2.2347|-5.9765|-4.7945|
 |ABD M2|2026-10-01|23532.8|%|—|—|0.5061|1.5338|5.8934|
-|Banka kredileri ABD|2026-11-11|14264.2|%|—|0.2687|0.6031|2.1627|8.0501|
+|Banka kredileri ABD|2026-11-18|14267.3|%|—|0.0122|0.4224|1.9716|7.8315|
 |Büyük ve orta şirket kredi standartlarını sıkılaştıran net banka yüzdesi|2026-10-01|1.7|yüzde puan|—|—|—|1.7|-4.8|
-|Yüksek getirili ABD tahvili risk primi|2026-11-24|3.72|baz puan|9.0|29.0|34.0|103.0|57.0|
-|VIX|2026-11-24|26.36|puan|-0.26|0.9|6.91|10.51|5.84|
+|Yüksek getirili ABD tahvili risk primi|2026-11-26|3.77|baz puan|0.0|25.0|47.0|110.0|77.0|
+|VIX|2026-11-26|26.8|puan|-1.49|-1.64|8.41|11.59|9.61|
 |Chicago Fed finansal koşullar|2026-11-20|-0.444|puan|—|0.006|0.03|0.098|0.059|
 |Brent petrol|2026-11-24|91.8|%|0.6579|-1.2266|-28.4489|-0.9816|41.6011|
 |Henry Hub doğal gaz|2026-11-24|3.3|%|0.6098|6.4516|18.705|16.6078|-20.4819|
@@ -48,10 +48,10 @@ Henüz sonuçlanmış ileri test yok.
 |ABD PCE|2026-10-01|132.703|%|—|—|0.3175|1.1571|3.8446|
 |ABD emtia üretici fiyat endeksi|2026-10-01|293.921|%|—|—|-0.1875|3.1892|12.7902|
 |Özel sektör saatlik ücret|2026-10-01|38|%|—|—|0.3698|0.9564|3.1208|
-|ABD 5 yıllık başabaş enflasyon|2026-11-25|2.13|baz puan|2.0|-10.0|-35.0|-18.0|-14.0|
-|ABD 2 yıllık tahvil faizi|2026-11-24|4.63|baz puan|0.0|-17.0|-6.0|39.0|117.0|
-|ABD 10 yıllık reel faiz|2026-11-24|2.79|baz puan|0.0|-10.0|13.0|41.0|98.0|
-|Gerçekleşen efektif Fed faizi|2026-11-24|3.88|baz puan|0.0|0.0|0.0|25.0|0.0|
+|ABD 5 yıllık başabaş enflasyon|2026-11-27|2.16|baz puan|3.0|-2.0|-29.0|-15.0|-13.0|
+|ABD 2 yıllık tahvil faizi|2026-11-25|4.61|baz puan|-2.0|-19.0|-8.0|44.0|118.0|
+|ABD 10 yıllık reel faiz|2026-11-25|2.73|baz puan|-6.0|-15.0|7.0|41.0|94.0|
+|Gerçekleşen efektif Fed faizi|2026-11-26|3.88|baz puan|0.0|0.0|0.0|25.0|0.0|
 |ABD mal ithalatı nominal değer|2026-09-01|346879|%|—|—|1.2853|12.1787|26.4311|
 |ABD mal ihracatı nominal değer|2026-09-01|210968|%|—|—|2.4863|1.795|13.1408|
 |ICI haftalık fon akışı|Kaynak hatası|—|—|—|—|—|—|—|
