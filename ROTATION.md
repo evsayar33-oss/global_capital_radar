@@ -1,6 +1,6 @@
 # Varlıklar arası sermaye takibi
 
-2026-11-27 · Araştırma
+2026-11-28 · Araştırma
 
 Akışlar seçili ABD fonunda milyon USD. COT farkı haftalık yüzde puan.
 
@@ -100,15 +100,15 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 
 |Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
 |---|---|---|---:|---:|---|
-|SPY|—|—|—|—|—|
+|SPY|PWD_DAILY_ROUNDED|2026-11-25|-4700000000.0|23|BEKLE · yuvarlanmış alternatif gözlem|
 |QQQ|ETFIQ_HISTORY|2026-11-25|2902657116|16|BEKLE · alternatif kaynak araştırma aşamasında|
-|DIA|—|—|—|—|—|
-|IWM|ISHARES_HISTORY|2026-11-25|-578401877.35|6301|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
-|SGOV|ISHARES_HISTORY|2026-11-25|543647953.8|1635|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
-|SHY|ISHARES_HISTORY|2026-11-25|106087638.8|6127|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|DIA|PWD_DAILY_ROUNDED|2026-11-25|-74500000.0|23|BEKLE · yuvarlanmış alternatif gözlem|
+|IWM|ISHARES_HISTORY|2026-11-27|-355747642.90000004|6302|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|SGOV|ISHARES_HISTORY|2026-11-27|936592128.3000001|1636|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|SHY|ISHARES_HISTORY|2026-11-27|260962617.60000002|6128|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |GLD|SPDR_GOLD_HISTORY|2026-11-25|63515636.4259491|4788|BEKLE · resmî NAV/varlık kaynaklı akış tahmini|
 |SLV|ISHARES_HISTORY|2026-11-27|23842174.2|3314|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |CPER|—|—|—|—|—|
 |USO|ETFIQ_HISTORY|2026-11-25|68225000|5|BEKLE · alternatif kaynak araştırma aşamasında|
-|IBIT|ISHARES_HISTORY|2026-11-25|-176387343.6|725|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
-|ETHA|ISHARES_HISTORY|2026-11-25|-38061368.0|609|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|IBIT|ISHARES_HISTORY|2026-11-27|-328525862.04|726|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|ETHA|ISHARES_HISTORY|2026-11-27|-67818537.0|610|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
