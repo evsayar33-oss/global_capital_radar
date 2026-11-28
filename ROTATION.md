@@ -100,10 +100,10 @@ Durum: DEGRADED_RESEARCH_AVAILABLE
 
 |Fon|Kaynak|Tarih|Günlük net USD|Ardışık gün|Karar|
 |---|---|---|---:|---:|---|
-|SPY|PWD_DAILY_ROUNDED|2026-11-25|-4700000000.0|23|BEKLE · yuvarlanmış alternatif gözlem|
+|SPY|ETFIQ_HISTORY|2026-11-25|-4814040718|400|BEKLE · alternatif kaynak araştırma aşamasında|
 |QQQ|ETFIQ_HISTORY|2026-11-25|2902657116|16|BEKLE · alternatif kaynak araştırma aşamasında|
-|DIA|PWD_DAILY_ROUNDED|2026-11-25|-74500000.0|23|BEKLE · yuvarlanmış alternatif gözlem|
-|IWM|ISHARES_HISTORY|2026-11-27|-355747642.90000004|6302|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
+|DIA|ETFIQ_HISTORY|2026-11-25|-74949630|400|BEKLE · alternatif kaynak araştırma aşamasında|
+|IWM|ISHARES_HISTORY|2026-11-27|-355747642.90000004|6301|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |SGOV|ISHARES_HISTORY|2026-11-27|936592128.3000001|1636|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |SHY|ISHARES_HISTORY|2026-11-27|260962617.60000002|6128|BEKLE · resmî pay/NAV kaynaklı akış tahmini|
 |GLD|SPDR_GOLD_HISTORY|2026-11-25|63515636.4259491|4788|BEKLE · resmî NAV/varlık kaynaklı akış tahmini|

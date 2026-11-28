@@ -2,7 +2,7 @@
   "SPY/1G": {
     "asof": "2026-11-25",
     "direction": "Çıkış",
-    "source": "PWD_DAILY_ROUNDED",
+    "source": "ETFIQ_HISTORY",
     "telegram_message_id": 22
   },
   "QQQ/1G": {
@@ -13,7 +13,7 @@
   "DIA/1G": {
     "asof": "2026-11-25",
     "direction": "Çıkış",
-    "source": "PWD_DAILY_ROUNDED",
+    "source": "ETFIQ_HISTORY",
     "telegram_message_id": 22
   },
   "IWM/1G": {
@@ -65,7 +65,7 @@
   "SPY/1H": {
     "asof": "2026-11-25",
     "direction": "Çıkış",
-    "source": "PWD_DAILY_ROUNDED"
+    "source": "ETFIQ_HISTORY"
   },
   "QQQ/1H": {
     "asof": "2026-11-25",
@@ -76,7 +76,7 @@
   "DIA/1H": {
     "asof": "2026-11-25",
     "direction": "Giriş",
-    "source": "PWD_DAILY_ROUNDED"
+    "source": "ETFIQ_HISTORY"
   },
   "IWM/1H": {
     "asof": "2026-11-27",
@@ -117,12 +117,12 @@
   "SPY/1A": {
     "asof": "2026-11-25",
     "direction": "Giriş",
-    "source": "PWD_DAILY_ROUNDED"
+    "source": "ETFIQ_HISTORY"
   },
   "DIA/1A": {
     "asof": "2026-11-25",
     "direction": "Giriş",
-    "source": "PWD_DAILY_ROUNDED"
+    "source": "ETFIQ_HISTORY"
   },
   "IWM/1A": {
     "asof": "2026-11-27",
@@ -160,12 +160,12 @@
     "source": "ISHARES_HISTORY"
   },
   "SPY/3A": {
-    "asof": "2026-11-24",
+    "asof": "2026-11-25",
     "direction": "Giriş",
     "source": "ETFIQ_HISTORY"
   },
   "DIA/3A": {
-    "asof": "2026-11-24",
+    "asof": "2026-11-25",
     "direction": "Giriş",
     "source": "ETFIQ_HISTORY"
   },
@@ -205,12 +205,12 @@
     "source": "ISHARES_HISTORY"
   },
   "SPY/1Y": {
-    "asof": "2026-11-24",
+    "asof": "2026-11-25",
     "direction": "Giriş",
     "source": "ETFIQ_HISTORY"
   },
   "DIA/1Y": {
-    "asof": "2026-11-24",
+    "asof": "2026-11-25",
     "direction": "Giriş",
     "source": "ETFIQ_HISTORY"
   },
